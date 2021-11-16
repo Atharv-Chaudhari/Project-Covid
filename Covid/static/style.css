@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.925rem;
 }
+
 a {
   text-decoration: none;
 }
+
 .container {
   width: 1170px;
   position: relative;
@@ -19,7 +22,9 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.navbar, .navbar > .container {
+
+.navbar,
+.navbar > .container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -27,15 +32,27 @@ a {
   justify-content: space-between;
 }
 @media (max-width: 768px) {
-  .navbar, .navbar > .container {
+  .navbar,
+.navbar > .container {
     display: block;
   }
 }
+
 .navbar {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   background-color: #fff;
   padding: 1rem 1.15rem;
   border-bottom: 1px solid #eceef3;
+  /*
+  |-----------------------------------
+  | Start navbar logo or brand etc..
+  |-----------------------------------
+  */
+  /*
+  |-----------------------------------
+  | Start navbar menu
+  |-----------------------------------
+  */
 }
 @media (min-width: 576px) {
   .navbar .container {
@@ -53,11 +70,6 @@ a {
   }
 }
 @media (min-width: 1200px) {
-  /*
-   |-----------------------------------
-   | Start navbar logo or brand etc..
-   |-----------------------------------
-   */
   .navbar .container {
     max-width: 1140px;
   }
@@ -98,11 +110,6 @@ a {
 .navbar .navbar-header > a {
   font-weight: 500;
   color: #3c4250;
-  /*
-   |-----------------------------------
-   | Start navbar menu
-   |-----------------------------------
-   */
 }
 .navbar .navbar-menu {
   display: flex;
@@ -128,7 +135,7 @@ a {
   .navbar .navbar-menu .navbar-nav {
     width: 100%;
     display: block;
-    border-top: 1px solid #EEE;
+    border-top: 1px solid #eee;
     margin-top: 1rem;
   }
 }
@@ -189,9 +196,11 @@ a {
 .navbar .navbar-dropdown {
   position: relative;
 }
+
 .navbar .navbar-header > a span {
   color: #66f;
 }
+
 .navbar .navbar-header h4 {
   font-weight: 500;
   font-size: 1.25rem;
