@@ -1,2 +1,1 @@
-web: gunicorn Covid/wsgi:app
-
+web: gunicorn Covid/Covid/wsgi:app
