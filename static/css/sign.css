@@ -68,7 +68,7 @@ a {
 }
 .modal-button.ghost {
 	/* background-color: transparent; */
-	border-color: #ffffff;
+	border-color: black;
 }
 
 form {
@@ -159,6 +159,7 @@ input {
 	overflow: hidden;
 	transition: transform 0.6s ease-in-out;
 	z-index: 100;
+	/* background-image: url("https://i.pinimg.com/564x/49/21/78/492178a305922cd7704b4d230dea43a3.jpg"); */
 }
 
 .modal-container.right-panel-active .overlay-container {
