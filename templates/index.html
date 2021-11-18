@@ -84,7 +84,7 @@
                   </a>
                  <br><br><br><br><br>
             <div class="modal-container" id="modal-container">
-                <div class="form-container sign-up-container">
+                <div class="form-container sign-up-container blueback">
                     <form action="#">
                         <h1>Create Account</h1>
                         <div class="social-container">
@@ -116,14 +116,17 @@
                 </div>
                 <div class="overlay-container">
                     <div class="overlay">
-                        <div class="overlay-panel overlay-left">
-                            <h1><img src="static/images/hello.gif" width="30px " height="30px "> Welcome Back!</h1>
-                            <p>To keep connected with us please login with your personal info</p>
-                            <button class="ghost modal-button" id="signIn">Sign In</button>
+                        <!-- remove comments and remove style background-image to get original shade back -->
+                        <div class="overlay-panel overlay-left" style="background-image: url('static/images/modalback1.jpg');">
+                            <!-- <h1><img src="static/images/hello.gif" width="30px " height="30px "> Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p> -->
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <button style="z-index: -1;" class="ghost modal-button" id="signIn">Sign In</button>
                         </div>
-                        <div class="overlay-panel overlay-right">
-                            <h1><img src="static/images/hello.gif" width="30px " height="30px "> Hello, Friend!</h1>
-                            <p>Enter your personal details and start journey with us</p>
+                        <div class="overlay-panel overlay-right" style="background-image: url('static/images/modalback2.jpg');">
+                            <!-- <h1><img src="static/images/hello.gif" width="30px " height="30px "> Hello, Friend!</h1>
+                            <p>Enter your personal details and start journey with us</p> -->
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                             <button class="ghost modal-button" id="signUp">Sign Up</button>
                         </div>
                     </div>

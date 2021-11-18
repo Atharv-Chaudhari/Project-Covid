@@ -119,6 +119,7 @@ input {
 }
 
 .modal-container.right-panel-active .sign-in-container {
+	background-image: url("https://raw.githubusercontent.com/Atharv-Chaudhari/Simple-MySql-Editor/main/back.jpg");
 	transform: translateX(100%);
 }
 
@@ -165,11 +166,11 @@ input {
 .modal-container.right-panel-active .overlay-container {
 	transform: translateX(-100%);
 }
-
+ /*white needed to be changed to black for previous modal*/
 .overlay {
-	background: black;
-	background: -webkit-linear-gradient(to right, black, grey);
-	background: linear-gradient(to right, black, grey);
+	background: white;
+	background: -webkit-linear-gradient(to right, white, white); /*second shade was grey*/
+	background: linear-gradient(to right, white, white);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
