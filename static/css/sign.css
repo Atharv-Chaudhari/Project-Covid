@@ -306,3 +306,23 @@ input {
     background: red;
     opacity: 1;
 }
+@media(max-width:650px) {
+	.modal-container {
+		width: 568px;
+	}
+}
+@media (max-width:568px) {
+	.modal-container {
+		width: 438px;
+		margin-bottom:100px;
+	}
+	/* .sign-in-container {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	.overlay{
+		opacity:0;
+		margin-left: -300%;
+	} */
+}
