@@ -18,5 +18,6 @@ from django.urls import path
 from app import views
 
 urlpatterns = [
-    path("",views.index,name='app')
+    path("",views.index,name='app'),
+    path("sign",views.sign,name='sign')
 ]

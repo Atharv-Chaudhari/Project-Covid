@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid</title>
+    <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
     <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/sign.css" />
     <!-- <link rel="stylesheet" href="static/css/style.scss" /> -->
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
 
 <body>
     <nav class="navbar ">
-        <div class="container ">
+        <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggler " data-toggle="open-navbar1">
           <span></span>
@@ -65,17 +68,96 @@
                     </li>
                     <li><a href="#">Research</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#" id="myBtn">Sign In / Sign Up</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <br>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <a  href="/" >
+                <button type="button" class="btn-close">
+                    <span class="icon-cross"></span>
+                    <span class="visually-hidden"></span>
+                  </button>
+                  </a>
+                 <br><br><br><br><br>
+            <div class="modal-container" id="modal-container">
+                <div class="form-container sign-up-container">
+                    <form action="#">
+                        <h1>Create Account</h1>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your email for registration</span>
+                        <input type="text" placeholder="Name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <button class="modal-button">Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form action="#">
+                        <h1>Sign in</h1>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your account</span>
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <a href="#">Forgot your password?</a>
+                        <button class="modal-button">Sign In</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1><img src="static/images/hello.gif" width="30px " height="30px "> Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="ghost modal-button" id="signIn">Sign In</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1><img src="static/images/hello.gif" width="30px " height="30px "> Hello, Friend!</h1>
+                            <p>Enter your personal details and start journey with us</p>
+                            <button class="ghost modal-button" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="mini-info ">
-        <marquee><strong><img src="https://c.tenor.com/nebZyl8oN7IAAAAi/wave-hello.gif " width="30px " height="30px "> Team
+        <marquee><strong><img src="static/images/hello.gif " width="30px " height="30px "> Team
         Infy SOARS presents Covid-19 Details and Research</strong></marquee>
     </div>
+    <div class="menu-container" style="margin-left:100%;">
+        <div class="collapse-icon">
+            <span class="fa fa-chevron-left"></span>
+        </div>
+        <div class="menu-item">
+            <span class="fa fa-instagram social-ico"></span>
+            <div class="menu-item-text">Instagram</div>
+        </div>
+        <div class="menu-item">
+            <span class="fa fa-twitter social-ico"></span>
+            <div class="menu-item-text">Twitter</div>
+        </div>
+        <div class="menu-item">
+            <span class="fa fa-facebook social-ico"></span>
+            <div class="menu-item-text">Facebook</div>
+        </div>
+        <div class="menu-item">
+            <span class="fa fa-linkedin social-ico"></span>
+            <div class="menu-item-text">Linked In</div>
+        </div>
+    </div>
     <script type="text/javascript" src="static/js/script.js "></script>
+    <script type="text/javascript" src="static/js/sign.js "></script>
 </body>
 
 </html>
