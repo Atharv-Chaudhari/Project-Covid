@@ -12,19 +12,48 @@
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
 </head>
 
-<body>
-    <nav class="navbar ">
+<!-- <body onload="present()"> -->
+    <body>
+    <nav class="navbar">
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggler " data-toggle="open-navbar1">
           <span></span>
           <span></span>
           <span></span>
+          <span></span>
         </button>
-                <a href="/ ">
-                    <h4 style="font-size: 25px;">Infy<span style="font-size: 25px;"> SOARS</span></h4> 
+                <!-- <a href="/ ">
+                    <h4 style="font-size: 25px;">Infy<span style="font-size: 25px;"> SOARS</span></h4>  -->
                     <!-- <span class="logo-text " style="color:red; "> Presents</span> -->
-                </a>
+                <!-- </a> -->
+                <div class="container-alert">
+                    <details>
+                      <summary>
+                        <div class="button-modal">
+                            <h4 style="font-size: 25px;">Infy<span style="font-size: 25px;color:#66f;"> SOARS</span></h4>
+                        </div>
+                        <div class="details-modal-overlay"></div>
+                      </summary>
+                      <div class="details-modal">
+                        <div class="details-modal-close">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z" fill="black" />
+                          </svg>
+                        </div>
+                        <div class="details-modal-title">
+                            <h1>Infy <span style="color:blue;font-size: 20px;"> SOARS<sup style="color:red;font-size: 10px;">TM</sup></span><span style="color:crimson;font-size: 15px;"> presents</span></h1>
+                          </div>
+                        <div class="details-modal-content">
+                            <p style="text-align: center;margin-top: -8%;"><img src="static/images/risklogo.png" width="300" height="300"></p>
+                            <h1 style="text-align: center;">Project Covid</h1>
+                          <p>
+                            
+                          </p>
+                        </div>
+                      </div>
+                    </details>
+                  </div>
             </div>
 
             <!-- <div class="navbar-menu " id="open-navbar1 ">
@@ -84,7 +113,7 @@
                   </a>
                  <br><br><br><br><br>
             <div class="modal-container" id="modal-container">
-                <div class="form-container sign-up-container">
+                <div id="sign-up" class="form-container sign-up-container">
                     <form action="#"  style="background-image: url('static/images/blueback.jpg');background-size: cover;">
                         <h1>Create Account</h1>
                         <br>
@@ -100,9 +129,10 @@
                         <input type="password" placeholder="Password" />
                         <br>
                         <button class="modal-button">Sign Up</button>
+                        <p class="link" onclick="switchForm('login')">already have an account ? sign in here</p>
                     </form>
                 </div>
-                <div class="form-container sign-in-container">
+                <div id="sign-in" class="form-container sign-in-container">
                     <form action="#"  style="background-image: url('static/images/blueback.jpg');background-size: cover;">
                         <br>
                         <h1>Sign in</h1>
@@ -119,6 +149,7 @@
                         <a href="#">Forgot your password?</a>
                         <br>
                         <button class="modal-button">Sign In</button>
+                        <p class="link" onclick="switchForm('register')">new here ? sign up here</p>
                     </form>
                 </div>
                 <div class="overlay-container">
@@ -128,7 +159,7 @@
                             <!-- <h1><img src="static/images/hello.gif" width="30px " height="30px "> Welcome Back!</h1>
                             <p>To keep connected with us please login with your personal info</p> -->
                             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                            <button style="z-index: -1;" class="ghost modal-button" id="signIn">Sign In</button>
+                            <button class="ghost modal-button" id="signIn">Sign In</button>
                         </div>
                         <div class="overlay-panel overlay-right" style="background-image: url('static/images/modalback2.jpg');background-size: auto;">
                             <!-- <h1><img src="static/images/hello.gif" width="30px " height="30px "> Hello, Friend!</h1>
@@ -166,6 +197,22 @@
             <div class="menu-item-text">Linked In</div>
         </div>
     </div>
+    <!-- <div id="myModal1" class="modal1">
+
+        <div class="modal-content1">
+            <div class="modal-header">
+              <span class="close1">&times;</span>
+              <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the Modal Body</p>
+              <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+              <h3>Modal Footer</h3>
+            </div>
+          </div>
+    </div> -->
     <script type="text/javascript" src="static/js/script.js "></script>
     <script type="text/javascript" src="static/js/sign.js "></script>
 </body>

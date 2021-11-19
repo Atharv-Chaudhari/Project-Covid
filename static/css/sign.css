@@ -309,6 +309,7 @@ input {
 @media(max-width:650px) {
 	.modal-container {
 		width: 568px;
+		height: 100%;
 	}
 }
 @media (max-width:568px) {
@@ -316,13 +317,33 @@ input {
 		width: 438px;
 		margin-bottom:100px;
 	}
-	/* .sign-in-container {
+	.sign-in-container {
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
+		z-index:300;
 	}
 	.overlay{
-		opacity:0;
-		margin-left: -300%;
-	} */
+		z-index:-1;
+		margin-left: -300%; 
+	}
+	.sign-up-container{
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		z-index:-1;
+	}
+}
+.link{
+    text-align: center;
+    color: #3f3f3f;
+    text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.link:hover{
+	font-weight: 500;
+    color: black;
 }
