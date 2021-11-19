@@ -712,3 +712,31 @@ code {
   margin-left: auto;
   margin-right: auto;
 }
+/* **************************************************************************************************** */
+ul.breadcrumb {
+  padding: 10px 62px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li a{
+  font-size: 20px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: none;
+
+}
+/* ************************************************************************************************************* */
