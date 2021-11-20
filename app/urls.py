@@ -19,5 +19,5 @@ from app import views
 
 urlpatterns = [
     path("",views.index,name='app'),
-    path("sign",views.sign,name='sign')
+    path("riskpredictor",views.riskpredictor,name='riskpredictor')
 ]

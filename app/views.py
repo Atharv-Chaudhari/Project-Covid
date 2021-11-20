@@ -4,5 +4,5 @@ from django.shortcuts import render,HttpResponse
 def index(request):
     return render(request,'index.html')
 
-def sign(request):
-    return render(request,'sign.html')
+def riskpredictor(request):
+    return render(request,'riskpredictor.html')
