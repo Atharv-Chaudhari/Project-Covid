@@ -9,11 +9,26 @@
     <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
     <link rel="stylesheet" href="static/css/riskpredictor.css" />
     <!-- <link rel="stylesheet" href="static/css/sign.css" /> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="static/css/style.scss" /> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
-        integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+        integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css "> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        .risk-prediction {
+            /* background: url("static/images/risk_back.jpg") no-repeat center center fixed; */
+            background-color: whitesmoke;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            /* background: #ecf0f3; */
+            /* background-color: white; */
+        }
+    </style>
 </head>
 
 <!-- <body onload="present()"> -->
@@ -54,14 +69,14 @@
                                         fill="black" />
                                 </svg>
                             </div>
-                            <div class="details-modal-title">
+                            <div class="details-modal-title" style="font-family: 'Montserrat', sans-serif;">
                                 <img src="static/images/welcome.gif" width="50" height="50">
                                 <h1 style="padding-left: 60px;margin-top:-8%;"> Infy <span
                                         style="color:blue;font-size: 20px;"> SOARS<sup
                                             style="color:red;font-size: 10px;">TM</sup></span><span
                                         style="color:crimson;font-size: 15px;"> presents</span></h1>
                             </div>
-                            <div class="details-modal-content">
+                            <div class="details-modal-content" style="font-family: 'Montserrat', sans-serif;">
                                 <p style="text-align: center;margin-top: -8%;"><img src="static/images/risklogo.png"
                                         width="300" height="300"></p>
                                 <h1 style="text-align: center;margin-top: -8%;">Project Covid</h1>
@@ -88,9 +103,10 @@
             </div> -->
             <div class="navbar-menu" id="open-navbar1">
                 <ul class="navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/"><i class="fa fa-home"></i> Home</a></li>
                     <li class="navbar-dropdown">
-                        <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+                        <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
+                                class="fa fa-bar-chart"></i>
                             Analysis <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown" id="my-dropdown-id">
@@ -102,8 +118,8 @@
                         </ul>
                     </li>
                     <li class="navbar-dropdown">
-                        <a href="#" class="dropdown-toggler" data-dropdown="blog">
-                            Risk Predictor <i class="fa fa-angle-down"></i>
+                        <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i> Predictors
+                            <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown" id="blog">
                             <li><a href="riskpredictor">Risk Predictor</a></li>
@@ -113,9 +129,9 @@
                             <li><a href="#">One more seprated link.</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><i class="fa fa-pencil-square-o"></i> Research</a></li>
+                    <li><a href="#"><i class="fa fa-info-circle"></i> About</a></li>
+                    <li><a href="#"><i style="font-size:13px;" class="material-icons">&#xe163;</i> Contact</a></li>
                     <!-- <li><a href="#" id="myBtn">Sign In / Sign Up</a></li> -->
                 </ul>
             </div>
@@ -123,8 +139,10 @@
     </nav>
     <br>
     <ul class="breadcrumb">
-        <li><a href="/">Home</a></li>
-        <li><a href="riskpredictor" style="color: black;">Risk Predictor</a></li>
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="riskpredictor" style="color: black;"><i class="fa fa-flask"></i> Predictors <i
+                    class="fas fa-long-arrow-alt-right arrow1" aria-hidden="False"></i> &#160&#160&#160Risk
+                Predictor</a></li>
     </ul>
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -203,34 +221,6 @@
         <marquee><strong><img src="static/images/hello.gif " width="30px " height="30px "> Team
                 Infy SOARS presents Covid-19 Details and Research</strong></marquee>
     </div>
-    <div class="risk-prediction">
-        <form>
-            <div class="segment">
-                <h1 style="color:blue;"> Welcome To Covid-19 Risk Predictor </h1>
-            </div>
-            <span style="font-size:20px;color: red;">✨ Enter Your Details ✨</span>
-            <br><br><br>
-            <div class="input-group">
-                <label>
-                    <span class="input-label">🧿 Enter Full Name &#160</span>
-                    <input type="text" placeholder="Full Name" />
-                </label>
-            </div>
-            <div class="input-group">
-                <label>
-                    <span class="input-label">🧿 Email Address </span>
-                    <input type="text" placeholder="Email Address" />
-                </label>
-            </div>
-            <div class="input-group">
-                <label>
-                    <span class="input-label" style="margin-left: 0%;">Enter Country </span>
-                    <input type="text" placeholder="Country" />
-                </label>
-            </div>
-            <button class="red" type="button"><i class="icon ion-md-lock"></i> Submit</button>
-        </form>
-    </div>
     <div class="menu-container" style="margin-left:100%;">
         <div class="collapse-icon">
             <span class="fa fa-chevron-left"></span>
@@ -251,6 +241,147 @@
             <span class="fa fa-linkedin social-ico"></span>
             <div class="menu-item-text">Linked In</div>
         </div>
+    </div>
+    <div class="risk-prediction">
+        <form>
+            <div class="segment">
+                <h1 style="color:blue;"> Welcome To Covid-19 Risk Predictor </h1>
+            </div>
+            <span style="font-size:20px;color: red;">✨ Enter Your Details ✨</span>
+            <br><br><br>
+            <div class="input-group">
+                <label>
+                    <span class="input-label">&#160&#160&#160&#160<i class="material-icons">person</i> Enter Full Name
+                        <span style="color: red;font-size: 25px;">*</span>&#160&#160</span>
+                    <input type="text" placeholder="Full Name" required />
+                </label>
+            </div>
+            <div class="input-group">
+                <label>
+                    <span class="input-label">&#160&#160&#160&#160&#160&#160<i class="fa fa-envelope"></i> Email Address
+                        <span style="color: red;font-size: 25px;">*</span></span>&#160&#160&#160&#160&#160
+                    <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email Address"
+                        required />
+                </label>
+            </div>
+            <div class="input-group">
+                <label>
+                    <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
+                            class="fa fa-globe"></i>
+                        Enter Country
+                        &#160&#160&#160&#160&#160&#160&#160&#160</span>
+                    <input type="text" placeholder="Country" />
+                </label>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
+                        class="fas fa-hiking"></i> Age 60 or Above <span style="color: red;font-size: 25px;">*</span>
+                    &#160&#160&#160&#160&#160</span>
+                <div class="switch-toggle" style="margin-right: auto;margin-left: auto;">
+                    <input type="checkbox" id="age">
+                    <label for="age"></label>
+                </div>
+            </div>
+            <br><br>
+            <div class="input-group">
+                <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
+                        class="fas fa-street-view"></i> Enter
+                    Gender <span style="color: red;font-size: 25px;">*</span>
+                    &#160&#160&#160&#160&#160&#160&#160&#160</span>
+                <div class="switch-toggle1" style="margin-right: auto;margin-left: auto;">
+                    <input type="checkbox" id="gender">
+                    <label for="gender"></label>
+                </div>
+            </div>
+            <br><br>
+            <div class="input-group">
+                <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
+                        class="fa fa-medkit"></i>
+                    Enter Symptoms <span style="color: red;font-size: 25px;">*</span></span>
+            </div>
+            <br>
+            <div class="switches">
+                <div class="switch-holder">
+                    <div class="switch-label">
+                        <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Cough</span>
+                    </div>
+                    <div class="switch-toggle">
+                        <input type="checkbox" id="cough">
+                        <label for="cough"></label>
+                    </div>
+                </div>
+                <div class="switch-holder">
+                    <div class="switch-label">
+                        <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Fever</span>
+                    </div>
+                    <div class="switch-toggle">
+                        <input type="checkbox" id="fever">
+                        <label for="fever"></label>
+                    </div>
+                </div>
+                <div class="switch-holder">
+                    <div class="switch-label">
+                        <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Sore Throat</span>
+                    </div>
+                    <div class="switch-toggle">
+                        <input type="checkbox" id="sore-throat">
+                        <label for="sore-throat"></label>
+                    </div>
+                </div>
+                <div class="switch-holder">
+                    <div class="switch-label">
+                        <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Shortness of Breath</span>
+                    </div>
+                    <div class="switch-toggle">
+                        <input type="checkbox" id="shortness-of-breath">
+                        <label for="shortness-of-breath"></label>
+                    </div>
+                </div>
+                <div class="switch-holder">
+                    <div class="switch-label">
+                        <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Headache </span>
+                    </div>
+                    <div class="switch-toggle">
+                        <input type="checkbox" id="headache">
+                        <label for="headache"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
+                        class="fas fa-hiking"></i> Abroad <span style="color: red;font-size: 25px;">*</span>
+                    &#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160</span>
+                <div class="switch-toggle" style="margin-right: auto;margin-left: auto;">
+                    <input type="checkbox" id="abroad">
+                    <label for="abroad"></label>
+                </div>
+            </div>
+            <br><br>
+            <div class="input-group">
+                <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
+                        class="fas fa-hiking"></i> Contact With Covid-19 Object <span
+                        style="color: red;font-size: 25px;">*</span></span>
+                <div class="switch-toggle" style="margin-left:10%;">
+                    <input type="checkbox" id="contact_obj">
+                    <label for="contact_obj"></label>
+                </div>
+            </div>
+            <br><br>
+            <div class="input-group">
+                <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
+                        class="fas fa-hiking"></i> Contact With Covid-19 Patient <span
+                        style="color: red;font-size: 25px;">*</span>
+                </span>
+                <div class="switch-toggle" style="margin-left:9%;">
+                    <input type="checkbox" id="contact_person">
+                    <label for="contact_person"></label>
+                </div>
+            </div>
+            <br>
+            <button class="red button-submit" type="submit"><i class="fa fa-check" style="color:lime;"></i> Submit
+                Details</button>
+        </form>
     </div>
     <footer>
         <div class="footer">
