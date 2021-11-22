@@ -274,16 +274,22 @@ a {
 
 /* my css */
 .mini-info {
-    background-color: lime;
-    color: blue;
-    height: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: #00FFFF	;
+  color: black;
+  height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .mini-info marquee {
-    padding: 0px;
+  padding: 0px;
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-
+.mini-info img{
+margin-top: auto;
+margin-bottom: auto;
+}
 .logo-text {
     font-size: 10px;
 }
@@ -775,7 +781,6 @@ ul.breadcrumb {
 /* * {
 	box-sizing: border-box;
 }
-
 body {
 	background: #f6f5f7;
 	display: flex;
@@ -1128,16 +1133,19 @@ input {
     letter-spacing: -0.2px;
     font-size: 16px;
     color: #babecc;
+    padding-top:100px;
+    padding-bottom:100px;
+    padding-right: auto;
+    padding-left: auto;
     text-shadow: 1px 1px 1px #fff;
-    padding: 100px;
-    height:1600px;
+    height:100%;
     width:100%;
   }
   form {
     padding: 16px;
     text-align: center;
-    width: 620px;
-    margin: 0 auto;
+    width: 50%;
+    margin: auto;
     border-radius: 2%;
     /* box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
     color: #babecc;
@@ -1177,7 +1185,6 @@ input {
   input {
     margin-right: 8px;
     box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
-    width: 60%;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     appearance: none;
@@ -1185,6 +1192,7 @@ input {
   }
   input[type="text"]{
     text-align: left;
+    width:60%;
   }
   input:focus {
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
@@ -1238,6 +1246,15 @@ input {
     text-align: left;
     margin-left: 0px;
   }
+  /* @media only screen and (max-width: 860px) {
+    .risk-prediction {
+      padding:100px;
+    }
+    .form{
+      width:400px;
+    }
+  } */
+
   /* ############################################################################################################## */
   /* arrow-icon */
   i {
@@ -1303,6 +1320,7 @@ input {
 
 .switch-toggle input[type="checkbox"] {
     position: absolute;
+    width: 100px;
     opacity: 0;
     z-index: -2;
 }
@@ -1352,6 +1370,7 @@ input {
 
 .switch-toggle1 input[type="checkbox"] {
   position: absolute;
+  width: 100px;
   opacity: 0;
   z-index: -2;
 }

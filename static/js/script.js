@@ -62,3 +62,27 @@ function handleSmallScreens() {
 }
 
 handleSmallScreens()
+var modal_risk = document.getElementById("risk-myModal");
+
+// Get the button that opens the modal
+var btn_risk = document.getElementById("risk-myBtn");
+
+// Get the <span> element that closes the modal
+var span_risk = document.getElementsByClassName("close-risk")[0];
+
+// When the user clicks the button, open the modal 
+btn_risk.onclick = function() {
+  modal_risk.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span_risk.onclick = function() {
+  modal_risk.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal_risk) {
+    modal_risk.style.display = "none";
+  }
+}
