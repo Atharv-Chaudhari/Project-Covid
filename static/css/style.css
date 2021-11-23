@@ -111,7 +111,7 @@ a {
   .navbar-header {
       margin-left: -13%;
   }
-  
+
   .navbar-menu {
       margin-top: -13%;
       margin-right:0.5%;
@@ -120,6 +120,15 @@ a {
 @media (max-width: 650px) {
   .navbar-header {
       margin-left: 1%;
+  }
+}
+@media (max-width: 400px) {
+  .navbar-header {
+      width:100% !important;
+  }
+
+  .navbar-menu {
+    width:100% !important;
   }
 }
 .navbar .navbar-header {
