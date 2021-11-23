@@ -204,7 +204,7 @@ a {
 
 @media (max-width: 768px) {
     .navbar .navbar-menu .navbar-nav {
-        width: 100%;
+        width: 150%;
         display: block;
         border-top: 1px solid #eee;
         margin-top: 1rem;
