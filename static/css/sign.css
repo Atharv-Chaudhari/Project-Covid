@@ -71,7 +71,7 @@ a {
 	border-color: black;
 }
 
-form {
+.sign-form {
 	background-color: #ffffff;
 	display: flex;
 	align-items: center;
@@ -82,7 +82,7 @@ form {
 	text-align: center;
 }
 
-input {
+.sign-input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;

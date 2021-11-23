@@ -85,21 +85,35 @@ a {
         max-width: 1140px;
     }
 }
-
+@media (max-width: 1200px) {
+  .navbar .navbar-menu .navbar-nav>li>a{
+    padding: 0.5rem 0.7rem !important;
+  }
+  .navbar .navbar-menu .navbar-nav{
+    margin-right: -4%;
+  }
+}
 @media (max-width: 992px) {
+  .navbar .navbar-menu .navbar-nav>li>a{
+    padding: 0.5rem 0.4rem !important;
+  }
     .navbar-header {
-        margin-left: -3%;
+        margin-left: -14%;
     }
-    .navbar-menu {
-        margin-right: -10%;
+    .navbar .navbar-menu .navbar-nav{
+      margin-right: -10%;
     }
 }
 @media (max-width: 884px) {
+  .navbar .navbar-menu .navbar-nav>li>a{
+    padding: 0.5rem 0.3rem !important;
+  }
   .navbar-header {
       margin-left: -13%;
   }
   .navbar-menu {
-      margin-right: -10%;
+      margin-top: -13%;
+      margin-right:0.5%;
   }
 }
 @media (max-width: 650px) {
@@ -315,6 +329,9 @@ a {
 .menu-container:hover .collapse-icon {
   opacity: 0;
   display: none;
+}
+.dropdown li :hover{
+  color: blue;
 }
 .menu-container:hover .menu-item {
   opacity: 1;
@@ -889,12 +906,12 @@ ul.breadcrumb li a:hover {
   padding:0;
   height: 100px;
   padding-left:50%;
-  padding-top: 2%;
+  padding-top: 45px;
 }
 @media (max-width:900px) {
   .social-foot{
     padding-left:50%;
-    padding-top: 4%;
+    padding-top: 45px;
   }
 }
 .social-foot ul {
@@ -944,7 +961,7 @@ ul.breadcrumb li a:hover {
 @media (max-width:500px)
 {
   .social-foot{
-    padding-top: 30px;
+    padding-top: 45px;
   }
 }
 .social-foot ul li:nth-child(1) a:hover .fab {
@@ -969,4 +986,7 @@ ul.breadcrumb li a:hover {
 /* ########################################################################################################### */
 i {
   color: blue;
+}
+.required{
+  color: red;
 }

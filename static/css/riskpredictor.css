@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 * {
     box-sizing: border-box;
     padding: 0;
@@ -44,7 +44,7 @@ a {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     background-color: #fff;
     padding: 1rem 1.15rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     /*
   |-----------------------------------
   | Start navbar logo or brand etc..
@@ -55,9 +55,9 @@ a {
   | Start navbar menu
   |-----------------------------------
   */
-}
+/* } */
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
     .navbar .container {
         max-width: 540px;
     }
@@ -263,7 +263,7 @@ a {
     .navbar .navbar-header h4 {
         font-size: 1.05rem;
     }
-}
+} */
 
 
 /* ---------------------------------------------------------------------------------------------------------- */
@@ -273,7 +273,7 @@ a {
 
 
 /* my css */
-.mini-info {
+/* .mini-info {
   background-color: #00FFFF	;
   color: black;
   height: 40px;
@@ -292,9 +292,9 @@ margin-bottom: auto;
 }
 .logo-text {
     font-size: 10px;
-}
+} */
 /* Social */
-.menu-container {
+/* .menu-container {
   background: black;
   position: fixed;
   left: -30px;
@@ -399,24 +399,24 @@ margin-bottom: auto;
   .fa-instagram {
     background: #bb0000;
     color: white;
-  }
+  } */
 /* ========================================================================================================= */
-  .modal1 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+  /* .modal1 { */
+    /* display: none; Hidden by default */
+    /* position: fixed; Stay in place */
+    /* z-index: 1; Sit on top */
+    /* padding-top: 100px; Location of the box */
+    /* left: 0; */
+    /* top: 0; */
+    /* width: 100%; Full width */
+    /* height: 100%; Full height */
+    /* overflow: auto; Enable scroll if needed */
+    /* background-color: rgb(0,0,0); Fallback color */
+    /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+  /* } */
   
   /* Modal Content */
-  .modal-content1 {
+  /* .modal-content1 {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -429,9 +429,9 @@ margin-bottom: auto;
     animation-name: animatetop;
     animation-duration: 0.4s
   }
-  
+   */
   /* The Close Button */
-  .close1 {
+  /* .close1 {
     color: white;
     float: right;
     font-size: 28px;
@@ -456,9 +456,9 @@ margin-bottom: auto;
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
-  }
+  } */
   /* Add Animation */
-@-webkit-keyframes animatetop {
+/* @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
   }
@@ -466,9 +466,9 @@ margin-bottom: auto;
   @keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
-  }
+  } */
 /* ************************************************************************************************************ */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 html {
   box-sizing: border-box;
 }
@@ -477,7 +477,7 @@ html {
 *:before,
 *:after {
   box-sizing: border-box;
-}
+} */
 
 /* body {
   -webkit-font-smoothing: antialiased;
@@ -499,26 +499,26 @@ html {
   }
 } */
 
-.button-modal {
+/* .button-modal {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
+} */
 
 
-.details-modal {
+/* .details-modal { */
   /* margin-top: 25%;
   margin-left: 50%; */
   /* margin-right: auto;
   margin-bottom: auto; */
-  background: #ffffff;
+  /* background: #ffffff;
   border-radius: 0.5em;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  left: 50%;
-  z-index: 1;
+  left: 50%; */
+  /* z-index: 1; */
   /* max-width: 90%;  */
-  pointer-events: none;
-  position: absolute;
+  /* pointer-events: none; */
+  /* position: absolute;
   top: 350%;
   transform: translate(-50%, -50%);
   width: 50%;
@@ -623,9 +623,9 @@ code {
   margin-left: 0.25em;
   opacity: 0.5;
   position: relative;
-}
+} */
 /* ************************************************** cols ******************************************** */
-.col-1{
+/* .col-1{
   width:50%;
 }
 .col-2{
@@ -659,12 +659,12 @@ ul.breadcrumb {
     color: #01447e;
     text-decoration: none;
   
-  }
+  } */
   /* ************************************************************************************************************* */
   /* footer */
   /* Footer */
   
-  .footer{
+  /* .footer{
     background:#000;
     padding:30px 0px;
     font-family: sans-serif;
@@ -774,9 +774,9 @@ ul.breadcrumb {
   }
   .contact-icons {
       text-align: center;
-  }
+  } */
   /* ?????????????????????????????????????????????????????????????????????????????????????????????????????? */
-  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+  /* @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800"); */
 
 /* * {
 	box-sizing: border-box;
@@ -792,7 +792,7 @@ body {
 	margin: -20px 0 50px;
 } */
 
-h1 {
+/* h1 {
 	font-weight: bold;
 	margin: 0;
 }
@@ -842,10 +842,10 @@ a {
 }
 .modal-button:hover{
 	background-color: lime;
-}
-.modal-button.ghost {
+} */
+/* .modal-button.ghost { */
 	/* background-color: transparent; */
-	border-color: black;
+	/* border-color: black;
 }
 
 .sign-form {
@@ -859,13 +859,6 @@ a {
 	text-align: center;
 }
 
-input {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
-}
 
 .modal-container {
 	background-color: #fff;
@@ -926,9 +919,9 @@ input {
 		opacity: 1;
 		z-index: 5;
 	}
-}
+} */
 
-.overlay-container {
+/* .overlay-container {
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -936,18 +929,18 @@ input {
 	height: 100%;
 	overflow: hidden;
 	transition: transform 0.6s ease-in-out;
-	z-index: 100;
+	z-index: 100; */
 	/* background-image: url("https://i.pinimg.com/564x/49/21/78/492178a305922cd7704b4d230dea43a3.jpg"); */
-}
+/* } */
 
-.modal-container.right-panel-active .overlay-container {
+/* .modal-container.right-panel-active .overlay-container {
 	transform: translateX(-100%);
-}
+} */
  /*white needed to be changed to black for previous modal*/
-.overlay {
-	background: white;
-	background: -webkit-linear-gradient(to right, white, white); /*second shade was grey*/
-	background: linear-gradient(to right, white, white);
+/* .overlay { */
+	/* background: white; */
+	/* background: -webkit-linear-gradient(to right, white, white); second shade was grey */
+	/* background: linear-gradient(to right, white, white);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -1009,20 +1002,20 @@ input {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
-}
+} */
 
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+/* .modal { */
+    /* display: none; Hidden by default */
+    /* position: fixed; Stay in place */
+    /* z-index: 1; Sit on top */
+    /* left: 0; */
+    /* top: 0; */
+    /* width: 100%; Full width */
+    /* height: 100%; Full height */
+    /* overflow: auto; Enable scroll if needed */
+    /* background-color: rgb(0,0,0); Fallback color */
+    /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+  /* } */
   
   /* Modal Content */
   /* .modal-content {
@@ -1033,7 +1026,7 @@ input {
     width: 80%;
   } */
   
-  .btn-close {
+  /* .btn-close {
     float: right;
     border: 0;
     padding: 0;
@@ -1123,25 +1116,25 @@ input {
 .link:hover{
 	font-weight: 500;
     color: black;
-}
+} */
   /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
   /* *********************************************************************************************************** */
   /* -----------------------------------------Code For Risk Predictor Starts From Here --------------------------*/
 
   .risk-prediction{
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
     letter-spacing: -0.2px;
     font-size: 16px;
     color: #babecc;
     padding-top:100px;
-    padding-bottom:100px;
+    padding-bottom:25px;
     padding-right: auto;
     padding-left: auto;
     text-shadow: 1px 1px 1px #fff;
     height:100%;
     width:100%;
   }
-  form {
+  .risk-modal-form {
     padding: 16px;
     text-align: center;
     width: 50%;
@@ -1157,14 +1150,63 @@ input {
                 inset 10px 10px 10px rgba(175, 172, 172, 0.3);
     justify-content: center;
   }
-  
+  @media (max-width: 2000px) {
+    .risk-modal-form{
+      width:50% !important;
+    }
+  }
+  @media (max-width: 1095px) {
+    .risk-modal-form{
+      width:55% !important;
+    }
+  }
+  @media (max-width: 993px) {
+    .risk-modal-form{
+      width:65% !important;
+    }
+  }
+  @media (max-width: 840px) {
+    .risk-modal-form{
+      width:75% !important;
+    }
+  }
+  @media (max-width: 728px) {
+    .risk-modal-form{
+      width:85% !important;
+    }
+  }
+  @media (max-width: 642px) {
+    .risk-modal-form{
+      width:95% !important;
+    }
+  }
+  @media (max-width: 576px) {
+    .risk-modal-form{
+      width:100% !important;
+    }
+    .risk-modal-form input[type="text"] {
+      text-align: left;
+      width: 100% !important;
+  }
+  .switches{
+    width:70% !important;
+  }
+  }
+  @media (max-width: 476px) {
+    .risk-modal-form{
+      width:100% !important;
+    }
+  .switches{
+    width:80% !important;
+  }
+  }
   .segment {
     padding: 32px 0;
     text-align: center;
   }
   
   .button-submit,
-  input {
+  .risk-modal-form input {
     border: 0;
     text-align: center;
     outline: 0;
@@ -1182,7 +1224,7 @@ input {
     text-align: left;
   }
   
-  input {
+  .risk-modal-form input {
     margin-right: 8px;
     box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
     box-sizing: border-box;
@@ -1190,11 +1232,11 @@ input {
     appearance: none;
     -webkit-appearance: none;
   }
-  input[type="text"]{
+  .risk-modal-form input[type="text"]{
     text-align: left;
-    width:60%;
+    width:60%; 
   }
-  input:focus {
+  .risk-modal-form input:focus {
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   }
   
@@ -1295,7 +1337,7 @@ input {
 }
 
 .switch-holder {
-  text-align: left;
+  /* text-align: left; */
     display: flex;
     color:black;
     padding: 10px 20px;
@@ -1318,14 +1360,14 @@ input {
     height: 40px;
 }
 
-.switch-toggle input[type="checkbox"] {
+.risk-modal-form .switch-toggle input[type="checkbox"] {
     position: absolute;
     width: 100px;
     opacity: 0;
     z-index: -2;
 }
 
-.switch-toggle input[type="checkbox"] + label {
+.risk-modal-form .switch-toggle input[type="checkbox"] + label {
     position: relative;
     display: inline-block;
     width: 100px;
@@ -1338,7 +1380,7 @@ input {
     
 }
 
-.switch-toggle input[type="checkbox"] + label::before {
+.risk-modal-form .switch-toggle input[type="checkbox"] + label::before {
     position: absolute;
     content: 'No';
     font-size: 13px;
@@ -1356,7 +1398,7 @@ input {
     transition: .3s ease-in-out;
 }
 
-.switch-toggle input[type="checkbox"]:checked + label::before {
+.risk-modal-form .switch-toggle input[type="checkbox"]:checked + label::before {
     left: 50%;
     content: 'Yes';
     color: #fff;
@@ -1368,14 +1410,14 @@ input {
   height: 40px;
 }
 
-.switch-toggle1 input[type="checkbox"] {
+.risk-modal-form .switch-toggle1 input[type="checkbox"] {
   position: absolute;
   width: 100px;
   opacity: 0;
   z-index: -2;
 }
 
-.switch-toggle1 input[type="checkbox"] + label {
+.risk-modal-form .switch-toggle1 input[type="checkbox"] + label {
   position: relative;
   display: inline-block;
   width: 160px;
@@ -1388,7 +1430,7 @@ input {
   
 }
 
-.switch-toggle1 input[type="checkbox"] + label::before {
+.risk-modal-form .switch-toggle1 input[type="checkbox"] + label::before {
   position: absolute;
   content: 'Female';
   font-size: 15px;
@@ -1406,7 +1448,7 @@ input {
   transition: .3s ease-in-out;
 }
 
-.switch-toggle1 input[type="checkbox"]:checked + label::before {
+.risk-modal-form .switch-toggle1 input[type="checkbox"]:checked + label::before {
   left: 50%;
   content: 'Male';
   color: #fff;

@@ -52,16 +52,18 @@ input[type="checkbox"] + label:before,
 select option,
 select {
   width: 100%;
-  padding: 1em;
   line-height: 0.4;
   background-color: #f9f9f9;
-  border: 1px solid #e5e5e5;
   border-radius: 3px;
   -webkit-transition: 0.35s ease-in-out;
   -moz-transition: 0.35s ease-in-out;
   -o-transition: 0.35s ease-in-out;
   transition: 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+}
+.lost{
+  padding: 1em;
+  border: 1px solid #e5e5e5;
 }
 input:focus {
   outline: 0;
@@ -198,14 +200,15 @@ select option {
 }
 .submits {
   width: 50%;
-  margin-left: auto;
+  margin-left: 25%;
 }
 
 .others {
-  margin-top: -11%;
+  margin-top: -5%;
   padding-left: 50%;
   width: 90%;
 }
+
 @media (max-width: 600px) {
   .others {
     margin-top: 0%;
@@ -213,4 +216,7 @@ select option {
     padding-left: 0%;
     width: 100%;
   }
+}
+.risk-modal h4{
+  color:#7ed321;
 }

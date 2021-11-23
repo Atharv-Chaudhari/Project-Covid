@@ -62,8 +62,9 @@ function handleSmallScreens() {
 }
 
 handleSmallScreens()
-var modal_risk = document.getElementById("risk-myModal");
 
+var modal_risk = document.getElementById("risk-myModal");
+var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn_risk = document.getElementById("risk-myBtn");
 
@@ -85,4 +86,7 @@ window.onclick = function(event) {
   if (event.target == modal_risk) {
     modal_risk.style.display = "none";
   }
+  if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }

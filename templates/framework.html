@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="300">
+    <!-- <meta http-equiv="refresh" content="300"> -->
     <title>Covid</title>
     <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/sign.css" />
+    <link rel="stylesheet" href="static/css/general.css" />
+    <link rel="stylesheet" href="static/css/risky_modal.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="static/css/style.scss" /> -->
@@ -17,7 +19,8 @@
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <!-- <body onload="present()"> -->
@@ -94,8 +97,9 @@
                 <ul class="navbar-nav">
                     <li class="active"><a href="/"><i class="fa fa-home"></i> Home</a></li>
                     <li class="navbar-dropdown">
-                        <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i class="fa fa-bar-chart"></i>
-                             Analysis <i class="fa fa-angle-down"></i>
+                        <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
+                                class="fa fa-bar-chart"></i>
+                            Analysis <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown" id="my-dropdown-id">
                             <li><a href="#">Something else here</a></li>
@@ -110,7 +114,11 @@
                             Predictors <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown" id="blog">
-                            <li><a href="riskpredictor" target="_blank">Risk Predictor</a></li>
+                            <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
+                            <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
+                                    id="risk-myBtn">Risk Predictor</span><a href="riskpredictor" target="_blank"
+                                    style="display: inline-block;margin:5px 0;"><i
+                                        class="fas fa-external-link-alt"></i></a></li>
                             <li class="separator"></li>
                             <li><a href="#">Seprated link</a></li>
                             <li class="separator"></li>
@@ -119,8 +127,9 @@
                     </li>
                     <li><a href="#"><i class="fa fa-pencil-square-o"></i> Research</a></li>
                     <li><a href="#"><i class="fa fa-info-circle"></i> About</a></li>
-                    <li><a href="#"><i style="font-size:13px;"class="material-icons">&#xe163;</i> Contact</a></li>
-                    <!-- <li><a href="#" id="myBtn">Sign In / Sign Up</a></li> -->
+                    <li><a href="#"><i style="font-size:13px;" class="material-icons">&#xe163;</i> Contact</a></li>
+                    <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
+                    <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
                 </ul>
             </div>
         </div>
@@ -140,7 +149,7 @@
             <br><br><br><br><br>
             <div class="modal-container" id="modal-container">
                 <div id="sign-up" class="form-container sign-up-container">
-                    <form action="#"
+                    <form class="sign-form" action="#"
                         style="background-image: url('static/images/blueback.jpg');background-size: cover;">
                         <h1>Create Account</h1>
                         <br>
@@ -160,7 +169,7 @@
                     </form>
                 </div>
                 <div id="sign-in" class="form-container sign-in-container">
-                    <form action="#"
+                    <form class="sign-form" action="#"
                         style="background-image: url('static/images/blueback.jpg');background-size: cover;">
                         <br>
                         <h1>Sign in</h1>
@@ -203,12 +212,42 @@
         </div>
     </div>
     <div class="mini-info ">
-        <marquee><strong><img src="static/images/hello.gif " width="30px " height="30px "> Team
+        <marquee><strong><img src="static/images/hello.gif " width="30px" height="30px"> Team
                 Infy SOARS presents Covid-19 Details and Research</strong></marquee>
     </div>
+    <!-- <div class="menu-container" style="margin-left:100%;">
+        <div class="collapse-icon">
+            <span class="fa fa-chevron-left"></span>
+        </div>
+        <div class="menu-item">
+            <span class="fa fa-instagram social-ico"></span>
+            <div class="menu-item-text">Instagram</div>
+        </div>
+        <div class="menu-item">
+            <span class="fa fa-twitter social-ico"></span>
+            <div class="menu-item-text">Twitter</div>
+        </div>
+        <div class="menu-item">
+            <span style="padding:5px;" class="fa fa-facebook social-ico"></span>
+            <div class="menu-item-text">Facebook</div>
+        </div>
+        <div class="menu-item">
+            <span class="fa fa-linkedin social-ico"></span>
+            <div class="menu-item-text">Linked In</div>
+        </div>
+    </div> -->
 
 
 
+    <div class="social-foot" style="height:100px;">
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
     <footer>
         <div class="footer">
             <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
@@ -221,8 +260,8 @@
                 <ul>
                     <li><a href="#">Siddharth Kulkarni</a></li>
                     <li><a href="#">Atharv Chaudhari</a></li>
-                    <li><a href="#">Omkar Patil</a></li>
                     <li><a href="#">Rutuja Vaidya</a></li>
+                    <li><a href="#">Omkar Patil</a></li>
                     <li><a href="#"><br>Sana Shaikh</a></li>
                 </ul>
             </div>
@@ -232,8 +271,118 @@
             <p style="color:white;">🧿 Designed By 😎 Team Infy SOARS 🧿</p>
         </div>
     </footer>
+    <!-- ##################################################################################################### -->
+    <!-- Risk Predictor Modal -->
+    <div id="risk-myModal" class="modal-risk">
+        <div class="modal-risk-content">
+            <span class="close-risk">&times;</span>
+            <form method="post">
+                <div class="row">
+                    </br>
+                    <img style="height:100%;width:100%;" src="static/images/old_logo.png">
+                    </br>
+                    <h3>Enter Your Details </h3>
+                    <h4>Email <span class="required">*</span></h4>
+                    <div class="input-group input-group-icon">
+                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email"
+                            placeholder="Email Address" required />
+                        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                    </div>
+                </div>
+                </br>
+                <h3 style="color:#7ed321;">Gender<span class="required"> *</span></h3>
+                <div class="input-group others">
+                    <input type="radio" name="Gender" value="1" id="Gender-male" required />
+                    <label for="Gender-male">Male</label>
+                    <input type="radio" name="Gender" value="0" id="Gender-female" required />
+                    <label for="Gender-female">Female</label>
+                </div>
+                </br>
+                <h3 style="color:#7ed321;">Age 60 or Above<span class="required"> *</span></h3>
+                <div class="input-group others">
+                    <input type="radio" name="age" value="1" id="age-yes" />
+                    <label for="age-yes">Yes</label>
+                    <input type="radio" name="age" value="0" id="age-no" checked="true" />
+                    <label for="age-no">No</label>
+                </div>
+                </br>
+                <h3 style="color:#399cbd;">Symptoms </h3>
+                <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
+                <div class="input-group others">
+                    <input type="radio" name="Cough" value="1" id="Cough-yes" />
+                    <label for="Cough-yes">Yes</label>
+                    <input type="radio" name="Cough" value="0" id="Cough-no" checked="true" />
+                    <label for="Cough-no">No</label>
+                </div>
+                <h3 style="color:black;">2) Fever <span class="required">*</span></h3>
+                <div class="input-group others">
+                    <input type="radio" name="Fever" value="1" id="Fever-yes" />
+                    <label for="Fever-yes">Yes</label>
+                    <input type="radio" name="Fever" value="0" id="Fever-no" checked="true" />
+                    <label for="Fever-no">No</label>
+                </div>
+                <h3 style="color:black;">3) Sore Throat <span class="required">*</span></h3>
+                <div class="input-group others">
+                    <input type="radio" name="Sore_Throat" value="1" id="Sore_Throat-yes" />
+                    <label for="Sore_Throat-yes">Yes</label>
+                    <input type="radio" name="Sore_Throat" value="0" id="Sore_Throat-no" checked="true" />
+                    <label for="Sore_Throat-no">No</label>
+                </div>
+                <h3 style="color:black;">4) Shortness of Breath <span class="required">*</span></h3>
+                <div class="input-group others">
+                    <input type="radio" name="Shortness_of_Breath" value="1" id="Shortness_of_Breath-yes" />
+                    <label for="Shortness_of_Breath-yes">Yes</label>
+                    <input type="radio" name="Shortness_of_Breath" value="0" id="Shortness_of_Breath-no"
+                        checked="true" />
+                    <label for="Shortness_of_Breath-no">No</label>
+                </div>
+                <h3 style="color:black;">5) Headache <span class="required">*</span></h3>
+                <div class="input-group others">
+                    <input type="radio" name="Headache" value="1" id="Headache-yes" />
+                    <label for="Headache-yes">Yes</label>
+                    <input type="radio" name="Headache" value="0" id="Headache-no" checked="true" />
+                    <label for="Headache-no">No</label>
+                </div>
+                </br>
+                <h3 style="color:#7ed321;">Abroad<span class="required"> *</span></h3>
+                <div class="input-group others">
+                    <input type="radio" name="Abroad" value="1" id="Abroad-yes" />
+                    <label for="Abroad-yes">Yes</label>
+                    <input type="radio" name="Abroad" value="0" id="Abroad-no" checked="true" />
+                    <label for="Abroad-no">No</label>
+                </div>
+                </br>
+                <h4>Contact With Covid-19 Object <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input type="radio" name="contact_Object" value="1" id="contact_Object-Yes" />
+                        <label for="contact_Object-Yes">Yes</label>
+                        <input type="radio" name="contact_Object" value="0" id="contact_Object-no" checked="true" />
+                        <label for="contact_Object-no">No</label>
+                    </div>
+                    </br>
+                    <h4>Contact With Covid-19 Patient <span class="required">*</span></h3>
+                        <div class="input-group others">
+                            <input type="radio" name="contact_Patient" value="1" id="contact_Patient-Yes" />
+                            <label for="contact_Patient-Yes">Yes</label>
+                            <input type="radio" name="contact_Patient" value="0" id="contact_Patient-no"
+                                checked="true" />
+                            <label for="contact_Patient-no">No</label>
+                        </div>
+                        </br>
+                        <div class="submits">
+                            <input type="submit" value="Submit" style="background-color: #7ed321; color: white;">
+                        </div>
+                        </br>
+        </div>
+        </form>
+    </div>
+    </div>
+    <!-- ##################################################################################################### -->
     <script type="text/javascript" src="static/js/script.js "></script>
     <script type="text/javascript" src="static/js/sign.js "></script>
+    <!-- <script type="text/javascript">
+        alert("Team Infy SOARS Presents \nProject Covid");
+        </script> -->
 </body>
 
 </html>
