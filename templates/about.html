@@ -9,10 +9,12 @@
     <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/sign.css" />
+    <link rel="stylesheet" href="static/css/about.css" />
     <link rel="stylesheet" href="static/css/general.css" />
     <link rel="stylesheet" href="static/css/loading.css" />
     <link rel="stylesheet" href="static/css/risky_modal.css" />
-    <link rel="stylesheet" href="static/css/riskpredictor.css" />
+    <!-- <link rel="stylesheet" href="static/css/riskpredictor.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="static/css/style.scss" /> -->
@@ -26,6 +28,7 @@
 </head>
 
 <!-- <body onload="present()"> -->
+
 
 <body>
     <div id="loader" style="display: none;">
@@ -69,8 +72,8 @@
         <div class="spinner"></div>
         <div class="spinner"></div>
     </div>
-
     <div style="display:block;" id="myDivload" class="animate-bottom">
+
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-header">
@@ -138,58 +141,58 @@
                     <li><a href="# ">Sign In</a></li>
                 </ul>
             </div> -->
-            <div class="navbar-menu" id="open-navbar1">
-                <ul class="navbar-nav">
-                    <li class="active"><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                    <li class="navbar-dropdown">
-                        <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
-                                class="fa fa-bar-chart"></i>
-                            Analysis <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown" id="my-dropdown-id">
-                            <li><a href="#" onclick="myFunction()">Something else here</a></li>
-                            <li class="separator"></li>
-                            <li><a href="#" onclick="myFunction()">Seprated link</a></li>
-                            <li class="separator"></li>
-                            <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
-                        </ul>
-                    </li>
-                    <li class="navbar-dropdown">
-                        <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
-                            Predictors <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown" id="blog">
-                            <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
-                            <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
-                                    id="risk-myBtn">Risk Predictor</span><a href="riskpredictor" target="_blank"
-                                    style="display: inline-block;margin:5px 0;"><i
-                                        class="fas fa-external-link-alt"></i></a></li>
-                            <li class="separator"></li>
-                            <li><a href="#" onclick="myFunction()">Seprated link</a></li>
-                            <li class="separator"></li>
-                            <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li>
-                    <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
-                    <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;" class="material-icons">&#xe163;</i> Contact</a></li>
-                    <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
-                    <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
-                </ul>
+                <div class="navbar-menu" id="open-navbar1">
+                    <ul class="navbar-nav">
+                        <li class="active"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                        <li class="navbar-dropdown">
+                            <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
+                                    class="fa fa-bar-chart"></i>
+                                Analysis <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown" id="my-dropdown-id">
+                                <li><a href="#" onclick="myFunction()">Something else here</a></li>
+                                <li class="separator"></li>
+                                <li><a href="#" onclick="myFunction()">Seprated link</a></li>
+                                <li class="separator"></li>
+                                <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar-dropdown">
+                            <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
+                                Predictors <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown" id="blog">
+                                <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
+                                <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
+                                        id="risk-myBtn">Risk Predictor</span><a href="riskpredictor" target="_blank"
+                                        style="display: inline-block;margin:5px 0;"><i
+                                            class="fas fa-external-link-alt"></i></a></li>
+                                <li class="separator"></li>
+                                <li><a href="#" onclick="myFunction()">Seprated link</a></li>
+                                <li class="separator"></li>
+                                <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li>
+                        <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
+                        <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
+                                    class="material-icons">&#xe163;</i> Contact</a></li>
+                        <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
+                        <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
         <br>
         <ul class="breadcrumb">
             <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="riskpredictor" style="color: black;"><i class="fa fa-flask"></i> Predictors <i
-                        class="fas fa-long-arrow-alt-right arrow1" aria-hidden="False"></i> &#160&#160&#160Risk
-                    Predictor</a></li>
+            <li><a href="about" style="color: black;"><i class="fa fa-info-circle"></i> About</a></li>
         </ul>
         <div class="alert-up" style="text-align: center;">
             <span class="closebtn-up" onclick="this.parentElement.style.display='none';">&times;</span>
-            Click on The Icon &#160<strong><i class="fas fa-external-link-alt"></i></strong> &#160To Get UI in New Window.
-          </div>
+            Click on The Icon &#160<strong><i class="fas fa-external-link-alt"></i></strong> &#160To Get UI in New
+            Window.
+        </div>
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <a>
@@ -288,151 +291,389 @@
             <div class="menu-item-text">Linked In</div>
         </div>
     </div> -->
-        <div class="risk-prediction">
-            <form class="risk-modal-form">
-                <div class="segment">
-                    <h1 style="color:blue;"> Welcome To Covid-19 Risk Predictor </h1>
-                </div>
-                <span style="font-size:20px;color: red;">✨ Enter Your Details ✨</span>
-                <img style="height:70%;width:70%;" src="static/images/old_logo.png">
-                <div class="input-group">
-                    <label>
-                        <span class="input-label">&#160&#160&#160&#160<i class="material-icons">person</i> Enter Full
-                            Name
-                            &#160&#160&#160&#160</span>
-                        <input type="text" placeholder="Full Name"/>
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label>
-                        <span class="input-label">&#160&#160&#160&#160&#160&#160<i class="fa fa-envelope"></i> Email
-                            Address
-                            <span style="color: red;font-size: 25px;">*</span></span>&#160&#160&#160&#160&#160
-                        <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email Address"
-                            required />
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label>
-                        <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
-                                class="fa fa-globe"></i>
-                            Enter Country
-                            &#160&#160&#160&#160&#160&#160&#160&#160</span>
-                        <input type="text" placeholder="Country" />
-                    </label>
-                </div>
-                <br>
-                <div class="input-group">
-                    <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
-                            class="fas fa-hiking"></i> Age 60 or Above <span
-                            style="color: red;font-size: 25px;">*</span>
-                        &#160&#160&#160&#160&#160</span>
-                    <div class="switch-toggle" style="margin-right: auto;margin-left: auto;">
-                        <input type="checkbox" id="age">
-                        <label for="age"></label>
+
+
+
+        <div class="about-each">
+            <div class="grid-container">
+                <div class="item1">
+
+                    <div class="profile-card">
+
+                        <div class="img-area">
+
+                            <div class="inner-area">
+
+                                <img src="https://4.bp.blogspot.com/-mNmJb1IPofs/X55dHjjl9fI/AAAAAAAABmw/yreuJ8F1BAkQVkYcsHKC0wlM_z3P-TpZwCK4BGAYYCw/s113/FB_IMG_1604213976970.jpg"
+                                    alt="" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="name">Infokudia</div>
+
+                        <div class="about">infokudia.blogspot.com</div>
+
+                        <div class="social-icons">
+
+                            <a href="#" class="fb" style="font-size: 20px;"><i class="fab fa-github"></i></a>
+
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+
+                            <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+
+                            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+
+                        </div>
+
+                        <div class="buttons">
+
+                            <button>Message</button>
+
+                            <button>Subscribe</button>
+
+                        </div>
+
+                        <div class="social-share">
+
+                            <div class="row">
+
+                                <i class="far fa-heart"></i>
+
+                                <i class="icon-2 fas fa-heart"></i>
+
+                                <span>20.4k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="far fa-comment"></i>
+
+                                <i class="icon-2 fas fa-comment"></i>
+
+                                <span>14.3k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="fas fa-share"></i>
+
+                                <span>12.8k</span>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
-                <br><br>
-                <div class="input-group">
-                    <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
-                            class="fas fa-street-view"></i> Enter
-                        Gender <span style="color: red;font-size: 25px;">*</span>
-                        &#160&#160&#160&#160&#160&#160&#160&#160</span>
-                    <div class="switch-toggle1" style="margin-right: auto;margin-left: auto;">
-                        <input type="checkbox" id="gender">
-                        <label for="gender"></label>
+                <div class="item3">
+                    <div class="profile-card">
+
+                        <div class="img-area">
+
+                            <div class="inner-area">
+
+                                <img src="https://4.bp.blogspot.com/-mNmJb1IPofs/X55dHjjl9fI/AAAAAAAABmw/yreuJ8F1BAkQVkYcsHKC0wlM_z3P-TpZwCK4BGAYYCw/s113/FB_IMG_1604213976970.jpg"
+                                    alt="" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="name">Infokudia</div>
+
+                        <div class="about">infokudia.blogspot.com</div>
+
+                        <div class="social-icons">
+
+                            <a href="#" class="fb"style="font-size: 20px;"><i class="fab fa-github"></i></a>
+
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+
+                            <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+
+                            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+
+                        </div>
+
+                        <div class="buttons">
+
+                            <button>Message</button>
+
+                            <button>Subscribe</button>
+
+                        </div>
+
+                        <div class="social-share">
+
+                            <div class="row">
+
+                                <i class="far fa-heart"></i>
+
+                                <i class="icon-2 fas fa-heart"></i>
+
+                                <span>20.4k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="far fa-comment"></i>
+
+                                <i class="icon-2 fas fa-comment"></i>
+
+                                <span>14.3k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="fas fa-share"></i>
+
+                                <span>12.8k</span>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
-                <br><br>
-                <div class="input-group">
-                    <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
-                            class="fa fa-medkit"></i>
-                        Enter Symptoms <span style="color: red;font-size: 25px;">*</span></span>
-                </div>
-                <br>
-                <div class="switches">
-                    <div class="switch-holder">
-                        <div class="switch-label">
-                            <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Cough</span>
+                <div class="item4">
+                    <div class="profile-card">
+
+                        <div class="img-area">
+
+                            <div class="inner-area">
+
+                                <img src="https://4.bp.blogspot.com/-mNmJb1IPofs/X55dHjjl9fI/AAAAAAAABmw/yreuJ8F1BAkQVkYcsHKC0wlM_z3P-TpZwCK4BGAYYCw/s113/FB_IMG_1604213976970.jpg"
+                                    alt="" />
+
+                            </div>
+
                         </div>
-                        <div class="switch-toggle">
-                            <input type="checkbox" id="cough">
-                            <label for="cough"></label>
+
+                        <div class="name">Infokudia</div>
+
+                        <div class="about">infokudia.blogspot.com</div>
+
+                        <div class="social-icons">
+
+                            <a href="#" class="fb" style="font-size: 20px;"><i class="fab fa-github"></i></a>
+
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+
+                            <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+
+                            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+
                         </div>
-                    </div>
-                    <div class="switch-holder">
-                        <div class="switch-label">
-                            <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Fever</span>
+
+                        <div class="buttons">
+
+                            <button>Message</button>
+
+                            <button>Subscribe</button>
+
                         </div>
-                        <div class="switch-toggle">
-                            <input type="checkbox" id="fever">
-                            <label for="fever"></label>
+
+                        <div class="social-share">
+
+                            <div class="row">
+
+                                <i class="far fa-heart"></i>
+
+                                <i class="icon-2 fas fa-heart"></i>
+
+                                <span>20.4k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="far fa-comment"></i>
+
+                                <i class="icon-2 fas fa-comment"></i>
+
+                                <span>14.3k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="fas fa-share"></i>
+
+                                <span>12.8k</span>
+
+                            </div>
+
                         </div>
-                    </div>
-                    <div class="switch-holder">
-                        <div class="switch-label">
-                            <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Sore Throat</span>
-                        </div>
-                        <div class="switch-toggle">
-                            <input type="checkbox" id="sore-throat">
-                            <label for="sore-throat"></label>
-                        </div>
-                    </div>
-                    <div class="switch-holder">
-                        <div class="switch-label">
-                            <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Shortness of Breath</span>
-                        </div>
-                        <div class="switch-toggle">
-                            <input type="checkbox" id="shortness-of-breath">
-                            <label for="shortness-of-breath"></label>
-                        </div>
-                    </div>
-                    <div class="switch-holder">
-                        <div class="switch-label">
-                            <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Headache </span>
-                        </div>
-                        <div class="switch-toggle">
-                            <input type="checkbox" id="headache">
-                            <label for="headache"></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="input-group">
-                    <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
-                            class="fas fa-hiking"></i> Abroad <span style="color: red;font-size: 25px;">*</span>
-                        &#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160</span>
-                    <div class="switch-toggle" style="margin-right: auto;margin-left: auto;">
-                        <input type="checkbox" id="abroad">
-                        <label for="abroad"></label>
-                    </div>
-                </div>
-                <br><br>
-                <div class="input-group">
-                    <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
-                            class="fa fa-american-sign-language-interpreting"></i> Contact With Covid-19 Object <span
-                            style="color: red;font-size: 25px;">*</span></span> &#160&#160&#160
-                    <div class="switch-toggle" style="margin-left:10%;">
-                        <input type="checkbox" id="contact_obj">
-                        <label for="contact_obj"></label>
-                    </div>
-                </div>
-                <br><br>
-                <div class="input-group">
-                    <span class="input-label" style="margin-left: 0%;">&#160&#160&#160&#160&#160&#160<i
-                            class="fas fa-handshake"></i> Contact With Covid-19 Patient <span
-                            style="color: red;font-size: 25px;">*</span> &#160&#160
-                    </span>
-                    <div class="switch-toggle" style="margin-left:9%;">
-                        <input type="checkbox" id="contact_person">
-                        <label for="contact_person"></label>
+
                     </div>
                 </div>
-                <br>
-                <button class="red button-submit" type="submit"><i class="fa fa-check" style="color:lime;"></i> Submit
-                    Details</button>
-            </form>
+                <div class="item5">
+                    <div class="profile-card">
+
+                        <div class="img-area">
+
+                            <div class="inner-area">
+
+                                <img src="https://4.bp.blogspot.com/-mNmJb1IPofs/X55dHjjl9fI/AAAAAAAABmw/yreuJ8F1BAkQVkYcsHKC0wlM_z3P-TpZwCK4BGAYYCw/s113/FB_IMG_1604213976970.jpg"
+                                    alt="" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="name">Infokudia</div>
+
+                        <div class="about">infokudia.blogspot.com</div>
+
+                        <div class="social-icons">
+
+                            <a href="#" class="fb" style="font-size: 20px;"><i class="fab fa-github"></i></a>
+
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+
+                            <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+
+                            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+
+                        </div>
+
+                        <div class="buttons">
+
+                            <button>Message</button>
+
+                            <button>Subscribe</button>
+
+                        </div>
+
+                        <div class="social-share">
+
+                            <div class="row">
+
+                                <i class="far fa-heart"></i>
+
+                                <i class="icon-2 fas fa-heart"></i>
+
+                                <span>20.4k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="far fa-comment"></i>
+
+                                <i class="icon-2 fas fa-comment"></i>
+
+                                <span>14.3k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="fas fa-share"></i>
+
+                                <span>12.8k</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item6">
+                    <div class="profile-card">
+
+                        <div class="img-area">
+
+                            <div class="inner-area">
+
+                                <img src="https://4.bp.blogspot.com/-mNmJb1IPofs/X55dHjjl9fI/AAAAAAAABmw/yreuJ8F1BAkQVkYcsHKC0wlM_z3P-TpZwCK4BGAYYCw/s113/FB_IMG_1604213976970.jpg"
+                                    alt="" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="name">Infokudia</div>
+
+                        <div class="about">infokudia.blogspot.com</div>
+
+                        <div class="social-icons">
+
+                            <a href="#" class="fb" style="font-size: 20px;"><i class="fab fa-github"></i></a>
+
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+
+                            <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+
+                            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+
+                        </div>
+
+                        <div class="buttons">
+
+                            <button>Message</button>
+
+                            <button>Subscribe</button>
+
+                        </div>
+
+                        <div class="social-share">
+
+                            <div class="row">
+
+                                <i class="far fa-heart"></i>
+
+                                <i class="icon-2 fas fa-heart"></i>
+
+                                <span>20.4k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="far fa-comment"></i>
+
+                                <i class="icon-2 fas fa-comment"></i>
+
+                                <span>14.3k</span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <i class="fas fa-share"></i>
+
+                                <span>12.8k</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="social-foot" style="height:100px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="social-foot">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -448,7 +689,7 @@
                     <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS ⚡</span></span></bold>
                 </h4>
                 <!-- <sup
-        style="color:crimson;font-size: 10px;"><strong></strong></sup>  -->
+    style="color:crimson;font-size: 10px;"><strong></strong></sup>  -->
                 <div class="row">
                     <ul>
                         <li><a href="#">Siddharth Kulkarni</a></li>
@@ -594,23 +835,23 @@
         </div>
     </div>
     </div>
-            <!-- ##################################################################################################### -->
-            <script type="text/javascript" src="static/js/script.js "></script>
-            <script type="text/javascript" src="static/js/sign.js "></script>
-            <script type="text/javascript" src="static/js/general.js "></script>
-            <!-- <script type="text/javascript">
+    <!-- ##################################################################################################### -->
+    <script type="text/javascript" src="static/js/script.js "></script>
+    <script type="text/javascript" src="static/js/sign.js "></script>
+    <script type="text/javascript" src="static/js/general.js "></script>
+    <!-- <script type="text/javascript">
+    function get_alert(){
+    alert("Team Infy SOARS Presents \nProject Covid");
+    } -->
+    <!-- function get_alert() {
+        document.getElementById("getalert").innerHTML = "Click on The icon <iclass='fas fa-external-link-alt'></i> To Get Risk Predictor or new tab";
+      } -->
+    <!-- </script> -->
+    <!-- <script type="text/javascript">
         function get_alert(){
-        alert("Team Infy SOARS Presents \nProject Covid");
-        } -->
-            <!-- function get_alert() {
-            document.getElementById("getalert").innerHTML = "Click on The icon <iclass='fas fa-external-link-alt'></i> To Get Risk Predictor or new tab";
-          } -->
-            <!-- </script> -->
-            <!-- <script type="text/javascript">
-            function get_alert(){
-            alert("Please Click On Icon Of New Tab To Get Risk Predictor UI in new tab");
-            }
-        </script> -->
+        alert("Please Click On Icon Of New Tab To Get Risk Predictor UI in new tab");
+        }
+    </script> -->
 </body>
 
 </html>

@@ -9,7 +9,7 @@ html, body { margin: 0 !important; }
 body {
     font-family: "Roboto", sans-serif;
     font-size: 0.925rem;
-    background-color: #EBECF0;
+    background-color: #F8F8F8;
 }
 
 a {
@@ -404,31 +404,60 @@ a {
       opacity: 0.7;
   }
   
-  .fa-facebook {
+  .social-foot .fa-facebook {
     background: #3B5998;
     color: white;
   }
   
-  .fa-twitter {
+  .social-foot .fa-twitter {
     background: #55ACEE;
     color: white;
   }
   
-  .fa-google {
+  .social-foot .fa-google {
     background: #dd4b39;
     color: white;
   }
   
-  .fa-linkedin {
+  .social-foot .fa-linkedin {
     background: #007bb5;
     color: white;
   }
   
-  .fa-youtube {
+  .social-foot .fa-youtube {
     background: #bb0000;
     color: white;
   }
-  .fa-instagram {
+  .social-foot .fa-instagram {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .social-container .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .social-container .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .social-container .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .social-container .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .social-container .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .social-container .fa-instagram {
     background: #bb0000;
     color: white;
   }
@@ -6445,7 +6474,7 @@ i {
   color: white;
   font-weight: bold;
   float: right;
-  font-size: 22px;
+  font-size: 32px;
   line-height: 20px;
   cursor: pointer;
   transition: 0.3s;

@@ -11,14 +11,32 @@
 //     // document.getElementById("alerting").style.display="block";
 //     }
 
+// var myVar;
+
+// function myFunction() {
+//   myVar = setTimeout(showPage, 3000);
+// }
+
+// function showPage() {
+//   document.getElementById("loader").style.display = "none";
+//   document.getElementById("myDivload").style.display = "block";
+//   document.getElementById('mymarquee').start();
+// }
 var myVar;
 
 function myFunction() {
+  document.getElementById("myDivload").style.display = "none";
+  document.getElementById("loader").style.display = "flex";
+  document.getElementById("loader").style.justifyContent = "center";
+  document.getElementById("loader").style.alignItems = "center";
+  document.getElementById("loader").style.margin = "0";
+  document.getElementById("loader").style.minHeight = "100vh"; 
+  // window.location.replace("http://www.aptimize.com/");  
   myVar = setTimeout(showPage, 3000);
 }
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDivload").style.display = "block";
-  document.getElementById('mymarquee').start();
+  // document.getElementById('mymarquee').start();
 }

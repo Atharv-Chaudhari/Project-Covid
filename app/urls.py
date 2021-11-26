@@ -19,5 +19,9 @@ from app import views
 
 urlpatterns = [
     path("",views.index,name='app'),
-    path("riskpredictor",views.riskpredictor,name='riskpredictor')
+    path("riskpredictor",views.riskpredictor,name='riskpredictor'),
+    path("about",views.about,name='about'),
+    path("loading",views.loading,name='loading'),
+    path("results",views.results,name='results'),
+    path("contact",views.contact,name='contact')
 ]

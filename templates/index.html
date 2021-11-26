@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="static/css/sign.css" />
     <link rel="stylesheet" href="static/css/riskpredictor.css" />
     <link rel="stylesheet" href="static/css/general.css" />
+    <link rel="stylesheet" href="static/css/loading.css" />
     <link rel="stylesheet" href="static/css/risky_modal.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,6 +29,7 @@
 
 <body onload="therow()">
     <div style="display:none;" id="myDivload-home" class="animate-bottom">
+    <div style="display:block;" id="myDivload" class="animate-bottom">
     <nav class="navbar">
         <div class="container">
             <div class="navbar-header">
@@ -104,11 +106,11 @@
                             Analysis <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown" id="my-dropdown-id">
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#" onclick="myFunction()">Something else here</a></li>
                             <li class="separator"></li>
-                            <li><a href="#">Seprated link</a></li>
+                            <li><a href="#" onclick="myFunction()">Seprated link</a></li>
                             <li class="separator"></li>
-                            <li><a href="#">One more seprated link.</a></li>
+                            <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                         </ul>
                     </li>
                     <li class="navbar-dropdown">
@@ -122,14 +124,14 @@
                                     style="display: inline-block;margin:5px 0;"><i
                                         class="fas fa-external-link-alt"></i></a></li>
                             <li class="separator"></li>
-                            <li><a href="#">Seprated link</a></li>
+                            <li><a href="#" onclick="myFunction()">Seprated link</a></li>
                             <li class="separator"></li>
-                            <li><a href="#">One more seprated link.</a></li>
+                            <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fa fa-pencil-square-o"></i> Research</a></li>
-                    <li><a href="#"><i class="fa fa-info-circle"></i> About</a></li>
-                    <li><a href="#"><i style="font-size:13px;" class="material-icons">&#xe163;</i> Contact</a></li>
+                    <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li>
+                    <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
+                    <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;" class="material-icons">&#xe163;</i> Contact</a></li>
                     <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
                     <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
                 </ul>
@@ -308,7 +310,7 @@
             <div class="row">
                 <ul>
                     <li><a href="#">Siddharth Kulkarni</a></li>
-                    <li><a href="#">Atharv Chaudhari</a></li>
+                    <li><a href="https://github.com/Atharv-Chaudhari" target="_blank">Atharv Chaudhari</a></li>
                     <li><a href="#">Rutuja Vaidya</a></li>
                     <li><a href="#">Omkar Patil</a></li>
                     <li><a href="#"><br>Sana Shaikh</a></li>
@@ -326,17 +328,18 @@
         <div class="modal-risk-content">
             <span class="close-risk">&times;</span>
             <form method="post">
+                {% csrf_token %}
                 <div class="row">
                     </br>
                     <img style="height:100%;width:100%;" src="static/images/old_logo.png">
                     </br>
                     <h3 style="color:blue;">Enter Your Details </h3>
                     <br>
-                    <h4 style="color:#7ed321;">Full Name <span class="required">*</span></h4>
+                    <h4 style="color:#7ed321;">Full Name</h4>
                     <br>
                     <div class="input-group input-group-icon">
                         <input class="lost" type="text" name="name"
-                            placeholder="Full Name" required />
+                            placeholder="Full Name" />
                         <div class="input-icon"><i class="material-icons">person</i></div>
                     </div>
                     <br>
@@ -348,7 +351,7 @@
                         <div class="input-icon"><i class="fa fa-envelope"></i></div>
                     </div>
                     <br>
-                    <h4 style="color:#7ed321;">Country <span class="required">*</span></h4>
+                    <h4 style="color:#7ed321;">Country </h4>
                     <br>
                     <div class="input-group input-group-icon">
                         <input class="lost" type="text" name="country"
@@ -439,7 +442,7 @@
                         </div>
                         </br>
                         <div class="submits">
-                            <input class="lost"  type="submit" value="Submit" style="background-color: #7ed321; color: white;">
+                            <input class="lost"  type="submit" value="Submit" onsubmit="myFunction()" style="background-color: #7ed321; color: white;">
                         </div>
                         </br>
         </div>
@@ -447,8 +450,14 @@
     </div>
     </div>
 </div>
+    <div id="loader" style="display:none;">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </div>
+</div>
     <!-- Welcome Page -->
-    <div class="welcome-me" id="welcome">
+    <div class="welcome-me" id="welcome" style="animation-iteration-count: 1;">
         <div class="background background0"></div>
         <div class="background background1"></div>
         <div class="background background2"></div>
