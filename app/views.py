@@ -21,3 +21,6 @@ def results(request):
 
 def contact(request):
     return render(request,'contact.html')
+
+def vaccine(request):
+    return render(request,'vaccine.html')
