@@ -23,4 +23,7 @@ def contact(request):
     return render(request,'contact.html')
 
 def vaccine(request):
-    return render(request,'vaccine.html')
+    if('message_frm' in request.POST):
+        print("I got it")
+    else:
+        return render(request,'vaccine.html')
