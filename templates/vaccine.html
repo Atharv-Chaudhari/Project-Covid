@@ -24,6 +24,40 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .centers table {
+            border-collapse: collapse;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .centers td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .centers th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            background-color: black;
+            color: white;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .centers tr:nth-child(even) {
+            background-color: #7FFFD4;
+            text-align: center;
+        }
+
+        .centers tr:nth-child(odd) {
+            background-color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <!-- <body onload="present()"> -->
@@ -162,11 +196,13 @@
                             <ul class="dropdown" id="blog">
                                 <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
                                 <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
-                                        id="risk-myBtn">Risk Predictor</span><a href="riskpredictor" target="_blank"
+                                        id="risk-myBtn"><i class="fas fa-search-location"></i> Risk Predictor</span><a
+                                        href="riskpredictor" target="_blank"
                                         style="display: inline-block;margin:5px 0;"><i
                                             class="fas fa-external-link-alt"></i></a></li>
                                 <li class="separator"></li>
-                                <li><a href="#" onclick="myFunction()">Seprated link</a></li>
+                                <li><a href="vaccine" onclick="myFunction()"><i class="fas fa-search-location"></i>
+                                        Vaccine Tracker</a></li>
                                 <li class="separator"></li>
                                 <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                             </ul>
@@ -184,8 +220,8 @@
         <br>
         <ul class="breadcrumb">
             <li><a href="/" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="about" onclick="myFunction()" style="color: black;"><i style="font-size:13px;"
-                        class="material-icons">&#xe163;</i>
+            <li><a href="vaccine" onclick="myFunction()" style="color: black;"><i style="font-size:13px;"
+                        class="fas fa-search-location"></i>
                     Vaccine Tracker</a></li>
         </ul>
         <div class="alert-up" style="text-align: center;">
@@ -291,32 +327,68 @@
             <div class="menu-item-text">Linked In</div>
         </div>
     </div> -->
-            <div id="userI">
+        <div id="userI">
 
-                <h3>Please enter Pincode and Date to get scheduled vaccination sessions</h3>
+            <h3>Please enter Pincode and Date to get scheduled vaccination sessions</h3>
 
-
+            <form method="post">
+                {% csrf_token %}
                 <table>
                     <tr>
                         <td><label for="pincode">Enter your Pincode</label></td>
-                        <td><input type="text" id="pincode" placeholder="pincode"></td>
+                        <td><input type="text" id="pincode" name="pincode" placeholder="pincode" required></td>
                     </tr>
 
                     <tr>
                         <td><label for="pincode">Enter Date of Vaccination</label></td>
-                        <td><input type="text" id="date" placeholder="dd-mm-yy"></td>
+                        <td><input type="date" id="date" name="date" required></td>
                     </tr>
                 </table>
 
 
                 <div id="appointmentbtn">
-                    <input type="submit" value="Click Here to View Appointments" id="submit1" name ="message_frm">
+                    <input onclick="myFunction2()" type="submit" value="Click Here to View Appointments" id="submit1"
+                        name="message_frm">
                 </div>
-            </div>
-
-
-
-
+            </form>
+        </div>
+        {% if lc|length > 0 %}
+        <div class="centers">
+            <h1 style="text-align: center;color:blue;">{{ lc }}</h1>
+            <br>
+            <br>
+            <h4 style="text-align: right;font-family: Arial, Helvetica, sans-serif;">Note :- Slots are updated by state
+                vaccination centers and private hospitals
+                everyday at 8AM, 12PM, 4PM, & 8PM.</h4>
+            <br>
+            <table style="text-align: center;align-items: center;font-family: Arial, Helvetica, sans-serif;">
+                <tr>
+                    {% for j in l %}
+                    <th>{{ j }}</th>
+                    {% endfor %}
+                </tr>
+                {% for i in data %}
+                <tr>
+                    {% for key, value in i.items %}
+                    {% if key == slot %}
+                    <td>
+                        {% for k in value %}
+                        <pre> {{ k }} </pre>
+                        {% endfor %}
+                    </td>
+                    {% else %}
+                    <td>{{ value }}</td>
+                    {% endif %}
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        {% endif %}
+        {% if error|length > 0 %}
+            <!-- <h1 style="text-align:center;color: red;">Error</h1> -->
+            <script>alert("{{ error }}")</script>
+        {% endif %}
 
 
 
@@ -507,6 +579,26 @@
         alert("Please Click On Icon Of New Tab To Get Risk Predictor UI in new tab");
         }
     </script> -->
+    <script>
+        var myVar;
+
+        function myFunction2() {
+            document.getElementById("myDivload").style.display = "none";
+            document.getElementById("loader").style.display = "flex";
+            document.getElementById("loader").style.justifyContent = "center";
+            document.getElementById("loader").style.alignItems = "center";
+            document.getElementById("loader").style.margin = "0";
+            document.getElementById("loader").style.minHeight = "100vh";
+            // window.location.replace("http://www.aptimize.com/");  
+            myVar = setTimeout(showPage, 30000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDivload").style.display = "block";
+            // document.getElementById('mymarquee').start();
+        }
+    </script>
 </body>
 
 

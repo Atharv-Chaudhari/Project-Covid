@@ -32,7 +32,7 @@ function myFunction() {
   document.getElementById("loader").style.margin = "0";
   document.getElementById("loader").style.minHeight = "100vh"; 
   // window.location.replace("http://www.aptimize.com/");  
-  myVar = setTimeout(showPage, 3000);
+  myVar = setTimeout(showPage, 30000);
 }
 
 function showPage() {

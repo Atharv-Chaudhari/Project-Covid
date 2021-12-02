@@ -32,7 +32,9 @@ td {
     background-color: white;
     border: 1px solid grey;
     padding: 1vh;
+    /* font-size: 20px; */
     border-radius: 2.5px;
+    line-height: 1!important;
 }
 
 #appointmentbtn {
