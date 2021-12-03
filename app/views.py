@@ -84,5 +84,5 @@ def vaccine_tracker(pincode,date):
         }
     except:
         print("Invalid Operation...!!!")
-        context={'error':'Inavlid Operation were Performed...!!!'}
+        context={'error':'Invalid Operations were Performed...!!!'}
     return context

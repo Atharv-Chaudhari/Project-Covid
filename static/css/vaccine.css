@@ -50,6 +50,7 @@ td {
     margin-right: auto;
     margin-left: auto;
     cursor: pointer;
+    line-height: 1!important;
     margin-top: 2vh;
 }
 
@@ -74,15 +75,11 @@ td {
 
 @media only screen and (max-width: 768px) and (min-width: 425px) {
     #userI {
-        width: 75vh;
+        width: 60%;
     }
 
     #appointmentbtn {
         text-align: center;
-    }
-    td {
-        padding: 1vh;
-        font-size: 2vh;
     }
 
     #pincode,
@@ -91,14 +88,15 @@ td {
         border: 1px solid grey;
         padding: 1vh;
         border-radius: 2.5px;
-        width: 25vh;
+        width: 100%;
     }
 
-    #submit {
+    #submit1 {
         background-color: white;
         border: 2px solid black;
         padding: 1.5vh;
         border-radius: 2.5px;
+        line-height: 1!important;
         cursor: pointer;
         text-align: center;
         margin-top: 2vh;
@@ -107,25 +105,22 @@ td {
 
 @media only screen and (max-width: 425px) {
     #userI {
-        width: 45vh;
-    }
-
-    td {
-        padding: 1vh;
-        font-size: 2vh;
+        width: 80%;
     }
 
     #appointmentbtn {
         text-align: center;
     }
-
+    #submit1{
+        width: 100%!important;
+    }
     #pincode,
     #date {
         background-color: white;
         border: 1px solid grey;
         padding: 1vh;
         border-radius: 2.5px;
-        width: 20vh;
+        width: 100%;
     }
 
     .placeinfo {
