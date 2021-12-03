@@ -86,7 +86,7 @@ td {
     #date {
         background-color: white;
         border: 1px solid grey;
-        padding: 1vh;
+        padding: 5px;
         border-radius: 2.5px;
         width: 100%;
     }
@@ -94,7 +94,7 @@ td {
     #submit1 {
         background-color: white;
         border: 2px solid black;
-        padding: 1.5vh;
+        padding: 5px;
         border-radius: 2.5px;
         line-height: 1!important;
         cursor: pointer;
@@ -113,12 +113,13 @@ td {
     }
     #submit1{
         width: 100%!important;
+        padding: 5px;
     }
     #pincode,
     #date {
         background-color: white;
         border: 1px solid grey;
-        padding: 1vh;
+        padding: 5px;
         border-radius: 2.5px;
         width: 100%;
     }

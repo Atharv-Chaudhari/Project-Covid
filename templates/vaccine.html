@@ -347,8 +347,7 @@
 
 
                 <div id="appointmentbtn">
-                    <input onclick="myFunction2()" type="submit" value="Submit" id="submit1"
-                        name="message_frm">
+                    <input onclick="myFunction2()" type="submit" value="Submit" id="submit1">
                 </div>
             </form>
         </div>
@@ -361,6 +360,7 @@
                 vaccination centers and private hospitals
                 everyday at 8AM, 12PM, 4PM, & 8PM.</h4>
             <br>
+            <div style="overflow-x:auto;">
             <table style="text-align: center;align-items: center;font-family: Arial, Helvetica, sans-serif;">
                 <tr>
                     {% for j in l %}
@@ -383,6 +383,7 @@
                 </tr>
                 {% endfor %}
             </table>
+            </div>
         </div>
         {% endif %}
         {% if error|length > 0 %}
