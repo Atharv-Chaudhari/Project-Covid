@@ -7,3 +7,4 @@ gunicorn
 html5lib
 joblib
 pandas
+sklearn
