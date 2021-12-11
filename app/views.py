@@ -30,7 +30,7 @@ def get_prediction (data,loaded_model = loaded_model):
     prediction=loaded_model.predict(df.values)
     pred_prob = loaded_model.predict_proba(df.values)
     print(prediction,pred_prob)
-    return prediction
+    return pred_prob
 
 
 wdata=[]
