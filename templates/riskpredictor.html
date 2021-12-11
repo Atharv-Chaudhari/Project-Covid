@@ -290,26 +290,27 @@
         </div>
     </div> -->
         <div class="risk-prediction">
-            <form class="risk-modal-form">
+            <form class="risk-modal-form" method="POST">
+                {% csrf_token %}
                 <div class="segment">
                     <h1 style="color:blue;"> Welcome To Covid-19 Risk Predictor </h1>
                 </div>
                 <span style="font-size:20px;color: red;">✨ Enter Your Details ✨</span>
                 <img style="height:70%;width:70%;" src="static/images/old_logo.png">
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <label>
                         <span class="input-label">&#160&#160&#160&#160<i class="material-icons">person</i> Enter Full
                             Name
                             &#160&#160&#160&#160</span>
                         <input type="text" placeholder="Full Name"/>
                     </label>
-                </div>
+                </div> -->
                 <div class="input-group">
                     <label>
                         <span class="input-label">&#160&#160&#160&#160&#160&#160<i class="fa fa-envelope"></i> Email
                             Address
                             <span style="color: red;font-size: 25px;">*</span></span>&#160&#160&#160&#160&#160
-                        <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email Address"
+                        <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email Address"
                             required />
                     </label>
                 </div>
@@ -319,7 +320,7 @@
                                 class="fa fa-globe"></i>
                             Enter Country
                             &#160&#160&#160&#160&#160&#160&#160&#160</span>
-                        <input type="text" placeholder="Country" />
+                        <input type="text" name="country" placeholder="Country" />
                     </label>
                 </div>
                 <br>
@@ -329,7 +330,7 @@
                             style="color: red;font-size: 25px;">*</span>
                         &#160&#160&#160&#160&#160</span>
                     <div class="switch-toggle" style="margin-right: auto;margin-left: auto;">
-                        <input type="checkbox" id="age">
+                        <input type="checkbox" name="age" id="age">
                         <label for="age"></label>
                     </div>
                 </div>
@@ -340,7 +341,7 @@
                         Gender <span style="color: red;font-size: 25px;">*</span>
                         &#160&#160&#160&#160&#160&#160&#160&#160</span>
                     <div class="switch-toggle1" style="margin-right: auto;margin-left: auto;">
-                        <input type="checkbox" id="gender">
+                        <input type="checkbox" name="Gender" id="gender">
                         <label for="gender"></label>
                     </div>
                 </div>
@@ -357,7 +358,7 @@
                             <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Cough</span>
                         </div>
                         <div class="switch-toggle">
-                            <input type="checkbox" id="cough">
+                            <input type="checkbox" name="Cough" id="cough">
                             <label for="cough"></label>
                         </div>
                     </div>
@@ -366,7 +367,7 @@
                             <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Fever</span>
                         </div>
                         <div class="switch-toggle">
-                            <input type="checkbox" id="fever">
+                            <input type="checkbox" name="Fever" id="fever">
                             <label for="fever"></label>
                         </div>
                     </div>
@@ -375,7 +376,7 @@
                             <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Sore Throat</span>
                         </div>
                         <div class="switch-toggle">
-                            <input type="checkbox" id="sore-throat">
+                            <input type="checkbox" name="Sore_Throat" id="sore-throat">
                             <label for="sore-throat"></label>
                         </div>
                     </div>
@@ -384,7 +385,7 @@
                             <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Shortness of Breath</span>
                         </div>
                         <div class="switch-toggle">
-                            <input type="checkbox" id="shortness-of-breath">
+                            <input type="checkbox" name="Shortness_of_Breath"  id="shortness-of-breath">
                             <label for="shortness-of-breath"></label>
                         </div>
                     </div>
@@ -393,7 +394,7 @@
                             <i class="fa fa-stethoscope"></i><span style="font-size:16px;"> Headache </span>
                         </div>
                         <div class="switch-toggle">
-                            <input type="checkbox" id="headache">
+                            <input type="checkbox" name="Headache" id="headache">
                             <label for="headache"></label>
                         </div>
                     </div>
@@ -403,7 +404,7 @@
                             class="fas fa-hiking"></i> Abroad <span style="color: red;font-size: 25px;">*</span>
                         &#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160</span>
                     <div class="switch-toggle" style="margin-right: auto;margin-left: auto;">
-                        <input type="checkbox" id="abroad">
+                        <input type="checkbox" name="Abroad" id="abroad">
                         <label for="abroad"></label>
                     </div>
                 </div>
@@ -413,7 +414,7 @@
                             class="fa fa-american-sign-language-interpreting"></i> Contact With Covid-19 Object <span
                             style="color: red;font-size: 25px;">*</span></span> &#160&#160&#160
                     <div class="switch-toggle" style="margin-left:10%;">
-                        <input type="checkbox" id="contact_obj">
+                        <input type="checkbox" name="contact_Object" id="contact_obj">
                         <label for="contact_obj"></label>
                     </div>
                 </div>
@@ -424,7 +425,7 @@
                             style="color: red;font-size: 25px;">*</span> &#160&#160
                     </span>
                     <div class="switch-toggle" style="margin-left:9%;">
-                        <input type="checkbox" id="contact_person">
+                        <input type="checkbox" name="contact_Patient" id="contact_person">
                         <label for="contact_person"></label>
                     </div>
                 </div>

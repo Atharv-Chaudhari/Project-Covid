@@ -6,9 +6,33 @@ from bs4 import BeautifulSoup
 from requests.api import request
 from geopy.geocoders import Nominatim
 import time
-
+import joblib
+import pandas as pd
 print("##################################################################################################################################################################################################################")
 # Create your views here.
+
+loaded_model = joblib.load ('model1.sav')
+
+def get_prediction (data,loaded_model = loaded_model):
+    data={
+        'cough':data['Cough'],
+        'fever':data['Fever'],
+        'sore_throat':data['Sore_Throat'],
+        'shortness_of_breath':data['Shortness_of_Breath'],
+        'head_ache':data['Headache'],
+        'age_60_and_above':data['age'],
+        'abroad':data['Abroad'],
+        'contact_with_covid_object':data['contact_Object'],
+        'contact_with_covid_patient':data['contact_Patient'],
+    }
+    df = pd.DataFrame(data,index=[0])
+    print(df)
+    prediction=loaded_model.predict(df.values)
+    pred_prob = loaded_model.predict_proba(df.values)
+    print(prediction,pred_prob)
+    return prediction
+
+
 wdata=[]
 def world_data():
     global wdata
@@ -32,7 +56,11 @@ def welcome(request):
 def home(request):
     global wdata
     if request.method == 'POST':
-        return render(request, 'results.html')
+        model_data=request.POST
+        context={
+            'model_pred':get_prediction(model_data)
+        }
+        return render(request, 'results.html',context)
     else:
         world_data()
         d={
@@ -45,7 +73,12 @@ def home(request):
 
 
 def riskpredictor(request):
-    return render(request, 'riskpredictor.html')
+    if request.method == 'POST':
+        # print(request.POST)
+        # get_prediction()
+        return render(request, 'results.html')
+    else:
+        return render(request, 'riskpredictor.html')
 
 
 def about(request):
