@@ -2,21 +2,25 @@ var mytime;
 
 function therow() {
   if (localStorage.getItem("hasCodeRunBefore") === null) {
-    mytime = setTimeout(showPage_wel, 7000);
+    mytime = setTimeout(showPage_wel, 0000);
+    document.getElementById("myDivload-home").style.display = "block";
+    document.getElementById('mymarquee-home').start();
+    alertify.alert('', '<center><h1>Welcome</h1></center><br><center><h2 style="color:blue;">To The</h2><center><br><h2 style="color:red;">Project Covid</h2>');
     localStorage.setItem("hasCodeRunBefore", true);
     }
     else{
-      document.getElementById("welcome").style.display = "none";
+      // document.getElementById("welcome").style.display = "none";
       document.getElementById("myDivload-home").style.display = "block";
       document.getElementById('mymarquee-home').start();
+      // alertify.alert('', '<center><h1>Welcome</h1></center><br><center><h2 style="color:blue;">To The</h2><center><br><h2 style="color:red;">Project Covid</h2>');
     }
     // document.getElementById("welcome").style.display="block";
   }
 function showPage_wel() {
-    document.getElementById("welcome").style.display = "none";
+    // document.getElementById("welcome").style.display = "none";
     document.getElementById("myDivload-home").style.display = "block";
     document.getElementById('mymarquee-home').start();
-    alertify.alert('', '<center><h1>Welcome</h1></center><br><center><h2 style="color:blue;">To The</h2><center><br><h2 style="color:red;">Project Covid</h2>');
+    // alertify.alert('', '<center><h1>Welcome</h1></center><br><center><h2 style="color:blue;">To The</h2><center><br><h2 style="color:red;">Project Covid</h2>');
   // document.getElementById("alerting").style.display="block";
 }
 var logoutTimer = setTimeout(function() { sessionStorage.clear(); }, (60 * 60 * 1000));

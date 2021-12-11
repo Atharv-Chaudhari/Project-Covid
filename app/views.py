@@ -1,19 +1,47 @@
 from django.shortcuts import render, HttpResponse
 import requests
 import json
-
+import requests
+from bs4 import BeautifulSoup
 from requests.api import request
 from geopy.geocoders import Nominatim
+import time
 
 print("##################################################################################################################################################################################################################")
 # Create your views here.
+wdata=[]
+def world_data():
+    global wdata
+    URL = "https://www.worldometers.info/coronavirus/"
+    r = requests.get(URL)
 
+    soup = BeautifulSoup(r.content, 'html5lib')
+    # print(soup.select(".maincounter-number span"))
+    nums = soup.find_all('div', attrs={'class': 'maincounter-number'})
+    wdata=[]
+    for tag in nums:
+        wdata.append(tag.text.strip())
 
-def index(request):
+# while True:
+#     world_data()
+#     time.sleep(2)
+
+def welcome(request):
+    return render(request, 'welcome.html')
+
+def home(request):
+    global wdata
     if request.method == 'POST':
         return render(request, 'results.html')
     else:
-        return render(request, 'index.html')
+        world_data()
+        d={
+            'cases':wdata[0],
+            'deaths':wdata[1],
+            'recovered':wdata[2]
+        }
+        return render(request, 'index.html',d)
+        # return render(request, 'index.html')
 
 
 def riskpredictor(request):
@@ -22,6 +50,10 @@ def riskpredictor(request):
 
 def about(request):
     return render(request, 'about.html')
+
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
 
 def loading(request):

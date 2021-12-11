@@ -18,11 +18,13 @@ from django.urls import path
 from app import views
 
 urlpatterns = [
-    path("",views.index,name='app'),
+    path("",views.welcome,name='app'),
+    path("home",views.home,name='home'),
     path("riskpredictor",views.riskpredictor,name='riskpredictor'),
     path("about",views.about,name='about'),
     path("loading",views.loading,name='loading'),
     path("results",views.results,name='results'),
     path("contact",views.contact,name='contact'),
-    path("vaccine",views.vaccine,name='vaccine')
+    path("vaccine",views.vaccine,name='vaccine'),
+    path("dashboard",views.dashboard,name='dashboard')
 ]
