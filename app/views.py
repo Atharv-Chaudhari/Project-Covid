@@ -21,9 +21,9 @@ def get_prediction (data,loaded_model = loaded_model):
         'shortness_of_breath':data['Shortness_of_Breath'],
         'head_ache':data['Headache'],
         'age_60_and_above':data['age'],
+        'gender':data['Gender'],
         'abroad':data['Abroad'],
-        # 'contact_with_covid_object':data['contact_Object'],
-        'contact_with_covid_patient':data['contact_Patient'],
+        'contact_with_covid_patient':data['contact_Patient']
     }
     df = pd.DataFrame(data,index=[0])
     print(df)
