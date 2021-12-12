@@ -56,11 +56,12 @@ def welcome(request):
 def home(request):
     global wdata
     if request.method == 'POST':
-        model_data=request.POST
-        context={
-            'model_pred':get_prediction(model_data)
-        }
-        return render(request, 'results.html',context)
+        if request.POST.get("form_type") == 'formFour':
+            model_data=request.POST
+            context={
+                'model_pred':get_prediction(model_data)
+            }
+            return render(request, 'results.html',context)
     else:
         world_data()
         d={
@@ -74,18 +75,41 @@ def home(request):
 
 def riskpredictor(request):
     if request.method == 'POST':
-        # print(request.POST)
-        # get_prediction()
-        return render(request, 'results.html')
+        if request.POST.get("form_type") == 'formFour':
+            model_data=request.POST
+            context={
+                'model_pred':get_prediction(model_data)
+            }
+            return render(request, 'results.html',context)
+        elif request.POST.get("form_type") == 'formSix':
+            model_data=request.POST
+            context={
+                'model_pred':get_prediction(model_data)
+            }
+            return render(request, 'results.html',context)
     else:
         return render(request, 'riskpredictor.html')
 
 
 def about(request):
+    if request.method == 'POST':
+        if request.POST.get("form_type") == 'formFour':
+            model_data=request.POST
+            context={
+                'model_pred':get_prediction(model_data)
+            }
+            return render(request, 'results.html',context)
     return render(request, 'about.html')
 
 
 def dashboard(request):
+    if request.method == 'POST':
+        if request.POST.get("form_type") == 'formFour':
+            model_data=request.POST
+            context={
+                'model_pred':get_prediction(model_data)
+            }
+            return render(request, 'results.html',context)
     return render(request, 'dashboard.html')
 
 
@@ -94,19 +118,40 @@ def loading(request):
 
 
 def results(request):
+    if request.method == 'POST':
+        if request.POST.get("form_type") == 'formFour':
+            model_data=request.POST
+            context={
+                'model_pred':get_prediction(model_data)
+            }
+            return render(request, 'results.html',context)
     return render(request, 'results.html')
 
 
 def contact(request):
+    if request.method == 'POST':
+        if request.POST.get("form_type") == 'formFour':
+            model_data=request.POST
+            context={
+                'model_pred':get_prediction(model_data)
+            }
+            return render(request, 'results.html',context)
     return render(request, 'contact.html')
 
 
 def vaccine(request):
     if request.method == 'POST':
-        pincode = request.POST['pincode']
-        date = request.POST['date']
-        context=vaccine_tracker(pincode,date)
-        return render(request, 'vaccine.html',context)
+        if request.POST.get("form_type") == 'formFour':
+            model_data=request.POST
+            context={
+                'model_pred':get_prediction(model_data)
+            }
+            return render(request, 'results.html',context)
+        elif request.POST.get("form_type") == 'formFive':
+            pincode = request.POST['pincode']
+            date = request.POST['date']
+            context=vaccine_tracker(pincode,date)
+            return render(request, 'vaccine.html',context)
     else:
         return render(request,'vaccine.html')
 

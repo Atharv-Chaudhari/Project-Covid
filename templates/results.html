@@ -341,8 +341,9 @@
     <div id="risk-myModal" class="modal-risk" style="font-family: Arial, Helvetica, sans-serif;">
         <div class="modal-risk-content">
             <span class="close-risk">&times;</span>
-            <form method="post">
+            <form method="post"  id="formFour">
                 {% csrf_token %}
+                <input type="hidden" name="form_type" value="formFour">
                 <div class="row">
                     </br>
                     <img style="height:100%;width:100%;" src="static/images/old_logo.png">
