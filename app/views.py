@@ -22,7 +22,7 @@ def get_prediction (data,loaded_model = loaded_model):
         'head_ache':data['Headache'],
         'age_60_and_above':data['age'],
         'abroad':data['Abroad'],
-        'contact_with_covid_object':data['contact_Object'],
+        # 'contact_with_covid_object':data['contact_Object'],
         'contact_with_covid_patient':data['contact_Patient'],
     }
     df = pd.DataFrame(data,index=[0])
