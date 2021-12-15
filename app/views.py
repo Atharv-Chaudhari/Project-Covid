@@ -66,7 +66,7 @@ def welcome(request):
     return render(request, 'welcome.html')
 
 def update(request):
-    world_data.delay(0)
+    # world_data.delay(0)
     sleep(0)
     return redirect('home')
 
@@ -80,7 +80,6 @@ def home(request):
             }
             return render(request, 'results.html',context)
     else:
-        world_data.delay(0)
         f=open("data.json", "r")
         d=json.load(f)
         return render(request, 'index.html',d)
