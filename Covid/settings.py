@@ -147,6 +147,7 @@ django_heroku.settings(locals())
 # RabbitMQ
 
 BROKER_URL = 'amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs'
+RESULT_BACKEND = 'amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs'
 BROKER_POOL_LIMIT = 1 # Will decrease connection usage
 BROKER_HEARTBEAT = None # We're using TCP keep-alive instead
 BROKER_CONNECTION_TIMEOUT = 30 # May require a long timeout due to Linux DNS timeouts etc
