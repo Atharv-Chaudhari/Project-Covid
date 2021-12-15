@@ -9,5 +9,4 @@ joblib
 pandas
 sklearn
 celery
-time
 redis
