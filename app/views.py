@@ -38,7 +38,7 @@ def get_prediction (data,loaded_model = loaded_model):
     data_model['prediction']=str(prediction[0])
     data_model['email']=data['email']
     data_model['country']=data['country']
-    send_mail_task.delay(data_model)
+    # send_mail_task.delay(data_model)
     return pred_prob
 
 
