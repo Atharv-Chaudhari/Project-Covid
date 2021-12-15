@@ -146,15 +146,15 @@ django_heroku.settings(locals())
 
 # RabbitMQ
 
-BROKER_URL = 'amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs'
-RESULT_BACKEND = 'amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs'
-BROKER_POOL_LIMIT = 1 # Will decrease connection usage
-BROKER_HEARTBEAT = None # We're using TCP keep-alive instead
-BROKER_CONNECTION_TIMEOUT = 30 # May require a long timeout due to Linux DNS timeouts etc
-RESULT_BACKEND = None # AMQP is not recommended as result backend as it creates thousands of queues
-EVENT_QUEUE_EXPIERS = 60 # Will delete all celeryev. queues without consumers after 1 minute.
-WORKER_PREFETCH_MULTIPLIER = 1 # Disable prefetching, it's causes problems and doesn't help performance
-WORKER_CONCURRENCY = 50 # If you tasks are CPU bound, then limit to the number of cores, otherwise increase substainally
+# BROKER_URL = 'amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs'
+# RESULT_BACKEND = 'amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs'
+# BROKER_POOL_LIMIT = 1 # Will decrease connection usage
+# BROKER_HEARTBEAT = None # We're using TCP keep-alive instead
+# BROKER_CONNECTION_TIMEOUT = 30 # May require a long timeout due to Linux DNS timeouts etc
+# RESULT_BACKEND = None # AMQP is not recommended as result backend as it creates thousands of queues
+# EVENT_QUEUE_EXPIERS = 60 # Will delete all celeryev. queues without consumers after 1 minute.
+# WORKER_PREFETCH_MULTIPLIER = 1 # Disable prefetching, it's causes problems and doesn't help performance
+# WORKER_CONCURRENCY = 50 # If you tasks are CPU bound, then limit to the number of cores, otherwise increase substainally
 
 
 CELERY_ACCEPT_CONTENT = ['application/json']
