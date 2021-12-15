@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Predictor Email</title>
+    <style>
+        body {
+            background-color: #F5F5F5;
+        }
+
+        .container {
+            width: 70%;
+            background-color: #ffffff;
+            border-radius: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            box-shadow:  10px 10px 10px 5px #E0E0E0;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    {{data}}
+    <div class="container">
+        <h1 style="color:red;">{{data.prob}}hello</h1>
+        <img src="static/images/risk_prec_mail.jpg" width="40%" height="40%"></img>
+        <img src="static/images/risk_prec_mail2.jpg" width="40%" height="50%"></img>
+        <img src="static/images/risk_prec_mail_mid.jpg" width="40%" height="50%"></img>
+        <img src="static/images/both_mail_mid.jpg" width="40%" height="50%"></img>
+        <img src="static/images/risk_prec_tnx.jpg" width="40%" height="50%"></img>
+    </div>
+</body>
+
+</html>

@@ -8,3 +8,6 @@ html5lib
 joblib
 pandas
 sklearn
+celery
+time
+redis

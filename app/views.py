@@ -1,20 +1,24 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import redirect, render, HttpResponse
 import requests
 import json
 import requests
 from bs4 import BeautifulSoup
 from requests.api import request
 from geopy.geocoders import Nominatim
-import time
+from time import sleep
 import joblib
 import pandas as pd
-print("##################################################################################################################################################################################################################")
+from .task import *
+import warnings
+warnings.filterwarnings("ignore")
+
+print("################################################## Lets Start Project #############################################################")
 # Create your views here.
 
 loaded_model = joblib.load ('model1.sav')
 
 def get_prediction (data,loaded_model = loaded_model):
-    data={
+    data_model={
         'cough':data['Cough'],
         'fever':data['Fever'],
         'sore_throat':data['Sore_Throat'],
@@ -25,36 +29,49 @@ def get_prediction (data,loaded_model = loaded_model):
         'abroad':data['Abroad'],
         'contact_with_covid_patient':data['contact_Patient']
     }
-    df = pd.DataFrame(data,index=[0])
+    df = pd.DataFrame(data_model,index=[0])
     print(df)
     prediction=loaded_model.predict(df.values)
     pred_prob = loaded_model.predict_proba(df.values)
     print(prediction,pred_prob)
+    data_model['prob']=pred_prob[0][1]
+    data_model['prediction']=str(prediction[0])
+    data_model['email']=data['email']
+    data_model['country']=data['country']
+    send_mail_task.delay(data_model)
     return pred_prob
 
 
-wdata=[]
-def world_data():
-    global wdata
-    URL = "https://www.worldometers.info/coronavirus/"
-    r = requests.get(URL)
+# wdata=[]
+# def world_data():
+#     global wdata
+#     URL = "https://www.worldometers.info/coronavirus/"
+#     r = requests.get(URL)
 
-    soup = BeautifulSoup(r.content, 'html5lib')
-    # print(soup.select(".maincounter-number span"))
-    nums = soup.find_all('div', attrs={'class': 'maincounter-number'})
-    wdata=[]
-    for tag in nums:
-        wdata.append(tag.text.strip())
+#     soup = BeautifulSoup(r.content, 'html5lib')
+#     # print(soup.select(".maincounter-number span"))
+#     nums = soup.find_all('div', attrs={'class': 'maincounter-number'})
+#     wdata=[]
+#     for tag in nums:
+#         wdata.append(tag.text.strip())
 
 # while True:
 #     world_data()
 #     time.sleep(2)
 
+def email(request):
+    return render(request,'email.html')
+
 def welcome(request):
     return render(request, 'welcome.html')
 
+def update(request):
+    world_data.delay(0)
+    sleep(0)
+    return redirect('home')
+
 def home(request):
-    global wdata
+    # global wdata
     if request.method == 'POST':
         if request.POST.get("form_type") == 'formFour':
             model_data=request.POST
@@ -63,12 +80,9 @@ def home(request):
             }
             return render(request, 'results.html',context)
     else:
-        world_data()
-        d={
-            'cases':wdata[0],
-            'deaths':wdata[1],
-            'recovered':wdata[2]
-        }
+        world_data.delay(0)
+        f=open("data.json", "r")
+        d=json.load(f)
         return render(request, 'index.html',d)
         # return render(request, 'index.html')
 
