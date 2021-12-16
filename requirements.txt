@@ -10,4 +10,5 @@ pandas
 sklearn
 celery
 redis
+rabbitmq
 eventlet

@@ -22,7 +22,7 @@ worker_prefetch_multiplier = 1 # Disable prefetching, it's causes problems and d
 worker_concurrency = 50 # If you tasks are CPU bound, then limit to the number of cores, otherwise increase substainally
 app = Celery('Covid', broker='amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs')
 
-# app = Celery('Covid')
+app = Celery('Covid')
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
