@@ -20,7 +20,7 @@ broker_connection_timeout = 30 # May require a long timeout due to Linux DNS tim
 event_queue_expires = 60 # Will delete all celeryev. queues without consumers after 1 minute.
 worker_prefetch_multiplier = 1 # Disable prefetching, it's causes problems and doesn't help performance
 worker_concurrency = 50 # If you tasks are CPU bound, then limit to the number of cores, otherwise increase substainally
-app = Celery('Covid', broker='amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs', backend='repc://')
+app = Celery('Covid', broker='amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs', backend='rpc://')
 
 # app = Celery('Covid')
 
