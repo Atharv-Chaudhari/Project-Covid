@@ -1,5 +1,4 @@
 import os
-
 from celery import Celery
 
 # Set the default Django settings module for the 'celery' program.
@@ -21,7 +20,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Covid.settings')
 # worker_prefetch_multiplier = 1 # Disable prefetching, it's causes problems and doesn't help performance
 # worker_concurrency = 50 # If you tasks are CPU bound, then limit to the number of cores, otherwise increase substainally
 app = Celery('Covid', broker='amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs')
-app.tasks['__main__.sleepy','__main__.send_mail_task','__main__.world_data']
 print(app.conf.broker_url)
 
 # app = Celery('Covid')
