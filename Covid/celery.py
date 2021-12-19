@@ -19,7 +19,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Covid.settings')
 # event_queue_expires = 60 # Will delete all celeryev. queues without consumers after 1 minute.
 # worker_prefetch_multiplier = 1 # Disable prefetching, it's causes problems and doesn't help performance
 # worker_concurrency = 50 # If you tasks are CPU bound, then limit to the number of cores, otherwise increase substainally
-app = Celery('Covid', broker='amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs',backend="http://0.0.0.0:14130")
+app = Celery('Covid', broker='amqps://xwwclfrs:n8Dz-5ooraTsgcmm_Vsu8WzDPYNPHRsx@jackal.rmq.cloudamqp.com/xwwclfrs')
 print(app.conf.broker_url)
 
 # app = Celery('Covid')
