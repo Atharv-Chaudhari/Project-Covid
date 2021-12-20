@@ -11,4 +11,5 @@ sklearn
 celery
 redis
 rabbitmq
+honcho
 eventlet
