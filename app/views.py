@@ -67,7 +67,7 @@ def welcome(request):
 
 def update(request):
     world_data.delay(0)
-    sleep(6)
+    sleep(5)
     return redirect('home')
 
 def home(request):
