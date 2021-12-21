@@ -37,6 +37,23 @@
         .block-in {
             display: flex;
         }
+
+        @media (max-width: 905px) {
+            .block1{
+                display:block;
+            }
+            img{
+                width:100%;
+                height:100%;
+            }
+            .col{
+                width:100%;
+                text-align: center;
+            }
+            .block-in{
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -47,7 +64,7 @@
         <h1 style="color:red;margin-top:-3%;">Risk Predictor Report</h1>
         <br><br>
         <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail.jpg?token=AOV4AO3YHMYTNNBBDLWG5XDBYM6SQ"
-        width="100%" height="400px"></img>
+            width="100%" height="400px"></img>
         <div class="block1">
             <div class="col" style="margin-left: 0px;">
                 <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail_mid.jpg?token=AOV4AO3FKKOFSNDC736USU3BYM7RE"
@@ -58,12 +75,12 @@
                 <h3 style="color:#FF6600	;text-align: center;">Basic Information</h3>
                 <div class="block-in" style="text-align: center;">
                     <div class="col">
-                        <h3> Email :- </h3>
-                        <h3> Country :- </h3>
-                        <h3> Gender :- </h3>
-                        <h3> Age 60 or Above :- </h3>
-                        <h3> Abroad :- </h3>
-                        <h3> Contact with Covid-19 Patient :- </h3>
+                        <h3> Email  </h3>
+                        <h3> Country  </h3>
+                        <h3> Gender  </h3>
+                        <h3> Age 60 or Above  </h3>
+                        <h3> Abroad  </h3>
+                        <h3> Contact with Covid-19 Patient  </h3>
                     </div>
                     <div class="col">
                         <h3 style="color:blue">{{data.email}}</h3>
@@ -80,20 +97,20 @@
                 </div>
             </div>
         </div>
-        <img
-            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail2.jpg?token=AOV4AO2DPCDGEQE5TCHA3G3BYM75A" width="100%" height="50%"></img>
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail2.jpg?token=AOV4AO2DPCDGEQE5TCHA3G3BYM75A"
+            width="100%" height="50%"></img>
         <div class="block1">
             <div class="col">
                 <h3 style="color:#FF6600	;text-align: center;">Symptoms</h3>
                 <div class="block-in" style="text-align: center;">
                     <div class="col">
-                        <h3> Cough :-</h3>
-                        <h3> Fever :- </h3>
-                        <h3> Sore Throat :- </h3>
-                        <h3> Shortness of Breath :- </h3>
-                        <h3> Headache :- </h3>
+                        <h3> Cough </h3>
+                        <h3> Fever  </h3>
+                        <h3> Sore Throat  </h3>
+                        <h3> Shortness of Breath  </h3>
+                        <h3> Headache  </h3>
                         <hr>
-                        <h3> Corona Risk :- </h3>
+                        <h3> Corona Risk  </h3>
                     </div>
                     <div class="col">
                         {% if data.cough in data.one %}
@@ -132,12 +149,13 @@
                 </div>
             </div>
             <div class="col">
-                <img
-                    src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/both_mail_mid.jpg?token=AOV4AO2KQ5FBNCFFYW4342DBYM7TI" width="100%"></img>
+                <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/both_mail_mid.jpg?token=AOV4AO2KQ5FBNCFFYW4342DBYM7TI"
+                    width="100%"></img>
             </div>
         </div>
-        <img
-            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_tnx.jpg?token=AOV4AO3SRC4UTN27G7JJ74LBYM7ZG" width="100%" height="400px"></img>
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_tnx.jpg?token=AOV4AO3SRC4UTN27G7JJ74LBYM7ZG"
+            width="100%" height="450px"></img>
+        <br><br><br>
     </div>
 </body>
 
