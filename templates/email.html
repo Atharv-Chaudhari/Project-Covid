@@ -7,14 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk Predictor Email</title>
     <style>
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: menu;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+
+        .grid-container {
+            display: grid;
+            width: 100%;
+            grid-template-areas:
+                'menu right';
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
         body {
             background-color: #F5F5F5;
             overflow-y: scroll;
-            font-family:"Roboto", sans-serif;
+            font-family: "Roboto", sans-serif;
         }
 
         .container {
-            width: 80%;
+            width: 90%;
             text-align: center;
             background-color: #ffffff;
             border-radius: 25px;
@@ -31,14 +60,27 @@
     {{data}}
     {{data.prob}}
     <div class="container">
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risklogo.png?token=AOV4AO2QPZH2FVLSMMLWODTBZCGZG"></img>
+        <img
+            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risklogo.png?token=AOV4AO2QPZH2FVLSMMLWODTBZCGZG"></img>
         <h1 style="color:red;margin-top:-3%;">Risk Predictor Report</h1>
         <br><br>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail2.jpg?token=AOV4AO2DPCDGEQE5TCHA3G3BYM75A" width="100%"></img>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail_mid.jpg?token=AOV4AO3FKKOFSNDC736USU3BYM7RE" width="50%"></img>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail.jpg?token=AOV4AO3YHMYTNNBBDLWG5XDBYM6SQ"></img>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/both_mail_mid.jpg?token=AOV4AO2KQ5FBNCFFYW4342DBYM7TI"></img>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_tnx.jpg?token=AOV4AO3SRC4UTN27G7JJ74LBYM7ZG"></img>
+        <img
+            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail2.jpg?token=AOV4AO2DPCDGEQE5TCHA3G3BYM75A"></img>
+        <div class="grid-container">
+            <div class="item2"><img
+                    src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail_mid.jpg?token=AOV4AO3FKKOFSNDC736USU3BYM7RE"></img>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="item4"><img
+                    src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/both_mail_mid.jpg?token=AOV4AO2KQ5FBNCFFYW4342DBYM7TI"></img>
+            </div>
+        </div>
+        <div class="item5"><img
+                src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail.jpg?token=AOV4AO3YHMYTNNBBDLWG5XDBYM6SQ"></img>
+        </div>
+        <img
+            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_tnx.jpg?token=AOV4AO3SRC4UTN27G7JJ74LBYM7ZG"></img>
         <br><br><br><br>
     </div>
 </body>
