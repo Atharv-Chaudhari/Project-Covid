@@ -7,33 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk Predictor Email</title>
     <style>
-        .item1 {
-            grid-area: header;
-        }
-
-        .item2 {
-            grid-area: menu;
-        }
-
-        .item3 {
-            grid-area: main;
-        }
-
-        .item4 {
-            grid-area: right;
-        }
-
-        .item5 {
-            grid-area: footer;
-        }
-
-        .grid-container {
-            display: grid;
-            width: 100%;
-            grid-template-areas:
-                'menu right';
-            grid-gap: 10px;
-            padding: 10px;
+        .col {
+            width: 50%;
         }
 
         body {
@@ -53,35 +28,116 @@
             /* box-shadow:  15px 15px 15px 5px #E0E0E0; */
             margin-right: auto;
         }
+
+        .block1 {
+            display: flex;
+            text-align: left;
+        }
+
+        .block-in {
+            display: flex;
+        }
     </style>
 </head>
 
 <body>
-    {{data}}
-    {{data.prob}}
     <div class="container">
-        <img
-            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risklogo.png?token=AOV4AO2QPZH2FVLSMMLWODTBZCGZG"></img>
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risklogo.png?token=AOV4AOY7N6MDEKBBJC7BZXDBZL5BY"
+            width="70%" height="70%"></img>
         <h1 style="color:red;margin-top:-3%;">Risk Predictor Report</h1>
         <br><br>
-        <img
-            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail2.jpg?token=AOV4AO2DPCDGEQE5TCHA3G3BYM75A"></img>
-        <div class="grid-container">
-            <div class="item2"><img
-                    src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail_mid.jpg?token=AOV4AO3FKKOFSNDC736USU3BYM7RE"></img>
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail.jpg?token=AOV4AO3YHMYTNNBBDLWG5XDBYM6SQ"
+        width="100%" height="400px"></img>
+        <div class="block1">
+            <div class="col" style="margin-left: 0px;">
+                <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail_mid.jpg?token=AOV4AO3FKKOFSNDC736USU3BYM7RE"
+                    width="100%"></img>
+            </div>
+            <div class="col">
+                <h2 style="color:red;text-align: center;">Detailed Report</h2>
+                <h3 style="color:#FF6600	;text-align: center;">Basic Information</h3>
+                <div class="block-in" style="text-align: center;">
+                    <div class="col">
+                        <h3> Email :- </h3>
+                        <h3> Country :- </h3>
+                        <h3> Gender :- </h3>
+                        <h3> Age 60 or Above :- </h3>
+                        <h3> Abroad :- </h3>
+                        <h3> Contact with Covid-19 Patient :- </h3>
+                    </div>
+                    <div class="col">
+                        <h3 style="color:blue">{{data.email}}</h3>
+                        <h3 style="color:blue">{{data.country}}</h3>
+                        <h3 style="color:blue">{{data.gender}}</h3>
+                        <h3 style="color:blue">{{data.age_60_and_above}}</h3>
+                        <h3 style="color:blue">{{data.abroad}}</h3>
+                        {% if data.contact_with_covid_patient in data.one %}
+                        <h3 style="color:red">{{data.contact_with_covid_patient}}</h3>
+                        {% else %}
+                        <h3 style="color:#00FF00">{{data.contact_with_covid_patient}}</h3>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="grid-container">
-            <div class="item4"><img
-                    src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/both_mail_mid.jpg?token=AOV4AO2KQ5FBNCFFYW4342DBYM7TI"></img>
+        <img
+            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail2.jpg?token=AOV4AO2DPCDGEQE5TCHA3G3BYM75A" width="100%" height="50%"></img>
+        <div class="block1">
+            <div class="col">
+                <h3 style="color:#FF6600	;text-align: center;">Symptoms</h3>
+                <div class="block-in" style="text-align: center;">
+                    <div class="col">
+                        <h3> Cough :-</h3>
+                        <h3> Fever :- </h3>
+                        <h3> Sore Throat :- </h3>
+                        <h3> Shortness of Breath :- </h3>
+                        <h3> Headache :- </h3>
+                        <hr>
+                        <h3> Corona Risk :- </h3>
+                    </div>
+                    <div class="col">
+                        {% if data.cough in data.one %}
+                        <h3 style="color:red">{{data.cough}}</h3>
+                        {% else %}
+                        <h3 style="color:#00FF00">{{data.cough}}</h3>
+                        {% endif %}
+                        {% if data.fever in data.one %}
+                        <h3 style="color:red">{{data.fever}}</h3>
+                        {% else %}
+                        <h3 style="color:#00FF00">{{data.fever}}</h3>
+                        {% endif %}
+                        {% if data.sore_throat in data.one %}
+                        <h3 style="color:red">{{data.sore_throat}}</h3>
+                        {% else %}
+                        <h3 style="color:#00FF00">{{data.sore_throat}}</h3>
+                        {% endif %}
+                        {% if data.shortness_of_breath in data.one %}
+                        <h3 style="color:red">{{data.shortness_of_breath}}</h3>
+                        {% else %}
+                        <h3 style="color:#00FF00">{{data.shortness_of_breath}}</h3>
+                        {% endif %}
+                        {% if data.head_ache in data.one %}
+                        <h3 style="color:red">{{data.head_ache}}</h3>
+                        {% else %}
+                        <h3 style="color:#00FF00">{{data.head_ache}}</h3>
+                        {% endif %}
+                        {% if data.prediction in data.one %}
+                        <hr>
+                        <h3 style="color:red">{{data.prob}}</h3>
+                        {% else %}
+                        <hr>
+                        <h3 style="color:#00FF00">{{data.prob}}</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <img
+                    src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/both_mail_mid.jpg?token=AOV4AO2KQ5FBNCFFYW4342DBYM7TI" width="100%"></img>
             </div>
         </div>
-        <div class="item5"><img
-                src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_mail.jpg?token=AOV4AO3YHMYTNNBBDLWG5XDBYM6SQ"></img>
-        </div>
         <img
-            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_tnx.jpg?token=AOV4AO3SRC4UTN27G7JJ74LBYM7ZG"></img>
-        <br><br><br><br>
+            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Sem-7-Covid/main/static/images/risk_prec_tnx.jpg?token=AOV4AO3SRC4UTN27G7JJ74LBYM7ZG" width="100%" height="400px"></img>
     </div>
 </body>
 

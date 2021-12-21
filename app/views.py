@@ -34,10 +34,13 @@ def get_prediction (data,loaded_model = loaded_model):
     prediction=loaded_model.predict(df.values)
     pred_prob = loaded_model.predict_proba(df.values)
     print(prediction,pred_prob)
-    data_model['prob']=pred_prob[0][1]
+    data_model['prob']=str(int(pred_prob[0][1]*100))+" %"
     data_model['prediction']=str(prediction[0])
     data_model['email']=data['email']
     data_model['country']=data['country']
+    if(data_model['country']==''):
+        data_model['country']="Not Given"
+    data_model['one']=['1']
     send_mail_task.delay(data_model)
     return pred_prob
 
