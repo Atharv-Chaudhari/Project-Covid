@@ -165,7 +165,7 @@ CELERY_TASK_SERIALIZER = 'json'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'infysoars0@gmail.com'
-EMAIL_HOST_PASSWORD = '9423591130'
+EMAIL_HOST_PASSWORD = 'cmhjpsvbhjkeiabu'
 EMAIL_PORT = 587
 EMAIL_USER_SSL = False
 
