@@ -11,6 +11,7 @@ import pandas as pd
 from .task import *
 import warnings
 warnings.filterwarnings("ignore")
+from apscheduler.schedulers.background import BackgroundScheduler
 
 print("################################################## Lets Start Project #############################################################")
 # Create your views here.
@@ -55,7 +56,13 @@ def get_prediction (data,loaded_model = loaded_model):
     send_mail_task.delay(data_model)
     return pred_prob
 
+def refresher():
+    world_data.delay(0)
+    return
 
+scheduler = BackgroundScheduler()
+job = scheduler.add_job(refresher, 'interval', minutes=60)
+scheduler.start()
 # wdata=[]
 # def world_data():
 #     global wdata
