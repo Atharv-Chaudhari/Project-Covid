@@ -235,3 +235,7 @@ def vaccine_tracker(pincode,date):
         print("Invalid Operation...!!!")
         context={'error':'Invalid Operations were Performed...!!!'}
     return context
+
+
+def welcome_dashboard(request):
+    return render(request,'welcome_dashboard.html')

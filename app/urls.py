@@ -28,5 +28,6 @@ urlpatterns = [
     path("contact",views.contact,name='contact'),
     path("vaccine",views.vaccine,name='vaccine'),
     path("dashboard",views.dashboard,name='dashboard'),
-    path("email",views.email,name='email')
+    path("email",views.email,name='email'),
+    path("welcome_dashboard",views.welcome_dashboard,name='welcome_dashboard')
 ]
