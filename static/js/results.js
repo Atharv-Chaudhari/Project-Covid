@@ -392,3 +392,4 @@ document.addEventListener("DOMContentLoaded", function() {
     confetti.resize();
   });
 });
+// document.getElementById("confetti").style.zIndex = "9999";

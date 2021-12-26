@@ -77,3 +77,8 @@ col{
         height:42px;
     }
 }
+@media (max-width: 414px){
+    .block-result-5{
+        height:20px;
+    }
+}

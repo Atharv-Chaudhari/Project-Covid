@@ -31,6 +31,7 @@
 
 <body>
     <!-- <body onload="myFunction()" style="margin:0;"> -->
+    <!-- <canvas id="confetti"></canvas> -->
     <div id="loader" style="display: none;">
         <!-- <div class="loader-book">
             <div>
@@ -167,8 +168,8 @@
                             <ul class="dropdown" id="blog">
                                 <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
                                 <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
-                                        id="risk-myBtn"><i class="fas fa-search-location"></i> Risk Predictor</span><a
-                                        href="riskpredictor" target="_blank"
+                                        id="risk-myBtn"><i class="fas fa-search-location"></i> Risk
+                                        Predictor</span><a href="riskpredictor" target="_blank"
                                         style="display: inline-block;margin:5px 0;"><i
                                             class="fas fa-external-link-alt"></i></a></li>
                                 <li class="separator"></li>
@@ -178,7 +179,8 @@
                                 <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li>
+                        <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a>
+                        </li>
                         <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
                         <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                     class="material-icons">&#xe163;</i> Contact</a></li>
@@ -351,6 +353,7 @@
                         <br><br>
                         <h3 style="color:blue">{{model_pred.age_60_and_above}}</h3>
                         <br><br>
+                        <div class="block-result-5"></div>
                         <h3 style="color:blue">{{model_pred.abroad}}</h3>
                         <br><br>
                         {% if model_pred.contact_with_covid_patient in data.one %}
@@ -585,7 +588,7 @@
     <script type="text/javascript" src="static/js/script.js "></script>
     <script type="text/javascript" src="static/js/sign.js "></script>
     <script type="text/javascript" src="static/js/general.js "></script>
-    <!-- <script type="text/javascript" src="static/js/general.js "></script> -->
+    <!-- <script type="text/javascript" src="static/js/results.js "></script> -->
     <!-- <script type="text/javascript">
     function get_alert(){
     alert("Team Infy SOARS Presents \nProject Covid");
