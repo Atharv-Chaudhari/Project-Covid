@@ -1,0 +1,25 @@
+.result-container{
+    width:80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding:50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 25px;
+}
+.result-block{
+    text-align: center;
+}
+col{
+    width:50%;
+}
+.block-in{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.line-me{
+    margin-top: 4px;
+}
