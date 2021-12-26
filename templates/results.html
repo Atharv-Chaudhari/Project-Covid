@@ -303,106 +303,109 @@
         <div class="result-container">
             <h1 style="text-align: center;color:red;">Prediction Report</h1>
             <br><br>
-            <img src="static/images/results_page.jpg" width="100%" height="30%">
+            <img class="img-result" src="static/images/results_page.jpg" width="100%" height="30%">
             <div class="result-block">
-                <br>
+                <br><br>
                 <h2 style="color:red;text-align: center;">Detailed Report</h2>
-                <br>
+                <br><br>
                 <div class="block-in" style="text-align: center;">
                     <div class="col">
                         <h3 style="color:#FF6600	;text-align: center;">Basic Information</h3>
-                        <br>
+                        <br><br>
                         <h3> Email </h3>
-                        <br>
+                        <br><br>
                         <h3> Country </h3>
-                        <br>
+                        <br><br>
                         <h3> Gender </h3>
-                        <br>
+                        <br><br>
                         <h3> Age 60 or Above </h3>
-                        <br>
+                        <br><br>
                         <h3> Abroad </h3>
-                        <br>
+                        <br><br>
                         <h3> Contact with Covid-19 Patient </h3>
-                        <br>
+                        <br><br>
                         <h3 style="color:#FF6600;text-align: center;">Symptoms</h3>
-                        <br>
+                        <br><br>
                         <h3> Cough </h3>
-                        <br>
+                        <br><br>
                         <h3> Fever </h3>
-                        <br>
+                        <br><br>
                         <h3> Sore Throat </h3>
-                        <br>
+                        <br><br>
                         <h3> Shortness of Breath </h3>
-                        <br>
+                        <br><br>
                         <h3> Headache </h3>
-                        <br>
+                        <br><br>
                         <hr>
-                        <br>
+                        <br><br>
                         <h3> Corona Risk </h3>
                     </div>
                     <div class="col" style="text-align: center;">
-                        <br><br>
+                        <br><br><br>
+                        <div class="block-result-4"></div>
                         <h3 style="color:blue">{{model_pred.email}}</h3>
-                        <br>
+                        <br><br>
                         <h3 style="color:blue">{{model_pred.country}}</h3>
-                        <br>
+                        <br><br>
                         <h3 style="color:blue">{{model_pred.gender}}</h3>
-                        <br>
+                        <br><br>
                         <h3 style="color:blue">{{model_pred.age_60_and_above}}</h3>
-                        <br>
+                        <br><br>
                         <h3 style="color:blue">{{model_pred.abroad}}</h3>
-                        <br>
+                        <br><br>
                         {% if model_pred.contact_with_covid_patient in data.one %}
                         <h3 style="color:red">{{model_pred.contact_with_covid_patient}}</h3>
                         {% else %}
                         <h3 style="color:#00FF00">{{model_pred.contact_with_covid_patient}}</h3>
                         {% endif %}
-                        <br>
                         <br><br>
+                        <br><br><br>
+                        <div class="block-result-2"></div>
                         {% if model_pred.cough in model_pred.one %}
                         <h3 style="color:red">{{model_pred.cough}}</h3>
                         {% else %}
                         <h3 style="color:#00FF00">{{model_pred.cough}}</h3>
                         {% endif %}
-                        <br>
+                        <br><br>
                         {% if model_pred.fever in model_pred.one %}
                         <h3 style="color:red">{{model_pred.fever}}</h3>
                         {% else %}
                         <h3 style="color:#00FF00">{{model_pred.fever}}</h3>
                         {% endif %}
-                        <br>
+                        <br><br>
                         {% if model_pred.sore_throat in model_pred.one %}
                         <h3 style="color:red">{{model_pred.sore_throat}}</h3>
                         {% else %}
                         <h3 style="color:#00FF00">{{model_pred.sore_throat}}</h3>
                         {% endif %}
-                        <br>
+                        <br><br>
                         {% if model_pred.shortness_of_breath in model_pred.one %}
                         <h3 style="color:red">{{model_pred.shortness_of_breath}}</h3>
                         {% else %}
                         <h3 style="color:#00FF00">{{model_pred.shortness_of_breath}}</h3>
                         {% endif %}
-                        <br>
+                        <br><br>
+                        <div class="block-result-3"></div>
                         {% if model_pred.head_ache in model_pred.one %}
                         <h3 style="color:red">{{model_pred.head_ache}}</h3>
                         {% else %}
                         <h3 style="color:#00FF00">{{model_pred.head_ache}}</h3>
                         {% endif %}
-                        <br>
+                        <br><br>
                         {% if model_pred.prediction in model_pred.one %}
                         <hr class="line-me">
-                        <br>
+                        <br><br>
                         <h3 style="color:red">{{model_pred.prob}}</h3>
                         {% else %}
                         <hr class="line-me">
-                        <br>
+                        <br><br>
                         <!-- <canvas id="confetti"></canvas> -->
                         <h3 style="color:#00FF00">{{model_pred.prob}}</h3>
                         {% endif %}
-                        <br>
+                        <br><br>
                     </div>
                 </div>
-                <img src="static/images/result_tnx.jpg" width="80%" height="400px">
+                <img class="img-result" src="static/images/result_tnx.jpg" width="80%" height="400px">
             </div>
         </div>
 
