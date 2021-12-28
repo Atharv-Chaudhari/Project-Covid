@@ -31,7 +31,7 @@ loaded_model = joblib.load('model1.sav')
 #Creating our view, it is a class based view
 class GeneratePdf(View):
      def get(self, request):
-        with open("pdf/report_one.txt") as f:
+        with open("pdf/report_one.txt",encoding = "utf8") as f:
             result = f.read()
         return HttpResponse(result, content_type='application/pdf')
 
