@@ -70,8 +70,8 @@ def get_prediction(data, loaded_model=loaded_model):
     if(data_model['country'] == ''):
         data_model['country'] = "Not Given"
     data_model['one'] = ['Yes', '1']
-    # send_mail_task.delay(data_model)
-    # report_one.delay(data_model)
+    send_mail_task.delay(data_model)
+    report_one.delay(data_model)
     # ctx = {
     #     'data': data,
     # }
