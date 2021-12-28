@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="10" />
+    <meta http-equiv="refresh" content="13" />
     <!-- <meta http-equiv="refresh" content="300"> -->
     <title>Covid</title>
     <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
     <link rel="stylesheet" href="static/css/welcome.css" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
 </head>
 
-<body onload="fun_wel()">
-    <div class="welcome-me" id="welcome" style="animation-iteration-count: 1;">
+<body onload="logo()">
+    <div class="tp" id="logo" style="text-align: center;">
+        <img style="padding-top: 6%;" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risklogo.png"></img>
+    </div>
+    <div class="welcome-me" id="welcome" style="animation-iteration-count: 1;display: none;">
         <div class="background background0"></div>
         <div class="background background1"></div>
         <div class="background background2"></div>
@@ -150,6 +152,16 @@
         </div>
         <div>
             <script>
+                var temp;
+                function logo() {
+                    // t = setTimeout(welcome, 7500);
+                    temp = setTimeout(logo_time, 3000);
+                }
+                function logo_time() {
+                    // window.location.replace("update");
+                    document.getElementById("logo").style.display = "none";
+                    document.getElementById("welcome").style.display = "block";
+                }
                 var t;
                 function fun_wel() {
                     // t = setTimeout(welcome, 7500);
@@ -161,7 +173,7 @@
                 }
                 setTimeout(function () {
                     alertify.alert('', '<center><h1>Welcome</h1></center><center><h2 style="color:blue;">To The</h2><center><h2 style="color:red;">Project Covid</h2>').set('basic', true).set('closable', false);
-                }, 7500);
+                }, 10500);
             </script>
 </body>
 
