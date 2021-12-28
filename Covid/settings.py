@@ -171,3 +171,4 @@ EMAIL_USER_SSL = False
 
 
 
+# WKHTMLTOPDF_CMD = '/usr/local/bin/wkhtmltopdf'

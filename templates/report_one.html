@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Predictor Email</title>
+    <style>
+        th,
+        td {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risklogo.png"></img>
+        <h1 style="color:red;font-size: 30px;margin-top:-3%;">Risk Predictor Report</h1>
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_mail.jpg"></img>
+        <br><br>
+        <h2 style="color:red;text-align: center;font-size: 20px;padding-top: 150px;">Detailed Report</h2>
+        <h3 style="color:#FF6600;text-align: center;font-size: 20px;">Basic Information</h3>
+        <div class="block-in" style="text-align: center;">
+            <table style="width:200;border-collapse: collapse;">
+                <tr>
+                    <td></td>
+                    <td> Email </td>
+                    <td style="color:blue">{{data.email}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Country </td>
+                    <td style="color:blue;">{{data.country}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Gender </td>
+                    <td style="color:blue;">{{data.gender}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Age 60 or Above </td>
+                    <td style="color:blue;">{{data.age_60_and_above}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Abroad </td>
+                    <td style="color:blue;">{{data.abroad}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Contact with Covid-19 Patient </td>
+                    {% if data.contact_with_covid_patient in data.one %}
+                    <td style="color:red;">{{data.contact_with_covid_patient}}</td>
+                    {% else %}
+                    <td style="color:#00FF00;">{{data.contact_with_covid_patient}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <h3 style="color:#FF6600;text-align: center;font-size: 20px;">Symptoms</h3>
+        <div class="block-in" style="text-align: center;">
+            <table>
+                <tr>
+                    <td></td>
+                    <td> Cough </td>
+                    {% if data.cough in data.one %}
+                    <td style="color:red;">{{data.cough}}</td>
+                    {% else %}
+                    <td style="color:#00FF00;">{{data.cough}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Fever </td>
+                    {% if data.fever in data.one %}
+                    <td style="color:red;">{{data.fever}}</td>
+                    {% else %}
+                    <td style="color:#00FF00;">{{data.fever}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Sore Throat </td>
+                    {% if data.sore_throat in data.one %}
+                    <td style="color:red;">{{data.sore_throat}}</td>
+                    {% else %}
+                    <td style="color:#00FF00;">{{data.sore_throat}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Shortness of Breath </td>
+                    {% if data.shortness_of_breath in data.one %}
+                    <td style="color:red">{{data.shortness_of_breath}}</td>
+                    {% else %}
+                    <td style="color:#00FF00;">{{data.shortness_of_breath}}</td>
+                    {% endif %} <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Headache </td>
+                    {% if data.head_ache in data.one %}
+                    <td style="color:red;">{{data.head_ache}}</td>
+                    {% else %}
+                    <td style="color:#00FF00;">{{data.head_ache}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td  style="background-color: #F0F0F0;"> Probability Of Being Covid-19 Positive </td>
+                    {% if data.prediction in data.one %}
+                    <td style="color:red;background-color: #F0F0F0;"> {{data.prob}} </td>
+                    {% else %}
+                    <td style="color:#00FF00;background-color: #F0F0F0;"> {{data.prob}} </td>
+                    {% endif %} 
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_tnx.jpg"></img>
+    </div>
+</body>
+
+</html>

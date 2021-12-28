@@ -11,6 +11,16 @@ import pandas as pd
 from .task import *
 import warnings
 warnings.filterwarnings("ignore")
+
+from django.http import HttpResponse
+from django.views.generic import View
+ 
+#importing get_template from loader
+from django.template.loader import get_template
+ 
+#import render_to_pdf from util.py 
+from .utils import render_to_pdf 
+ 
 # from apscheduler.schedulers.background import BackgroundScheduler
 
 print("################################################## Lets Start Project #############################################################")
@@ -18,6 +28,12 @@ print("################################################## Lets Start Project ###
 
 loaded_model = joblib.load('model1.sav')
 
+#Creating our view, it is a class based view
+class GeneratePdf(View):
+     def get(self, request):
+        with open("pdf/report_one.txt") as f:
+            result = f.read()
+        return HttpResponse(result, content_type='application/pdf')
 
 def get_prediction(data, loaded_model=loaded_model):
     data_model = {
@@ -54,7 +70,16 @@ def get_prediction(data, loaded_model=loaded_model):
     if(data_model['country'] == ''):
         data_model['country'] = "Not Given"
     data_model['one'] = ['Yes', '1']
-    send_mail_task.delay(data_model)
+    # send_mail_task.delay(data_model)
+    # report_one.delay(data_model)
+    # ctx = {
+    #     'data': data,
+    # }
+    # messageContent = get_template('email.html').render(ctx)
+    # file = open("templates/report_one.html","w")
+    # file.write(str(messageContent))
+    # file.close()
+    # print(str(messageContent))
     return data_model
 
 # data refresher for replit

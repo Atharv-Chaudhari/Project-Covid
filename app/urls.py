@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views
+from .views import GeneratePdf
 
 urlpatterns = [
     path("",views.welcome,name='app'),
@@ -29,5 +30,6 @@ urlpatterns = [
     path("vaccine",views.vaccine,name='vaccine'),
     path("dashboard",views.dashboard,name='dashboard'),
     path("email",views.email,name='email'),
-    path("welcome_dashboard",views.welcome_dashboard,name='welcome_dashboard')
+    path("welcome_dashboard",views.welcome_dashboard,name='welcome_dashboard'),
+    path('pdf/report_one', GeneratePdf.as_view()), 
 ]
