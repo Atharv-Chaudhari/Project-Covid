@@ -9,22 +9,20 @@
     <style>
         th,
         td {
-            padding-top: 5px;
-            padding-bottom: 5px;
-            font-size: 15px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            font-size: 17px;
         }
     </style>
 </head>
 
 <body>
     <div class="container" style="text-align: center;">
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risklogo.png"></img>
-        <h1 style="color:red;font-size: 30px;margin-top:-3%;">Risk Predictor Report</h1>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_mail.jpg"></img>
-        <br><br>
-        <h2 style="color:red;text-align: center;font-size: 20px;padding-top: 150px;">Detailed Report</h2>
-        <h3 style="color:#FF6600;text-align: center;font-size: 20px;">Basic Information</h3>
+        <img width="350px" height="350px"
+            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risklogo.png"></img>
         <div class="block-in" style="text-align: center;">
+            <h1 style="color:red;font-size: 25px;margin-top: -3%;">Risk Predictor Report</h1>
+            <h3 style="color:#FF6600;text-align: center;font-size: 20px;">Basic Information</h3>
             <table style="width:200;border-collapse: collapse;">
                 <tr>
                     <td></td>
@@ -122,18 +120,17 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td  style="background-color: #F0F0F0;"> Probability Of Being Covid-19 Positive </td>
+                    <td style="background-color: #F0F0F0;"> Probability Of Being Covid-19 Positive </td>
                     {% if data.prediction in data.one %}
                     <td style="color:red;background-color: #F0F0F0;"> {{data.prob}} </td>
                     {% else %}
                     <td style="color:#00FF00;background-color: #F0F0F0;"> {{data.prob}} </td>
-                    {% endif %} 
+                    {% endif %}
                     <td></td>
                 </tr>
             </table>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_tnx.jpg"></img>
+        <h1 style="color:blue;font-size: 30px;text-align: center;padding-top: 13%;">Thank You</h1>
     </div>
 </body>
 
