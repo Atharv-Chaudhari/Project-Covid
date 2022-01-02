@@ -104,7 +104,7 @@
             width="100%" height="50%"></img>
         <div class="block1">
             <div class="col">
-                <h3 style="color:#FF6600	;text-align: center;">Symptoms</h3>
+                <h3 style="color:#FF6600;text-align: center;">Symptoms</h3>
                 <div class="block-in" style="text-align: center;">
                     <div class="col">
                         <h3> Cough </h3>
@@ -114,6 +114,7 @@
                         <h3> Headache  </h3>
                         <hr>
                         <h3> Corona Result  </h3>
+                        <h3> Probability  </h3>
                     </div>
                     <div class="col">
                         {% if data.cough in data.one %}
@@ -147,6 +148,11 @@
                         {% else %}
                         <hr>
                         <h3 style="color:#00FF00">Negative</h3>
+                        {% endif %}
+                        {% if data.prediction in data.one %}
+                        <h3 style="color:red">{{data.prob}}</h3>
+                        {% else %}
+                        <h3 style="color:#00FF00">{{data.prob}}</h3>
                         {% endif %}
                     </div>
                 </div>
