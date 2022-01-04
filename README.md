@@ -1,6 +1,6 @@
 # Sem-7-Covid 
 
-## Current Project Status ➡ ![Status](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)
+## Current Project Status -> ![Status](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)
 
 [Visit on Heroku](https://covid-infy-soars.herokuapp.com/)
 
