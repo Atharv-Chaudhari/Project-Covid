@@ -342,6 +342,8 @@
                         <hr>
                         <br><br>
                         <h3> Corona Result </h3>
+                        <br>
+                        <h3> Probability </h3>
                     </div>
                     <div class="col" style="text-align: center;">
                         <br><br><br>
@@ -405,6 +407,14 @@
                         <br><br>
                         <!-- <canvas id="confetti"></canvas> -->
                         <h3 style="color:#00FF00">Negative</h3>
+                        {% endif %}
+                        {% if model_pred.prediction in model_pred.one %}
+                        <br>
+                        <h3 style="color:red">{{model_pred.prob}}</h3>
+                        {% else %}
+                        <br>
+                        <!-- <canvas id="confetti"></canvas> -->
+                        <h3 style="color:#00FF00">{{model_pred.prob}}</h3>
                         {% endif %}
                         <br><br>
                     </div>
