@@ -1,7 +1,6 @@
 # Sem-7-Covid 
 
-## Current Project Status <span style="animation: slide1 1s ease-in-out infinite;color:blue;">&#8594;</span> ![Status](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+## Current Project Status ![alt text](https://i.pinimg.com/originals/d1/eb/68/d1eb6846f08ac6884b4c2c6a8b39731d.gif "Logo Title Text 1") ![Status](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)
 
 [Visit on Heroku](https://covid-infy-soars.herokuapp.com/)
 
