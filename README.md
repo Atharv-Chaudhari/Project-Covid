@@ -1,4 +1,4 @@
-# Sem-7-Covid ![example workflow](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)
+# Sem-7-Covid ![Status](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)
 
 [Visit on Heroku](https://covid-infy-soars.herokuapp.com/)
 
