@@ -1,4 +1,4 @@
-# Sem-7-Covid <p style="text-align:center;">![Status](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)</p>
+# Sem-7-Covid <p style="text-align:right;">![Status](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)</p>
 
 [Visit on Heroku](https://covid-infy-soars.herokuapp.com/)
 
