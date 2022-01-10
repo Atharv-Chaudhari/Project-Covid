@@ -31,12 +31,12 @@ from .utils import render_to_pdf
 print("################################################## Lets Start Project #############################################################")
 # Create your views here.
 
-loaded_model = joblib.load('model1.sav')
+loaded_model = joblib.load('models/model1.sav')
 
 #Creating our view, it is a class based view
 class GeneratePdf(View):
      def get(self, request):
-        with open("pdf/report_one.txt",'rb') as f:
+        with open("tmp/pdf/report_one.txt",'rb') as f:
             result = f.read()
         return HttpResponse(result, content_type='application/pdf')
 
@@ -139,7 +139,7 @@ def home(request):
             return render(request, 'results.html', context)
     else:
         world_data.delay(0)
-        f = open("data.json", "r")
+        f = open("tmp/data.json", "r")
         d = json.load(f)
         return render(request, 'index.html', d)
         # return render(request, 'index.html')
@@ -283,7 +283,7 @@ def welcome_dashboard(request):
     return render(request, 'welcome_dashboard.html')
 
 def img_process(img):
-    model = tf.keras.models.load_model("./model2.h5")
+    model = tf.keras.models.load_model("models/model2.h5")
 
     img = image.load_img(img, target_size = (128,128))
     img = image.img_to_array(img)/255

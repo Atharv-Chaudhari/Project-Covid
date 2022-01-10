@@ -31,6 +31,6 @@ urlpatterns = [
     path("dashboard",views.dashboard,name='dashboard'),
     path("email",views.email,name='email'),
     path("welcome_dashboard",views.welcome_dashboard,name='welcome_dashboard'),
-    path('pdf/report_one', GeneratePdf.as_view()), 
+    path('tmp/pdf/report_one', GeneratePdf.as_view()), 
     path("img_pred",views.img_pred,name='img_pred'),
 ]

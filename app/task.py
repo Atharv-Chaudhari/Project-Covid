@@ -57,7 +57,7 @@ def report_one(data):
     }
         #getting the template
     pdf = render_to_pdf('report_one.html',ctx)
-    with open("pdf/report_one.txt", "wb") as outfile:
+    with open("tmp/pdf/report_one.txt", "wb") as outfile:
         outfile.write(pdf.getvalue())
     return None
 
@@ -78,6 +78,6 @@ def world_data(d):
         'deaths': wdata[1],
         'recovered': wdata[2]
     }
-    f = open("data.json", "w")
+    f = open("tmp/data.json", "w")
     f = json.dump(d, f)
     return None
