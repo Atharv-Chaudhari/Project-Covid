@@ -9,10 +9,9 @@ joblib
 pandas
 sklearn
 celery
-redis
 rabbitmq
 honcho
 eventlet
 xhtml2pdf
 numpy
-tensorflow
+tensorflow==2.0.0
