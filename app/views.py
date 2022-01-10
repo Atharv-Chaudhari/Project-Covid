@@ -4,6 +4,8 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from requests.api import request
+from django.http import HttpResponseRedirect
+# from .forms import UploadFileForm
 from geopy.geocoders import Nominatim
 from time import sleep
 import joblib
@@ -11,6 +13,9 @@ import pandas as pd
 from .task import *
 import warnings
 warnings.filterwarnings("ignore")
+import numpy as np
+import tensorflow as tf
+from keras.preprocessing import image
 
 from django.http import HttpResponse
 from django.views.generic import View
@@ -276,3 +281,37 @@ def vaccine_tracker(pincode, date):
 
 def welcome_dashboard(request):
     return render(request, 'welcome_dashboard.html')
+
+def img_process(img):
+    model = tf.keras.models.load_model("./model2.h5")
+
+    img = image.load_img(img, target_size = (128,128))
+    img = image.img_to_array(img)/255
+    img = np.array([img])
+    print(img.shape)
+
+    print((model.predict(img) >= 0.5).astype("int32"))
+
+from django.core.files.storage import default_storage
+
+def img_pred(request):
+    if request.method == 'POST':
+        if request.POST.get("form_type") == 'formFour':
+            model_data = request.POST
+            context = {
+                'model_pred': get_prediction(model_data)
+            }
+            return render(request, 'results.html', context)
+        if request.POST.get("form_type") == 'formSeven' and request.FILES['image']:
+            filename = request.FILES['image']
+            filename=str(filename)
+            file_data=request.FILES['image'].read()
+            temp=filename.index(".")
+            img="tmp/image"+str(filename[temp:])
+            print(img)
+            with open("tmp/image"+str(filename[temp:]), "wb") as outfile:
+                outfile.write(file_data)
+            img_process(img)
+            return render(request, 'img_pred.html')
+    return render(request, 'img_pred.html')
+    
