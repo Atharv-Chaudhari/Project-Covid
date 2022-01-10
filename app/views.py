@@ -289,10 +289,9 @@ def img_process(img):
     img = image.img_to_array(img)/255
     img = np.array([img])
     print(img.shape)
-
-    print((model.predict(img) >= 0.5).astype("int32"))
-
-from django.core.files.storage import default_storage
+    ans=(model.predict(img) >= 0.5).astype("int32")
+    print(ans)
+    return ans
 
 def img_pred(request):
     if request.method == 'POST':
@@ -311,7 +310,7 @@ def img_pred(request):
             print(img)
             with open("tmp/image"+str(filename[temp:]), "wb") as outfile:
                 outfile.write(file_data)
-            img_process(img)
-            return render(request, 'img_pred.html')
+            imgpred=img_process(img)
+            return render(request, 'img_result.html',{'imgpred':imgpred})
     return render(request, 'img_pred.html')
     
