@@ -306,7 +306,7 @@
             <a href="tmp/pdf/report_one" target="_blank"><i class="fas fa-download" style="padding-left: 100%;font-size: 25px;"></i></a>
             <h1 style="text-align: center;color:red;">Prediction Report</h1>
             <br><br>
-            <img class="img-result" src="static/images/results_page.jpg" width="100%" height="30%">
+            <!-- <img class="img-result" src="static/images/results_page.jpg" width="100%" height="30%"> -->
             <div class="result-block">
                 <br><br>
                 <h2 style="color:red;text-align: center;">Detailed Report</h2>
@@ -362,7 +362,7 @@
                         {% if model_pred.contact_with_covid_patient in data.one %}
                         <h3 style="color:red">{{model_pred.contact_with_covid_patient}}</h3>
                         {% else %}
-                        <h3 style="color:#00FF00">{{model_pred.contact_with_covid_patient}}</h3>
+                        <h3 style="color:blue">{{model_pred.contact_with_covid_patient}}</h3>
                         {% endif %}
                         <br><br>
                         <br><br><br>
@@ -370,32 +370,32 @@
                         {% if model_pred.cough in model_pred.one %}
                         <h3 style="color:red">{{model_pred.cough}}</h3>
                         {% else %}
-                        <h3 style="color:#00FF00">{{model_pred.cough}}</h3>
+                        <h3 style="color:blue">{{model_pred.cough}}</h3>
                         {% endif %}
                         <br><br>
                         {% if model_pred.fever in model_pred.one %}
                         <h3 style="color:red">{{model_pred.fever}}</h3>
                         {% else %}
-                        <h3 style="color:#00FF00">{{model_pred.fever}}</h3>
+                        <h3 style="color:blue">{{model_pred.fever}}</h3>
                         {% endif %}
                         <br><br>
                         {% if model_pred.sore_throat in model_pred.one %}
                         <h3 style="color:red">{{model_pred.sore_throat}}</h3>
                         {% else %}
-                        <h3 style="color:#00FF00">{{model_pred.sore_throat}}</h3>
+                        <h3 style="color:blue">{{model_pred.sore_throat}}</h3>
                         {% endif %}
                         <br><br>
                         {% if model_pred.shortness_of_breath in model_pred.one %}
                         <h3 style="color:red">{{model_pred.shortness_of_breath}}</h3>
                         {% else %}
-                        <h3 style="color:#00FF00">{{model_pred.shortness_of_breath}}</h3>
+                        <h3 style="color:blue">{{model_pred.shortness_of_breath}}</h3>
                         {% endif %}
                         <br><br>
                         <div class="block-result-3"></div>
                         {% if model_pred.head_ache in model_pred.one %}
                         <h3 style="color:red">{{model_pred.head_ache}}</h3>
                         {% else %}
-                        <h3 style="color:#00FF00">{{model_pred.head_ache}}</h3>
+                        <h3 style="color:blue">{{model_pred.head_ache}}</h3>
                         {% endif %}
                         <br><br>
                         {% if model_pred.prediction in model_pred.one %}
@@ -406,7 +406,7 @@
                         <hr class="line-me">
                         <br><br>
                         <!-- <canvas id="confetti"></canvas> -->
-                        <h3 style="color:#00FF00">Negative</h3>
+                        <h3 style="color:blue">Negative</h3>
                         {% endif %}
                         {% if model_pred.prediction in model_pred.one %}
                         <br>
@@ -414,12 +414,12 @@
                         {% else %}
                         <br>
                         <!-- <canvas id="confetti"></canvas> -->
-                        <h3 style="color:#00FF00">{{model_pred.prob}}</h3>
+                        <h3 style="color:blue">{{model_pred.prob}}</h3>
                         {% endif %}
                         <br><br>
                     </div>
                 </div>
-                <img class="img-result" src="static/images/result_tnx.jpg" width="80%" height="400px">
+                <!-- <img class="img-result" src="static/images/result_tnx.jpg" width="80%" height="400px"> -->
                 <br><br><br>
                 <div style="text-align:center;">
                     <a href="tmp/pdf/report_one" target="_blank">

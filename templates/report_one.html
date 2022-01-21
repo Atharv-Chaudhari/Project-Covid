@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk Predictor Email</title>
     <style>
+        /* @page { size: A5 } */
         th,
         td {
             padding-top: 2px;
@@ -60,7 +61,7 @@
                     {% if data.contact_with_covid_patient in data.one %}
                     <td style="color:red;">{{data.contact_with_covid_patient}}</td>
                     {% else %}
-                    <td style="color:#00FF00;">{{data.contact_with_covid_patient}}</td>
+                    <td style="color:blue;">{{data.contact_with_covid_patient}}</td>
                     {% endif %}
                     <td></td>
                 </tr>
@@ -75,7 +76,7 @@
                     {% if data.cough in data.one %}
                     <td style="color:red;">{{data.cough}}</td>
                     {% else %}
-                    <td style="color:#00FF00;">{{data.cough}}</td>
+                    <td style="color:blue;">{{data.cough}}</td>
                     {% endif %}
                     <td></td>
                 </tr>
@@ -85,7 +86,7 @@
                     {% if data.fever in data.one %}
                     <td style="color:red;">{{data.fever}}</td>
                     {% else %}
-                    <td style="color:#00FF00;">{{data.fever}}</td>
+                    <td style="color:blue;">{{data.fever}}</td>
                     {% endif %}
                     <td></td>
                 </tr>
@@ -95,7 +96,7 @@
                     {% if data.sore_throat in data.one %}
                     <td style="color:red;">{{data.sore_throat}}</td>
                     {% else %}
-                    <td style="color:#00FF00;">{{data.sore_throat}}</td>
+                    <td style="color:blue;">{{data.sore_throat}}</td>
                     {% endif %}
                     <td></td>
                 </tr>
@@ -105,7 +106,7 @@
                     {% if data.shortness_of_breath in data.one %}
                     <td style="color:red">{{data.shortness_of_breath}}</td>
                     {% else %}
-                    <td style="color:#00FF00;">{{data.shortness_of_breath}}</td>
+                    <td style="color:blue;">{{data.shortness_of_breath}}</td>
                     {% endif %} <td></td>
                 </tr>
                 <tr>
@@ -114,7 +115,7 @@
                     {% if data.head_ache in data.one %}
                     <td style="color:red;">{{data.head_ache}}</td>
                     {% else %}
-                    <td style="color:#00FF00;">{{data.head_ache}}</td>
+                    <td style="color:blue;">{{data.head_ache}}</td>
                     {% endif %}
                     <td></td>
                 </tr>
@@ -124,7 +125,7 @@
                     {% if data.prediction in data.one %}
                     <td style="color:red;background-color: #F0F0F0;"> Positive </td>
                     {% else %}
-                    <td style="color:#00FF00;background-color: #F0F0F0;"> Negative </td>
+                    <td style="color:blue;background-color: #F0F0F0;"> Negative </td>
                     {% endif %}
                     <td></td>
                 </tr>
@@ -134,7 +135,7 @@
                     {% if data.prediction in data.one %}
                     <td style="color:red;background-color: #F0F0F0;"> {{data.prob}} </td>
                     {% else %}
-                    <td style="color:#00FF00;background-color: #F0F0F0;"> {{data.prob}} </td>
+                    <td style="color:blue;background-color: #F0F0F0;"> {{data.prob}} </td>
                     {% endif %}
                     <td></td>
                 </tr>
