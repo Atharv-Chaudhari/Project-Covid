@@ -4,7 +4,7 @@
 
 [Visit on Heroku](https://covid-infy-soars.herokuapp.com/)
 
-[Visit on Replit](https://InfySOARS-Project-Covid.infysoars.repl.co)
+[Visit on Replit](https://infysoars-project-covid.infysoars.repl.co/)
 
 [Visit on Python Any Where](https://infysoars.pythonanywhere.com)
 
