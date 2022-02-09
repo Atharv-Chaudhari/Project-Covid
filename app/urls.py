@@ -33,4 +33,6 @@ urlpatterns = [
     path("welcome_dashboard",views.welcome_dashboard,name='welcome_dashboard'),
     path('tmp/pdf/report_one', GeneratePdf.as_view()), 
     path("img_pred",views.img_pred,name='img_pred'),
+    path("predictors",views.predictors,name='predictors'),
+    path("nlp",views.nlp,name='nlp'),
 ]

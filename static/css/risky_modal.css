@@ -199,8 +199,9 @@ select option {
     border-color: #BCE8F1;
 }
 .submits {
-  width: 50%;
-  margin-left: 25%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .others {
@@ -219,4 +220,9 @@ select option {
 }
 .risk-modal h4{
   color:#7ed321;
+}
+#borderimg1 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-color: white 30 round;
 }

@@ -35,7 +35,7 @@ def send_mail_task(data):
     }
     heading = "Test Report By Team InfySOARS"
     messageContent = get_template('email.html').render(ctx)
-    msg = EmailMessage(heading, messageContent, 'infysoars0@gmail.com',
+    msg = EmailMessage(heading, messageContent, '<infysoars0@gmail.com>',
                        [data['email']])
     msg.content_subtype = 'html'
     msg.send()

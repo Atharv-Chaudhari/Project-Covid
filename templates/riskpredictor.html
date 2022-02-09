@@ -141,40 +141,45 @@
             </div> -->
             <div class="navbar-menu" id="open-navbar1">
                 <ul class="navbar-nav">
-                    <li class="active"><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
                     <li class="navbar-dropdown">
                         <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
                                 class="fa fa-bar-chart"></i>
                             Analysis <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown" id="my-dropdown-id">
-                            <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank" onclick="myFunction()"><span class="iconify" data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
+                            <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify" data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
                             <li class="separator"></li>
                             <li><a href="#" onclick="myFunction()">Seprated link</a></li>
                             <li class="separator"></li>
                             <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                         </ul>
                     </li>
-                    <li class="navbar-dropdown">
+                    <li class="navbar-dropdown active">
                         <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
                             Applications <i class="fa fa-angle-down"></i>
                         </a>
-                        <ul class="dropdown" id="blog">
+                        <ul class="dropdown" id="blog" style="text-align: center;">
                             <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
-                            <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
-                                id="risk-myBtn"><i class="fas fa-search-location"></i> Risk Predictor</span><a href="riskpredictor" target="_blank"
+                            <li style="padding-top: 10px;padding-bottom: 10px;"><span
+                                    style="font-size: 14px;cursor: pointer;" id="risk-myBtn"><i
+                                        class="fa fa-rocket"></i> &#160Phase - I Predictor</span>
+                                <!-- <a href="riskpredictor" target="_blank"
                                 style="display: inline-block;margin:5px 0;"><i
-                                    class="fas fa-external-link-alt"></i></a></li>
-                        <li class="separator"></li>
-                        <li><a href="vaccine" onclick="myFunction()"><i class="fas fa-search-location"></i> Vaccine Tracker</a></li>
-                        <li class="separator"></li>
-                            <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
+                                    class="fas fa-external-link-alt"></i></a> -->
+                                <br>
+                            </li>
+                            <li class="separator"></li>
+                            <li><a href="img_pred"><i class="fa fa-rocket"></i> &#160Phase - II Predictor</span></a></li>
+                            <li class="separator"></li>
+                            <li><a href="vaccine" class="tracker"><i class="fas fa-search-location"></i>
+                                    &#160Vaccine Tracker</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li>
+                    <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
                     <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
                     <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;" class="material-icons">&#xe163;</i> Contact</a></li>
-                    <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
+                    <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
+                    <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                     <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
                 </ul>
             </div>
@@ -187,10 +192,10 @@
                         class="fas fa-long-arrow-alt-right arrow1" aria-hidden="False"></i> &#160&#160&#160Risk
                     Predictor</a></li>
         </ul>
-        <div class="alert-up" style="text-align: center;">
+        <!-- <div class="alert-up" style="text-align: center;">
             <span class="closebtn-up" onclick="this.parentElement.style.display='none';">&times;</span>
             Click on The Icon &#160<strong><i class="fas fa-external-link-alt"></i></strong> &#160To Get UI in New Window.
-          </div>
+          </div> -->
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <a>
@@ -297,7 +302,7 @@
                     <h1 style="color:blue;"> Welcome To Covid-19 Risk Predictor </h1>
                 </div>
                 <span style="font-size:20px;color: red;">✨ Enter Your Details ✨</span>
-                <img style="height:70%;width:70%;" src="static/images/old_logo.png">
+                <img style="height:70%;width:70%;" src="static/images/risklogo.png">
                 <!-- <div class="input-group">
                     <label>
                         <span class="input-label">&#160&#160&#160&#160<i class="material-icons">person</i> Enter Full

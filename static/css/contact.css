@@ -1,7 +1,6 @@
 .contact {
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
@@ -9,8 +8,14 @@
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
+    text-align: center;
+    width:70%;
+    padding-bottom:50px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    /* display: grid; */
+    /* grid-template-columns: auto auto; */
     /* padding: 10px; */
 }
 
@@ -21,15 +26,16 @@
 }
 
 .sub-block {
-    /* background-color: white; */
-    width: 100%;
-    height: 100%;
+    text-align: center;
+    background-color: white;
+    width: 60%;
+    border-radius: 25px;
     margin-right: auto;
     margin-left: auto;
 }
 
 .sub-block h4 {
-    padding: 10%;
+    padding: 0%;
 }
 
 .sub-block input {
@@ -37,7 +43,7 @@
     width: 70%;
     border: grey;
     background-color: #E8E8E8;
-    padding: 15px;
+    padding: 13px;
     font-size: 15px;
 }
 
@@ -52,10 +58,10 @@
 }
 
 .row {
-    padding: 8px;
+    padding-top: 12px;
 }
 
-.sub-block input[type=button] {
+.sub-block input[type=submit] {
     color: white;
     background-color: black;
     padding: 20px;
@@ -66,7 +72,7 @@
     cursor: pointer;
 }
 
-.sub-block input[type=button]:focus {
+.sub-block input[type=submit]:focus {
     color: white;
     background-color: black;
 }
@@ -87,7 +93,7 @@
     }
 }
 @media (max-width:500px){
-    .sub-block input[type=button]{
+    .sub-block input[type=submit]{
         width:50%;
     }
 }
@@ -96,4 +102,38 @@
     background-position-y: 70px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+@media (max-width:1100px){
+    .sub-block{
+        width:70%;
+    }
+}
+@media (max-width:900px){
+    .sub-block{
+        width:80%;
+    }
+    .sub-block input[type=submit]{
+        width:40%;
+    }
+}
+@media (max-width:700px){
+    .sub-block{
+        width:90%;
+    }
+    .sub-block input[type=submit]{
+        width:50%;
+    }
+}
+@media (max-width:600px){
+    .sub-block{
+        width:100%;
+    }
+    .sub-block input[type=submit]{
+        width:50%;
+    }
+}
+@media (max-width:500px){
+    .grid-container{
+        width:100%;
+    }
 }

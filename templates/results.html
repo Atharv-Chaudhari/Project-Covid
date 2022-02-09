@@ -118,9 +118,9 @@
                                             style="color:crimson;font-size: 15px;"> presents</span></h1>
                                 </div>
                                 <div class="details-modal-content" style="font-family: 'Montserrat', sans-serif;">
-                                    <p style="text-align: center;margin-top: -8%;"><img src="static/images/risklogo.png"
-                                            width="300" height="300"></p>
-                                    <h1 style="text-align: center;margin-top: -8%;">Project Covid</h1>
+                                    <p style="text-align: center;"><img src="static/images/risklogo.png" width="250"
+                                            height="250"></p>
+                                    <h1 style="text-align: center;">Project Covid</h1>
                                     <p>
 
                                     </p>
@@ -144,16 +144,15 @@
             </div> -->
                 <div class="navbar-menu" id="open-navbar1">
                     <ul class="navbar-nav">
-                        <li class="active"><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
-                        </li>
+
                         <li class="navbar-dropdown">
                             <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
                                     class="fa fa-bar-chart"></i>
                                 Analysis <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown" id="my-dropdown-id">
-                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank" onclick="myFunction()"><span
-                                            class="iconify" data-icon="ion:logo-tableau"></span> Tableau DashBoard</a>
+                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify"
+                                            data-icon="ion:logo-tableau"></span> Tableau DashBoard</a>
                                 </li>
                                 <li class="separator"></li>
                                 <li><a href="#" onclick="myFunction()">Seprated link</a></li>
@@ -161,30 +160,42 @@
                                 <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                             </ul>
                         </li>
-                        <li class="navbar-dropdown">
+                        <li class="navbar-dropdown active">
                             <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
                                 Applications <i class="fa fa-angle-down"></i>
                             </a>
-                            <ul class="dropdown" id="blog">
+                            <ul class="dropdown" id="blog" style="text-align: center;">
                                 <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
-                                <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
-                                        id="risk-myBtn"><i class="fas fa-search-location"></i> Risk
-                                        Predictor</span><a href="riskpredictor" target="_blank"
-                                        style="display: inline-block;margin:5px 0;"><i
-                                            class="fas fa-external-link-alt"></i></a></li>
+                                <!-- <li style="padding-top: 10px;padding-bottom: 10px;"><a<span
+                                        style="font-size: 14px;cursor: pointer;" id="risk-myBtn"><i
+                                            class="fa fa-rocket"></i> Covid Predictors </span> -->
+                                <!-- <a href="riskpredictor" target="_blank"
+                                    style="display: inline-block;margin:5px 0;"><i
+                                        class="fas fa-external-link-alt"></i></a> 
+                                    <br>
+                                </li>-->
+                                <!-- <li class="separator"></li>
+                                <li><a href="img_pred"><i class="fa fa-rocket"></i> &#160Phase - II
+                                        Predictor</span></a></li> -->
+                                <li><a href="predictors" class="tracker"><i class="fa fa-rocket"></i>
+                                        &#160Covid Predictors</a></li>
                                 <li class="separator"></li>
-                                <li><a href="vaccine" onclick="myFunction()"><i class="fas fa-search-location"></i>
-                                        Vaccine Tracker</a></li>
+                                <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
+                                            class="fa fa-rocket"></i>
+                                        &#160Vaccine Tracker</a></li>
                                 <li class="separator"></li>
-                                <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
+                                <li><a href="nlp" onclick="myFunction()" class="tracker"><i class="fa fa-rocket"></i>
+                                        &#160Tweet Predictor </a></li>
                             </ul>
                         </li>
-                        <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a>
+                        <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a> -->
                         </li>
                         <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
                         <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                     class="material-icons">&#xe163;</i> Contact</a></li>
-                        <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
+                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
+                        </li>
+                        <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                         <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
                     </ul>
                 </div>
@@ -196,11 +207,11 @@
             <li><a href="results" onclick="myFunction()" style="color: black;"><i class="fa fa-info-circle"></i>
                     Reports</a></li>
         </ul>
-        <div class="alert-up" style="text-align: center;">
+        <!-- <div class="alert-up" style="text-align: center;">
             <span class="closebtn-up" onclick="this.parentElement.style.display='none';">&times;</span>
             Click on The Icon &#160<strong><i class="fas fa-external-link-alt"></i></strong> &#160To Get UI in New
             Window.
-        </div>
+        </div> -->
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <a>
@@ -303,121 +314,116 @@
 
 
         <div class="result-container">
-            <a href="tmp/pdf/report_one" target="_blank"><i class="fas fa-download" style="padding-left: 100%;font-size: 25px;"></i></a>
+            <a href="tmp/pdf/report_one" target="_blank"><i class="fas fa-download"
+                    style="padding-left: 100%;font-size: 25px;"></i></a>
             <h1 style="text-align: center;color:red;">Prediction Report</h1>
-            <br><br>
+            <img class="result-img"
+                src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risklogo.png"></img>
             <!-- <img class="img-result" src="static/images/results_page.jpg" width="100%" height="30%"> -->
             <div class="result-block">
-                <br><br>
+                <br>
                 <h2 style="color:red;text-align: center;">Detailed Report</h2>
-                <br><br>
-                <div class="block-in" style="text-align: center;">
-                    <div class="col">
-                        <h3 style="color:#FF6600	;text-align: center;">Basic Information</h3>
-                        <br><br>
-                        <h3> Email </h3>
-                        <br><br>
-                        <h3> Country </h3>
-                        <br><br>
-                        <h3> Gender </h3>
-                        <br><br>
-                        <h3> Age 60 or Above </h3>
-                        <br><br>
-                        <h3> Abroad </h3>
-                        <br><br>
-                        <h3> Contact with Covid-19 Patient </h3>
-                        <br><br>
-                        <h3 style="color:#FF6600;text-align: center;">Symptoms</h3>
-                        <br><br>
-                        <h3> Cough </h3>
-                        <br><br>
-                        <h3> Fever </h3>
-                        <br><br>
-                        <h3> Sore Throat </h3>
-                        <br><br>
-                        <h3> Shortness of Breath </h3>
-                        <br><br>
-                        <h3> Headache </h3>
-                        <br><br>
-                        <hr>
-                        <br><br>
-                        <h3> Corona Result </h3>
-                        <br>
-                        <h3> Probability </h3>
-                    </div>
-                    <div class="col" style="text-align: center;">
-                        <br><br><br>
-                        <div class="block-result-4"></div>
-                        <h3 style="color:blue">{{model_pred.email}}</h3>
-                        <br><br>
-                        <h3 style="color:blue">{{model_pred.country}}</h3>
-                        <br><br>
-                        <h3 style="color:blue">{{model_pred.gender}}</h3>
-                        <br><br>
-                        <h3 style="color:blue">{{model_pred.age_60_and_above}}</h3>
-                        <br><br>
-                        <div class="block-result-5"></div>
-                        <h3 style="color:blue">{{model_pred.abroad}}</h3>
-                        <br><br>
-                        {% if model_pred.contact_with_covid_patient in data.one %}
-                        <h3 style="color:red">{{model_pred.contact_with_covid_patient}}</h3>
-                        {% else %}
-                        <h3 style="color:blue">{{model_pred.contact_with_covid_patient}}</h3>
-                        {% endif %}
-                        <br><br>
-                        <br><br><br>
-                        <div class="block-result-2"></div>
-                        {% if model_pred.cough in model_pred.one %}
-                        <h3 style="color:red">{{model_pred.cough}}</h3>
-                        {% else %}
-                        <h3 style="color:blue">{{model_pred.cough}}</h3>
-                        {% endif %}
-                        <br><br>
-                        {% if model_pred.fever in model_pred.one %}
-                        <h3 style="color:red">{{model_pred.fever}}</h3>
-                        {% else %}
-                        <h3 style="color:blue">{{model_pred.fever}}</h3>
-                        {% endif %}
-                        <br><br>
-                        {% if model_pred.sore_throat in model_pred.one %}
-                        <h3 style="color:red">{{model_pred.sore_throat}}</h3>
-                        {% else %}
-                        <h3 style="color:blue">{{model_pred.sore_throat}}</h3>
-                        {% endif %}
-                        <br><br>
-                        {% if model_pred.shortness_of_breath in model_pred.one %}
-                        <h3 style="color:red">{{model_pred.shortness_of_breath}}</h3>
-                        {% else %}
-                        <h3 style="color:blue">{{model_pred.shortness_of_breath}}</h3>
-                        {% endif %}
-                        <br><br>
-                        <div class="block-result-3"></div>
-                        {% if model_pred.head_ache in model_pred.one %}
-                        <h3 style="color:red">{{model_pred.head_ache}}</h3>
-                        {% else %}
-                        <h3 style="color:blue">{{model_pred.head_ache}}</h3>
-                        {% endif %}
-                        <br><br>
-                        {% if model_pred.prediction in model_pred.one %}
-                        <hr class="line-me">
-                        <br><br>
-                        <h3 style="color:red">Positive</h3>
-                        {% else %}
-                        <hr class="line-me">
-                        <br><br>
-                        <!-- <canvas id="confetti"></canvas> -->
-                        <h3 style="color:blue">Negative</h3>
-                        {% endif %}
-                        {% if model_pred.prediction in model_pred.one %}
-                        <br>
-                        <h3 style="color:red">{{model_pred.prob}}</h3>
-                        {% else %}
-                        <br>
-                        <!-- <canvas id="confetti"></canvas> -->
-                        <h3 style="color:blue">{{model_pred.prob}}</h3>
-                        {% endif %}
-                        <br><br>
-                    </div>
+                <br>
+                <div class="block-in">
+                    <table style="border-collapse: collapse;">
+                        <tr>
+                            <th colspan="2">
+                                <h3 style="color:#FF6600;text-align: center;">Basic Information</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Email </td>
+                            <td style="color:blue;text-align: center;">{{data.email}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Country </td>
+                            <td style="color:blue;text-align: center;">{{data.country}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Gender </td>
+                            <td style="color:blue;text-align: center;">{{data.gender}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Age 60 or Above </td>
+                            <td style="color:blue;text-align: center;">{{data.age_60_and_above}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Abroad </td>
+                            <td style="color:blue;text-align: center;">{{data.abroad}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Contact with Covid-19 Patient </td>
+                            {% if data.contact_with_covid_patient in data.one %}
+                            <td style="color:red;text-align: center">{{data.contact_with_covid_patient}}</td>
+                            {% else %}
+                            <td style="color:blue;text-align: center;">{{data.contact_with_covid_patient}}</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                <h3 style="color:#FF6600;text-align: center;font-size: 20px;">Symptoms</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Cough </td>
+                            {% if data.cough in data.one %}
+                            <td style="color:red;text-align: center;">{{data.cough}}</td>
+                            {% else %}
+                            <td style="color:blue;text-align: center;">{{data.cough}}</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Fever </td>
+                            {% if data.fever in data.one %}
+                            <td style="color:red;text-align: center;">{{data.fever}}</td>
+                            {% else %}
+                            <td style="color:blue;text-align: center;">{{data.fever}}</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Sore Throat </td>
+                            {% if data.sore_throat in data.one %}
+                            <td style="color:red;text-align: center;">{{data.sore_throat}}</td>
+                            {% else %}
+                            <td style="color:blue;text-align: center;">{{data.sore_throat}}</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Shortness of Breath </td>
+                            {% if data.shortness_of_breath in data.one %}
+                            <td style="color:red;text-align: center;">{{data.shortness_of_breath}}</td>
+                            {% else %}
+                            <td style="color:blue;text-align: center;">{{data.shortness_of_breath}}</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"> &#160&#160&#160Headache </td>
+                            {% if data.head_ache in data.one %}
+                            <td style="color:red;text-align: center;">{{data.head_ache}}</td>
+                            {% else %}
+                            <td style="color:blue;text-align: center;">{{data.head_ache}}</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <td style="background-color: #F0F0F0;text-align: left;"> &#160&#160&#160Corona
+                                Result </td>
+                            {% if data.prediction in data.one %}
+                            <td style="color:red;background-color: #F0F0F0;text-align: center;"> Positive
+                            </td>
+                            {% else %}
+                            <td style="color:blue;background-color: #F0F0F0;text-align: center;"> Negative
+                            </td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <td style="background-color: #F0F0F0;text-align: left;"> &#160&#160&#160Probability </td>
+                            {% if data.prediction in data.one %}
+                            <td style="color:red;background-color: #F0F0F0;text-align: center;"> {{data.prob}} </td>
+                            {% else %}
+                            <td style="color:blue;background-color: #F0F0F0;text-align: center;"> {{data.prob}} </td>
+                            {% endif %}
+                        </tr>
+                    </table>
                 </div>
                 <!-- <img class="img-result" src="static/images/result_tnx.jpg" width="80%" height="400px"> -->
                 <br><br><br>
@@ -440,7 +446,7 @@
 
 
 
-        <div class="social-foot">
+        <!-- <div class="social-foot">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -448,7 +454,7 @@
                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
-        </div>
+        </div> -->
         <footer>
             <div class="footer">
                 <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
@@ -482,7 +488,7 @@
                     <input type="hidden" name="form_type" value="formFour">
                     <div class="row">
                         </br>
-                        <img style="height:100%;width:100%;" src="static/images/old_logo.png">
+                        <img style="height:100%;width:100%;" src="static/images/risklogo.png">
                         </br>
                         <h3 style="color:blue;">Enter Your Details </h3>
                         <br>

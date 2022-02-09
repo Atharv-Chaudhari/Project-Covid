@@ -14,11 +14,11 @@
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
-    width: 40%;
+    width: 45%;
     height:80%;
     margin-top: 50px;
     margin-bottom: 50px;
-    padding:3%;
+    padding:2%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -133,3 +133,18 @@ td {
         font-size: 2.4vh;
     }
 }
+.arrow1 {
+    animation: slide1 1s ease-in-out infinite;
+    margin-left: 9px;
+  }
+  
+  @keyframes slide1 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(10px, 0);
+    }
+  }

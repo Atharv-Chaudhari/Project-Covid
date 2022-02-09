@@ -156,10 +156,18 @@ a {
     display: none;
     outline: none;
 }
-
+.tracker{
+  text-align: left;
+}
+.tracker:hover{
+  color: blue;
+}
 @media (max-width: 768px) {
     .navbar .navbar-header .navbar-toggler {
         display: block;
+    }
+    .tracker{
+      text-align: center;
     }
 }
 

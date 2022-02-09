@@ -75,9 +75,9 @@
                                                 style="color:crimson;font-size: 15px;"> presents</span></h1>
                                     </div>
                                     <div class="details-modal-content" style="font-family: 'Montserrat', sans-serif;">
-                                        <p style="text-align: center;margin-top: -8%;"><img
-                                                src="static/images/risklogo.png" width="300" height="300"></p>
-                                        <h1 style="text-align: center;margin-top: -8%;">Project Covid</h1>
+                                        <p style="text-align: center;"><img src="static/images/risklogo.png" width="250"
+                                                height="250"></p>
+                                        <h1 style="text-align: center;">Project Covid</h1>
                                         <p>
 
                                         </p>
@@ -101,15 +101,13 @@
             </div> -->
                     <div class="navbar-menu" id="open-navbar1">
                         <ul class="navbar-nav">
-                            <li class="active"><a href="home"><i class="fa fa-home"></i> Home</a></li>
                             <li class="navbar-dropdown">
                                 <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
                                         class="fa fa-bar-chart"></i>
                                     Analysis <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown" id="my-dropdown-id">
-                                    <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"
-                                            onclick="myFunction()"><span class="iconify"
+                                    <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify"
                                                 data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
                                     <li class="separator"></li>
                                     <li><a href="#" onclick="myFunction()">Seprated link</a></li>
@@ -121,27 +119,39 @@
                                 <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
                                     Applications <i class="fa fa-angle-down"></i>
                                 </a>
-                                <ul class="dropdown" id="blog">
+                                <ul class="dropdown" id="blog" style="text-align: center;">
                                     <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
-                                    <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
-                                            id="risk-myBtn"><i class="fas fa-search-location"></i> Risk
-                                            Predictor</span><a href="riskpredictor" target="_blank"
-                                            style="display: inline-block;margin:5px 0;"><i
-                                                class="fas fa-external-link-alt"></i></a></li>
+                                    <!-- <li style="padding-top: 10px;padding-bottom: 10px;"><a<span
+                                            style="font-size: 14px;cursor: pointer;" id="risk-myBtn"><i
+                                                class="fa fa-rocket"></i> Covid Predictors </span> -->
+                                    <!-- <a href="riskpredictor" target="_blank"
+                                        style="display: inline-block;margin:5px 0;"><i
+                                            class="fas fa-external-link-alt"></i></a> 
+                                        <br>
+                                    </li>-->
+                                    <!-- <li class="separator"></li>
+                                    <li><a href="img_pred"><i class="fa fa-rocket"></i> &#160Phase - II
+                                            Predictor</span></a></li> -->
+                                    <li><a href="predictors" class="tracker"><i class="fa fa-rocket"></i>
+                                            &#160Covid Predictors</a></li>
                                     <li class="separator"></li>
-                                    <li><a href="vaccine" onclick="myFunction()"><i class="fas fa-search-location"></i>
-                                            Vaccine Tracker</a></li>
+                                    <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
+                                                class="fa fa-rocket"></i>
+                                            &#160Vaccine Tracker</a></li>
                                     <li class="separator"></li>
-                                    <li><a href="/img_pred" onclick="myFunction()">Imgae Processesing</a></li>
+                                    <li><a href="nlp" onclick="myFunction()" class="tracker"><i
+                                                class="fa fa-rocket"></i>
+                                            &#160Tweet Predictor </a></li>
                                 </ul>
                             </li>
-                            <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a>
-                            </li>
+                            <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a> -->
+                            <!-- </li> -->
                             <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
                             <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                         class="material-icons">&#xe163;</i> Contact</a></li>
-                            <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
+                            <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                             <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
+                            <li class="active"><a href="home"><i class="fa fa-home"></i> Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -150,11 +160,11 @@
             <ul class="breadcrumb">
                 <li><a href="home" style="color:black;"><i class="fa fa-home"></i> Home</a></li>
             </ul>
-            <div class="alert-up" style="text-align: center;">
+            <!-- <div class="alert-up" style="text-align: center;">
                 <span class="closebtn-up" onclick="this.parentElement.style.display='none';">&times;</span>
                 Click on The Icon &#160<strong><i class="fas fa-external-link-alt"></i></strong> &#160To Get UI in New
                 Window.
-            </div>
+            </div> -->
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <a>
@@ -254,23 +264,28 @@
             <div class="menu-item-text">Linked In</div>
         </div>
     </div> -->
-            <br>
-            <h1 style="text-align: center;color: blue;">Covid - 19</h1>
-            <br>
-            <div style="overflow-x:auto;">
-                <table style="text-align: center;margin-left: auto;margin-right: auto;font-size: 25px;">
-                    <tr>
-                        <th style="color:red;">Cases</th>
-                        <th style="color:red;">Deaths</th>
-                        <th style="color:lime;">Recovered</th>
-                    </tr>
-                    <tr>
-                        <td style="color:red;">{{ cases }}</td>
-                        <td style="color:red;">{{ deaths }}</td>
-                        <td style="color:lime;">{{ recovered }}</td>
-                    </tr>
+            <br><br>
+            <div
+                style="box-shadow:5px 5px 10px 10px #E0E0E0;background-color: white;border-radius: 25px;width:35%;margin-left: auto;margin-right: auto;">
+                <br>
+                <h1 style="text-align: center;color: blue;">Covid - 19</h1>
+                <br>
+                <div style="overflow-x:auto;">
+                    <table style="text-align: center;margin-left: auto;margin-right: auto;font-size: 25px;">
+                        <tr>
+                            <th style="color:red;">Cases</th>
+                            <th style="color:red;">Deaths</th>
+                            <th style="color:lime;">Recovered</th>
+                        </tr>
+                        <tr>
+                            <td style="color:red;">{{ cases }}</td>
+                            <td style="color:red;">{{ deaths }}</td>
+                            <td style="color:lime;">{{ recovered }}</td>
+                        </tr>
 
-                </table>
+                    </table>
+                    <br>
+                </div>
             </div>
             <!-- <h1>Cases {{ cases }} Deaths {{ deaths }} Recovered {{ recovered }}</h1> -->
             <div class="covid-info">
@@ -278,8 +293,9 @@
                     <img src="static/images/covid.jpg" class="card__image" />
                     <div class="card__content">
                         <time datetime="2021-11-19" class="card__date"><span style="color: grey;">Last Updated on
-                            </span><span style="color: blue;">19<sup style="text-transform: lowercase;">th</sup> Nov
-                                2021</span></time>
+                            </span><span style="color: blue;">{{ update_dt }}<sup
+                                    style="text-transform: lowercase;">th</sup> {{ update_mn }}
+                                {{ update_yr }}</span></time>
                         <span class="card__title">Covid-19</span>
                         <p>Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.</p>
 
@@ -303,6 +319,32 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
+            <div class='tableauPlaceholder' id='viz1644148889279' style='position: relative'><object class='tableauViz'
+                    style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='GlobalCovidDataAnalysis&#47;CovidCases' />
+                    <param name='tabs' value='yes' />
+                    <param name='toolbar' value='yes' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object></div>
+            <script
+                type='text/javascript'>                    var divElement = document.getElementById('viz1644148889279'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+
+
             <!-- <div id="myModal1" class="modal1">
 
         <div class="modal-content1">
@@ -319,7 +361,7 @@
             </div>
           </div>
     </div> -->
-            <div class="social-foot">
+            <!-- <div class="social-foot">
                 <ul>
                     <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -327,7 +369,7 @@
                     <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
-            </div>
+            </div> -->
             <footer>
                 <div class="footer">
                     <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
@@ -353,7 +395,7 @@
             </footer>
             <!-- ##################################################################################################### -->
             <!-- Risk Predictor Modal -->
-            <div id="risk-myModal" class="modal-risk" style="font-family: Arial, Helvetica, sans-serif;">
+            <!-- <div id="risk-myModal" class="modal-risk" style="font-family: Arial, Helvetica, sans-serif;">
                 <div class="modal-risk-content">
                     <span class="close-risk">&times;</span>
                     <form method="post" id="formFour">
@@ -361,18 +403,18 @@
                         <input type="hidden" name="form_type" value="formFour">
                         <div class="row">
                             </br>
-                            <img style="height:100%;width:100%;" src="static/images/old_logo.png">
+                            <img style="height:100%;width:100%;" src="static/images/risklogo.png">
                             </br>
                             <h3 style="color:blue;">Enter Your Details </h3>
-                            <br>
-                            <!-- <h4 style="color:#7ed321;">Full Name</h4>
+                            <br> -->
+            <!-- <h4 style="color:#7ed321;">Full Name</h4>
                     <br>
                     <div class="input-group input-group-icon">
                         <input class="lost" type="text" name="name"
                             placeholder="Full Name" />
                         <div class="input-icon"><i class="material-icons">person</i></div>
                     </div> -->
-                            <br>
+            <!-- <br>
                             <h4 style="color:#7ed321;">Email <span class="required">*</span></h4>
                             <br>
                             <div class="input-group input-group-icon">
@@ -454,8 +496,8 @@
                             <input class="lost" type="radio" name="Abroad" value="0" id="Abroad-no" checked="true" />
                             <label class="lost" for="Abroad-no">No</label>
                         </div>
-                        </br>
-                        <!-- <h4 style="color:#7ed321;">Contact With Covid-19 Object <span class="required">*</span></h3>
+                        </br> -->
+            <!-- <h4 style="color:#7ed321;">Contact With Covid-19 Object <span class="required">*</span></h3>
                     <div class="input-group others">
                         <input class="lost" type="radio" name="contact_Object" value="1" id="contact_Object-Yes" />
                         <label class="lost" for="contact_Object-Yes">Yes</label>
@@ -463,7 +505,7 @@
                         <label class="lost" for="contact_Object-no">No</label>
                     </div>
                     </br> -->
-                        <h4 style="color:#7ed321;">Contact With Covid-19 Patient <span class="required">*</span></h3>
+            <!-- <h4 style="color:#7ed321;">Contact With Covid-19 Patient <span class="required">*</span></h3>
                             <div class="input-group others">
                                 <input class="lost" type="radio" name="contact_Patient" value="1"
                                     id="contact_Patient-Yes" />
@@ -480,7 +522,7 @@
                             </br>
                 </div>
                 </form>
-            </div>
+            </div> -->
         </div>
     </div>
     <div id="loader" style="display:none;">

@@ -25,6 +25,38 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            var flag1 = 0;
+            var flag2 = 0
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "infysoars0@gmail.com",
+                Password: "cmhjpsvbhjkeiabu",
+                To: document.getElementById("email").value,
+                From: 'Team InfySOARS' + "<infysoars0@gmail.com>",
+                Subject: "Thank You For Contacting Team InfySOARS",
+                Body: "<p>Dear " + document.getElementById("name").value + " Your Query Has been submitted successfully....</p><p>Thank you for reaching out To Us....</p>",
+            }).then(
+                flag1 = 1
+            );
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "infysoars0@gmail.com",
+                Password: "cmhjpsvbhjkeiabu",
+                To: "infysoars0@gmail.com",
+                From: "infysoars0@gmail.com",
+                Subject: 'Query: ' + document.getElementById("subject").value,
+                Body: "<h3>Query Raised By :-</h3><h4>Name :- " + document.getElementById("name").value + "</h4>" + "<br><h3>Message :- </h3><h4>" + document.getElementById("message").value + "</h4>",
+            }).then(
+                flag2 = 1
+            );
+            if (flag1 == 1 && flag2 == 1) {
+                alert("Query Submitted Successfully...!!!")
+            }
+        }
+    </script>
 </head>
 
 <!-- <body onload="present()"> -->
@@ -116,9 +148,9 @@
                                             style="color:crimson;font-size: 15px;"> presents</span></h1>
                                 </div>
                                 <div class="details-modal-content" style="font-family: 'Montserrat', sans-serif;">
-                                    <p style="text-align: center;margin-top: -8%;"><img src="static/images/risklogo.png"
-                                            width="300" height="300"></p>
-                                    <h1 style="text-align: center;margin-top: -8%;">Project Covid</h1>
+                                    <p style="text-align: center;"><img src="static/images/risklogo.png" width="250"
+                                            height="250"></p>
+                                    <h1 style="text-align: center;">Project Covid</h1>
                                     <p>
 
                                     </p>
@@ -142,14 +174,15 @@
             </div> -->
                 <div class="navbar-menu" id="open-navbar1">
                     <ul class="navbar-nav">
-                        <li class="active"><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
                         <li class="navbar-dropdown">
                             <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
                                     class="fa fa-bar-chart"></i>
                                 Analysis <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown" id="my-dropdown-id">
-                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank" onclick="myFunction()"><span class="iconify" data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
+                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify"
+                                            data-icon="ion:logo-tableau"></span> Tableau DashBoard</a>
+                                </li>
                                 <li class="separator"></li>
                                 <li><a href="#" onclick="myFunction()">Seprated link</a></li>
                                 <li class="separator"></li>
@@ -160,24 +193,38 @@
                             <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
                                 Applications <i class="fa fa-angle-down"></i>
                             </a>
-                            <ul class="dropdown" id="blog">
+                            <ul class="dropdown" id="blog" style="text-align: center;">
                                 <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
-                                <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
-                                    id="risk-myBtn"><i class="fas fa-search-location"></i> Risk Predictor</span><a href="riskpredictor" target="_blank"
+                                <!-- <li style="padding-top: 10px;padding-bottom: 10px;"><a<span
+                                        style="font-size: 14px;cursor: pointer;" id="risk-myBtn"><i
+                                            class="fa fa-rocket"></i> Covid Predictors </span> -->
+                                <!-- <a href="riskpredictor" target="_blank"
                                     style="display: inline-block;margin:5px 0;"><i
-                                        class="fas fa-external-link-alt"></i></a></li>
-                            <li class="separator"></li>
-                            <li><a href="vaccine" onclick="myFunction()"><i class="fas fa-search-location"></i> Vaccine Tracker</a></li>
-                            <li class="separator"></li>
-                                <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
+                                        class="fas fa-external-link-alt"></i></a> 
+                                    <br>
+                                </li>-->
+                                <!-- <li class="separator"></li>
+                                <li><a href="img_pred"><i class="fa fa-rocket"></i> &#160Phase - II
+                                        Predictor</span></a></li> -->
+                                <li><a href="predictors" class="tracker"><i class="fa fa-rocket"></i>
+                                        &#160Covid Predictors</a></li>
+                                <li class="separator"></li>
+                                <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
+                                            class="fa fa-rocket"></i>
+                                        &#160Vaccine Tracker</a></li>
+                                <li class="separator"></li>
+                                <li><a href="nlp" onclick="myFunction()" class="tracker"><i class="fa fa-rocket"></i>
+                                        &#160Tweet Predictor </a></li>
                             </ul>
                         </li>
-                        <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li>
+                        <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
                         <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
-                        <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
+                        <li class="active"><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                     class="material-icons">&#xe163;</i> Contact</a></li>
-                        <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
+                        <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                         <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
+                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -185,14 +232,26 @@
         <br>
         <ul class="breadcrumb">
             <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="about" onclick="myFunction()" style="color: black;"><i style="font-size:13px;" class="material-icons">&#xe163;</i>
+            <li><a href="contact" onclick="myFunction()" style="color: black;"><i style="font-size:13px;"
+                        class="material-icons">&#xe163;</i>
                     Contact</a></li>
         </ul>
-        <div class="alert-up" style="text-align: center;">
+        <!-- <div class="alert-up" style="text-align: center;">
             <span class="closebtn-up" onclick="this.parentElement.style.display='none';">&times;</span>
             Click on The Icon &#160<strong><i class="fas fa-external-link-alt"></i></strong> &#160To Get UI in New
             Window.
-        </div>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+        <!-- Dump Code -->
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <a>
@@ -266,6 +325,24 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="mini-info ">
             <marquee id="mymarquee"><strong><img src="static/images/hello.gif " width="30px" height="30px"> Team
                     Infy SOARS presents Covid-19 Details and Research</strong></marquee>
@@ -294,24 +371,34 @@
 
         <div class="contact">
             <div class="grid-container">
-                <div class="grid-item">
+                <!-- <div class="grid-item">
                     <div class="sub-block back-contact">
                         <h4>Let's Talk About Everything!</h4>
                     </div>
+                </div> -->
+                <!-- <div class="grid-item"> -->
+                <div class="sub-block">
+                    <br><br>
+                    <h4 style="font-size: 25px;color: blue;">Contact Us</h4>
+                    <br>
+                    <form onsubmit="sendEmail()" action="contact" method="post">
+                        {% csrf_token %}
+                        <div class="row"><input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="row"><input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                name="email" placeholder="Email" required></div>
+                        <div class="row"><input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="row"><textarea type="text" id="message" name="message" rows="4" cols="50"
+                                placeholder="Write Your Message" required></textarea></div>
+                        <br>
+                        <div class="row"><input type="submit" value="Send Message"></div>
+                        <br><br>
+                    </form>
                 </div>
-                <div class="grid-item">
-                    <div class="sub-block">
-                        <h4>Please Fill Following Details!</h4>
-                        <div class="row"><input type="text" placeholder="Full Name"></div>
-                        <div class="row"><input type="text" placeholder="Email"></div>
-                        <div class="row"><input type="text" placeholder="Contact Number"></div>
-                        <div class="row"><input type="text" placeholder="Subject"></div>
-                        <div class="row"><textarea type="text" rows="4" cols="50" placeholder="Write Your Message"></textarea></div>
-                        <div class="row"><input type="button" value="Send Message"></div>
-                    </div>
-                </div>
+                <!-- </div>
+            </div> -->
             </div>
-        </div>
 
 
 
@@ -326,7 +413,7 @@
 
 
 
-        <div class="social-foot">
+            <!-- <div class="social-foot">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -334,133 +421,134 @@
                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
-        </div>
-        <footer>
-            <div class="footer">
-                <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
-                        style="font-size: 25px;color:grey;">Team</span>
-                    <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS ⚡</span></span></bold>
-                </h4>
-                <!-- <sup
+        </div> -->
+            <footer>
+                <div class="footer">
+                    <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
+                            style="font-size: 25px;color:grey;">Team</span>
+                        <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS ⚡</span></span></bold>
+                    </h4>
+                    <!-- <sup
     style="color:crimson;font-size: 10px;"><strong></strong></sup>  -->
-                <div class="row">
-                    <ul>
-                        <li><a href="#">Siddharth Kulkarni</a></li>
-                        <li><a href="#">Atharv Chaudhari</a></li>
-                        <li><a href="#">Rutuja Vaidya</a></li>
-                        <li><a href="#">Omkar Patil</a></li>
-                        <li><a href="#"><br>Sana Shaikh</a></li>
-                    </ul>
-                </div>
-                <div class="sub-footer">
-                    ✨ Copyright © 2021 - All rights reserved ✨
-                </div>
-                <p style="color:white;">🧿 Designed By 😎 Team Infy SOARS 🧿</p>
-            </div>
-        </footer>
-        <!-- ##################################################################################################### -->
-        <!-- Risk Predictor Modal -->
-        <div id="risk-myModal" class="modal-risk" style="font-family: Arial, Helvetica, sans-serif;">
-            <div class="modal-risk-content">
-                <span class="close-risk">&times;</span>
-                <form method="post" id="formFour">
-                    {% csrf_token %}
-                    <input type="hidden" name="form_type" value="formFour">
                     <div class="row">
-                        </br>
-                        <img style="height:100%;width:100%;" src="static/images/old_logo.png">
-                        </br>
-                        <h3 style="color:blue;">Enter Your Details </h3>
-                        <br>
-                        <!-- <h4 style="color:#7ed321;">Full Name </h4>
+                        <ul>
+                            <li><a href="#">Siddharth Kulkarni</a></li>
+                            <li><a href="#">Atharv Chaudhari</a></li>
+                            <li><a href="#">Rutuja Vaidya</a></li>
+                            <li><a href="#">Omkar Patil</a></li>
+                            <li><a href="#"><br>Sana Shaikh</a></li>
+                        </ul>
+                    </div>
+                    <div class="sub-footer">
+                        ✨ Copyright © 2021 - All rights reserved ✨
+                    </div>
+                    <p style="color:white;">🧿 Designed By 😎 Team Infy SOARS 🧿</p>
+                </div>
+            </footer>
+            <!-- ##################################################################################################### -->
+            <!-- Risk Predictor Modal -->
+            <div id="risk-myModal" class="modal-risk" style="font-family: Arial, Helvetica, sans-serif;">
+                <div class="modal-risk-content">
+                    <span class="close-risk">&times;</span>
+                    <form method="post" id="formFour">
+                        {% csrf_token %}
+                        <input type="hidden" name="form_type" value="formFour">
+                        <div class="row">
+                            </br>
+                            <img style="height:100%;width:100%;" src="static/images/risklogo.png">
+                            </br>
+                            <h3 style="color:blue;">Enter Your Details </h3>
+                            <br>
+                            <!-- <h4 style="color:#7ed321;">Full Name </h4>
                         <br>
                         <div class="input-group input-group-icon">
                             <input class="lost" type="text" name="name" placeholder="Full Name" />
                             <div class="input-icon"><i class="material-icons">person</i></div>
                         </div> -->
-                        <br>
-                        <h4 style="color:#7ed321;">Email <span class="required">*</span></h4>
-                        <br>
-                        <div class="input-group input-group-icon">
-                            <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                name="email" placeholder="Email Address" required />
-                            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                            <br>
+                            <h4 style="color:#7ed321;">Email <span class="required">*</span></h4>
+                            <br>
+                            <div class="input-group input-group-icon">
+                                <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    name="email" placeholder="Email Address" required />
+                                <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                            </div>
+                            <br>
+                            <h4 style="color:#7ed321;">Country </h4>
+                            <br>
+                            <div class="input-group input-group-icon">
+                                <input class="lost" type="text" name="country" placeholder="Country" />
+                                <div class="input-icon"><i class="fa fa-globe"></i></div>
+                            </div>
                         </div>
-                        <br>
-                        <h4 style="color:#7ed321;">Country </h4>
-                        <br>
-                        <div class="input-group input-group-icon">
-                            <input class="lost" type="text" name="country" placeholder="Country" />
-                            <div class="input-icon"><i class="fa fa-globe"></i></div>
+                        </br>
+                        <h3 style="color:#7ed321;">Gender<span class="required"> *</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="Gender" value="1" id="Gender-male" required />
+                            <label class="lost" for="Gender-male">Male</label>
+                            <input class="lost" type="radio" name="Gender" value="0" id="Gender-female" required />
+                            <label class="lost" for="Gender-female">Female</label>
                         </div>
-                    </div>
-                    </br>
-                    <h3 style="color:#7ed321;">Gender<span class="required"> *</span></h3>
-                    <div class="input-group others">
-                        <input class="lost" type="radio" name="Gender" value="1" id="Gender-male" required />
-                        <label class="lost" for="Gender-male">Male</label>
-                        <input class="lost" type="radio" name="Gender" value="0" id="Gender-female" required />
-                        <label class="lost" for="Gender-female">Female</label>
-                    </div>
-                    </br>
-                    <h3 style="color:#7ed321;">Age 60 or Above<span class="required"> *</span></h3>
-                    <div class="input-group others">
-                        <input class="lost" type="radio" name="age" value="1" id="age-yes" />
-                        <label class="lost" for="age-yes">Yes</label>
-                        <input class="lost" type="radio" name="age" value="0" id="age-no" checked="true" />
-                        <label class="lost" for="age-no">No</label>
-                    </div>
-                    </br>
-                    <h3 style="color:#399cbd;">Symptoms </h3>
-                    <br>
-                    <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
-                    <div class="input-group others">
-                        <input class="lost" type="radio" name="Cough" value="1" id="Cough-yes" />
-                        <label class="lost" for="Cough-yes">Yes</label>
-                        <input class="lost" type="radio" name="Cough" value="0" id="Cough-no" checked="true" />
-                        <label class="lost" for="Cough-no">No</label>
-                    </div>
-                    <h3 style="color:black;">2) Fever <span class="required">*</span></h3>
-                    <div class="input-group others">
-                        <input class="lost" type="radio" name="Fever" value="1" id="Fever-yes" />
-                        <label class="lost" for="Fever-yes">Yes</label>
-                        <input class="lost" type="radio" name="Fever" value="0" id="Fever-no" checked="true" />
-                        <label class="lost" for="Fever-no">No</label>
-                    </div>
-                    <h3 style="color:black;">3) Sore Throat <span class="required">*</span></h3>
-                    <div class="input-group others">
-                        <input class="lost" type="radio" name="Sore_Throat" value="1" id="Sore_Throat-yes" />
-                        <label class="lost" for="Sore_Throat-yes">Yes</label>
-                        <input class="lost" type="radio" name="Sore_Throat" value="0" id="Sore_Throat-no"
-                            checked="true" />
-                        <label class="lost" for="Sore_Throat-no">No</label>
-                    </div>
-                    <h3 style="color:black;">4) Shortness of Breath <span class="required">*</span></h3>
-                    <div class="input-group others">
-                        <input class="lost" type="radio" name="Shortness_of_Breath" value="1"
-                            id="Shortness_of_Breath-yes" />
-                        <label class="lost" for="Shortness_of_Breath-yes">Yes</label>
-                        <input class="lost" type="radio" name="Shortness_of_Breath" value="0"
-                            id="Shortness_of_Breath-no" checked="true" />
-                        <label class="lost" for="Shortness_of_Breath-no">No</label>
-                    </div>
-                    <h3 style="color:black;">5) Headache <span class="required">*</span></h3>
-                    <div class="input-group others">
-                        <input class="lost" type="radio" name="Headache" value="1" id="Headache-yes" />
-                        <label class="lost" for="Headache-yes">Yes</label>
-                        <input class="lost" type="radio" name="Headache" value="0" id="Headache-no" checked="true" />
-                        <label class="lost" for="Headache-no">No</label>
-                    </div>
-                    </br>
-                    <h3 style="color:#7ed321;">Abroad<span class="required"> *</span></h3>
-                    <div class="input-group others">
-                        <input class="lost" type="radio" name="Abroad" value="1" id="Abroad-yes" />
-                        <label class="lost" for="Abroad-yes">Yes</label>
-                        <input class="lost" type="radio" name="Abroad" value="0" id="Abroad-no" checked="true" />
-                        <label class="lost" for="Abroad-no">No</label>
-                    </div>
-                    </br>
-                    <!-- <h4 style="color:#7ed321;">Contact With Covid-19 Object <span class="required">*</span></h3>
+                        </br>
+                        <h3 style="color:#7ed321;">Age 60 or Above<span class="required"> *</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="age" value="1" id="age-yes" />
+                            <label class="lost" for="age-yes">Yes</label>
+                            <input class="lost" type="radio" name="age" value="0" id="age-no" checked="true" />
+                            <label class="lost" for="age-no">No</label>
+                        </div>
+                        </br>
+                        <h3 style="color:#399cbd;">Symptoms </h3>
+                        <br>
+                        <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="Cough" value="1" id="Cough-yes" />
+                            <label class="lost" for="Cough-yes">Yes</label>
+                            <input class="lost" type="radio" name="Cough" value="0" id="Cough-no" checked="true" />
+                            <label class="lost" for="Cough-no">No</label>
+                        </div>
+                        <h3 style="color:black;">2) Fever <span class="required">*</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="Fever" value="1" id="Fever-yes" />
+                            <label class="lost" for="Fever-yes">Yes</label>
+                            <input class="lost" type="radio" name="Fever" value="0" id="Fever-no" checked="true" />
+                            <label class="lost" for="Fever-no">No</label>
+                        </div>
+                        <h3 style="color:black;">3) Sore Throat <span class="required">*</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="Sore_Throat" value="1" id="Sore_Throat-yes" />
+                            <label class="lost" for="Sore_Throat-yes">Yes</label>
+                            <input class="lost" type="radio" name="Sore_Throat" value="0" id="Sore_Throat-no"
+                                checked="true" />
+                            <label class="lost" for="Sore_Throat-no">No</label>
+                        </div>
+                        <h3 style="color:black;">4) Shortness of Breath <span class="required">*</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="Shortness_of_Breath" value="1"
+                                id="Shortness_of_Breath-yes" />
+                            <label class="lost" for="Shortness_of_Breath-yes">Yes</label>
+                            <input class="lost" type="radio" name="Shortness_of_Breath" value="0"
+                                id="Shortness_of_Breath-no" checked="true" />
+                            <label class="lost" for="Shortness_of_Breath-no">No</label>
+                        </div>
+                        <h3 style="color:black;">5) Headache <span class="required">*</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="Headache" value="1" id="Headache-yes" />
+                            <label class="lost" for="Headache-yes">Yes</label>
+                            <input class="lost" type="radio" name="Headache" value="0" id="Headache-no"
+                                checked="true" />
+                            <label class="lost" for="Headache-no">No</label>
+                        </div>
+                        </br>
+                        <h3 style="color:#7ed321;">Abroad<span class="required"> *</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="Abroad" value="1" id="Abroad-yes" />
+                            <label class="lost" for="Abroad-yes">Yes</label>
+                            <input class="lost" type="radio" name="Abroad" value="0" id="Abroad-no" checked="true" />
+                            <label class="lost" for="Abroad-no">No</label>
+                        </div>
+                        </br>
+                        <!-- <h4 style="color:#7ed321;">Contact With Covid-19 Object <span class="required">*</span></h3>
                         <div class="input-group others">
                             <input class="lost" type="radio" name="contact_Object" value="1" id="contact_Object-Yes" />
                             <label class="lost" for="contact_Object-Yes">Yes</label>
@@ -484,14 +572,14 @@
                                     style="background-color: #7ed321; color: white;">
                             </div>
                             </br>
+                </div>
+                </form>
             </div>
-            </form>
         </div>
-    </div>
     </div>
     <!-- ##################################################################################################### -->
     <script type="text/javascript" src="static/js/script.js "></script>
-    <script type="text/javascript" src="static/js/sign.js "></script>
+    <!-- <script type="text/javascript" src="static/js/sign.js "></script> -->
     <script type="text/javascript" src="static/js/general.js "></script>
     <!-- <script type="text/javascript">
     function get_alert(){

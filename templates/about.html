@@ -118,9 +118,9 @@
                                             style="color:crimson;font-size: 15px;"> presents</span></h1>
                                 </div>
                                 <div class="details-modal-content" style="font-family: 'Montserrat', sans-serif;">
-                                    <p style="text-align: center;margin-top: -8%;"><img src="static/images/risklogo.png"
-                                            width="300" height="300"></p>
-                                    <h1 style="text-align: center;margin-top: -8%;">Project Covid</h1>
+                                    <p style="text-align: center;"><img src="static/images/risklogo.png" width="250"
+                                            height="250"></p>
+                                    <h1 style="text-align: center;">Project Covid</h1>
                                     <p>
 
                                     </p>
@@ -144,14 +144,15 @@
             </div> -->
                 <div class="navbar-menu" id="open-navbar1">
                     <ul class="navbar-nav">
-                        <li class="active"><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
+                        </li>
                         <li class="navbar-dropdown">
                             <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
                                     class="fa fa-bar-chart"></i>
                                 Analysis <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown" id="my-dropdown-id">
-                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank" onclick="myFunction()"><span class="iconify" data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
+                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify"
+                                            data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
                                 <li class="separator"></li>
                                 <li><a href="#" onclick="myFunction()">Seprated link</a></li>
                                 <li class="separator"></li>
@@ -162,24 +163,39 @@
                             <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
                                 Applications <i class="fa fa-angle-down"></i>
                             </a>
-                            <ul class="dropdown" id="blog">
+                            <ul class="dropdown" id="blog" style="text-align: center;">
                                 <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
-                                <li><span style="padding: 0.5rem 1rem; font-size: 14px;cursor: pointer;"
-                                    id="risk-myBtn"><i class="fas fa-search-location"></i> Risk Predictor</span><a href="riskpredictor" target="_blank"
+                                <!-- <li style="padding-top: 10px;padding-bottom: 10px;"><a<span
+                                        style="font-size: 14px;cursor: pointer;" id="risk-myBtn"><i
+                                            class="fa fa-rocket"></i> Covid Predictors </span> -->
+                                <!-- <a href="riskpredictor" target="_blank"
                                     style="display: inline-block;margin:5px 0;"><i
-                                        class="fas fa-external-link-alt"></i></a></li>
-                            <li class="separator"></li>
-                            <li><a href="vaccine" onclick="myFunction()"><i class="fas fa-search-location"></i> Vaccine Tracker</a></li>
-                            <li class="separator"></li>
-                                <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
+                                        class="fas fa-external-link-alt"></i></a> 
+                                    <br>
+                                </li>-->
+                                <!-- <li class="separator"></li>
+                                <li><a href="img_pred"><i class="fa fa-rocket"></i> &#160Phase - II
+                                        Predictor</span></a></li> -->
+                                <li><a href="predictors" class="tracker"><i class="fa fa-rocket"></i>
+                                        &#160Covid Predictors</a></li>
+                                <li class="separator"></li>
+                                <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
+                                            class="fa fa-rocket"></i>
+                                        &#160Vaccine Tracker</a></li>
+                                <li class="separator"></li>
+                                <li><a href="nlp" onclick="myFunction()" class="tracker"><i class="fa fa-rocket"></i>
+                                        &#160Tweet Predictor </a></li>
                             </ul>
                         </li>
-                        <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li>
-                        <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
+                        <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
+                        <li class="active"><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i>
+                                About</a></li>
                         <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                     class="material-icons">&#xe163;</i> Contact</a></li>
-                        <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li>
-                        <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
+                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
+
+                            <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
+                            <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
                     </ul>
                 </div>
             </div>
@@ -187,13 +203,14 @@
         <br>
         <ul class="breadcrumb">
             <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="about" onclick="myFunction()" style="color: black;"><i class="fa fa-info-circle"></i> About</a></li>
+            <li><a href="about" onclick="myFunction()" style="color: black;"><i class="fa fa-info-circle"></i> About</a>
+            </li>
         </ul>
-        <div class="alert-up" style="text-align: center;">
+        <!-- <div class="alert-up" style="text-align: center;">
             <span class="closebtn-up" onclick="this.parentElement.style.display='none';">&times;</span>
             Click on The Icon &#160<strong><i class="fas fa-external-link-alt"></i></strong> &#160To Get UI in New
             Window.
-        </div>
+        </div> -->
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <a>
@@ -203,6 +220,25 @@
                     </button>
                 </a>
                 <br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--  UnUsed Code Block-->
                 <div class="modal-container" id="modal-container">
                     <div id="sign-up" class="form-container sign-up-container">
                         <form class="sign-form" action="#"
@@ -265,6 +301,26 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
         <div class="mini-info ">
@@ -390,7 +446,7 @@
 
                         <div class="social-icons">
 
-                            <a href="#" class="fb"style="font-size: 20px;"><i class="fab fa-github"></i></a>
+                            <a href="#" class="fb" style="font-size: 20px;"><i class="fab fa-github"></i></a>
 
                             <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
 
@@ -674,7 +730,7 @@
 
 
 
-        <div class="social-foot">
+        <!-- <div class="social-foot">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -682,7 +738,7 @@
                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
-        </div>
+        </div> -->
         <footer>
             <div class="footer">
                 <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
@@ -716,7 +772,7 @@
                     <input type="hidden" name="form_type" value="formFour">
                     <div class="row">
                         </br>
-                        <img style="height:100%;width:100%;" src="static/images/old_logo.png">
+                        <img style="height:100%;width:100%;" src="static/images/risklogo.png">
                         </br>
                         <h3 style="color:blue;">Enter Your Details </h3>
                         <br>
@@ -817,21 +873,21 @@
                             <label class="lost" for="contact_Object-no">No</label>
                         </div>
                         </br> -->
-                        <h4 style="color:#7ed321;">Contact With Covid-19 Patient <span class="required">*</span></h3>
-                            <div class="input-group others">
-                                <input class="lost" type="radio" name="contact_Patient" value="1"
-                                    id="contact_Patient-Yes" />
-                                <label class="lost" for="contact_Patient-Yes">Yes</label>
-                                <input class="lost" type="radio" name="contact_Patient" value="0"
-                                    id="contact_Patient-no" checked="true" />
-                                <label class="lost" for="contact_Patient-no">No</label>
-                            </div>
-                            </br>
-                            <div class="submits">
-                                <input class="lost" type="submit" value="Submit"
-                                    style="background-color: #7ed321; color: white;">
-                            </div>
-                            </br>
+                    <h4 style="color:#7ed321;">Contact With Covid-19 Patient <span class="required">*</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="contact_Patient" value="1"
+                                id="contact_Patient-Yes" />
+                            <label class="lost" for="contact_Patient-Yes">Yes</label>
+                            <input class="lost" type="radio" name="contact_Patient" value="0" id="contact_Patient-no"
+                                checked="true" />
+                            <label class="lost" for="contact_Patient-no">No</label>
+                        </div>
+                        </br>
+                        <div class="submits">
+                            <input class="lost" type="submit" value="Submit"
+                                style="background-color: #7ed321; color: white;">
+                        </div>
+                        </br>
             </div>
             </form>
         </div>

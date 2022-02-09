@@ -39,22 +39,39 @@
         }
 
         @media (max-width: 905px) {
-            .block1{
-                display:block;
+            .block1 {
+                display: block;
             }
-            img{
-                width:100%;
-                height:100%;
+
+            img {
+                width: 100%;
+                height: 100%;
             }
-            .col{
-                width:100%;
+
+            .col {
+                width: 100%;
                 text-align: center;
             }
-            .block-in{
+
+            .block-in {
                 text-align: center;
             }
-            .hide-img{
-                display:none;
+
+            .hide-img {
+                display: none;
+            }
+        }
+
+        th,
+        td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 17px;
+            width: 70%;
+        }
+        @media (max-width:400px){
+            .mob-mail{
+                text-align: center!important;
             }
         }
     </style>
@@ -62,109 +79,127 @@
 
 <body>
     <div class="container">
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risklogo.png"
-            width="70%" height="70%"></img>
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risklogo.png" width="40%"
+            height="40%"></img>
         <h1 style="color:red;margin-top:-3%;">Risk Predictor Report</h1>
-        <br><br>
-        <img class="hide-img" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_mail.jpg"
-            width="100%" height="400px"></img>
-        <div class="block1">
-            <div class="col" style="margin-left: 0px;">
+        <!-- <img class="hide-img" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_mail.jpg"
+            width="100%" height="400px"></img> -->
+        <!-- <div class="block1" style="text-align: center;"> -->
+        <!-- <div class="col" style="margin-left: 0px;">
                 <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_mail_mid.jpg"
                     width="100%"></img>
-            </div>
-            <div class="col">
-                <h2 style="color:red;text-align: center;">Detailed Report</h2>
-                <h3 style="color:#FF6600	;text-align: center;">Basic Information</h3>
-                <div class="block-in" style="text-align: center;">
-                    <div class="col">
-                        <h3> Email  </h3>
-                        <h3> Country  </h3>
-                        <h3> Gender  </h3>
-                        <h3> Age 60 or Above  </h3>
-                        <h3> Abroad  </h3>
-                        <h3> Contact with Covid-19 Patient  </h3>
-                    </div>
-                    <div class="col">
-                        <h3 style="color:blue">{{data.email}}</h3>
-                        <h3 style="color:blue">{{data.country}}</h3>
-                        <h3 style="color:blue">{{data.gender}}</h3>
-                        <h3 style="color:blue">{{data.age_60_and_above}}</h3>
-                        <h3 style="color:blue">{{data.abroad}}</h3>
+            </div> -->
+        <div class="result-block">
+            <h2 style="color:red;text-align: center;">Detailed Report</h2>
+            <div class="block-in">
+                <table style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <tr>
+                        <th colspan="2">
+                            <h3 style="color:#FF6600;text-align: center;">Basic Information</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Email </td>
+                        <td style="color:blue;text-align: center;">{{data.email}}</td>
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Country </td>
+                        <td style="color:blue;text-align: center;">{{data.country}}</td>
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Gender </td>
+                        <td style="color:blue;text-align: center;">{{data.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Age 60 or Above </td>
+                        <td style="color:blue;text-align: center;">{{data.age_60_and_above}}</td>
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Abroad </td>
+                        <td style="color:blue;text-align: center;">{{data.abroad}}</td>
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Contact with Covid-19 Patient </td>
                         {% if data.contact_with_covid_patient in data.one %}
-                        <h3 style="color:red">{{data.contact_with_covid_patient}}</h3>
+                        <td style="color:red;text-align: center">{{data.contact_with_covid_patient}}</td>
                         {% else %}
-                        <h3 style="color:blue">{{data.contact_with_covid_patient}}</h3>
+                        <td style="color:blue;text-align: center;">{{data.contact_with_covid_patient}}</td>
                         {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img class="hide-img" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_mail2.jpg"
-            width="100%" height="50%"></img>
-        <div class="block1">
-            <div class="col">
-                <h3 style="color:#FF6600;text-align: center;">Symptoms</h3>
-                <div class="block-in" style="text-align: center;">
-                    <div class="col">
-                        <h3> Cough </h3>
-                        <h3> Fever  </h3>
-                        <h3> Sore Throat  </h3>
-                        <h3> Shortness of Breath  </h3>
-                        <h3> Headache  </h3>
-                        <hr>
-                        <h3> Corona Result  </h3>
-                        <h3> Probability  </h3>
-                    </div>
-                    <div class="col">
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <h3 style="color:#FF6600;text-align: center;font-size: 20px;">Symptoms</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Cough </td>
                         {% if data.cough in data.one %}
-                        <h3 style="color:red">{{data.cough}}</h3>
+                        <td style="color:red;text-align: center;">{{data.cough}}</td>
                         {% else %}
-                        <h3 style="color:blue">{{data.cough}}</h3>
+                        <td style="color:blue;text-align: center;">{{data.cough}}</td>
                         {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Fever </td>
                         {% if data.fever in data.one %}
-                        <h3 style="color:red">{{data.fever}}</h3>
+                        <td style="color:red;text-align: center;">{{data.fever}}</td>
                         {% else %}
-                        <h3 style="color:blue">{{data.fever}}</h3>
+                        <td style="color:blue;text-align: center;">{{data.fever}}</td>
                         {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Sore Throat </td>
                         {% if data.sore_throat in data.one %}
-                        <h3 style="color:red">{{data.sore_throat}}</h3>
+                        <td style="color:red;text-align: center;">{{data.sore_throat}}</td>
                         {% else %}
-                        <h3 style="color:blue">{{data.sore_throat}}</h3>
+                        <td style="color:blue;text-align: center;">{{data.sore_throat}}</td>
                         {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Shortness of Breath </td>
                         {% if data.shortness_of_breath in data.one %}
-                        <h3 style="color:red">{{data.shortness_of_breath}}</h3>
+                        <td style="color:red;text-align: center;">{{data.shortness_of_breath}}</td>
                         {% else %}
-                        <h3 style="color:blue">{{data.shortness_of_breath}}</h3>
+                        <td style="color:blue;text-align: center;">{{data.shortness_of_breath}}</td>
                         {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="text-align: left;"> &nbsp;&nbsp;&nbsp;Headache </td>
                         {% if data.head_ache in data.one %}
-                        <h3 style="color:red">{{data.head_ache}}</h3>
+                        <td style="color:red;text-align: center;">{{data.head_ache}}</td>
                         {% else %}
-                        <h3 style="color:blue">{{data.head_ache}}</h3>
+                        <td style="color:blue;text-align: center;">{{data.head_ache}}</td>
                         {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="background-color: #F0F0F0;text-align: left;"> &nbsp;&nbsp;&nbsp;Corona
+                            Result </td>
                         {% if data.prediction in data.one %}
-                        <hr>
-                        <h3 style="color:red">Positive</h3>
+                        <td style="color:red;background-color: #F0F0F0;text-align: center;"> Positive
+                        </td>
                         {% else %}
-                        <hr>
-                        <h3 style="color:blue">Negative</h3>
+                        <td style="color:blue;background-color: #F0F0F0;text-align: center;"> Negative
+                        </td>
                         {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="mob-mail" style="background-color: #F0F0F0;text-align: left;"> &nbsp;&nbsp;&nbsp;Probability </td>
                         {% if data.prediction in data.one %}
-                        <h3 style="color:red">{{data.prob}}</h3>
+                        <td style="color:red;background-color: #F0F0F0;text-align: center;"> {{data.prob}} </td>
                         {% else %}
-                        <h3 style="color:blue">{{data.prob}}</h3>
+                        <td style="color:blue;background-color: #F0F0F0;text-align: center;"> {{data.prob}} </td>
                         {% endif %}
-                    </div>
-                </div>
+                    </tr>
+                </table>
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/both_mail_mid.jpg"
                     width="100%"></img>
-            </div>
+            </div> -->
         </div>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_tnx.jpg"
+        <!-- <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risk_prec_tnx.jpg"
             width="100%" height="450px"></img>
-        <br><br><br>
+        <br><br><br> -->
     </div>
 </body>
 

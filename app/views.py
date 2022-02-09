@@ -14,9 +14,12 @@ from .task import *
 import warnings
 warnings.filterwarnings("ignore")
 import numpy as np
-import tensorflow as tf
-from keras.preprocessing import image
-
+# import tensorflow as tf
+# from keras.preprocessing import image
+from datetime import date
+today = date.today()
+update_date=today.strftime("%d %b %Y").split()
+# print(update_date)
 from django.http import HttpResponse
 from django.views.generic import View
  
@@ -115,7 +118,11 @@ def get_prediction(data, loaded_model=loaded_model):
 #     time.sleep(2)
 
 def email(request):
-    return render(request, 'email.html')
+    context={
+        'data': get_prediction({'csrfmiddlewaretoken': ['UI5kSD5v9KtSLSw9hU9b2zYhw9433kkmj9XL4FBoStD1HOsdRjIcF0gam8xErb34'], 'form_type': ['formFour'], 'email': ['atharv3820@gmail.com'], 'country': [''], 'Gender': ['1'], 'age': ['0'], 'Cough': ['0'], 'Fever': ['0'], 
+'Sore_Throat': ['0'], 'Shortness_of_Breath': ['0'], 'Headache': ['0'], 'Abroad': ['0'], 'contact_Patient': ['0']})
+    }
+    return render(request, 'email.html',context)
 
 
 def welcome(request):
@@ -138,9 +145,13 @@ def home(request):
             }
             return render(request, 'results.html', context)
     else:
+        global update_date
         world_data.delay(0)
         f = open("tmp/data.json", "r")
         d = json.load(f)
+        d["update_dt"]=update_date[0]
+        d["update_mn"]=update_date[1]
+        d["update_yr"]=update_date[2]
         return render(request, 'index.html', d)
         # return render(request, 'index.html')
 
@@ -186,7 +197,7 @@ def dashboard(request):
 
 
 def loading(request):
-    return render(request, 'loading.html')
+    return render(request, 'spinner.html')
 
 
 def results(request):
@@ -283,15 +294,16 @@ def welcome_dashboard(request):
     return render(request, 'welcome_dashboard.html')
 
 def img_process(img):
-    model = tf.keras.models.load_model("models/model2.h5")
+    # model = tf.keras.models.load_model("models/model2.h5")
 
-    img = image.load_img(img, target_size = (128,128))
-    img = image.img_to_array(img)/255
-    img = np.array([img])
-    print(img.shape)
-    ans=(model.predict(img) >= 0.5).astype("int32")
-    print(ans)
-    return ans
+    # img = image.load_img(img, target_size = (128,128))
+    # img = image.img_to_array(img)/255
+    # img = np.array([img])
+    # print(img.shape)
+    # ans=(model.predict(img) >= 0.5).astype("int32")
+    # print(ans)
+    # return ans
+    return
 
 def img_pred(request):
     if request.method == 'POST':
@@ -314,3 +326,27 @@ def img_pred(request):
             return render(request, 'img_result.html',{'imgpred':imgpred})
     return render(request, 'img_pred.html')
     
+
+def predictors(request):
+    if request.method == 'POST':
+        if request.POST.get("form_type") == 'formFour':
+            model_data = request.POST
+            context = {
+                'data': get_prediction(model_data)
+            }
+            return render(request, 'results.html', context)
+        if request.POST.get("form_type") == 'formSeven' and request.FILES['image']:
+            filename = request.FILES['image']
+            filename=str(filename)
+            file_data=request.FILES['image'].read()
+            temp=filename.index(".")
+            img="tmp/image"+str(filename[temp:])
+            print(img)
+            with open("tmp/image"+str(filename[temp:]), "wb") as outfile:
+                outfile.write(file_data)
+            imgpred=img_process(img)
+            return render(request, 'img_result.html',{'imgpred':imgpred})
+    return render(request, 'predictors.html')
+
+def nlp(request):
+    return render(request, 'nlp.html')
