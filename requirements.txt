@@ -14,4 +14,3 @@ honcho
 eventlet
 xhtml2pdf
 numpy
-tensorflow-cpu
