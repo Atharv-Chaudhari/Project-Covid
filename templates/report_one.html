@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Predictor Email</title>
+    <style>
+        /* @page { size: A5 } */
+        th,
+        td {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <img width="350px" height="350px"
+            src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/risklogo.png"></img>
+        <div class="block-in" style="text-align: center;">
+            <h1 style="color:red;font-size: 25px;">Risk Predictor Report</h1>
+            <h3 style="color:#FF6600;text-align: center;font-size: 20px;">Basic Information</h3>
+            <table style="width:200;border-collapse: collapse;">
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Email </td>
+                    <td style="color:blue;text-align: center;">{{data.email}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Country </td>
+                    <td style="color:blue;text-align: center;">{{data.country}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Gender </td>
+                    <td style="color:blue;text-align: center;">{{data.gender}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Age 60 or Above </td>
+                    <td style="color:blue;text-align: center;">{{data.age_60_and_above}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Abroad </td>
+                    <td style="color:blue;text-align: center;">{{data.abroad}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Contact with Covid-19 Patient </td>
+                    {% if data.contact_with_covid_patient in data.one %}
+                    <td style="color:red;text-align: center">{{data.contact_with_covid_patient}}</td>
+                    {% else %}
+                    <td style="color:blue;text-align: center;">{{data.contact_with_covid_patient}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <h3 style="color:#FF6600;text-align: center;font-size: 20px;">Symptoms</h3>
+        <div class="block-in" style="text-align: center;">
+            <table>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Cough </td>
+                    {% if data.cough in data.one %}
+                    <td style="color:red;text-align: center;">{{data.cough}}</td>
+                    {% else %}
+                    <td style="color:blue;text-align: center;">{{data.cough}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Fever </td>
+                    {% if data.fever in data.one %}
+                    <td style="color:red;text-align: center;">{{data.fever}}</td>
+                    {% else %}
+                    <td style="color:blue;text-align: center;">{{data.fever}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Sore Throat </td>
+                    {% if data.sore_throat in data.one %}
+                    <td style="color:red;text-align: center;">{{data.sore_throat}}</td>
+                    {% else %}
+                    <td style="color:blue;text-align: center;">{{data.sore_throat}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Shortness of Breath </td>
+                    {% if data.shortness_of_breath in data.one %}
+                    <td style="color:red;text-align: center;">{{data.shortness_of_breath}}</td>
+                    {% else %}
+                    <td style="color:blue;text-align: center;">{{data.shortness_of_breath}}</td>
+                    {% endif %} <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"> &#160&#160&#160Headache </td>
+                    {% if data.head_ache in data.one %}
+                    <td style="color:red;text-align: center;">{{data.head_ache}}</td>
+                    {% else %}
+                    <td style="color:blue;text-align: center;">{{data.head_ache}}</td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="background-color: #F0F0F0;text-align: left;padding-top:50%;"> &#160&#160&#160Corona Result </td>
+                    {% if data.prediction in data.one %}
+                    <td style="color:red;background-color: #F0F0F0;text-align: center;padding-top:50%;"> Positive </td>
+                    {% else %}
+                    <td style="color:blue;background-color: #F0F0F0;text-align: center;padding-top:50%;"> Negative </td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+                    <td></td>
+                    <td style="background-color: #F0F0F0;text-align: left;"> &#160&#160&#160Probability </td>
+                    {% if data.prediction in data.one %}
+                    <td style="color:red;background-color: #F0F0F0;text-align: center;"> {{data.prob}} </td>
+                    {% else %}
+                    <td style="color:blue;background-color: #F0F0F0;text-align: center;"> {{data.prob}} </td>
+                    {% endif %}
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <h1 style="color:blue;font-size: 30px;text-align: center;padding-top: 18%;">Thank You</h1>
+    </div>
+</body>
+
+</html>

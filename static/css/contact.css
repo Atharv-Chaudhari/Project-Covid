@@ -1,0 +1,139 @@
+.contact {
+    width: 100%;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+.grid-container {
+    text-align: center;
+    width:70%;
+    padding-bottom:50px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    /* display: grid; */
+    /* grid-template-columns: auto auto; */
+    /* padding: 10px; */
+}
+
+.grid-item {
+    /* padding: 20px; */
+    font-size: 30px;
+    text-align: center;
+}
+
+.sub-block {
+    text-align: center;
+    background-color: white;
+    width: 60%;
+    border-radius: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sub-block h4 {
+    padding: 0%;
+}
+
+.sub-block input {
+    border-radius: 7px;
+    width: 70%;
+    border: grey;
+    background-color: #E8E8E8;
+    padding: 13px;
+    font-size: 15px;
+}
+
+.sub-block textarea {
+    width: 70%;
+    padding: 15px;
+    outline: none;
+    border-radius: 7px;
+    font-size: 15px;
+    border: grey;
+    background-color: #E8E8E8;
+}
+
+.row {
+    padding-top: 12px;
+}
+
+.sub-block input[type=submit] {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 17px;
+    border: black;
+    cursor: pointer;
+}
+
+.sub-block input[type=submit]:focus {
+    color: white;
+    background-color: black;
+}
+
+@media (max-width:876px) {
+    .grid-container {
+        display: block;
+    }
+    .back-contact{
+        height:100vh;
+        background-position-y: 0px !important;
+    }
+    .contact{
+        padding-top: 10px;
+    }
+    .back-contact h4{
+        opacity: 0;
+    }
+}
+@media (max-width:500px){
+    .sub-block input[type=submit]{
+        width:50%;
+    }
+}
+.back-contact {
+    background-image: url('/static/images/contact.svg');
+    background-position-y: 70px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+@media (max-width:1100px){
+    .sub-block{
+        width:70%;
+    }
+}
+@media (max-width:900px){
+    .sub-block{
+        width:80%;
+    }
+    .sub-block input[type=submit]{
+        width:40%;
+    }
+}
+@media (max-width:700px){
+    .sub-block{
+        width:90%;
+    }
+    .sub-block input[type=submit]{
+        width:50%;
+    }
+}
+@media (max-width:600px){
+    .sub-block{
+        width:100%;
+    }
+    .sub-block input[type=submit]{
+        width:50%;
+    }
+}
+@media (max-width:500px){
+    .grid-container{
+        width:100%;
+    }
+}

@@ -1,0 +1,16 @@
+django_heroku==0.3.1
+requests==2.26.0
+geopy==2.2.0
+Django==3.2.9
+beautifulsoup4==4.10.0
+gunicorn
+html5lib
+joblib
+pandas
+sklearn
+celery
+rabbitmq
+honcho
+eventlet
+xhtml2pdf
+numpy

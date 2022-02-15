@@ -1,0 +1,40 @@
+/* Center the loader */
+#loader {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add animation to "page content" */
+  
+  #myDivload {
+    display: none;
+  }
+  
+  .spinner {
+    width: 0.875rem;
+    height: 5rem;
+    background: lightgreen;
+    margin-left: 0.875rem;
+    animation: bar-loading 1s infinite alternate;
+  }
+  
+  .spinner:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  .spinner:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  
+  @keyframes bar-loading {
+    0% {
+      transform: scaleY(0.5);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  /* ****************************** Book ******************************************************* */

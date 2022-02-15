@@ -1,0 +1,165 @@
+.result-container {
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.result-block {
+    text-align: center;
+}
+
+col {
+    width: 50%;
+}
+
+.block-in {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.line-me {
+    margin-top: 4px;
+}
+.result-img{
+    width:70%;
+    height:70%;
+}
+@media (max-width:900px){
+    .result-container {
+        width: 60%;
+    }
+}
+@media (max-width:750px){
+    .result-container {
+        width: 70%;
+    }
+}
+@media (max-width: 645px) {
+    .line-me {
+        margin-top: 2px;
+    }
+
+    .img-result {
+        width: 100%;
+        height: 100%;
+    }
+
+    .block-result-2 {
+        height: 22px;
+    }
+}
+
+@media (max-width: 550px) {
+    .line-me {
+        margin-top: 0px;
+    }
+
+    .block-result-3 {
+        height: 22px;
+    }
+}
+
+@media (max-width: 530px) {
+    .result-container {
+        width: 95%;
+    }
+
+    .line-me {
+        margin-top: 2px;
+    }
+
+    .block-result-3 {
+        height: 0px;
+    }
+
+    .block-result-2 {
+        height: 2px;
+    }
+}
+
+@media (max-width: 516px) {
+    .block-result-2 {
+        height: 22px;
+    }
+}
+
+@media (max-width: 440px) {
+    .block-result-3 {
+        height: 20px;
+    }
+    .result-img{
+        width:90%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 423px) {
+    .block-result-4 {
+        height: 20px;
+    }
+}
+
+@media (max-width: 414px) {
+    .block-result-2 {
+        height: 42px;
+    }
+}
+
+@media (max-width: 414px) {
+    .block-result-5 {
+        height: 20px;
+    }
+}
+@media (max-width:350px){
+    .result-img{
+        width:100%;
+        height: 100%;
+    }
+}
+@media (max-width:300px){
+    .block-in{
+        overflow-x:auto;
+    }
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+th,
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    width:70%;
+}
+
