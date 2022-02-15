@@ -1,6 +1,6 @@
 # ✨ Sem-7-Covid 
 
-## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/arrow.gif" width="60" height="15" /> [!Project Working](https://github.com/Atharv-Chaudhari/Sem-7-Covid/actions/workflows/django.yml/badge.svg)[![Project Information Page](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment)
+## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/arrow.gif" width="60" height="15" /> [![Project Status](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml)[![Project Information Page](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment)
 
 [Visit on Heroku](https://covid-infy-soars.herokuapp.com/)
 
