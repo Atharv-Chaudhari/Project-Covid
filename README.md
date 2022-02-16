@@ -18,6 +18,6 @@
 
 [Data Source](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) (Image Data)
 
-## Phase 3 - Global Vaccination Analysis & Covid Vaccine Tracker  
+## Phase 3 - Global Covid Data Analysis & Vaccine Tracker  
 
 [Data Source](https://github.com/BloombergGraphics/covid-vaccine-tracker-data)
