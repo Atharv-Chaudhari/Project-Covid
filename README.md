@@ -1,4 +1,4 @@
-# ✨ Sem-7-Covid 
+# ✨ Project Covid 
 
 ## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/arrow.gif" width="60" height="15" /> [![Project_Status](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml)
 
