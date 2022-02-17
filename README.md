@@ -10,14 +10,14 @@
 
 [Visit on Python Any Where](https://infysoars.pythonanywhere.com)
 
-## Phase 1 - Detection of Covid Positive Cases using Supervised Machine Learning 
+## Phase 1 - Detection of Covid Positive Cases using Machine Learning 
 
 [Data Source](https://data.gov.il/dataset/covid-19/resource/d337959a-020a-4ed3-84f7-fca182292308) (CSV Data)
 
 ## Phase 2 - Detection of Covid Positive Cases using Deep Learning 
 
-[Data Source](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) (Image Data)
+[Data Source](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) (Chest X-Ray Data)
 
-## Phase 3 - Global Vaccination Analysis & Covid Vaccine Tracker  
+## Phase 3 - Global Covid Data Analysis & Vaccine Tracker  
 
-[Data Source](https://github.com/BloombergGraphics/covid-vaccine-tracker-data)
+[Data Source](https://github.com/BloombergGraphics/covid-vaccine-tracker-data) (Live Data)
