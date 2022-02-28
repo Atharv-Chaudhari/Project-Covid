@@ -1,8 +1,8 @@
-django_heroku==0.3.1
-requests==2.26.0
-geopy==2.2.0
-Django==3.2.9
-beautifulsoup4==4.10.0
+django_heroku
+requests
+geopy
+Django
+beautifulsoup4
 gunicorn
 html5lib
 joblib
