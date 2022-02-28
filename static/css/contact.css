@@ -96,7 +96,7 @@
     }
 }
 .back-contact {
-    background-image: url('/static/images/contact.svg');
+    /* background-image: url('/static/images/contact.svg'); */
     background-position-y: 70px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
