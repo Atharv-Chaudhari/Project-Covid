@@ -31,7 +31,7 @@
 <!-- <body onload="present()"> -->
 
 
-<body>
+<body onload="sympred()">
     <div id="loader" style="display: none;">
         <!-- <div class="loader-book">
             <div>
@@ -91,11 +91,15 @@
                     <div class="container-alert">
                         <details>
                             <summary>
-                                <div class="button-modal">
+                                <div class="button-modal" style="cursor: pointer;">
                                     <!-- <img src="static/images/infinity.gif" width="30" height="30"> -->
-                                    <h4 style="font-size: 25px;">
-                                        <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS<sup
-                                                    style="color:crimson;font-size: 10px;"><strong>TM</strong></sup></span></span>
+                                    <h4>
+                                        <bold><span style="color: black;font-size: 30px;"> Infy<span
+                                                    style="font-size: 30px;color:#66f;">SOARS
+                                                    <!-- <sup
+                                            style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-weight: 600;font-family: Arial, Helvetica, sans-serif;">Team</sup>     -->
+                                                    <!-- <sub
+                                                style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-family: Arial, Helvetica, sans-serif;"><strong>Project</strong></sub> -->
                                         </bold>
                                     </h4>
                                 </div>
@@ -144,6 +148,7 @@
             </div> -->
                 <div class="navbar-menu" id="open-navbar1">
                     <ul class="navbar-nav">
+                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
                         </li>
                         <li class="navbar-dropdown">
                             <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
@@ -159,9 +164,9 @@
                                 <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                             </ul>
                         </li>
-                        <li class="navbar-dropdown active">
-                            <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
-                                Applications <i class="fa fa-angle-down"></i>
+                        <li class="navbar-dropdown">
+                            <a href="#" class="dropdown-toggler active-drop" data-dropdown="blog"><i class="fa fa-flask active-dripio"></i>
+                                Applications <i class="fa fa-angle-down active-dripio"></i>
                             </a>
                             <ul class="dropdown" id="blog" style="text-align: center;">
                                 <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
@@ -176,7 +181,7 @@
                                 <!-- <li class="separator"></li>
                                 <li><a href="img_pred"><i class="fa fa-rocket"></i> &#160Phase - II
                                         Predictor</span></a></li> -->
-                                <li><a href="predictors" class="tracker"><i class="fa fa-rocket"></i>
+                                <li><a href="predictors" class="tracker active-dropit"><i class="active-dripioit fa fa-rocket"></i>
                                         &#160Covid Predictors</a></li>
                                 <li class="separator"></li>
                                 <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
@@ -188,10 +193,9 @@
                             </ul>
                         </li>
                         <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
-                        <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
+                        <!-- <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li> -->
                         <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                     class="material-icons">&#xe163;</i> Contact</a></li>
-                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
 
                             <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                             <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
@@ -202,7 +206,7 @@
         <br>
         <ul class="breadcrumb">
             <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="predictors" onclick="myFunction()" style="color: black;"><i class="fa fa-rocket"></i>
+            <li><a href="predictors" onclick="myFunction()"><i class="fa fa-rocket"></i>
                     Applications <i class="fas fa-long-arrow-alt-right arrow1" aria-hidden="False"></i> &#160&#160&#160
                     Predictor</a></li>
         </ul>
@@ -352,9 +356,9 @@
 
 
         <div class="btn-list">
-            <button class="red button-submit" onclick="sympred()"><i class="fa fa-rocket" style="color:lime;"></i>
+            <button id="active-it1" style="font-size: 20px;" class="red button-submit" onclick="sympred()"><i class="fa fa-rocket"  id="active-it3" style="color:lime;"></i>
                 &#160Predictor I </button>
-            <button class="red button-submit" onclick="imgpred()"><i class="fa fa-rocket" style="color:lime;"></i>
+            <button id="active-it2" style="font-size: 20px;" class="red button-submit" onclick="imgpred()"><i class="fa fa-rocket"  id="active-it4" style="color:lime;"></i>
                 &#160Predictor II </button>
         </div>
         <br>
@@ -368,9 +372,9 @@
                 <div class="row">
                         <h1 style="text-align: center;color: red;">Predictor I</h1>
                     </br>
-                    <h3 style="color:blue;">Enter Your Details </h3>
+                    <h2 style="color:blue;text-align: left;">Enter Your Details </h2>
                     <br>
-                    <h4 style="color:#7ed321;">Email <span class="required">*</span></h4>
+                    <h3 style="color:#7ed321;font-size: 18px;">Email <span class="required">*</span></h3>
                     <br>
                     <div class="input-group input-group-icon">
                         <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email"
@@ -378,7 +382,7 @@
                         <div class="input-icon"><i class="fa fa-envelope"></i></div>
                     </div>
                     <br>
-                    <h4 style="color:#7ed321;">Country </h4>
+                    <h3 style="color:#7ed321;font-size: 18px;">Country </h3>
                     <br>
                     <div class="input-group input-group-icon">
                         <input class="lost" type="text" name="country" placeholder="Country" />
@@ -386,7 +390,7 @@
                     </div>
                 </div>
                 </br>
-                <h3 style="color:#7ed321;">Gender<span class="required"> *</span></h3>
+                <h3 style="color:#7ed321;font-size: 18px;">Gender<span class="required"> *</span></h3>
                 <div class="input-group others">
                     <input class="lost" type="radio" name="Gender" value="1" id="Gender-male" required />
                     <label class="lost" for="Gender-male">Male</label>
@@ -394,7 +398,7 @@
                     <label class="lost" for="Gender-female">Female</label>
                 </div>
                 </br>
-                <h3 style="color:#7ed321;">Age 60 or Above<span class="required"> *</span></h3>
+                <h3 style="color:#7ed321;font-size: 18px;">Age 60 or Above<span class="required"> *</span></h3>
                 <div class="input-group others">
                     <input class="lost" type="radio" name="age" value="1" id="age-yes" />
                     <label class="lost" for="age-yes">Yes</label>
@@ -402,7 +406,7 @@
                     <label class="lost" for="age-no">No</label>
                 </div>
                 </br>
-                <h3 style="color:#399cbd;">Symptoms </h3>
+                <h3 style="color:#7ed321;font-size: 18px;">Symptoms </h3>
                 <br>
                 <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
                 <div class="input-group others">
@@ -442,7 +446,7 @@
                     <label class="lost" for="Headache-no">No</label>
                 </div>
                 </br>
-                <h3 style="color:#7ed321;">Abroad<span class="required"> *</span></h3>
+                <h3 style="color:#7ed321;font-size: 18px;">Abroad<span class="required"> *</span></h3>
                 <div class="input-group others">
                     <input class="lost" type="radio" name="Abroad" value="1" id="Abroad-yes" />
                     <label class="lost" for="Abroad-yes">Yes</label>
@@ -450,7 +454,7 @@
                     <label class="lost" for="Abroad-no">No</label>
                 </div>
                 </br>
-                <h3 style="color:#7ed321;">Contact With Covid-19 Patient <span class="required">*</span></h3>
+                <h3 style="color:#7ed321;font-size: 18px;">Contact With Covid-19 Patient <span class="required">*</span></h3>
                     <div class="input-group others">
                         <input class="lost" type="radio" name="contact_Patient" value="1" id="contact_Patient-Yes" />
                         <label class="lost" for="contact_Patient-Yes">Yes</label>

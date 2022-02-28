@@ -14,11 +14,13 @@ from .task import *
 import warnings
 warnings.filterwarnings("ignore")
 import numpy as np
+from keras.models import load_model
+import cv2
 # import tensorflow as tf
 # from keras.preprocessing import image
-from datetime import date
-today = date.today()
-update_date=today.strftime("%d %b %Y").split()
+# from datetime import date
+# today = date.today()
+# update_date=today.strftime("%d %b %Y").split()
 # print(update_date)
 from django.http import HttpResponse
 from django.views.generic import View
@@ -145,13 +147,13 @@ def home(request):
             }
             return render(request, 'results.html', context)
     else:
-        global update_date
+        # global update_date
         world_data.delay(0)
         f = open("tmp/data.json", "r")
         d = json.load(f)
-        d["update_dt"]=update_date[0]
-        d["update_mn"]=update_date[1]
-        d["update_yr"]=update_date[2]
+        # d["update_dt"]=update_date[0]
+        # d["update_mn"]=update_date[1]
+        # d["update_yr"]=update_date[2]
         return render(request, 'index.html', d)
         # return render(request, 'index.html')
 
@@ -294,16 +296,15 @@ def welcome_dashboard(request):
     return render(request, 'welcome_dashboard.html')
 
 def img_process(img):
-    # model = tf.keras.models.load_model("models/model2.h5")
+    model_1 = load_model('models/cnn_model.h5')
 
-    # img = image.load_img(img, target_size = (128,128))
-    # img = image.img_to_array(img)/255
-    # img = np.array([img])
-    # print(img.shape)
-    # ans=(model.predict(img) >= 0.5).astype("int32")
-    # print(ans)
-    # return ans
-    return
+    z_img = cv2.imread(img)
+    z_img = cv2.resize(z_img, (70, 70)) / 255.0
+    z_img = z_img.reshape(1, z_img.shape[0], z_img.shape[1], z_img.shape[2])
+        
+    z = model_1.predict(z_img)
+    z = np.argmax(z, axis = 1)
+    return z
 
 def img_pred(request):
     if request.method == 'POST':
@@ -319,14 +320,15 @@ def img_pred(request):
             file_data=request.FILES['image'].read()
             temp=filename.index(".")
             img="tmp/image"+str(filename[temp:])
-            print(img)
             with open("tmp/image"+str(filename[temp:]), "wb") as outfile:
                 outfile.write(file_data)
             imgpred=img_process(img)
             return render(request, 'img_result.html',{'imgpred':imgpred})
     return render(request, 'img_pred.html')
     
-
+from django.shortcuts import render
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
 def predictors(request):
     if request.method == 'POST':
         if request.POST.get("form_type") == 'formFour':
@@ -340,12 +342,14 @@ def predictors(request):
             filename=str(filename)
             file_data=request.FILES['image'].read()
             temp=filename.index(".")
-            img="tmp/image"+str(filename[temp:])
+            img="static/tmp/image"+str(filename[temp:])
             print(img)
-            with open("tmp/image"+str(filename[temp:]), "wb") as outfile:
+            with open("static/tmp/image"+str(filename[temp:]), "wb") as outfile:
                 outfile.write(file_data)
             imgpred=img_process(img)
-            return render(request, 'img_result.html',{'imgpred':imgpred})
+            file_n="static/tmp/image"+str(filename[temp:])
+            tk=[1]
+            return render(request, 'img_result.html',{'imgpred':imgpred[0],'img_result':file_n,'tk':tk})
     return render(request, 'predictors.html')
 
 def nlp(request):

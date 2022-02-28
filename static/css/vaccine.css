@@ -1,4 +1,4 @@
-.placeinfo {
+/* .placeinfo {
     background-color: white;
     margin-top: 1vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
@@ -32,7 +32,6 @@ td {
     background-color: white;
     border: 1px solid grey;
     padding: 1vh;
-    /* font-size: 20px; */
     border-radius: 2.5px;
     line-height: 1!important;
 }
@@ -71,7 +70,6 @@ td {
     padding: 2vh;
 }
 
-/* media queries */
 
 @media only screen and (max-width: 768px) and (min-width: 425px) {
     #userI {
@@ -133,6 +131,7 @@ td {
         font-size: 2.4vh;
     }
 }
+*/
 .arrow1 {
     animation: slide1 1s ease-in-out infinite;
     margin-left: 9px;
@@ -147,4 +146,71 @@ td {
     50% {
       transform: translate(10px, 0);
     }
+  } 
+
+.cont-vaccine{
+    margin-left: auto;
+    margin-right: auto;
+    width:70%;
+    display: flex;
+    background-color: white!important;
+    border-radius: 25px;
+    margin-bottom:50px;
+    margin-top:50px;
+}
+.sub-vac{
+    width:50%;
+    text-align: center;
+}
+.vac-img{
+    height:410px;
+    width:100%;
+    border-radius: var(--border-radius-primary);
+}
+.row {
+    padding-top: 12px;
+}
+
+.row input[type=submit] {
+    color: white;
+    background-color: #43f943;
+    padding: 12px;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 20px;
+    border: black;
+    cursor: pointer;
+}
+
+.row input[type=submit]:focus {
+    color: white;
+    background-color: #00e000;
+}
+/* .sub-vac input[type=text]{
+    border-radius: 25px;
+    padding:10px;
+    width:50%;
+    line-height: 1;
+}
+.sub-vac input[type=date]{
+    border-radius: 25px;
+    line-height: 1;
+    width:50%;
+    padding:10px;
+}*/
+.vac-form{
+    margin-left: auto;
+    margin-right: auto;
+} 
+.vac-form input {
+    border-radius: 7px;
+    width: 80%;
+    line-height: 1;
+    border: grey;
+    background-color: #E8E8E8;
+    padding: 13px;
+    font-size: 15px;
+}
+.centered-element {
+    padding-top: 15%;
   }

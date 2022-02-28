@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="static/css/sign.css" />
     <link rel="stylesheet" href="static/css/general.css" />
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    <link rel="stylesheet" href="static/css/img_pred.css" />
+    <link rel="stylesheet" href="static/css/img_result.css" />
     <link rel="stylesheet" href="static/css/loading.css" />
     <link rel="stylesheet" href="static/css/risky_modal.css" />
     <!-- <link rel="stylesheet" href="static/css/riskpredictor.css" /> -->
@@ -25,40 +25,6 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .centers table {
-            border-collapse: collapse;
-            width: 95%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .centers td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .centers th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            background-color: black;
-            color: white;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .centers tr:nth-child(even) {
-            background-color: #7FFFD4;
-            text-align: center;
-        }
-
-        .centers tr:nth-child(odd) {
-            background-color: white;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <!-- <body onload="present()"> -->
@@ -176,14 +142,16 @@
             </div> -->
                 <div class="navbar-menu" id="open-navbar1">
                     <ul class="navbar-nav">
+                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
+                        </li>
                         <li class="navbar-dropdown">
                             <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
                                     class="fa fa-bar-chart"></i>
                                 Analysis <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown" id="my-dropdown-id">
-                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span
-                                            class="iconify" data-icon="ion:logo-tableau"></span> Tableau DashBoard</a>
+                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify"
+                                            data-icon="ion:logo-tableau"></span> Tableau DashBoard</a>
                                 </li>
                                 <li class="separator"></li>
                                 <li><a href="#" onclick="myFunction()">Seprated link</a></li>
@@ -191,9 +159,10 @@
                                 <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                             </ul>
                         </li>
-                        <li class="navbar-dropdown active">
-                            <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
-                                Applications <i class="fa fa-angle-down"></i>
+                        <li class="navbar-dropdown">
+                            <a href="#" class="dropdown-toggler active-drop" data-dropdown="blog"><i
+                                    class="fa fa-flask active-dripio"></i>
+                                Applications <i class="fa fa-angle-down active-dripio"></i>
                             </a>
                             <ul class="dropdown" id="blog" style="text-align: center;">
                                 <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
@@ -208,7 +177,8 @@
                                 <!-- <li class="separator"></li>
                                 <li><a href="img_pred"><i class="fa fa-rocket"></i> &#160Phase - II
                                         Predictor</span></a></li> -->
-                                <li><a href="predictors" class="tracker"><i class="fa fa-rocket"></i>
+                                <li><a href="predictors" class="tracker active-dropit"><i
+                                            class="active-dripioit fa fa-rocket"></i>
                                         &#160Covid Predictors</a></li>
                                 <li class="separator"></li>
                                 <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
@@ -223,8 +193,7 @@
                         <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
                         <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                     class="material-icons">&#xe163;</i> Contact</a></li>
-                                    <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
-                                    </li>
+
                         <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                         <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
                     </ul>
@@ -341,7 +310,20 @@
             <div class="menu-item-text">Linked In</div>
         </div>
     </div> -->
-
+        <div class="img-result-cont">
+            <h1 class="add-space">Image Predictor Result</h1>
+            <br>
+            <h2 style="color:blue;">Your X-Ray Image</h2>
+            <br>
+            <img src={{img_result}}>
+            <h1 style="color:blue;">Result</h1>
+            {% if imgpred in tk %}
+            <h3 style="color: red;">Positive</h3>
+            {% else %}
+            <h3 style="color: blue;">Negative</h3>
+            {% endif %}
+            <br>
+        </div>
         <!-- <form method="post" id="formSeven" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="text" name="txt">
@@ -351,15 +333,7 @@
             <p><img id="output" width="200" /></p>
             <input type="submit" value="submit">
         </form> -->
-        <h1 style="text-align: center;">{{imgpred}}</h1>
-        <form method="post" id="formSeven" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="hidden" name="form_type" value="formSeven">
-            <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)">
-            </p>
-            <p><img id="output" width="200" /></p>
-            <input type="submit">
-    </form>
+
 
         <!-- <div class="social-foot">
             <ul>

@@ -121,11 +121,15 @@
                     <div class="container-alert">
                         <details>
                             <summary>
-                                <div class="button-modal">
+                                <div class="button-modal" style="cursor: pointer;">
                                     <!-- <img src="static/images/infinity.gif" width="30" height="30"> -->
-                                    <h4 style="font-size: 25px;">
-                                        <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS<sup
-                                                    style="color:crimson;font-size: 10px;"><strong>TM</strong></sup></span></span>
+                                    <h4>
+                                        <bold><span style="color: black;font-size: 30px;"> Infy<span
+                                                    style="font-size: 30px;color:#66f;">SOARS
+                                                    <!-- <sup
+                                            style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-weight: 600;font-family: Arial, Helvetica, sans-serif;">Team</sup>     -->
+                                                    <!-- <sub
+                                                style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-family: Arial, Helvetica, sans-serif;"><strong>Project</strong></sub> -->
                                         </bold>
                                     </h4>
                                 </div>
@@ -174,6 +178,8 @@
             </div> -->
                 <div class="navbar-menu" id="open-navbar1">
                     <ul class="navbar-nav">
+                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
+                        </li>
                         <li class="navbar-dropdown">
                             <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
                                     class="fa fa-bar-chart"></i>
@@ -218,13 +224,12 @@
                             </ul>
                         </li>
                         <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
-                        <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
+                        <!-- <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li> -->
                         <li class="active"><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                     class="material-icons">&#xe163;</i> Contact</a></li>
                         <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                         <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
-                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -232,7 +237,7 @@
         <br>
         <ul class="breadcrumb">
             <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="contact" onclick="myFunction()" style="color: black;"><i style="font-size:13px;"
+            <li><a href="contact" onclick="myFunction()" style="color: blue;"><i style="font-size:13px;"
                         class="material-icons">&#xe163;</i>
                     Contact</a></li>
         </ul>
@@ -370,16 +375,13 @@
     </div> -->
 
         <div class="contact">
-            <div class="grid-container">
-                <!-- <div class="grid-item">
-                    <div class="sub-block back-contact">
-                        <h4>Let's Talk About Everything!</h4>
-                    </div>
-                </div> -->
-                <!-- <div class="grid-item"> -->
+            <div class="main-blocki">
+                <div class="sub-block">
+                    <img style="-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 25px;" width="100%" height="100%" src="static/images/contact.jpg">
+                </div>
                 <div class="sub-block">
                     <br><br>
-                    <h4 style="font-size: 25px;color: blue;">Contact Us</h4>
+                    <h4 style="font-size: 25px;color: #43f943;">Contact Us</h4>
                     <br>
                     <form onsubmit="sendEmail()" action="contact" method="post">
                         {% csrf_token %}
@@ -396,9 +398,9 @@
                         <br><br>
                     </form>
                 </div>
-                <!-- </div>
-            </div> -->
+                <!--  </div> -->
             </div>
+        </div>
 
 
 
@@ -413,7 +415,7 @@
 
 
 
-            <!-- <div class="social-foot">
+        <!-- <div class="social-foot">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -422,133 +424,132 @@
                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
         </div> -->
-            <footer>
-                <div class="footer">
-                    <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
-                            style="font-size: 25px;color:grey;">Team</span>
-                        <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS ⚡</span></span></bold>
-                    </h4>
-                    <!-- <sup
+        <footer>
+            <div class="footer">
+                <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
+                        style="font-size: 25px;color:grey;">Team</span>
+                    <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS ⚡</span></span></bold>
+                </h4>
+                <!-- <sup
     style="color:crimson;font-size: 10px;"><strong></strong></sup>  -->
-                    <div class="row">
-                        <ul>
-                            <li><a href="#">Siddharth Kulkarni</a></li>
-                            <li><a href="#">Atharv Chaudhari</a></li>
-                            <li><a href="#">Rutuja Vaidya</a></li>
-                            <li><a href="#">Omkar Patil</a></li>
-                            <li><a href="#"><br>Sana Shaikh</a></li>
-                        </ul>
-                    </div>
-                    <div class="sub-footer">
-                        ✨ Copyright © 2021 - All rights reserved ✨
-                    </div>
-                    <p style="color:white;">🧿 Designed By 😎 Team Infy SOARS 🧿</p>
+                <div class="row">
+                    <ul>
+                        <li><a href="#">Siddharth Kulkarni</a></li>
+                        <li><a href="#">Atharv Chaudhari</a></li>
+                        <li><a href="#">Rutuja Vaidya</a></li>
+                        <li><a href="#">Omkar Patil</a></li>
+                        <li><a href="#"><br>Sana Shaikh</a></li>
+                    </ul>
                 </div>
-            </footer>
-            <!-- ##################################################################################################### -->
-            <!-- Risk Predictor Modal -->
-            <div id="risk-myModal" class="modal-risk" style="font-family: Arial, Helvetica, sans-serif;">
-                <div class="modal-risk-content">
-                    <span class="close-risk">&times;</span>
-                    <form method="post" id="formFour">
-                        {% csrf_token %}
-                        <input type="hidden" name="form_type" value="formFour">
-                        <div class="row">
-                            </br>
-                            <img style="height:100%;width:100%;" src="static/images/risklogo.png">
-                            </br>
-                            <h3 style="color:blue;">Enter Your Details </h3>
-                            <br>
-                            <!-- <h4 style="color:#7ed321;">Full Name </h4>
+                <div class="sub-footer">
+                    ✨ Copyright © 2021 - All rights reserved ✨
+                </div>
+                <p style="color:white;">🧿 Designed By 😎 Team Infy SOARS 🧿</p>
+            </div>
+        </footer>
+        <!-- ##################################################################################################### -->
+        <!-- Risk Predictor Modal -->
+        <div id="risk-myModal" class="modal-risk" style="font-family: Arial, Helvetica, sans-serif;">
+            <div class="modal-risk-content">
+                <span class="close-risk">&times;</span>
+                <form method="post" id="formFour">
+                    {% csrf_token %}
+                    <input type="hidden" name="form_type" value="formFour">
+                    <div class="row">
+                        </br>
+                        <img style="height:100%;width:100%;" src="static/images/risklogo.png">
+                        </br>
+                        <h3 style="color:blue;">Enter Your Details </h3>
+                        <br>
+                        <!-- <h4 style="color:#7ed321;">Full Name </h4>
                         <br>
                         <div class="input-group input-group-icon">
                             <input class="lost" type="text" name="name" placeholder="Full Name" />
                             <div class="input-icon"><i class="material-icons">person</i></div>
                         </div> -->
-                            <br>
-                            <h4 style="color:#7ed321;">Email <span class="required">*</span></h4>
-                            <br>
-                            <div class="input-group input-group-icon">
-                                <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                    name="email" placeholder="Email Address" required />
-                                <div class="input-icon"><i class="fa fa-envelope"></i></div>
-                            </div>
-                            <br>
-                            <h4 style="color:#7ed321;">Country </h4>
-                            <br>
-                            <div class="input-group input-group-icon">
-                                <input class="lost" type="text" name="country" placeholder="Country" />
-                                <div class="input-icon"><i class="fa fa-globe"></i></div>
-                            </div>
-                        </div>
-                        </br>
-                        <h3 style="color:#7ed321;">Gender<span class="required"> *</span></h3>
-                        <div class="input-group others">
-                            <input class="lost" type="radio" name="Gender" value="1" id="Gender-male" required />
-                            <label class="lost" for="Gender-male">Male</label>
-                            <input class="lost" type="radio" name="Gender" value="0" id="Gender-female" required />
-                            <label class="lost" for="Gender-female">Female</label>
-                        </div>
-                        </br>
-                        <h3 style="color:#7ed321;">Age 60 or Above<span class="required"> *</span></h3>
-                        <div class="input-group others">
-                            <input class="lost" type="radio" name="age" value="1" id="age-yes" />
-                            <label class="lost" for="age-yes">Yes</label>
-                            <input class="lost" type="radio" name="age" value="0" id="age-no" checked="true" />
-                            <label class="lost" for="age-no">No</label>
-                        </div>
-                        </br>
-                        <h3 style="color:#399cbd;">Symptoms </h3>
                         <br>
-                        <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
-                        <div class="input-group others">
-                            <input class="lost" type="radio" name="Cough" value="1" id="Cough-yes" />
-                            <label class="lost" for="Cough-yes">Yes</label>
-                            <input class="lost" type="radio" name="Cough" value="0" id="Cough-no" checked="true" />
-                            <label class="lost" for="Cough-no">No</label>
+                        <h4 style="color:#7ed321;">Email <span class="required">*</span></h4>
+                        <br>
+                        <div class="input-group input-group-icon">
+                            <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                name="email" placeholder="Email Address" required />
+                            <div class="input-icon"><i class="fa fa-envelope"></i></div>
                         </div>
-                        <h3 style="color:black;">2) Fever <span class="required">*</span></h3>
-                        <div class="input-group others">
-                            <input class="lost" type="radio" name="Fever" value="1" id="Fever-yes" />
-                            <label class="lost" for="Fever-yes">Yes</label>
-                            <input class="lost" type="radio" name="Fever" value="0" id="Fever-no" checked="true" />
-                            <label class="lost" for="Fever-no">No</label>
+                        <br>
+                        <h4 style="color:#7ed321;">Country </h4>
+                        <br>
+                        <div class="input-group input-group-icon">
+                            <input class="lost" type="text" name="country" placeholder="Country" />
+                            <div class="input-icon"><i class="fa fa-globe"></i></div>
                         </div>
-                        <h3 style="color:black;">3) Sore Throat <span class="required">*</span></h3>
-                        <div class="input-group others">
-                            <input class="lost" type="radio" name="Sore_Throat" value="1" id="Sore_Throat-yes" />
-                            <label class="lost" for="Sore_Throat-yes">Yes</label>
-                            <input class="lost" type="radio" name="Sore_Throat" value="0" id="Sore_Throat-no"
-                                checked="true" />
-                            <label class="lost" for="Sore_Throat-no">No</label>
-                        </div>
-                        <h3 style="color:black;">4) Shortness of Breath <span class="required">*</span></h3>
-                        <div class="input-group others">
-                            <input class="lost" type="radio" name="Shortness_of_Breath" value="1"
-                                id="Shortness_of_Breath-yes" />
-                            <label class="lost" for="Shortness_of_Breath-yes">Yes</label>
-                            <input class="lost" type="radio" name="Shortness_of_Breath" value="0"
-                                id="Shortness_of_Breath-no" checked="true" />
-                            <label class="lost" for="Shortness_of_Breath-no">No</label>
-                        </div>
-                        <h3 style="color:black;">5) Headache <span class="required">*</span></h3>
-                        <div class="input-group others">
-                            <input class="lost" type="radio" name="Headache" value="1" id="Headache-yes" />
-                            <label class="lost" for="Headache-yes">Yes</label>
-                            <input class="lost" type="radio" name="Headache" value="0" id="Headache-no"
-                                checked="true" />
-                            <label class="lost" for="Headache-no">No</label>
-                        </div>
-                        </br>
-                        <h3 style="color:#7ed321;">Abroad<span class="required"> *</span></h3>
-                        <div class="input-group others">
-                            <input class="lost" type="radio" name="Abroad" value="1" id="Abroad-yes" />
-                            <label class="lost" for="Abroad-yes">Yes</label>
-                            <input class="lost" type="radio" name="Abroad" value="0" id="Abroad-no" checked="true" />
-                            <label class="lost" for="Abroad-no">No</label>
-                        </div>
-                        </br>
-                        <!-- <h4 style="color:#7ed321;">Contact With Covid-19 Object <span class="required">*</span></h3>
+                    </div>
+                    </br>
+                    <h3 style="color:#7ed321;">Gender<span class="required"> *</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Gender" value="1" id="Gender-male" required />
+                        <label class="lost" for="Gender-male">Male</label>
+                        <input class="lost" type="radio" name="Gender" value="0" id="Gender-female" required />
+                        <label class="lost" for="Gender-female">Female</label>
+                    </div>
+                    </br>
+                    <h3 style="color:#7ed321;">Age 60 or Above<span class="required"> *</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="age" value="1" id="age-yes" />
+                        <label class="lost" for="age-yes">Yes</label>
+                        <input class="lost" type="radio" name="age" value="0" id="age-no" checked="true" />
+                        <label class="lost" for="age-no">No</label>
+                    </div>
+                    </br>
+                    <h3 style="color:#399cbd;">Symptoms </h3>
+                    <br>
+                    <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Cough" value="1" id="Cough-yes" />
+                        <label class="lost" for="Cough-yes">Yes</label>
+                        <input class="lost" type="radio" name="Cough" value="0" id="Cough-no" checked="true" />
+                        <label class="lost" for="Cough-no">No</label>
+                    </div>
+                    <h3 style="color:black;">2) Fever <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Fever" value="1" id="Fever-yes" />
+                        <label class="lost" for="Fever-yes">Yes</label>
+                        <input class="lost" type="radio" name="Fever" value="0" id="Fever-no" checked="true" />
+                        <label class="lost" for="Fever-no">No</label>
+                    </div>
+                    <h3 style="color:black;">3) Sore Throat <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Sore_Throat" value="1" id="Sore_Throat-yes" />
+                        <label class="lost" for="Sore_Throat-yes">Yes</label>
+                        <input class="lost" type="radio" name="Sore_Throat" value="0" id="Sore_Throat-no"
+                            checked="true" />
+                        <label class="lost" for="Sore_Throat-no">No</label>
+                    </div>
+                    <h3 style="color:black;">4) Shortness of Breath <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Shortness_of_Breath" value="1"
+                            id="Shortness_of_Breath-yes" />
+                        <label class="lost" for="Shortness_of_Breath-yes">Yes</label>
+                        <input class="lost" type="radio" name="Shortness_of_Breath" value="0"
+                            id="Shortness_of_Breath-no" checked="true" />
+                        <label class="lost" for="Shortness_of_Breath-no">No</label>
+                    </div>
+                    <h3 style="color:black;">5) Headache <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Headache" value="1" id="Headache-yes" />
+                        <label class="lost" for="Headache-yes">Yes</label>
+                        <input class="lost" type="radio" name="Headache" value="0" id="Headache-no" checked="true" />
+                        <label class="lost" for="Headache-no">No</label>
+                    </div>
+                    </br>
+                    <h3 style="color:#7ed321;">Abroad<span class="required"> *</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Abroad" value="1" id="Abroad-yes" />
+                        <label class="lost" for="Abroad-yes">Yes</label>
+                        <input class="lost" type="radio" name="Abroad" value="0" id="Abroad-no" checked="true" />
+                        <label class="lost" for="Abroad-no">No</label>
+                    </div>
+                    </br>
+                    <!-- <h4 style="color:#7ed321;">Contact With Covid-19 Object <span class="required">*</span></h3>
                         <div class="input-group others">
                             <input class="lost" type="radio" name="contact_Object" value="1" id="contact_Object-Yes" />
                             <label class="lost" for="contact_Object-Yes">Yes</label>
@@ -557,25 +558,25 @@
                             <label class="lost" for="contact_Object-no">No</label>
                         </div>
                         </br> -->
-                        <h4 style="color:#7ed321;">Contact With Covid-19 Patient <span class="required">*</span></h3>
-                            <div class="input-group others">
-                                <input class="lost" type="radio" name="contact_Patient" value="1"
-                                    id="contact_Patient-Yes" />
-                                <label class="lost" for="contact_Patient-Yes">Yes</label>
-                                <input class="lost" type="radio" name="contact_Patient" value="0"
-                                    id="contact_Patient-no" checked="true" />
-                                <label class="lost" for="contact_Patient-no">No</label>
-                            </div>
-                            </br>
-                            <div class="submits">
-                                <input class="lost" type="submit" value="Submit"
-                                    style="background-color: #7ed321; color: white;">
-                            </div>
-                            </br>
-                </div>
-                </form>
+                    <h4 style="color:#7ed321;">Contact With Covid-19 Patient <span class="required">*</span></h3>
+                        <div class="input-group others">
+                            <input class="lost" type="radio" name="contact_Patient" value="1"
+                                id="contact_Patient-Yes" />
+                            <label class="lost" for="contact_Patient-Yes">Yes</label>
+                            <input class="lost" type="radio" name="contact_Patient" value="0" id="contact_Patient-no"
+                                checked="true" />
+                            <label class="lost" for="contact_Patient-no">No</label>
+                        </div>
+                        </br>
+                        <div class="submits">
+                            <input class="lost" type="submit" value="Submit"
+                                style="background-color: #7ed321; color: white;">
+                        </div>
+                        </br>
             </div>
+            </form>
         </div>
+    </div>
     </div>
     <!-- ##################################################################################################### -->
     <script type="text/javascript" src="static/js/script.js "></script>

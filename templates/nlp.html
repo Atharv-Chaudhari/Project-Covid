@@ -90,11 +90,15 @@
                     <div class="container-alert">
                         <details>
                             <summary>
-                                <div class="button-modal">
+                                <div class="button-modal" style="cursor: pointer;">
                                     <!-- <img src="static/images/infinity.gif" width="30" height="30"> -->
-                                    <h4 style="font-size: 25px;">
-                                        <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS<sup
-                                                    style="color:crimson;font-size: 10px;"><strong>TM</strong></sup></span></span>
+                                    <h4>
+                                        <bold><span style="color: black;font-size: 30px;"> Infy<span
+                                                    style="font-size: 30px;color:#66f;">SOARS
+                                                    <!-- <sup
+                                            style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-weight: 600;font-family: Arial, Helvetica, sans-serif;">Team</sup>     -->
+                                                    <!-- <sub
+                                                style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-family: Arial, Helvetica, sans-serif;"><strong>Project</strong></sub> -->
                                         </bold>
                                     </h4>
                                 </div>
@@ -143,6 +147,7 @@
             </div> -->
                 <div class="navbar-menu" id="open-navbar1">
                     <ul class="navbar-nav">
+                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
                         </li>
                         <li class="navbar-dropdown">
                             <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
@@ -158,9 +163,9 @@
                                 <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                             </ul>
                         </li>
-                        <li class="navbar-dropdown active">
-                            <a href="#" class="dropdown-toggler" data-dropdown="blog"><i class="fa fa-flask"></i>
-                                Applications <i class="fa fa-angle-down"></i>
+                        <li class="navbar-dropdown">
+                            <a href="#" class="dropdown-toggler active-drop" data-dropdown="blog"><i class="fa fa-flask active-dripio"></i>
+                                Applications <i class="fa fa-angle-down active-dripio"></i>
                             </a>
                             <ul class="dropdown" id="blog" style="text-align: center;">
                                 <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
@@ -182,15 +187,14 @@
                                             class="fa fa-rocket"></i>
                                         &#160Vaccine Tracker</a></li>
                                 <li class="separator"></li>
-                                <li><a href="nlp" onclick="myFunction()" class="tracker"><i class="fa fa-rocket"></i>
+                                <li><a href="nlp" onclick="myFunction()" class="tracker active-dropit"><i class="active-dripioit fa fa-rocket"></i>
                                         &#160Tweet Predictor </a></li>
                             </ul>
                         </li>
                         <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
-                        <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
+                        <!-- <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li> -->
                         <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                     class="material-icons">&#xe163;</i> Contact</a></li>
-                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
 
                             <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                             <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
@@ -201,7 +205,7 @@
         <br>
         <ul class="breadcrumb">
             <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="nlp" onclick="myFunction()" style="color: black;"><i class="fa fa-rocket"></i>
+            <li><a href="nlp" onclick="myFunction()" style="color: blue;"><i class="fa fa-rocket"></i>
                     Applications <i class="fas fa-long-arrow-alt-right arrow1" aria-hidden="False"></i> &#160&#160&#160
                     Predictor</a></li>
         </ul>
@@ -350,16 +354,16 @@
 
 
         <div class="container-main">
-            <h1 style="text-align: center;color:blue;"> Title </h1>
+            <h1 style="text-align: center;color:#43f943;"> Title </h1>
             <br>
-            <h3 style="text-align: center;color:red;"> Enter Tweet </h3>
+            <h2 style="text-align: center;color:red;"> Enter Tweet </h2>
             <br>
             <div class="container-nlp">
                 <form class="form" action="#" method="POST">
                     {% csrf_token %}
                     <textarea class="form__field" name="tweet" placeholder="Enter Tweet Here..." required></textarea>
                     <br><br>
-                    <button type="submit" class="btn--primary">Submit</button>
+                    <button style="font-size: 18px;" type="submit" class="btn--primary">Submit</button>
                 </form>
             </div>
             <br><br>

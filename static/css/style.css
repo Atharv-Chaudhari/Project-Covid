@@ -9,7 +9,7 @@ html, body { margin: 0 !important; }
 body {
     font-family: "Roboto", sans-serif;
     font-size: 0.925rem;
-    background-color: #F8F8F8;
+    background-color: #b4ffff; /* #F8F8F8 */
 }
 
 a {
@@ -19,8 +19,8 @@ a {
 .container {
     width: 1170px;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -44,7 +44,6 @@ a {
 .navbar {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     background-color: #fff;
-    padding: 1rem 1.15rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /*
   |-----------------------------------
@@ -83,7 +82,7 @@ a {
 
 @media (min-width: 1200px) {
     .navbar .container {
-        max-width: 1140px;
+        max-width: 1350px;
     }
 }
 @media (max-width: 1200px) {
@@ -237,13 +236,30 @@ a {
 }
 
 .navbar .navbar-menu .navbar-nav>li.active a {
-    color: #66f;
+    background-color: #43f943;
+    color:white;
+    border-radius: 15px;
 }
 
+.active-drop{
+  background-color: #43f943;
+    color:white;
+    border-radius: 15px;
+}
+.active-dripio{
+  color:white!important;
+}
+.active-dropit{
+  background-color: #43f943;
+    color:white;
+}
+.active-dripioit{
+  color:white!important;
+}
 .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
     list-style: none;
     position: absolute;
-    top: 150%;
+    top: 200%;
     left: 0;
     background-color: #fff;
     padding-top: 0.5rem;
@@ -266,7 +282,7 @@ a {
 
 .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
     color: #3c4250;
-    padding: 0.25rem 1rem;
+    padding:0.55rem 1.2rem;
     display: block;
 }
 
@@ -310,7 +326,7 @@ a {
 
 /* my css */
 .mini-info {
-    background-color: #00FFFF	;
+    background-color: #f26bf5;
     color: black;
     height: 40px;
     font-family: Arial, Helvetica, sans-serif;
@@ -687,12 +703,12 @@ code {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-.container-alert sup {
+/* .container-alert sup {
   font-size: 1rem;
   margin-left: 0.25em;
   opacity: 0.5;
   position: relative;
-}
+} */
 /* ************************************************** cols ******************************************** */
 .col-1{
   width:50%;
@@ -812,6 +828,7 @@ ul.breadcrumb {
   padding: 10px 62px;
   list-style: none;
   background-color: white;
+  color:blue;
 }
 ul.breadcrumb li {
   display: inline;
@@ -1035,13 +1052,15 @@ ul.breadcrumb li a:hover {
   color: #e4405f;
 }
 /* ########################################################################################################### */
-i {
-  color: blue;
+.navbar-nav i {
+  color: #43f943;
 }
 .required{
   color: red;
 }
-
+.active i{
+  color: white;
+}
 /* ########################################################################################################## */
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -1069,3 +1088,43 @@ i {
 .closebtn-up:hover {
   color: red;
 }
+.navbar-nav{
+  font-size:16px;
+}
+/* .navbar-nav li:hover{
+    background-color: #F8F8F8;
+    border-radius: 15px;
+} */
+.make-cont{
+  background-color: white;
+  width: 90%;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 2%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+}
+.col-it-man{
+  width:33%;
+}
+.news-stuff{
+  margin-left: auto;
+  margin-right: auto;
+}
+.col-it-man table {
+  table-layout: fixed;
+  width: 90%;
+  border-spacing: 15px;
+}
+
+.col-it-man th,
+td {
+  width: 100px;
+  overflow: hidden;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

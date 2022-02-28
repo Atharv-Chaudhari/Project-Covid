@@ -7,12 +7,15 @@
     font-family: "Roboto", sans-serif;
 }
 
-.grid-container {
+.main-blocki {
     text-align: center;
     width:70%;
-    padding-bottom:50px;
-    border-radius: 25px;
+    margin-bottom:50px;
+    border-radius: 25px!important;
     margin-left: auto;
+    display: flex;
+    background-color: white;
+    flex-direction: row;
     margin-right: auto;
     /* display: grid; */
     /* grid-template-columns: auto auto; */
@@ -26,12 +29,7 @@
 }
 
 .sub-block {
-    text-align: center;
-    background-color: white;
-    width: 60%;
-    border-radius: 25px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 50%;
 }
 
 .sub-block h4 {
@@ -40,7 +38,7 @@
 
 .sub-block input {
     border-radius: 7px;
-    width: 70%;
+    width: 80%;
     border: grey;
     background-color: #E8E8E8;
     padding: 13px;
@@ -48,7 +46,7 @@
 }
 
 .sub-block textarea {
-    width: 70%;
+    width: 80%;
     padding: 15px;
     outline: none;
     border-radius: 7px;
@@ -63,7 +61,7 @@
 
 .sub-block input[type=submit] {
     color: white;
-    background-color: black;
+    background-color: #43f943;
     padding: 20px;
     border-radius: 5px;
     width: 30%;
@@ -74,7 +72,7 @@
 
 .sub-block input[type=submit]:focus {
     color: white;
-    background-color: black;
+    background-color: #00e000;
 }
 
 @media (max-width:876px) {
@@ -103,31 +101,19 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-@media (max-width:1100px){
-    .sub-block{
-        width:70%;
-    }
-}
+
 @media (max-width:900px){
-    .sub-block{
-        width:80%;
-    }
     .sub-block input[type=submit]{
         width:40%;
     }
 }
 @media (max-width:700px){
-    .sub-block{
-        width:90%;
-    }
     .sub-block input[type=submit]{
         width:50%;
     }
 }
 @media (max-width:600px){
-    .sub-block{
-        width:100%;
-    }
+
     .sub-block input[type=submit]{
         width:50%;
     }

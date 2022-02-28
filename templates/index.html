@@ -7,10 +7,10 @@
     <!-- <meta http-equiv="refresh" content="300"> -->
     <title>Covid</title>
     <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
-    <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/sign.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/vaccine.css" />
-    <link rel="stylesheet" href="static/css/riskpredictor.css" />
+    <!-- <link rel="stylesheet" href="static/css/riskpredictor.css" /> -->
     <link rel="stylesheet" href="static/css/general.css" />
     <link rel="stylesheet" href="static/css/loading.css" />
     <link rel="stylesheet" href="static/css/risky_modal.css" />
@@ -25,6 +25,56 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Slideshow container */
+        .slideshow-container {
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+            object-fit: cover;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+        .img-slide{
+            width: 100%;
+            height: 450px;
+        }
+    </style>
 </head>
 
 <!-- <body onload="present()"> -->
@@ -48,11 +98,15 @@
                         <div class="container-alert">
                             <details>
                                 <summary>
-                                    <div class="button-modal">
+                                    <div class="button-modal" style="cursor: pointer;">
                                         <!-- <img src="static/images/infinity.gif" width="30" height="30"> -->
-                                        <h4 style="font-size: 25px;">
-                                            <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS<sup
-                                                        style="color:crimson;font-size: 10px;"><strong>TM</strong></sup></span></span>
+                                        <h4>
+                                            <bold><span style="color: black;font-size: 30px;"> Infy<span
+                                                        style="font-size: 30px;color:#66f;">SOARS
+                                                        <!-- <sup
+                                                style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-weight: 600;font-family: Arial, Helvetica, sans-serif;">Team</sup>     -->
+                                                        <!-- <sub
+                                                    style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-family: Arial, Helvetica, sans-serif;"><strong>Project</strong></sub> -->
                                             </bold>
                                         </h4>
                                     </div>
@@ -101,16 +155,19 @@
             </div> -->
                     <div class="navbar-menu" id="open-navbar1">
                         <ul class="navbar-nav">
+                            <li class="active"><a href="home"><i class="fa fa-home"></i> Home</a></li>
                             <li class="navbar-dropdown">
                                 <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
                                         class="fa fa-bar-chart"></i>
                                     Analysis <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown" id="my-dropdown-id">
-                                    <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify"
-                                                data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
+                                    <li style="display: inline-block;"><a href="https://tabsoft.co/3Gzy8v8"
+                                            target="_blank"><span class="iconify" data-icon="ion:logo-tableau"></span>
+                                            Israel Covid Data Analysis</a></li>
                                     <li class="separator"></li>
-                                    <li><a href="#" onclick="myFunction()">Seprated link</a></li>
+                                    <li><a href="https://tabsoft.co/3Iax6ak" target="_blank"><span class="iconify"
+                                                data-icon="ion:logo-tableau"></span> Global Covid Data Analysis</a></li>
                                     <li class="separator"></li>
                                     <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
                                 </ul>
@@ -146,19 +203,18 @@
                             </li>
                             <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a> -->
                             <!-- </li> -->
-                            <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li>
+                            <!-- <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li> -->
                             <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
                                         class="material-icons">&#xe163;</i> Contact</a></li>
                             <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                             <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
-                            <li class="active"><a href="home"><i class="fa fa-home"></i> Home</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
             <br>
             <ul class="breadcrumb">
-                <li><a href="home" style="color:black;"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="home"><i class="fa fa-home"></i> Home</a></li>
             </ul>
             <!-- <div class="alert-up" style="text-align: center;">
                 <span class="closebtn-up" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -288,14 +344,138 @@
                 </div>
             </div>
             <!-- <h1>Cases {{ cases }} Deaths {{ deaths }} Recovered {{ recovered }}</h1> -->
+
+            <div class="make-cont">
+                <div class="col-it-man">
+                    <table class="news-stuff">
+                        <tr>
+                            <th style="font-size:25px;background-color: #9999ff;">Title</th>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: lightblue;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #8cff66;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #ffff4d;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #dd99ff;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #ffff99;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #99ffff;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #ff8080;">Alfreds Futterkiste</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-it-man">
+                    <!-- <table class="news-stuff">
+                        <tr>
+                            <td rowspan="7">
+                            </td>
+                        </tr>
+                    </table> -->
+                    <img width="100%" height="100%"
+                        src="https://cdn.shrm.org/image/upload/c_crop,h_1080,w_1919,x_0,y_0/c_fit,f_auto,q_auto,w_767/v1/News/2020-YIR-01-Coronavirus-BG_1_uo0nzq?databtoa=eyIxNng5Ijp7IngiOjAsInkiOjAsIngyIjoxOTE5LCJ5MiI6MTA4MCwidyI6MTkxOSwiaCI6MTA4MH19">
+                </div>
+                <div class="col-it-man">
+                    <table class="news-stuff">
+                        <tr>
+                            <th style="font-size:25px;background-color: #9999ff;">Title</th>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: lightblue;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #8cff66;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #ffff4d;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #dd99ff;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #ffff99;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #99ffff;">Alfreds Futterkiste</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:15px;background-color: #ff8080;">Alfreds Futterkiste</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
             <div class="covid-info">
                 <div class="card">
-                    <img src="static/images/covid.jpg" class="card__image" />
+                    <!-- <img src="static/images/covid.jpg" class="card__image" /> -->
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img class="img-slide" src="static/images/s1slide1.jpg"
+                                style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img class="img-slide" src="static/images/s1slide2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img class="img-slide" src="static/images/s1slide3.webp" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 3</div>
+                            <img class="img-slide" src="static/images/s1slide4.jpg" style="width:100%">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <div class="numbertext">5 / 3</div>
+                            <img class="img-slide" src="static/images/s1slide5.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">6 / 3</div>
+                            <img class="img-slide" src="static/images/s1slide6.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">7 / 3</div>
+                            <img class="img-slide" src="static/images/s1slide7.jpg" style="width:100%">
+                        </div>
+                    </div>
+                    <script>
+                        var slideIndex = 0;
+                        showSlides();
+
+                        function showSlides() {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            slideIndex++;
+                            if (slideIndex > slides.length) { slideIndex = 1 }
+                            slides[slideIndex - 1].style.display = "block";
+                            setTimeout(showSlides, 4000); // Change image every 4 seconds
+                        }
+                    </script>
                     <div class="card__content">
-                        <time datetime="2021-11-19" class="card__date"><span style="color: grey;">Last Updated on
+                        <!-- <time datetime="2021-11-19" class="card__date"><span style="color: grey;">Last Updated on
                             </span><span style="color: blue;">{{ update_dt }}<sup
                                     style="text-transform: lowercase;">th</sup> {{ update_mn }}
-                                {{ update_yr }}</span></time>
+                                {{ update_yr }}</span></time> -->
                         <span class="card__title">Covid-19</span>
                         <p>Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.</p>
 
@@ -319,6 +499,16 @@
                     </div>
                 </div>
             </div>
+            <div style="text-align: center;width:90%;margin-left: auto;margin-right: auto;">
+                <iframe style="display:block;" width="100%" height="600"
+                    src="https://www.youtube.com/embed/oqFn6AHoJZQ?playlist=oqFn6AHoJZQ&loop=1">
+                </iframe>
+            </div>
+
+           
+
+
+
 
 
 
@@ -390,7 +580,6 @@
                     <div class="sub-footer">
                         ✨ Copyright © 2021 - All rights reserved ✨
                     </div>
-                    <p style="color:white;">🧿 Designed By 😎 Team Infy SOARS 🧿</p>
                 </div>
             </footer>
             <!-- ##################################################################################################### -->
