@@ -17,3 +17,4 @@ opencv-python
 matplotlib
 reportlab==3.6.6
 tensorflow-cpu
+
