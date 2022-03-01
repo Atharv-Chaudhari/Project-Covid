@@ -17,3 +17,4 @@ numpy
 opencv-python
 matplotlib
 keras
+reportlab==3.6.6
