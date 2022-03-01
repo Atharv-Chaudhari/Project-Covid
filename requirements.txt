@@ -16,5 +16,5 @@ xhtml2pdf
 opencv-python
 matplotlib
 reportlab==3.6.6
-tensorflow-cpu
+tensorflow-cpu==2.5.0
 
