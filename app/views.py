@@ -309,14 +309,23 @@ from django.shortcuts import render
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 def predictors(request):
+    flag_it=0
+    zero=0
+    one=1
+    two=2
     if request.method == 'POST':
         if request.POST.get("form_type") == 'formFour':
+            flag_it=1
             model_data = request.POST
             context = {
-                'data': get_prediction(model_data)
+                'data': get_prediction(model_data),
+                'zero':one,
+                'one':one,
+                'flag_it':flag_it,
             }
-            return render(request, 'results.html', context)
+            return render(request, 'predictors.html', context)
         if request.POST.get("form_type") == 'formSeven' and request.FILES['image']:
+            flag_it=2
             filename = request.FILES['image']
             filename=str(filename)
             file_data=request.FILES['image'].read()
@@ -328,8 +337,9 @@ def predictors(request):
             imgpred=img_process(img)
             file_n="static/tmp/image"+str(filename[temp:])
             tk=[1]
-            return render(request, 'img_result.html',{'imgpred':imgpred[0],'img_result':file_n,'tk':tk})
-    return render(request, 'predictors.html')
+            return render(request, 'predictors.html',{'imgpred':imgpred[0],'img_result':file_n,'tk':tk,'zero':one,
+                'flag_it':flag_it,'two':two})
+    return render(request, 'predictors.html',{'flag_it':flag_it,'zero':zero})
 
 def nlp(request):
     return render(request, 'nlp.html')

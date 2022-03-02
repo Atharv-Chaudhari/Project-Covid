@@ -7,7 +7,7 @@
 html, body { margin: 0 !important; }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Times New Roman', Times, serif!important;
     font-size: 0.925rem;
     background-color: #b4ffff; /* #F8F8F8 */
 }
@@ -326,8 +326,8 @@ a {
 
 /* my css */
 .mini-info {
-    background-color: #f26bf5;
-    color: black;
+    background-color: #650ab9;
+    color: white;
     height: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -752,11 +752,8 @@ code {
 .card {
   border-radius: var(--border-radius-primary);
   /* box-shadow: 24px 24px 80px rgba(0, 0, 0, 0.1); */
-  box-shadow: 5px 5px 20px #BABECC,-5px -5px 20px #fff;
   /* box-shadow:  inset 2px 2px 5px #fff, inset -5px -5px 10px #BABECC; */
-  padding: 20px 20px 28px 20px;
   box-sizing: border-box;
-  margin: 20px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -1128,3 +1125,19 @@ td {
   overflow: hidden;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.navbar-nav{
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.container-alert{
+  font-family: "Roboto", sans-serif;
+}

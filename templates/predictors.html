@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="static/css/style.css" />
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <link rel="stylesheet" href="static/css/sign.css" />
-    <link rel="stylesheet" href="static/css/general.css" />
     <link rel="stylesheet" href="static/css/loading.css" />
     <link rel="stylesheet" href="static/css/predictors.css" />
     <link rel="stylesheet" href="static/css/risky_modal.css" />
@@ -30,10 +29,15 @@
 
 <!-- <body onload="present()"> -->
 
+{% if flag_it is zero %}
 
 <body onload="sympred()">
-    <div id="loader" style="display: none;">
-        <!-- <div class="loader-book">
+    {% else %}
+
+    <body onload="imgpred()">
+        {% endif %}
+        <div id="loader" style="display: none;">
+            <!-- <div class="loader-book">
             <div>
               <ul>
                 <li>
@@ -69,72 +73,72 @@
               </ul>
             </div><span style="font-size: 20px;">Loading...</span>
             </div> -->
-        <div class="spinner"></div>
-        <div class="spinner"></div>
-        <div class="spinner"></div>
-    </div>
-    <div style="display:block;" id="myDivload" class="animate-bottom">
+            <div class="spinner"></div>
+            <div class="spinner"></div>
+            <div class="spinner"></div>
+        </div>
+        <div style="display:block;" id="myDivload" class="animate-bottom">
 
-        <nav class="navbar">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggler " data-toggle="open-navbar1">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <!-- <a href="/ ">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="navbar-toggler " data-toggle="open-navbar1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <!-- <a href="/ ">
                     <h4 style="font-size: 25px;">Infy<span style="font-size: 25px;"> SOARS</span></h4>  -->
-                    <!-- <span class="logo-text " style="color:red; "> Presents</span> -->
-                    <!-- </a> -->
-                    <div class="container-alert">
-                        <details>
-                            <summary>
-                                <div class="button-modal" style="cursor: pointer;">
-                                    <!-- <img src="static/images/infinity.gif" width="30" height="30"> -->
-                                    <h4>
-                                        <bold><span style="color: black;font-size: 30px;"> Infy<span
-                                                    style="font-size: 30px;color:#66f;">SOARS
-                                                    <!-- <sup
+                        <!-- <span class="logo-text " style="color:red; "> Presents</span> -->
+                        <!-- </a> -->
+                        <div class="container-alert">
+                            <details>
+                                <summary>
+                                    <div class="button-modal" style="cursor: pointer;">
+                                        <!-- <img src="static/images/infinity.gif" width="30" height="30"> -->
+                                        <h4>
+                                            <bold><span style="color: black;font-size: 30px;"> Infy<span
+                                                        style="font-size: 30px;color:#66f;">SOARS
+                                                        <!-- <sup
                                             style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-weight: 600;font-family: Arial, Helvetica, sans-serif;">Team</sup>     -->
-                                                    <!-- <sub
+                                                        <!-- <sub
                                                 style="text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;color:white;font-size: 19px;font-family: Arial, Helvetica, sans-serif;"><strong>Project</strong></sub> -->
-                                        </bold>
-                                    </h4>
-                                </div>
-                                <div class="details-modal-overlay"></div>
-                            </summary>
-                            <div class="details-modal" style="display:flex;">
-                                <div class="details-modal-close">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
-                                            fill="black" />
-                                    </svg>
-                                </div>
-                                <div class="details-modal-title" style="font-family: 'Montserrat', sans-serif;">
-                                    <img src="static/images/welcome.gif" width="50" height="50">
-                                    <h1 style="padding-left: 60px;margin-top:-8%;"> Infy <span
-                                            style="color:blue;font-size: 20px;"> SOARS<sup
-                                                style="color:red;font-size: 10px;">TM</sup></span><span
-                                            style="color:crimson;font-size: 15px;"> presents</span></h1>
-                                </div>
-                                <div class="details-modal-content" style="font-family: 'Montserrat', sans-serif;">
-                                    <p style="text-align: center;"><img src="static/images/risklogo.png" width="250"
-                                            height="250"></p>
-                                    <h1 style="text-align: center;">Project Covid</h1>
-                                    <p>
+                                            </bold>
+                                        </h4>
+                                    </div>
+                                    <div class="details-modal-overlay"></div>
+                                </summary>
+                                <div class="details-modal" style="display:flex;">
+                                    <div class="details-modal-close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                                                fill="black" />
+                                        </svg>
+                                    </div>
+                                    <div class="details-modal-title" style="font-family: 'Montserrat', sans-serif;">
+                                        <img src="static/images/welcome.gif" width="50" height="50">
+                                        <h1 style="padding-left: 60px;margin-top:-8%;"> Infy <span
+                                                style="color:blue;font-size: 20px;"> SOARS<sup
+                                                    style="color:red;font-size: 10px;">TM</sup></span><span
+                                                style="color:crimson;font-size: 15px;"> presents</span></h1>
+                                    </div>
+                                    <div class="details-modal-content" style="font-family: 'Montserrat', sans-serif;">
+                                        <p style="text-align: center;"><img src="static/images/risklogo.png" width="250"
+                                                height="250"></p>
+                                        <h1 style="text-align: center;">Project Covid</h1>
+                                        <p>
 
-                                    </p>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </details>
+                            </details>
+                        </div>
                     </div>
-                </div>
 
-                <!-- <div class="navbar-menu " id="open-navbar1 ">
+                    <!-- <div class="navbar-menu " id="open-navbar1 ">
                 <ul class="navbar-nav ">
                     <li class="active "><a href="/ ">Home</a></li>
                     <li><a href="# ">Stats</a></li>
@@ -146,84 +150,88 @@
                     <li><a href="# ">Sign In</a></li>
                 </ul>
             </div> -->
-                <div class="navbar-menu" id="open-navbar1">
-                    <ul class="navbar-nav">
-                        <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
-                        </li>
-                        <li class="navbar-dropdown">
-                            <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
-                                    class="fa fa-bar-chart"></i>
-                                Analysis <i class="fa fa-angle-down"></i>
-                            </a>
-                            <ul class="dropdown" id="my-dropdown-id">
-                                <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify"
-                                            data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
-                                <li class="separator"></li>
-                                <li><a href="#" onclick="myFunction()">Seprated link</a></li>
-                                <li class="separator"></li>
-                                <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar-dropdown">
-                            <a href="#" class="dropdown-toggler active-drop" data-dropdown="blog"><i class="fa fa-flask active-dripio"></i>
-                                Applications <i class="fa fa-angle-down active-dripio"></i>
-                            </a>
-                            <ul class="dropdown" id="blog" style="text-align: center;">
-                                <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
-                                <!-- <li style="padding-top: 10px;padding-bottom: 10px;"><a<span
+                    <div class="navbar-menu" id="open-navbar1">
+                        <ul class="navbar-nav">
+                            <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a>
+                            </li>
+                            <li class="navbar-dropdown">
+                                <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id"><i
+                                        class="fa fa-bar-chart"></i>
+                                    Analysis <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown" id="my-dropdown-id">
+                                    <li><a href="https://tabsoft.co/3Gzy8v8" target="_blank"><span class="iconify"
+                                                data-icon="ion:logo-tableau"></span> Tableau DashBoard</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="#" onclick="myFunction()">Seprated link</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="#" onclick="myFunction()">One more seprated link.</a></li>
+                                </ul>
+                            </li>
+                            <li class="navbar-dropdown">
+                                <a href="#" class="dropdown-toggler active-drop" data-dropdown="blog"><i
+                                        class="fa fa-flask active-dripio"></i>
+                                    Applications <i class="fa fa-angle-down active-dripio"></i>
+                                </a>
+                                <ul class="dropdown" id="blog" style="text-align: center;">
+                                    <!-- <li><a href="riskpredictor" id="risk-myBtn" target="_blank">Risk Predictor</a></li> -->
+                                    <!-- <li style="padding-top: 10px;padding-bottom: 10px;"><a<span
                                         style="font-size: 14px;cursor: pointer;" id="risk-myBtn"><i
                                             class="fa fa-rocket"></i> Covid Predictors </span> -->
-                                <!-- <a href="riskpredictor" target="_blank"
+                                    <!-- <a href="riskpredictor" target="_blank"
                                     style="display: inline-block;margin:5px 0;"><i
                                         class="fas fa-external-link-alt"></i></a> 
                                     <br>
                                 </li>-->
-                                <!-- <li class="separator"></li>
+                                    <!-- <li class="separator"></li>
                                 <li><a href="img_pred"><i class="fa fa-rocket"></i> &#160Phase - II
                                         Predictor</span></a></li> -->
-                                <li><a href="predictors" class="tracker active-dropit"><i class="active-dripioit fa fa-rocket"></i>
-                                        &#160Covid Predictors</a></li>
-                                <li class="separator"></li>
-                                <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
-                                            class="fa fa-rocket"></i>
-                                        &#160Vaccine Tracker</a></li>
-                                <li class="separator"></li>
-                                <li><a href="nlp" onclick="myFunction()" class="tracker"><i class="fa fa-rocket"></i>
-                                        &#160Tweet Predictor </a></li>
-                            </ul>
-                        </li>
-                        <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
-                        <!-- <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li> -->
-                        <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
-                                    class="material-icons">&#xe163;</i> Contact</a></li>
+                                    <li><a href="predictors" class="tracker active-dropit"><i
+                                                class="active-dripioit fa fa-rocket"></i>
+                                            &#160Covid Predictors</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
+                                                class="fa fa-rocket"></i>
+                                            &#160Vaccine Tracker</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="nlp" onclick="myFunction()" class="tracker"><i
+                                                class="fa fa-rocket"></i>
+                                            &#160Tweet Predictor </a></li>
+                                </ul>
+                            </li>
+                            <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
+                            <!-- <li><a href="about" onclick="myFunction()"><i class="fa fa-info-circle"></i> About</a></li> -->
+                            <li><a href="contact" onclick="myFunction()"><i style="font-size:13px;"
+                                        class="material-icons">&#xe163;</i> Contact</a></li>
 
                             <!-- <li><a href="#" id="myBtn"><i class="fas fa-sign-in-alt"></i> Sign In / Sign Up</a></li> -->
                             <!-- <input type="checkbox" onclick="dark_day()" name="checkbox" class="switch"> -->
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <br>
-        <ul class="breadcrumb">
-            <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="predictors" onclick="myFunction()"><i class="fa fa-rocket"></i>
-                    Applications <i class="fas fa-long-arrow-alt-right arrow1" aria-hidden="False"></i> &#160&#160&#160
-                    Predictor</a></li>
-        </ul>
-        <!-- <div class="alert-up" style="text-align: center;">
+            </nav>
+            <br>
+            <ul class="breadcrumb">
+                <li><a href="home" onclick="myFunction()"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="predictors" onclick="myFunction()"><i class="fa fa-rocket"></i>
+                        Applications <i class="fas fa-long-arrow-alt-right arrow1" aria-hidden="False"></i>
+                        &#160&#160&#160
+                        Predictor</a></li>
+            </ul>
+            <!-- <div class="alert-up" style="text-align: center;">
             <span class="closebtn-up" onclick="this.parentElement.style.display='none';">&times;</span>
             Click on The Icon &#160<strong><i class="fas fa-external-link-alt"></i></strong> &#160To Get UI in New
             Window.
         </div> -->
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <a>
-                    <button type="button" class="btn-close">
-                        <span class="icon-cross"></span>
-                        <span class="visually-hidden"></span>
-                    </button>
-                </a>
-                <br><br><br><br><br>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <a>
+                        <button type="button" class="btn-close">
+                            <span class="icon-cross"></span>
+                            <span class="visually-hidden"></span>
+                        </button>
+                    </a>
+                    <br><br><br><br><br>
 
 
 
@@ -242,96 +250,96 @@
 
 
 
-                <!--  UnUsed Code Block-->
-                <div class="modal-container" id="modal-container">
-                    <div id="sign-up" class="form-container sign-up-container">
-                        <form class="sign-form" action="#"
-                            style="background-image: url('static/images/blueback.jpg');background-size: cover;">
-                            <h1>Create Account</h1>
-                            <br>
-                            <div class="social-container">
-                                <a href="#" class="social"><i class="fa fa-facebook social-ico"></i></a>
-                                <a href="#" class="social"><i class="fa fa-google social-ico"></i></a>
-                                <a href="#" class="social"><i class="fa fa-linkedin social-ico"></i></a>
-                            </div>
-                            <span>or use your email for registration</span>
-                            <br>
-                            <input class="sign-input" type="text" placeholder="Name" />
-                            <input class="sign-input" type="email" placeholder="Email" />
-                            <input class="sign-input" type="password" placeholder="Password" />
-                            <br>
-                            <button class="modal-button">Sign Up</button>
-                            <p class="link" onclick="switchForm('login')">already have an account ? sign in here</p>
-                        </form>
-                    </div>
-                    <div id="sign-in" class="form-container sign-in-container">
-                        <form class="sign-form" action="#"
-                            style="background-image: url('static/images/blueback.jpg');background-size: cover;">
-                            <br>
-                            <h1>Sign in</h1>
-                            <br>
-                            <div class="social-container">
-                                <a href="#" class="social"><i class="fa fa-facebook social-ico"></i></a>
-                                <a href="#" class="social"><i class="fa fa-google social-ico"></i></a>
-                                <a href="#" class="social"><i class="fa fa-linkedin social-ico"></i></a>
-                            </div>
-                            <span>or use your account</span>
-                            <br>
-                            <input class="sign-input" type="email" placeholder="Email" />
-                            <input class="sign-input" type="password" placeholder="Password" />
-                            <a href="#">Forgot your password?</a>
-                            <br>
-                            <button class="modal-button">Sign In</button>
-                            <p class="link" onclick="switchForm('register')">new here ? sign up here</p>
-                        </form>
-                    </div>
-                    <div class="overlay-container">
-                        <div class="overlay">
-                            <!-- remove comments and remove style background-image to get original shade back -->
-                            <div class="overlay-panel overlay-left"
-                                style="background-image: url('static/images/modalback1.jpg');">
-                                <!-- <h1><img src="static/images/hello.gif" width="30px " height="30px "> Welcome Back!</h1>
+                    <!--  UnUsed Code Block-->
+                    <div class="modal-container" id="modal-container">
+                        <div id="sign-up" class="form-container sign-up-container">
+                            <form class="sign-form" action="#"
+                                style="background-image: url('static/images/blueback.jpg');background-size: cover;">
+                                <h1>Create Account</h1>
+                                <br>
+                                <div class="social-container">
+                                    <a href="#" class="social"><i class="fa fa-facebook social-ico"></i></a>
+                                    <a href="#" class="social"><i class="fa fa-google social-ico"></i></a>
+                                    <a href="#" class="social"><i class="fa fa-linkedin social-ico"></i></a>
+                                </div>
+                                <span>or use your email for registration</span>
+                                <br>
+                                <input class="sign-input" type="text" placeholder="Name" />
+                                <input class="sign-input" type="email" placeholder="Email" />
+                                <input class="sign-input" type="password" placeholder="Password" />
+                                <br>
+                                <button class="modal-button">Sign Up</button>
+                                <p class="link" onclick="switchForm('login')">already have an account ? sign in here</p>
+                            </form>
+                        </div>
+                        <div id="sign-in" class="form-container sign-in-container">
+                            <form class="sign-form" action="#"
+                                style="background-image: url('static/images/blueback.jpg');background-size: cover;">
+                                <br>
+                                <h1>Sign in</h1>
+                                <br>
+                                <div class="social-container">
+                                    <a href="#" class="social"><i class="fa fa-facebook social-ico"></i></a>
+                                    <a href="#" class="social"><i class="fa fa-google social-ico"></i></a>
+                                    <a href="#" class="social"><i class="fa fa-linkedin social-ico"></i></a>
+                                </div>
+                                <span>or use your account</span>
+                                <br>
+                                <input class="sign-input" type="email" placeholder="Email" />
+                                <input class="sign-input" type="password" placeholder="Password" />
+                                <a href="#">Forgot your password?</a>
+                                <br>
+                                <button class="modal-button">Sign In</button>
+                                <p class="link" onclick="switchForm('register')">new here ? sign up here</p>
+                            </form>
+                        </div>
+                        <div class="overlay-container">
+                            <div class="overlay">
+                                <!-- remove comments and remove style background-image to get original shade back -->
+                                <div class="overlay-panel overlay-left"
+                                    style="background-image: url('static/images/modalback1.jpg');">
+                                    <!-- <h1><img src="static/images/hello.gif" width="30px " height="30px "> Welcome Back!</h1>
                             <p>To keep connected with us please login with your personal info</p> -->
-                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                                <button class="ghost modal-button" id="signIn">Sign In</button>
-                            </div>
-                            <div class="overlay-panel overlay-right"
-                                style="background-image: url('static/images/modalback2.jpg');background-size: auto;">
-                                <!-- <h1><img src="static/images/hello.gif" width="30px " height="30px "> Hello, Friend!</h1>
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                    <button class="ghost modal-button" id="signIn">Sign In</button>
+                                </div>
+                                <div class="overlay-panel overlay-right"
+                                    style="background-image: url('static/images/modalback2.jpg');background-size: auto;">
+                                    <!-- <h1><img src="static/images/hello.gif" width="30px " height="30px "> Hello, Friend!</h1>
                             <p>Enter your personal details and start journey with us</p> -->
-                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                                <button class="ghost modal-button" id="signUp">Sign Up</button>
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                    <button class="ghost modal-button" id="signUp">Sign Up</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
-        </div>
-        <div class="mini-info ">
-            <marquee id="mymarquee"><strong><img src="static/images/hello.gif " width="30px" height="30px"> Team
-                    Infy SOARS presents Covid-19 Details and Research</strong></marquee>
-        </div>
-        <!-- <div class="menu-container" style="margin-left:100%;">
+            <div class="mini-info ">
+                <marquee id="mymarquee"><strong><img src="static/images/hello.gif " width="30px" height="30px"> Team
+                        Infy SOARS presents Covid-19 Details and Research</strong></marquee>
+            </div>
+            <!-- <div class="menu-container" style="margin-left:100%;">
         <div class="collapse-icon">
             <span class="fa fa-chevron-left"></span>
         </div>
@@ -354,107 +362,109 @@
     </div> -->
 
 
-
-        <div class="btn-list">
-            <button id="active-it1" style="font-size: 20px;" class="red button-submit" onclick="sympred()"><i class="fa fa-rocket"  id="active-it3" style="color:lime;"></i>
-                &#160Predictor I </button>
-            <button id="active-it2" style="font-size: 20px;" class="red button-submit" onclick="imgpred()"><i class="fa fa-rocket"  id="active-it4" style="color:lime;"></i>
-                &#160Predictor II </button>
-        </div>
-        <br>
-        <div class="symp">
-            <!-- <form class="symp-form"
+            <br>
+            <div class="btn-list">
+                <button id="active-it1" style="font-size: 20px;" class="red button-submit" onclick="sympred()"><i
+                        class="fa fa-rocket" id="active-it3" style="color:lime;"></i>
+                    &#160Predictor I </button>
+                <button id="active-it2" style="font-size: 20px;" class="red button-submit" onclick="imgpred()"><i
+                        class="fa fa-rocket" id="active-it4" style="color:lime;"></i>
+                    &#160Predictor II </button>
+            </div>
+            <br>
+            <div class="symp">
+                <!-- <form class="symp-form"
                 style="background-image: url('static/images/predictor1.jpg');background-size: cover;" method="post"
                 id="formFour"> -->
-            <form class="symp-form" method="post" id="formFour">
-                {% csrf_token %}
-                <input type="hidden" name="form_type" value="formFour">
-                <div class="row">
-                        <h1 style="text-align: center;color: red;">Predictor I</h1>
+                <form class="symp-form" method="post" id="formFour">
+                    {% csrf_token %}
+                    <input type="hidden" name="form_type" value="formFour">
+                    <div class="row">
+                        <h2 style="color:blue;text-align: center;">Enter Your Details </h2>
+                        <br><br>
+                        <h3 style="color:#7ed321;font-size: 18px;">Email <span class="required">*</span></h3>
+                        <br>
+                        <div class="input-group input-group-icon">
+                            <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                name="email" placeholder="Email Address" required />
+                            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                        </div>
+                        <br>
+                        <h3 style="color:#7ed321;font-size: 18px;">Country </h3>
+                        <br>
+                        <div class="input-group input-group-icon">
+                            <input class="lost" type="text" name="country" placeholder="Country" />
+                            <div class="input-icon"><i class="fa fa-globe"></i></div>
+                        </div>
+                    </div>
                     </br>
-                    <h2 style="color:blue;text-align: left;">Enter Your Details </h2>
-                    <br>
-                    <h3 style="color:#7ed321;font-size: 18px;">Email <span class="required">*</span></h3>
-                    <br>
-                    <div class="input-group input-group-icon">
-                        <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email"
-                            placeholder="Email Address" required />
-                        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                    <h3 style="color:#7ed321;font-size: 18px;">Gender<span class="required"> *</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Gender" value="1" id="Gender-male" required />
+                        <label class="lost" for="Gender-male">Male</label>
+                        <input class="lost" type="radio" name="Gender" value="0" id="Gender-female" required />
+                        <label class="lost" for="Gender-female">Female</label>
                     </div>
-                    <br>
-                    <h3 style="color:#7ed321;font-size: 18px;">Country </h3>
-                    <br>
-                    <div class="input-group input-group-icon">
-                        <input class="lost" type="text" name="country" placeholder="Country" />
-                        <div class="input-icon"><i class="fa fa-globe"></i></div>
+                    </br>
+                    <h3 style="color:#7ed321;font-size: 18px;">Age 60 or Above<span class="required"> *</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="age" value="1" id="age-yes" />
+                        <label class="lost" for="age-yes">Yes</label>
+                        <input class="lost" type="radio" name="age" value="0" id="age-no" checked="true" />
+                        <label class="lost" for="age-no">No</label>
                     </div>
-                </div>
-                </br>
-                <h3 style="color:#7ed321;font-size: 18px;">Gender<span class="required"> *</span></h3>
-                <div class="input-group others">
-                    <input class="lost" type="radio" name="Gender" value="1" id="Gender-male" required />
-                    <label class="lost" for="Gender-male">Male</label>
-                    <input class="lost" type="radio" name="Gender" value="0" id="Gender-female" required />
-                    <label class="lost" for="Gender-female">Female</label>
-                </div>
-                </br>
-                <h3 style="color:#7ed321;font-size: 18px;">Age 60 or Above<span class="required"> *</span></h3>
-                <div class="input-group others">
-                    <input class="lost" type="radio" name="age" value="1" id="age-yes" />
-                    <label class="lost" for="age-yes">Yes</label>
-                    <input class="lost" type="radio" name="age" value="0" id="age-no" checked="true" />
-                    <label class="lost" for="age-no">No</label>
-                </div>
-                </br>
-                <h3 style="color:#7ed321;font-size: 18px;">Symptoms </h3>
-                <br>
-                <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
-                <div class="input-group others">
-                    <input class="lost" type="radio" name="Cough" value="1" id="Cough-yes" />
-                    <label class="lost" for="Cough-yes">Yes</label>
-                    <input class="lost" type="radio" name="Cough" value="0" id="Cough-no" checked="true" />
-                    <label class="lost" for="Cough-no">No</label>
-                </div>
-                <h3 style="color:black;">2) Fever <span class="required">*</span></h3>
-                <div class="input-group others">
-                    <input class="lost" type="radio" name="Fever" value="1" id="Fever-yes" />
-                    <label class="lost" for="Fever-yes">Yes</label>
-                    <input class="lost" type="radio" name="Fever" value="0" id="Fever-no" checked="true" />
-                    <label class="lost" for="Fever-no">No</label>
-                </div>
-                <h3 style="color:black;">3) Sore Throat <span class="required">*</span></h3>
-                <div class="input-group others">
-                    <input class="lost" type="radio" name="Sore_Throat" value="1" id="Sore_Throat-yes" />
-                    <label class="lost" for="Sore_Throat-yes">Yes</label>
-                    <input class="lost" type="radio" name="Sore_Throat" value="0" id="Sore_Throat-no" checked="true" />
-                    <label class="lost" for="Sore_Throat-no">No</label>
-                </div>
-                <h3 style="color:black;">4) Shortness of Breath <span class="required">*</span></h3>
-                <div class="input-group others">
-                    <input class="lost" type="radio" name="Shortness_of_Breath" value="1"
-                        id="Shortness_of_Breath-yes" />
-                    <label class="lost" for="Shortness_of_Breath-yes">Yes</label>
-                    <input class="lost" type="radio" name="Shortness_of_Breath" value="0" id="Shortness_of_Breath-no"
-                        checked="true" />
-                    <label class="lost" for="Shortness_of_Breath-no">No</label>
-                </div>
-                <h3 style="color:black;">5) Headache <span class="required">*</span></h3>
-                <div class="input-group others">
-                    <input class="lost" type="radio" name="Headache" value="1" id="Headache-yes" />
-                    <label class="lost" for="Headache-yes">Yes</label>
-                    <input class="lost" type="radio" name="Headache" value="0" id="Headache-no" checked="true" />
-                    <label class="lost" for="Headache-no">No</label>
-                </div>
-                </br>
-                <h3 style="color:#7ed321;font-size: 18px;">Abroad<span class="required"> *</span></h3>
-                <div class="input-group others">
-                    <input class="lost" type="radio" name="Abroad" value="1" id="Abroad-yes" />
-                    <label class="lost" for="Abroad-yes">Yes</label>
-                    <input class="lost" type="radio" name="Abroad" value="0" id="Abroad-no" checked="true" />
-                    <label class="lost" for="Abroad-no">No</label>
-                </div>
-                </br>
-                <h3 style="color:#7ed321;font-size: 18px;">Contact With Covid-19 Patient <span class="required">*</span></h3>
+                    </br>
+                    <h3 style="color:#7ed321;font-size: 18px;">Symptoms </h3>
+                    <br>
+                    <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Cough" value="1" id="Cough-yes" />
+                        <label class="lost" for="Cough-yes">Yes</label>
+                        <input class="lost" type="radio" name="Cough" value="0" id="Cough-no" checked="true" />
+                        <label class="lost" for="Cough-no">No</label>
+                    </div>
+                    <h3 style="color:black;">2) Fever <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Fever" value="1" id="Fever-yes" />
+                        <label class="lost" for="Fever-yes">Yes</label>
+                        <input class="lost" type="radio" name="Fever" value="0" id="Fever-no" checked="true" />
+                        <label class="lost" for="Fever-no">No</label>
+                    </div>
+                    <h3 style="color:black;">3) Sore Throat <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Sore_Throat" value="1" id="Sore_Throat-yes" />
+                        <label class="lost" for="Sore_Throat-yes">Yes</label>
+                        <input class="lost" type="radio" name="Sore_Throat" value="0" id="Sore_Throat-no"
+                            checked="true" />
+                        <label class="lost" for="Sore_Throat-no">No</label>
+                    </div>
+                    <h3 style="color:black;">4) Shortness of Breath <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Shortness_of_Breath" value="1"
+                            id="Shortness_of_Breath-yes" />
+                        <label class="lost" for="Shortness_of_Breath-yes">Yes</label>
+                        <input class="lost" type="radio" name="Shortness_of_Breath" value="0"
+                            id="Shortness_of_Breath-no" checked="true" />
+                        <label class="lost" for="Shortness_of_Breath-no">No</label>
+                    </div>
+                    <h3 style="color:black;">5) Headache <span class="required">*</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Headache" value="1" id="Headache-yes" />
+                        <label class="lost" for="Headache-yes">Yes</label>
+                        <input class="lost" type="radio" name="Headache" value="0" id="Headache-no" checked="true" />
+                        <label class="lost" for="Headache-no">No</label>
+                    </div>
+                    </br>
+                    <h3 style="color:#7ed321;font-size: 18px;">Abroad<span class="required"> *</span></h3>
+                    <div class="input-group others">
+                        <input class="lost" type="radio" name="Abroad" value="1" id="Abroad-yes" />
+                        <label class="lost" for="Abroad-yes">Yes</label>
+                        <input class="lost" type="radio" name="Abroad" value="0" id="Abroad-no" checked="true" />
+                        <label class="lost" for="Abroad-no">No</label>
+                    </div>
+                    </br>
+                    <h3 style="color:#7ed321;font-size: 18px;">Contact With Covid-19 Patient <span
+                            class="required">*</span></h3>
                     <div class="input-group others">
                         <input class="lost" type="radio" name="contact_Patient" value="1" id="contact_Patient-Yes" />
                         <label class="lost" for="contact_Patient-Yes">Yes</label>
@@ -462,73 +472,104 @@
                             checked="true" />
                         <label class="lost" for="contact_Patient-no">No</label>
                     </div>
-                    </br> </br>
+                    </br>
                     <div class="submits">
                         <input class="lost kill" type="submit" value="Submit"
                             style="background-color: #7ed321; color: white;">
                     </div>
-                    </br>
-            </form>
-            <form class="img-form" method="post" id="formSeven" enctype="multipart/form-data">
-                {% csrf_token %}
-                <h1 style="text-align: center;color:red;">Predictor II</h1>
-                <br>
-                <div class="img-alg2">
-                    <div class="divide">
-                        <img id="borderimg1" src="static/images/Covid-Positive-Image.png" width="100%">
-                        <h3 style="text-align: center;">Covid Positive X-Ray Image</h3>
+                    <div id="hide_pred">
+                        {% if flag_it is one %}
+                        <br><br>
+                        {% if data.prediction in data.one %}
+                        <h2
+                            style="padding-top:10px;padding-bottom:5px;background-color: #F0F0F0;text-align: center;width:60%;margin-left: auto;margin-right: auto;">
+                            Corona Result: <span style="color:red;font-size:23px;"> Positive
+                            </span></h2>
+                        {% else %}
+                        <h2
+                            style="padding-top:10px;padding-bottom:5px;background-color: #F0F0F0;text-align: center;width:60%;margin-left: auto;margin-right: auto;">
+                            Corona Result: <span style="color:blue;font-size:23px;"> Negative
+                            </span></h2>
+                        {% endif %}
+                        {% endif %}
                     </div>
-                    <div class="divide">
-                        <img id="borderimg1" src="static/images/Normal-Image.png" width="100%">
-                        <h3 style="text-align: center;">Normal X-Ray Image</h3>
+                </form>
+                <form class="img-form" method="post" id="formSeven" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="img-alg2">
+                        <div class="divide">
+                            <img id="borderimg1" src="static/images/Covid-Positive-Image.png" width="100%">
+                            <h3 style="text-align: center;">Covid Positive X-Ray Image</h3>
+                        </div>
+                        <div class="divide">
+                            <img id="borderimg1" src="static/images/Normal-Image.png" width="100%">
+                            <h3 style="text-align: center;">Normal X-Ray Image</h3>
+                        </div>
                     </div>
-                </div>
-                <br><br>
-                <input type="hidden" name="form_type" value="formSeven">
-                <div style="margin-left: auto;margin-right: auto;">
-                <div class="tp-it">
-                   <i style="font-size: 22px;" class="fas fa-long-arrow-alt-right arrow1" aria-hidden="False"></i>
-                    <input type="file" class="inp-img" accept="image/*"
-                        name="image" id="file" required>
-                </div>
+                    <br><br>
+                    <input type="hidden" name="form_type" value="formSeven">
+                    <div style="margin-left: auto;margin-right: auto;">
+                        <div class="tp-it">
+                            <i style="font-size: 22px;" class="fas fa-long-arrow-alt-right arrow1"
+                                aria-hidden="False"></i>
+                            <input type="file" class="inp-img" accept="image/*" name="image" id="file" required>
+                        </div>
+                    </div>
+                    <p id="killingmachine" style="text-align: center;display: none;"><img id="output" width='80%' /></p>
+                    <div class="submits">
+                        <!-- <p id="killer"></p> -->
+                        <br><br>
+                        <input class="lost kill" type="submit" value="Submit"
+                            style="background-color: #7ed321; color: white;">
+                    </div>
+                    <div id="hide_pred2">
+                    {% if flag_it is two %}
+                    <br><br>
+                    {% if imgpred in tk %}
+                    <h2
+                        style="padding-top:10px;padding-bottom:5px;background-color: #F0F0F0;text-align: center;width:60%;margin-left: auto;margin-right: auto;">
+                        Corona Result: <span style="color:red;font-size:23px;"> Positive
+                        </span></h2>
+                    {% else %}
+                    <h2
+                        style="padding-top:10px;padding-bottom:5px;background-color: #F0F0F0;text-align: center;width:60%;margin-left: auto;margin-right: auto;">
+                        Corona Result: <span style="color:blue;font-size:23px;"> Negative
+                        </span></h2>
+                    {% endif %}
+                    {% endif %}
+                    </div>
+                    <script>
+                        // var loadFile = function (event) {
+                        //     var image = document.getElementById('output');
+                        //     document.getElementById("killingmachine").style.display = "block";
+                        //     document.getElementById("killer").style.display = "none";
+                        //     image.src = URL.createObjectURL(event.target.files[0]);
+                        // };
+                        // var file = document.getElementById('file');
+
+                        file.onchange = function (e) {
+                            var ext = this.value.match(/\.([^\.]+)$/)[1];
+                            switch (ext) {
+                                case 'jpeg':
+                                case 'jfif':
+                                case 'pjpeg':
+                                case 'bmp':
+                                case 'webp':
+                                case 'pjp':
+                                case 'jpg':
+                                case 'bmp':
+                                case 'png':
+                                case 'tif':
+                                    loadFile(event)
+                                    break;
+                                default:
+                                    alert('Only Image Files Allowed');
+                                    this.value = '';
+                            }
+                        };
+                    </script>
+                </form>
             </div>
-                <p id="killingmachine" style="text-align: center;display: none;"><img id="output" width='80%' /></p>
-                <div class="submits">
-                    <p id="killer"></p>
-                    <input class="lost kill" type="submit" value="Submit" style="background-color: #7ed321; color: white;">
-                </div>
-                <script>
-                    var loadFile = function (event) {
-                        var image = document.getElementById('output');
-                        document.getElementById("killingmachine").style.display = "block";
-                        document.getElementById("killer").style.display = "none";
-                        image.src = URL.createObjectURL(event.target.files[0]);
-                    };
-                    var file = document.getElementById('file');
-
-                    file.onchange = function (e) {
-                        var ext = this.value.match(/\.([^\.]+)$/)[1];
-                        switch (ext) {
-                            case 'jpeg':
-                            case 'jfif':
-                            case 'pjpeg':
-                            case 'bmp':
-                            case 'webp':
-                            case 'pjp':
-                            case 'jpg':
-                            case 'bmp':
-                            case 'png':
-                            case 'tif':
-                                loadFile(event)
-                                break;
-                            default:
-                                alert('Only Image Files Allowed');
-                                this.value = '';
-                        }
-                    };
-                </script>
-            </form>
-        </div>
 
 
 
@@ -536,7 +577,7 @@
 
 
 
-        <!-- <div class="social-foot">
+            <!-- <div class="social-foot">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -545,52 +586,52 @@
                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
         </div> -->
-        <footer>
-            <div class="footer">
-                <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
-                        style="font-size: 25px;color:grey;">Team</span>
-                    <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS ⚡</span></span></bold>
-                </h4>
-                <!-- <sup
+            <footer>
+                <div class="footer">
+                    <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">⚡ </span><span
+                            style="font-size: 25px;color:grey;">Team</span>
+                        <bold> Infy<span style="font-size: 25px;color:#66f;"> SOARS ⚡</span></span></bold>
+                    </h4>
+                    <!-- <sup
     style="color:crimson;font-size: 10px;"><strong></strong></sup>  -->
-                <div class="row">
-                    <ul>
-                        <li><a href="#">Siddharth Kulkarni</a></li>
-                        <li><a href="#">Atharv Chaudhari</a></li>
-                        <li><a href="#">Rutuja Vaidya</a></li>
-                        <li><a href="#">Omkar Patil</a></li>
-                        <li><a href="#"><br>Sana Shaikh</a></li>
-                    </ul>
+                    <div class="row">
+                        <ul>
+                            <li><a href="#">Siddharth Kulkarni</a></li>
+                            <li><a href="#">Atharv Chaudhari</a></li>
+                            <li><a href="#">Rutuja Vaidya</a></li>
+                            <li><a href="#">Omkar Patil</a></li>
+                            <li><a href="#"><br>Sana Shaikh</a></li>
+                        </ul>
+                    </div>
+                    <div class="sub-footer">
+                        ✨ Copyright © 2021 - All rights reserved ✨
+                    </div>
+                    <p style="color:white;">🧿 Designed By 😎 Team Infy SOARS 🧿</p>
                 </div>
-                <div class="sub-footer">
-                    ✨ Copyright © 2021 - All rights reserved ✨
-                </div>
-                <p style="color:white;">🧿 Designed By 😎 Team Infy SOARS 🧿</p>
-            </div>
-        </footer>
+            </footer>
+            <!-- ##################################################################################################### -->
+            <!-- Risk Predictor Modal -->
+        </div>
+        </div>
+        </div>
         <!-- ##################################################################################################### -->
-        <!-- Risk Predictor Modal -->
-    </div>
-    </div>
-    </div>
-    <!-- ##################################################################################################### -->
-    <script type="text/javascript" src="static/js/script.js "></script>
-    <script type="text/javascript" src="static/js/sign.js "></script>
-    <script type="text/javascript" src="static/js/general.js "></script>
-    <script type="text/javascript" src="static/js/predictors.js "></script>
-    <!-- <script type="text/javascript">
+        <script type="text/javascript" src="static/js/script.js "></script>
+        <script type="text/javascript" src="static/js/sign.js "></script>
+        <script type="text/javascript" src="static/js/general.js "></script>
+        <script type="text/javascript" src="static/js/predictors.js "></script>
+        <!-- <script type="text/javascript">
     function get_alert(){
     alert("Team Infy SOARS Presents \nProject Covid");
     } -->
-    <!-- function get_alert() {
+        <!-- function get_alert() {
         document.getElementById("getalert").innerHTML = "Click on The icon <iclass='fas fa-external-link-alt'></i> To Get Risk Predictor or new tab";
       } -->
-    <!-- </script> -->
-    <!-- <script type="text/javascript">
+        <!-- </script> -->
+        <!-- <script type="text/javascript">
         function get_alert(){
         alert("Please Click On Icon Of New Tab To Get Risk Predictor UI in new tab");
         }
     </script> -->
-</body>
+    </body>
 
 </html>

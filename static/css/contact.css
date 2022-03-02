@@ -62,7 +62,8 @@
 .sub-block input[type=submit] {
     color: white;
     background-color: #43f943;
-    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-radius: 5px;
     width: 30%;
     font-size: 17px;

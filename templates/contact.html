@@ -37,7 +37,7 @@
                 To: document.getElementById("email").value,
                 From: 'Team InfySOARS' + "<infysoars0@gmail.com>",
                 Subject: "Thank You For Contacting Team InfySOARS",
-                Body: "<p>Dear " + document.getElementById("name").value + " Your Query Has been submitted successfully....</p><p>Thank you for reaching out To Us....</p>",
+                Body: "<p>Dear " + document.getElementById("name").value + " !</p><p>Your query has been submitted successfully.</p><p>Thank you for reaching out to us.</p>",
             }).then(
                 flag1 = 1
             );
@@ -48,7 +48,7 @@
                 To: "infysoars0@gmail.com",
                 From: "infysoars0@gmail.com",
                 Subject: 'Query: ' + document.getElementById("subject").value,
-                Body: "<h3>Query Raised By :-</h3><h4>Name :- " + document.getElementById("name").value + "</h4>" + "<br><h3>Message :- </h3><h4>" + document.getElementById("message").value + "</h4>",
+                Body: "<h3>Query Raised By:</h3><h4>Name: " + document.getElementById("name").value + "</h4>" + "<br><h3>Message: </h3><h4>" + document.getElementById("message").value + "</h4>",
             }).then(
                 flag2 = 1
             );
@@ -381,7 +381,7 @@
                 </div>
                 <div class="sub-block">
                     <br><br>
-                    <h4 style="font-size: 25px;color: #43f943;">Contact Us</h4>
+                    <h4 style="font-size: 25px;color: red;">Contact Us</h4>
                     <br>
                     <form onsubmit="sendEmail()" action="contact" method="post">
                         {% csrf_token %}
