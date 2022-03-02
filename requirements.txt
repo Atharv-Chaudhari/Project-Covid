@@ -16,4 +16,5 @@ opencv-python
 matplotlib
 xhtml2pdf
 reportlab==3.6.6
-
+keras
+tensorflow==2.5.0
