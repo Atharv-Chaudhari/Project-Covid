@@ -12,9 +12,6 @@ from django.views.generic import View
 #importing get_template from loader
 from django.template.loader import get_template
  
-#import render_to_pdf from util.py 
-from .utils import render_to_pdf 
- 
 # from fpdf import FPDF, HTMLMixin
 
 
@@ -40,27 +37,6 @@ def send_mail_task(data):
     msg.content_subtype = 'html'
     msg.send()
     return None
-
-
-@shared_task
-def report_one(data):
-    # ctx = {
-    #     'data': data,
-    # }
-    # messageContent = get_template('report_one.html').render(ctx)
-    # pdf = PDF()
-    # pdf.add_page()
-    # pdf.write_html(messageContent)
-    # pdf.output('pdf/report_one.pdf')
-    ctx = {
-        'data': data,
-    }
-        #getting the template
-    pdf = render_to_pdf('report_one.html',ctx)
-    with open("tmp/pdf/report_one.txt", "wb") as outfile:
-        outfile.write(pdf.getvalue())
-    return None
-
 
 @shared_task
 def world_data(d):
