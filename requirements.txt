@@ -12,8 +12,9 @@ celery
 rabbitmq
 honcho
 eventlet
-xhtml2pdf
 numpy
 opencv-python
 matplotlib
 keras
+xhtml2pdf
+reportlab==3.6.6
