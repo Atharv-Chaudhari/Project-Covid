@@ -12,9 +12,18 @@ celery
 rabbitmq
 honcho
 eventlet
+<<<<<<< HEAD
 numpy
 opencv-python
 matplotlib
 keras
 xhtml2pdf
 reportlab==3.6.6
+=======
+opencv-python
+matplotlib
+xhtml2pdf
+reportlab==3.6.6
+keras
+tensorflow-cpu==2.5.0
+>>>>>>> 6be8ef2f65c87e1d87bbce71afcb1ff20d7fbe5a
