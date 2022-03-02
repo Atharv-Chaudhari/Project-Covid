@@ -54,6 +54,6 @@ def world_data(d):
         'deaths': wdata[1],
         'recovered': wdata[2]
     }
-    f = open("tmp/data.json", "w")
+    f = open("static/tmp/data.json", "w")
     f = json.dump(d, f)
     return None
