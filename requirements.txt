@@ -12,7 +12,7 @@ celery
 rabbitmq
 honcho
 eventlet
-opencv-python
+opencv-python-headless
 matplotlib
 xhtml2pdf
 reportlab==3.6.6
