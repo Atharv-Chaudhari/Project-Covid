@@ -29,7 +29,6 @@ from django.views.generic import View
 from django.template.loader import get_template
  
 #import render_to_pdf from util.py 
-from .utils import render_to_pdf 
  
 # from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -37,13 +36,6 @@ print("################################################## Lets Start Project ###
 # Create your views here.
 
 loaded_model = joblib.load('models/model1.sav')
-
-#Creating our view, it is a class based view
-class GeneratePdf(View):
-     def get(self, request):
-        with open("tmp/pdf/report_one.txt",'rb') as f:
-            result = f.read()
-        return HttpResponse(result, content_type='application/pdf')
 
 def get_prediction(data, loaded_model=loaded_model):
     data_model = {
@@ -149,7 +141,7 @@ def home(request):
     else:
         # global update_date
         world_data.delay(0)
-        f = open("tmp/data.json", "r")
+        f = open("static/tmp/data.json", "r")
         d = json.load(f)
         # d["update_dt"]=update_date[0]
         # d["update_mn"]=update_date[1]
@@ -174,18 +166,6 @@ def riskpredictor(request):
             return render(request, 'results.html', context)
     else:
         return render(request, 'riskpredictor.html')
-
-
-def about(request):
-    if request.method == 'POST':
-        if request.POST.get("form_type") == 'formFour':
-            model_data = request.POST
-            context = {
-                'model_pred': get_prediction(model_data)
-            }
-            return render(request, 'results.html', context)
-    return render(request, 'about.html')
-
 
 def dashboard(request):
     if request.method == 'POST':
@@ -319,8 +299,8 @@ def img_pred(request):
             filename=str(filename)
             file_data=request.FILES['image'].read()
             temp=filename.index(".")
-            img="tmp/image"+str(filename[temp:])
-            with open("tmp/image"+str(filename[temp:]), "wb") as outfile:
+            img="static/tmp/image"+str(filename[temp:])
+            with open("static/tmp/image"+str(filename[temp:]), "wb") as outfile:
                 outfile.write(file_data)
             imgpred=img_process(img)
             return render(request, 'img_result.html',{'imgpred':imgpred})
