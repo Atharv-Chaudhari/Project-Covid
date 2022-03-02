@@ -14,9 +14,9 @@ from .task import *
 import warnings
 warnings.filterwarnings("ignore")
 import numpy as np
-from keras.models import load_model
+# from keras.models import load_model
 import cv2
-# import tensorflow as tf
+import tensorflow as tf
 # from keras.preprocessing import image
 # from datetime import date
 # today = date.today()
@@ -296,7 +296,7 @@ def welcome_dashboard(request):
     return render(request, 'welcome_dashboard.html')
 
 def img_process(img):
-    model_1 = load_model('models/cnn_model.h5')
+    model_1 = tf.keras.models.load_model('models/cnn_model.h5')
 
     z_img = cv2.imread(img)
     z_img = cv2.resize(z_img, (70, 70)) / 255.0
