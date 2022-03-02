@@ -57,3 +57,21 @@ def world_data(d):
     f = open("static/tmp/data.json", "w")
     f = json.dump(d, f)
     return None
+
+@shared_task
+def send_img_mail_task(data):
+    # grad cam code here take static path of cam img
+    cam_img="static/tmp/pred_img.jpg" # path to img
+    ctx = {
+        'output': data['output'],
+        'email':data['email'],
+        'img':"https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/tree/main/"+str(data['img']),
+        'cam_img':"https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/tree/main/"+str(cam_img),
+    }
+    heading = "Test Report By Team InfySOARS"
+    messageContent = get_template('img_email.html').render(ctx)
+    msg = EmailMessage(heading, messageContent, '<infysoars0@gmail.com>',
+                       [data['email']])
+    msg.content_subtype = 'html'
+    msg.send()
+    return None

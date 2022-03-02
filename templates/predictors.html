@@ -193,10 +193,6 @@
                                     <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
                                                 class="fa fa-rocket"></i>
                                             &#160Vaccine Tracker</a></li>
-                                    <li class="separator"></li>
-                                    <li><a href="nlp" onclick="myFunction()" class="tracker"><i
-                                                class="fa fa-rocket"></i>
-                                            &#160Tweet Predictor </a></li>
                                 </ul>
                             </li>
                             <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
@@ -387,14 +383,14 @@
                         <div class="input-group input-group-icon">
                             <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                 name="email" placeholder="Email Address" required />
-                            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                            <div class="input-icon"><i class="fa fa-envelope iconblick"></i></div>
                         </div>
                         <br>
                         <h3 style="color:#7ed321;font-size: 18px;">Country </h3>
                         <br>
                         <div class="input-group input-group-icon">
                             <input class="lost" type="text" name="country" placeholder="Country" />
-                            <div class="input-icon"><i class="fa fa-globe"></i></div>
+                            <div class="input-icon"><i class="fa fa-globe iconblick"></i></div>
                         </div>
                     </div>
                     </br>
@@ -498,20 +494,34 @@
                     {% csrf_token %}
                     <div class="img-alg2">
                         <div class="divide">
-                            <img id="borderimg1" src="static/images/Covid-Positive-Image.png" width="100%">
+                            <img id="borderimg1" src="static/images/img_pos.jpg" width="100%">
                             <h3 style="text-align: center;">Covid Positive X-Ray Image</h3>
                         </div>
                         <div class="divide">
-                            <img id="borderimg1" src="static/images/Normal-Image.png" width="100%">
+                            <img id="borderimg1" src="static/images/img_neg.jpg" width="100%">
                             <h3 style="text-align: center;">Normal X-Ray Image</h3>
                         </div>
                     </div>
-                    <br><br>
+                    <div class="img-alg2">
+                        <div class="divide">
+                            <img id="borderimg1" src="static/images/img_pos_cam.jpg" width="100%">
+                        </div>
+                        <div class="divide">
+                            <img id="borderimg1" src="static/images/img_neg_cam.jpg" width="100%">
+                        </div>
+                    </div>
+                    <br>
                     <input type="hidden" name="form_type" value="formSeven">
                     <div style="margin-left: auto;margin-right: auto;">
+                        <div class="input-group input-group-icon" style="width:60%;margin-left: auto;margin-right: auto;">
+                            <input class="lost" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                name="img_email" placeholder="Enter Email Address" required />
+                            <div class="input-icon"><i class="fa fa-envelope iconblick"></i></div>
+                        </div>
+                        <br>
                         <div class="tp-it">
-                            <i style="font-size: 22px;" class="fas fa-long-arrow-alt-right arrow1"
-                                aria-hidden="False"></i>
+                            <i style="font-size: 22px;" class="fas fa-long-arrow-alt-right arrow1 iconblick"
+                                aria-hidden="False"></i>&#160&#160
                             <input type="file" class="inp-img" accept="image/*" name="image" id="file" required>
                         </div>
                     </div>
