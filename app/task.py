@@ -65,8 +65,8 @@ def send_img_mail_task(data):
     ctx = {
         'output': data['output'],
         'email':data['email'],
-        'img':"https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/tree/main/"+str(data['img']),
-        'cam_img':"https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/tree/main/"+str(cam_img),
+        'img':"https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/"+str(data['img']),
+        'cam_img':"https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/"+str(cam_img),
     }
     heading = "Test Report By Team InfySOARS"
     messageContent = get_template('img_email.html').render(ctx)
