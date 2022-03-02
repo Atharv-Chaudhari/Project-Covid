@@ -1,17 +1,2 @@
 django_heroku
-requests
-geopy
 Django
-beautifulsoup4
-gunicorn
-html5lib
-joblib
-pandas
-sklearn
-celery
-rabbitmq
-honcho
-eventlet
-opencv-python
-matplotlib
-
