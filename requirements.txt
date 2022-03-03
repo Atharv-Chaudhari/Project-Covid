@@ -14,7 +14,6 @@ honcho
 eventlet
 opencv-python-headless
 matplotlib
-xhtml2pdf
-reportlab==3.6.6
 keras
 tensorflow-cpu==2.5.0
+PyGithub
