@@ -68,8 +68,8 @@ def send_img_mail_task(data):
         data['img'].replace("image","cam_pred"),
     ]
     file_names = [
-        data['img'],
-        data['img'].replace("image","cam_pred"),
+        'image1.png',
+        'cam_img.png',
     ]
     commit_message = 'Commit Images'
     master_ref = repo.get_git_ref('heads/main')
