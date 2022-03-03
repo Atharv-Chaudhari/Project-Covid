@@ -62,7 +62,7 @@ def send_img_mail_task(data):
     cam_pred(data['img'],data['img'].replace("image","cam_pred"))
     token = os.environ['token']
     g = Github(token)
-    repo = g.get_user().get_repo('mathematics')
+    repo = g.get_user().get_repo('Project-Covid-Helper')
     file_list = [
         data['img'],
         data['img'].replace("image","cam_pred")

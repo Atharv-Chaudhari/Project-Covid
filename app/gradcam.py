@@ -4,11 +4,11 @@ def cam_pred(img_path,out_path):
     from tensorflow import keras
     import matplotlib.pyplot as plt
     import matplotlib.cm as cm
-    model_builder = keras.applications.xception.Xception
-    img_size = (299, 299)
-    preprocess_input = keras.applications.xception.preprocess_input
-    decode_predictions = keras.applications.xception.decode_predictions
-    last_conv_layer_name = "block14_sepconv2_act"
+    model = keras.applications.mobilenet_v2.MobileNetV2(include_top=True, weights='imagenet')
+    img_size = (224, 224)
+    preprocess_input = keras.applications.mobilenet_v2.preprocess_input
+    decode_predictions = keras.applications.mobilenet_v2.decode_predictions
+    last_conv_layer_name = "Conv_1"
 
     ## The GradCam Algorithm
     def get_img_array(img_path, size):
@@ -37,7 +37,7 @@ def cam_pred(img_path,out_path):
 
     ## Heatmap:
     img_array = preprocess_input(get_img_array(img_path, size=img_size))
-    model = model_builder(weights="imagenet")
+    # model = model_builder(weights="imagenet")
     model.layers[-1].activation = None
     preds = model.predict(img_array)
     heatmap = make_gradcam_heatmap(img_array, model, last_conv_layer_name)
