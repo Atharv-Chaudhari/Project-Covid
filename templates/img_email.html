@@ -34,17 +34,19 @@
         <br>
         <h2 style="color:red;text-align: center;">Detailed Report</h2>
         <br>
-        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/img_mail.jpg" width="60%"
-            height="50%"></img>
+        <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/img_mail.jpg" width="70%"
+            height="55%"></img>
         <br><br><br><br>
         <div class="block-it">
             <div class="col-1">
-                <img src="data:image/jpeg;base64,iVBORwA{{ img }}"
-                    width="95%" height="90%"></img>
+                <img src="{{ img }}"
+                    width="75%" height="70%"></img>
+                    <h3 style="text-align: center;">Your X-Ray Image</h3>
             </div>
             <div class="col-1">
-                <img src="data:image/jpeg;base64,iVBORwA{{ cam_img }}"
-                    width="95%" height="90%"></img>
+                <img src="{{ cam_img }}"
+                    width="75%" height="70%"></img>
+                    <h3 style="text-align: center;">Analysis of Your X-Ray Image</h3>
             </div>
         </div>
         {% if output in tk %}

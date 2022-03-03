@@ -60,25 +60,49 @@ def world_data(d):
 @shared_task
 def send_img_mail_task(data):
     cam_pred(data['img'],data['img'].replace("image","cam_pred"))
+    
     token = os.environ['token']
     g = Github(token)
-    repo = g.get_user().get_repo('Project-Covid-Helper')
+    repo = g.get_user().get_repo('Project-Covid-Helper') # repo name
     file_list = [
         data['img'],
         data['img'].replace("image","cam_pred")
     ]
-    commit_message = 'Add Images'
-    master_ref = repo.get_git_ref('heads/master')
+    file_names = [
+        str(list(data['img'].split('/'))[-1]),
+        str(list(data['img'].replace("image","cam_pred").split('/'))[-1])
+    ]
+    commit_message = 'python commit'
+    master_ref = repo.get_git_ref('heads/main')
     master_sha = master_ref.object.sha
     base_tree = repo.get_git_tree(master_sha)
+
     element_list = list()
-    for entry in file_list:
-        with open(entry, 'rb') as input_file:
-            data = input_file.read()
-        if entry.endswith('.png'):
-            data = base64.b64encode(data)
-        element = InputGitTreeElement(entry, '100644', 'blob', data)
+    for i, entry in enumerate(file_list):
+        with open(entry,'rb') as input_file:
+            data1 = input_file.read()
+        if entry.endswith('.png'): 
+            data1 = base64.b64encode(data1)
+        if entry.endswith('.jpeg'): 
+            data1 = base64.b64encode(data1)
+        if entry.endswith('.jfif'): 
+            data1 = base64.b64encode(data1)
+        if entry.endswith('.pjpeg'): 
+            data1 = base64.b64encode(data1)
+        if entry.endswith('.bmp'): 
+            data1 = base64.b64encode(data1)
+        if entry.endswith('.webp'): 
+            data1 = base64.b64encode(data1)
+        if entry.endswith('.pjp'): 
+            data1 = base64.b64encode(data1)
+        if entry.endswith('.tif'): 
+            data1 = base64.b64encode(data1)
+        if entry.endswith('.jpg'): 
+            data1 = base64.b64encode(data1)
+        blob = repo.create_git_blob(data1.decode("utf-8"), "base64")
+        element = InputGitTreeElement(file_names[i], mode='100644', type='blob',sha=blob.sha)
         element_list.append(element)
+
     tree = repo.create_git_tree(element_list, base_tree)
     parent = repo.get_git_commit(master_sha)
     commit = repo.create_git_commit(commit_message, tree, [parent])
@@ -87,8 +111,8 @@ def send_img_mail_task(data):
         'tk':[1],
         'output': int(data['output']),
         'email':data['email'],
-        'img':'',
-        'cam_img':'',
+        'img':str("https://raw.githubusercontent.com/INFYSOARS/Project-Covid-Helper/main/")+file_names[0],
+        'cam_img':str("https://raw.githubusercontent.com/INFYSOARS/Project-Covid-Helper/main/")+file_names[1],
     }
     heading = "Test Report By Team InfySOARS"
     messageContent = get_template('img_email.html').render(ctx)
