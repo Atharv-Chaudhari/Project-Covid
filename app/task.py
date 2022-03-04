@@ -108,6 +108,8 @@ def send_img_mail_task(data):
     parent = repo.get_git_commit(master_sha)
     commit = repo.create_git_commit(commit_message, tree, [parent])
     master_ref.edit(commit.sha)
+    import time
+    time.sleep(10)
     ctx = {
         'tk':[1],
         'output': int(data['output']),
