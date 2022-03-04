@@ -64,6 +64,7 @@ def send_img_mail_task(data):
     token = os.environ['token']
     g = Github(token)
     repo = g.get_user().get_repo('Project-Covid-Helper') # repo name
+    print(repo)
     file_list = [
         data['img'],
         data['img'].replace("image","cam_pred")
