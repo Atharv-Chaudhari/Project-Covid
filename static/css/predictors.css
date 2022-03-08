@@ -208,7 +208,8 @@
   color: #61677c;
   font-weight: bold;
   width: 180px;
-  box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babecc;
+  box-shadow: 5px 5px 10px #babecc;
+  /* -5px -5px 5px #fff, */
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 600;
