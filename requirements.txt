@@ -12,8 +12,8 @@ celery
 rabbitmq
 honcho
 eventlet
-xhtml2pdf
-numpy
-opencv-python
+opencv-python-headless
 matplotlib
 keras
+tensorflow-cpu==2.5.0
+PyGithub

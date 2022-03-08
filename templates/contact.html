@@ -9,7 +9,6 @@
     <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/sign.css" />
-    <link rel="stylesheet" href="static/css/general.css" />
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <link rel="stylesheet" href="static/css/contact.css" />
     <link rel="stylesheet" href="static/css/loading.css" />
@@ -37,7 +36,7 @@
                 To: document.getElementById("email").value,
                 From: 'Team InfySOARS' + "<infysoars0@gmail.com>",
                 Subject: "Thank You For Contacting Team InfySOARS",
-                Body: "<p>Dear " + document.getElementById("name").value + " Your Query Has been submitted successfully....</p><p>Thank you for reaching out To Us....</p>",
+                Body: "<p>Dear " + document.getElementById("name").value + " !</p><p>Your query has been submitted successfully.</p><p>Thank you for reaching out to us.</p>",
             }).then(
                 flag1 = 1
             );
@@ -48,7 +47,7 @@
                 To: "infysoars0@gmail.com",
                 From: "infysoars0@gmail.com",
                 Subject: 'Query: ' + document.getElementById("subject").value,
-                Body: "<h3>Query Raised By :-</h3><h4>Name :- " + document.getElementById("name").value + "</h4>" + "<br><h3>Message :- </h3><h4>" + document.getElementById("message").value + "</h4>",
+                Body: "<h3>Query Raised By:</h3><h4>Name: " + document.getElementById("name").value + "</h4>" + "<br><h3>Message: </h3><h4>" + document.getElementById("message").value + "</h4>",
             }).then(
                 flag2 = 1
             );
@@ -218,9 +217,6 @@
                                 <li><a href="vaccine" onclick="myFunction()" class="tracker"><i
                                             class="fa fa-rocket"></i>
                                         &#160Vaccine Tracker</a></li>
-                                <li class="separator"></li>
-                                <li><a href="nlp" onclick="myFunction()" class="tracker"><i class="fa fa-rocket"></i>
-                                        &#160Tweet Predictor </a></li>
                             </ul>
                         </li>
                         <!-- <li><a href="#" onclick="myFunction()"><i class="fa fa-pencil-square-o"></i> Research</a></li> -->
@@ -381,7 +377,7 @@
                 </div>
                 <div class="sub-block">
                     <br><br>
-                    <h4 style="font-size: 25px;color: #43f943;">Contact Us</h4>
+                    <h4 style="font-size: 25px;color: red;">Contact Us</h4>
                     <br>
                     <form onsubmit="sendEmail()" action="contact" method="post">
                         {% csrf_token %}

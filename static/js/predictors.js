@@ -7,6 +7,7 @@ function sympred(){
     document.getElementById("active-it4").style.color = "lime";
     document.getElementById("active-it2").style.backgroundColor = "#ebecf0";
     document.getElementById("formSeven").style.display = "none";
+    document.getElementById("hide_pred2").style.display = "none";
 }
 function imgpred(){
     document.getElementById("formFour").style.display = "none";
@@ -17,4 +18,5 @@ function imgpred(){
     document.getElementById("active-it1").style.backgroundColor = "#ebecf0";
     document.getElementById("active-it3").style.color = "lime";
     document.getElementById("formSeven").style.display = "block";
+    document.getElementById("hide_pred").style.display = "none";
 }

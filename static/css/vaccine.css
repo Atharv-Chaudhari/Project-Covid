@@ -151,7 +151,7 @@ td {
 .cont-vaccine{
     margin-left: auto;
     margin-right: auto;
-    width:70%;
+    width:60%;
     display: flex;
     background-color: white!important;
     border-radius: 25px;
@@ -160,6 +160,7 @@ td {
 }
 .sub-vac{
     width:50%;
+    border-radius: 25px;
     text-align: center;
 }
 .vac-img{
@@ -204,7 +205,7 @@ td {
 } 
 .vac-form input {
     border-radius: 7px;
-    width: 80%;
+    width: 70%;
     line-height: 1;
     border: grey;
     background-color: #E8E8E8;
