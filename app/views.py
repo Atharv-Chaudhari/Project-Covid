@@ -164,9 +164,9 @@ def vaccine_tracker(pincode, date):
                 str(data[i]['fee'])+" "+str(data[i]['fee_type'])
             d['Age'] = str(data[i]['min_age_limit'])+"+"
             d['Center Name'] = str(data[i]['name'])
-            d['Address'] = str(data[i]['name'])+" "+str(data[i]['address'])+" "+str(data[i]['block_name']) + \
-                " "+str(data[i]['district_name'])+" "+str(data[i]
-                                                          ['state_name'])+" "+str(data[i]['pincode'])
+            # d['Address'] = str(data[i]['name'])+" "+str(data[i]['address'])+" "+str(data[i]['block_name']) + \
+            #     " "+str(data[i]['district_name'])+" "+str(data[i]
+            #                                               ['state_name'])+" "+str(data[i]['pincode'])
             d['Available Dose 1 Quantity'] = str(
                 data[i]['available_capacity_dose1'])
             d['Available Dose 2 Quantity'] = str(
