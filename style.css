@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.long-button a{
+    text-decoration: none;
+    color: white;
+}
+.website-link{
+    width: 20%;
+    background-color: #650ab9;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 5px;
+}
+.logo img{
+    margin: 40px;
+}
+.box{
+    margin: 0px auto;
+}
+.item{
+    text-align: center;
+    padding: 10px;
+}
+h3,h5{
+    margin: 10px;
+    padding: 5px;
+}
+.item ul li a{
+    text-decoration: none;
+    color: blue;
+    font-size: large;
+    font-weight: 500;
+}
+.item ul li a:hover{
+    color: red;
+}
+.item span{
+font-size:13px;
+}
+
+.website{
+    margin: 10px;
+}
+
+.website a{
+    text-decoration: none;
+    color: white;    
+}
+
+@media screen and (max-width: 989px){
+    .item h3{
+        font-size: 18px;
+    }
+    .item h5{
+        font-size: 15px;
+    }
+    .item ul li a{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 769px){
+    .item h5{
+        font-size: 15px;
+    }
+    .item ul li a{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:572px){
+    .item h3{
+        font-size: 24px;
+    }
+    .item h5{
+        font-size: 20px;
+    }
+    .item ul li a{
+        font-size: 18px;
+    }
+}
