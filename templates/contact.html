@@ -185,10 +185,17 @@
                                 Analysis <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown" id="my-dropdown-id">
-                                <li><a style="display:flex;" href="https://tabsoft.co/3Gzy8v8" target="_blank"><img style="width:30px; height:30px;" src="static/images/tablue.png"><div style="line-height: 30px;font-size:20px;"> &#160&#160Israel Covid Data
-                                        Analysis</div></a></li>
+                                <li><a style="display:flex;" href="https://tabsoft.co/3Gzy8v8" target="_blank"><img
+                                            style="width:30px; height:30px;" src="static/images/tablue.png">
+                                        <div style="line-height: 30px;font-size:20px;"> &#160&#160Israel Covid Data
+                                            Analysis</div>
+                                    </a></li>
                                 <li class="separator"></li>
-                                <li><a style="display:flex;" href="https://tabsoft.co/3Iax6ak" target="_blank"><img style="width:30px; height:30px;" src="static/images/tablue.png"><div style="line-height: 30px;font-size:20px;"> &#160&#160Global Covid Data Analysis</div></a></li>
+                                <li><a style="display:flex;" href="https://tabsoft.co/3Iax6ak" target="_blank"><img
+                                            style="width:30px; height:30px;" src="static/images/tablue.png">
+                                        <div style="line-height: 30px;font-size:20px;"> &#160&#160Global Covid Data
+                                            Analysis</div>
+                                    </a></li>
                             </ul>
                         </li>
                         </li>
@@ -343,7 +350,9 @@
 
 
         <div class="mini-info ">
-            <marquee id="mymarquee"><strong><img src="static/images/hello.gif " width="30px" height="30px"> InfySOARS presents Detection of Covid Positive Cases from Symptoms or Chest X-Ray images using Machine Learning & Deep Learning. Do check Live Global Covid-19 Data Analysis !!</strong></marquee>
+            <marquee id="mymarquee"><strong><img src="static/images/hello.gif " width="30px" height="30px"> InfySOARS
+                    presents Detection of Covid Positive Cases from Symptoms or Chest X-Ray images using Machine
+                    Learning & Deep Learning. Do check Live Global Covid-19 Data Analysis !!</strong></marquee>
         </div>
         <!-- <div class="menu-container" style="margin-left:100%;">
         <div class="collapse-icon">
@@ -367,28 +376,33 @@
         </div>
     </div> -->
 
-        <div class="contact">
+        <div class="contact" style="font-family: 'Times New Roman', Times, serif;">
             <div class="main-blocki">
                 <div class="sub-block">
-                    <img style="-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 25px;" width="100%" height="100%" src="static/images/contact.jpg">
+                    <img style="-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 25px;" width="100%"
+                        class="imgh" src="static/images/contact.jpg">
                 </div>
+                <div class="fakecontact"></div>
                 <div class="sub-block">
-                    <br><br>
                     <h4 style="font-size: 25px;color: red;">Contact Us</h4>
                     <br>
                     <form onsubmit="sendEmail()" action="contact" method="post">
                         {% csrf_token %}
-                        <div class="row"><input type="text" id="name" name="name" placeholder="Full Name" required>
+                        <div class="row"><input type="text" style="font-family: 'Times New Roman', Times, serif;"
+                                id="name" name="name" placeholder="Full Name" required>
                         </div>
-                        <div class="row"><input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                name="email" placeholder="Email" required></div>
-                        <div class="row"><input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <div class="row"><input type="email" style="font-family: 'Times New Roman', Times, serif;"
+                                id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email"
+                                placeholder="Email" required></div>
+                        <div class="row"><input type="text" style="font-family: 'Times New Roman', Times, serif;"
+                                id="subject" name="subject" placeholder="Subject" required>
                         </div>
-                        <div class="row"><textarea type="text" id="message" name="message" rows="4" cols="50"
-                                placeholder="Write Your Message" required></textarea></div>
+                        <div class="row"><textarea type="text" style="font-family: 'Times New Roman', Times, serif;"
+                                id="message" name="message" rows="4" cols="50" placeholder="Write Your Message"
+                                required></textarea></div>
                         <br>
                         <div class="row"><input type="submit" value="Send Message"></div>
-                        <br><br>
+                        <div class="fakecontact"></div>
                     </form>
                 </div>
                 <!--  </div> -->
@@ -419,17 +433,25 @@
         </div> -->
         <footer>
             <div class="footer">
-                <a href="https://github.com/Atharv-Chaudhari/Project-Covid" target="_blank"><h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">
-                    </span><span style="font-size: 25px;color:white;">Team</span>
-                    <bold> Infy<span style="font-size: 25px;color:white;">SOARS </span></span></bold>
-                    <i style="font-size: 25px;" class="fa fa-github" style="font-size:36px"></i></h4></a>
+                <a href="https://github.com/Atharv-Chaudhari/Project-Covid" target="_blank">
+                    <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">
+                        </span><span style="font-size: 25px;color:white;">Team</span>
+                        <bold> Infy<span style="font-size: 25px;color:white;">SOARS </span></span></bold>
+                        <i style="font-size: 25px;" class="fa fa-github" style="font-size:36px"></i>
+                    </h4>
+                </a>
                 <div class="row">
                     <ul>
-                        <li><a href="https://www.linkedin.com/in/siddharth-kulkarni-0296a01aa/" target="_blank">Siddharth Kulkarni</a></li>
-                        <li><a href="https://www.linkedin.com/in/atharv-chaudhari-4a6105188/" target="_blank">Atharv Chaudhari</a></li>
-                        <li><a href="https://www.linkedin.com/in/rutuja-vaidya-97b5781ab/" target="_blank">Rutuja Vaidya</a></li>
-                        <li><a href="https://www.linkedin.com/in/omkar-patil-14b4581ab/" target="_blank">Omkar Patil</a></li>
-                        <li><a href="https://www.linkedin.com/in/sana-shaikh-b30136176/" target="_blank"><br>Sana Shaikh</a></li>
+                        <li><a href="https://www.linkedin.com/in/siddharth-kulkarni-0296a01aa/"
+                                target="_blank">Siddharth Kulkarni</a></li>
+                        <li><a href="https://www.linkedin.com/in/atharv-chaudhari-4a6105188/" target="_blank">Atharv
+                                Chaudhari</a></li>
+                        <li><a href="https://www.linkedin.com/in/rutuja-vaidya-97b5781ab/" target="_blank">Rutuja
+                                Vaidya</a></li>
+                        <li><a href="https://www.linkedin.com/in/omkar-patil-14b4581ab/" target="_blank">Omkar Patil</a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/sana-shaikh-b30136176/" target="_blank">Sana
+                                Shaikh</a></li>
                     </ul>
                 </div>
                 <div class="sub-footer">

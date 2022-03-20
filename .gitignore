@@ -2,3 +2,4 @@ set_envs.py
 .vscode
 back up.txt
 Backup-codes-infysoars0.txt
+__pycache__

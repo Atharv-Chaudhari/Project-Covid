@@ -30,6 +30,8 @@
 
 .sub-block {
     width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .sub-block h4 {
@@ -65,7 +67,7 @@
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 5px;
-    width: 30%;
+    width: 150px;
     font-size: 17px;
     border: black;
     cursor: pointer;
@@ -76,7 +78,7 @@
     background-color: #00e000;
 }
 
-@media (max-width:876px) {
+/* @media (max-width:876px) {
     .grid-container {
         display: block;
     }
@@ -90,36 +92,58 @@
     .back-contact h4{
         opacity: 0;
     }
-}
-@media (max-width:500px){
-    .sub-block input[type=submit]{
-        width:50%;
-    }
+} */
+.imgh{
+    height:100%;
 }
 .back-contact {
     background-position-y: 70px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
-@media (max-width:900px){
-    .sub-block input[type=submit]{
-        width:40%;
-    }
-}
-@media (max-width:700px){
-    .sub-block input[type=submit]{
-        width:50%;
-    }
-}
-@media (max-width:600px){
-
-    .sub-block input[type=submit]{
-        width:50%;
-    }
-}
 @media (max-width:500px){
     .grid-container{
         width:100%;
+    }
+}
+@media (max-width:1200px){
+    .main-blocki {
+        width: 80%;
+    }
+}
+@media (max-width:1000px){
+    .main-blocki {
+        width: 95%;
+    }
+}
+@media (max-width:900px){
+    .main-blocki{
+        height: 450px;
+    }
+}
+@media (max-width:768px){
+    .main-blocki{
+        width: 70%;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+    }
+    .sub-block{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fakecontact{
+        height: 25px;
+    }
+}
+@media (max-width:578px){
+    .main-blocki{
+        width: 80%;
+    }
+}
+@media (max-width:400px){
+    .main-blocki{
+        width: 90%;
     }
 }
