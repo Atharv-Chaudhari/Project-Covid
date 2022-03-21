@@ -8,7 +8,6 @@
 
 [Visit on Replit](https://infysoars-project-covid.infysoars.repl.co/)
 
-[Visit on Python Any Where](https://infysoars.pythonanywhere.com)
 
 ## Phase 1 - Detection of Covid Positive Cases using Machine Learning 
 
