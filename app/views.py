@@ -79,10 +79,26 @@ def get_prediction(data, loaded_model=loaded_model):
 def welcome(request):
     return render(request, 'welcome.html')
 
+def update_it():
+    URL = "https://www.worldometers.info/coronavirus/"
+    r = requests.get(URL)
+
+    soup = BeautifulSoup(r.content, 'html5lib')
+    nums = soup.find_all('div', attrs={'class': 'maincounter-number'})
+    wdata = []
+    for tag in nums:
+        wdata.append(tag.text.strip())
+    d = {
+        'cases': wdata[0],
+        'deaths': wdata[1],
+        'recovered': wdata[2]
+    }
+    f = open("static/tmp/data.json", "w")
+    f = json.dump(d, f)
+    return None
 
 def update(request):
-    world_data.delay(0)
-    sleep(5)
+    update_it()
     return redirect('home')
 
 

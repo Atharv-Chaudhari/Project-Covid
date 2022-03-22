@@ -259,6 +259,9 @@ td {
     .cont-vaccine{
         width: 70%;
     }
+    .row {
+        padding-bottom: 12px;
+    }
   }
   @media(max-width:550px){
     .cont-vaccine{
@@ -270,19 +273,11 @@ td {
         width: 90%;
     }
     .vac-img{
-        height: 300px;
+        height: 70%;
     }
   }
   @media(max-width:400px){
     .cont-vaccine{
         width: 95%;
-    }
-    .vac-img{
-        height: 300px;
-    }
-  }
-  @media(max-width:400px){
-    .vac-img{
-        height: 250px;
     }
   }

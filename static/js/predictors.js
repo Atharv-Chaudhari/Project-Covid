@@ -1,4 +1,4 @@
-function sympred(){
+function sympred() {
     document.getElementById("formFour").style.display = "block";
     document.getElementById("active-it1").style.color = "white";
     document.getElementById("active-it3").style.color = "white";
@@ -8,8 +8,9 @@ function sympred(){
     document.getElementById("active-it2").style.backgroundColor = "white";
     document.getElementById("formSeven").style.display = "none";
     document.getElementById("hide_pred2").style.display = "none";
+    nhamnham();
 }
-function imgpred(){
+function imgpred() {
     document.getElementById("formFour").style.display = "none";
     document.getElementById("active-it2").style.color = "white";
     document.getElementById("active-it4").style.color = "white";
@@ -19,4 +20,15 @@ function imgpred(){
     document.getElementById("active-it3").style.color = "lime";
     document.getElementById("formSeven").style.display = "block";
     document.getElementById("hide_pred").style.display = "none";
+}
+function nhamnham() {
+    if (document.getElementById("switch-it").checked) {
+        document.getElementById("formFour").style.display = "none";
+        document.getElementById("formSeven").style.display = "block";
+        document.getElementById("hide_pred").style.display = "none";
+    } else {
+        document.getElementById("formFour").style.display = "block";
+        document.getElementById("formSeven").style.display = "none";
+        document.getElementById("hide_pred2").style.display = "none";
+    }
 }

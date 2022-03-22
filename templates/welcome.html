@@ -147,15 +147,17 @@
             <script>
                 var t;
                 function fun_wel() {
-                    // t = setTimeout(welcome, 7500);
-                    t = setTimeout(welcome, 00);
-                }
-                function welcome() {
+                    t = setTimeout(welcome, 8000);
+                    // t = setTimeout(welcome, 00);
                     window.location.replace("update");
                 }
-                setTimeout(function () {
+                function welcome() {
+                    // window.location.replace("update");
                     document.getElementById('footer').style.display = "flex";
-                }, 7500);
+                }
+                setTimeout(function () {
+                    // document.getElementById('footer').style.display = "flex";
+                },00);
             </script>
 </body>
 

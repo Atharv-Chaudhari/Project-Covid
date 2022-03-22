@@ -220,6 +220,9 @@ select option {
     padding-left: 0%;
     width: 100%;
   }
+  .input-group {
+    margin-bottom: 1.2em;
+}
 }
 .risk-modal h4{
   color:#7ed321;

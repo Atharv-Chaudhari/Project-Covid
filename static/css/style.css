@@ -231,6 +231,12 @@ a {
     border-top: 1px solid #eee;
     margin-top: 1rem;
   }
+
+  .navbar .navbar-menu .navbar-nav>li.active a {
+    background-color: #43f943;
+    color: white;
+    border-radius: 15px;
+  }
 }
 
 .navbar .navbar-menu .navbar-nav>li>a {
@@ -295,10 +301,7 @@ a {
 @media (max-width: 768px) {
   .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
     position: relative;
-    box-shadow: none;
-  }
-  .plk{
-    padding-left: 20%!important;
+    /* box-shadow: none; */
   }
 }
 
@@ -1318,9 +1321,11 @@ td {
   text-align: center;
   padding: 15px;
 }
-.itsflex{
-  width:200px;
+
+.itsflex {
+  width: 200px;
 }
+
 /* ========================================= Final Media Queries Styling =========================== */
 @media (max-width:1100px) {
   .get_live {
@@ -1361,6 +1366,10 @@ td {
 }
 
 @media (max-width:720px) {
+  .itskf {
+    padding: 3%;
+  }
+
   .get_live {
     width: 60%;
   }
@@ -1379,6 +1388,10 @@ td {
 
   .itsvedio {
     height: 350px;
+  }
+
+  .breadcrumb {
+    display: none;
   }
 }
 
@@ -1420,48 +1433,64 @@ td {
 
 @media (max-width:500px) {
   .get_live {
-    width: 85%;
+    width: 95%;
   }
 
   .img-slide {
-    height: 250px !important;
+    height: 100% !important;
   }
 
   .img-slide1 {
-    height: 250px !important;
+    height: 100% !important;
   }
 }
 
-@media (max-width:430px) {
-  .get_live {
-    width: 90%;
+@media (max-width:400px) {
+  .itskf {
+    padding: 7%;
   }
-}
 
-@media (max-width:390px) {
-  .get_live {
-    width: 95%;
-  }
-}
-
-@media (max-width:375px) {
-  .get_live {
-    width: 95%;
-  }
-  .liveit{
+  .liveit {
     flex-direction: column;
   }
-  .itsflex{
+
+  .itsflex {
     padding-top: 4%;
-    width:100%;
+    width: 100%;
   }
-  .ghl{
+
+  .ghl {
     margin-top: -9%;
   }
-  .jkl{
+
+  .jkl {
     height: 10px;
   }
-  .ul.breadcrumb{
-    padding: 10px 32px;
+}
+
+@media (max-width: 768px) {
+  .active {
+    background-color: #43f943;
+    color: white;
   }
+
+  .navbar-nav li:hover {
+    background-color: whitesmoke;
+  }
+
+  .navbar .navbar-menu .navbar-nav>li>a {
+    border-bottom: 1px solid #eceef3;
+    width: 100%;
+  }
+  .active-drop {
+    background-color: whitesmoke;
+    color: blue;
+    border-radius: 0px;
+}
+  .active-dripio{
+    color: blue!important;
+  }
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+    justify-content: center;
+}
 }
