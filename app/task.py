@@ -15,8 +15,8 @@ from PIL import Image
 import base64
 import io
 import base64
-from github import Github
-from github import InputGitTreeElement
+# from github import Github
+# from github import InputGitTreeElement
 import os
 
 
