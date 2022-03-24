@@ -310,8 +310,48 @@
   display: none;
 }
 
+.page-2-res {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: #F0F0F0;
+  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-1-res {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: #F0F0F0;
+  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ============================================================================================== */
 @media (max-width:500px) {
+  .page-2-res {
+    width: 90%;
+  }
+
+  .page-1-res {
+    width: 90%;
+  }
+
+  .qwe {
+    padding-top: 18%;
+  }
+
+  .oiu {
+    padding-top: 16%;
+  }
+
+  .leaveitbro {
+    padding-top: 4%;
+  }
+
   .btn-list {
     display: none;
   }

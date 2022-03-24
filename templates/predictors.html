@@ -421,6 +421,7 @@
                         <label class="lost" for="Gender-female">Female</label>
                     </div>
                     </br>
+                    <div class="qwe"></div>
                     <h3 style="color:#7ed321;font-size: 18px;">Age 60 or Above<span class="required"> *</span></h3>
                     <div class="poi"></div>
                     <div class="input-group others">
@@ -430,6 +431,7 @@
                         <label class="lost" for="age-no">No</label>
                     </div>
                     </br>
+                    <div class="qwe"></div>
                     <h3 style="color:#7ed321;font-size: 18px;">Symptoms </h3>
                     <br>
                     <h3 style="color:black;">1) Cough <span class="required">*</span></h3>
@@ -476,6 +478,7 @@
                         <label class="lost" for="Headache-no">No</label>
                     </div>
                     </br>
+                    <div class="qwe"></div>
                     <h3 style="color:#7ed321;font-size: 18px;">Abroad<span class="required"> *</span></h3>
                     <div class="poi"></div>
                     <div class="input-group others">
@@ -485,6 +488,7 @@
                         <label class="lost" for="Abroad-no">No</label>
                     </div>
                     </br>
+                    <div class="qwe"></div>
                     <h3 style="color:#7ed321;font-size: 18px;">Contact With Covid-19 Patient <span
                             class="required">*</span></h3>
                     <div class="poi"></div>
@@ -496,6 +500,7 @@
                         <label class="lost" for="contact_Patient-no">No</label>
                     </div>
                     </br>
+                    <div class="oiu"></div>
                     <div class="submits">
                         <input class="lost kill" type="submit" value="Submit"
                             style="background-color: #7ed321; color: white;">
@@ -504,13 +509,11 @@
                         {% if flag_it is one %}
                         <br><br>
                         {% if data.prediction in data.one %}
-                        <h2
-                            style="padding-top:10px;padding-bottom:5px;background-color: #F0F0F0;text-align: center;width:60%;margin-left: auto;margin-right: auto;">
+                        <h2 class="page-1-res">
                             Corona Result: <span style="color:red;font-size:23px;"> Positive
                             </span></h2>
                         {% else %}
-                        <h2
-                            style="padding-top:10px;padding-bottom:5px;background-color: #F0F0F0;text-align: center;width:60%;margin-left: auto;margin-right: auto;">
+                        <h2 class="page-1-res">
                             Corona Result: <span style="color:blue;font-size:23px;"> Negative
                             </span></h2>
                         {% endif %}
@@ -568,17 +571,16 @@
                         <input class="lost kill" type="submit" value="Submit"
                             style="background-color: #7ed321; color: white;">
                     </div>
+                    <div class="leaveitbro"></div>
                     <div id="hide_pred2">
                         {% if flag_it is two %}
                         <br><br>
                         {% if imgpred in tk %}
-                        <h2
-                            style="padding-top:10px;padding-bottom:5px;background-color: #F0F0F0;text-align: center;width:60%;margin-left: auto;margin-right: auto;">
+                        <h2 class="page-2-res">
                             Corona Result: <span style="color:red;font-size:23px;"> Positive
                             </span></h2>
                         {% else %}
-                        <h2
-                            style="padding-top:10px;padding-bottom:5px;background-color: #F0F0F0;text-align: center;width:60%;margin-left: auto;margin-right: auto;">
+                        <h2 class="page-2-res">
                             Corona Result: <span style="color:blue;font-size:23px;"> Negative
                             </span></h2>
                         {% endif %}
