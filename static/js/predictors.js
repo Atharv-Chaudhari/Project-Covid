@@ -20,6 +20,7 @@ function imgpred() {
     document.getElementById("active-it3").style.color = "lime";
     document.getElementById("formSeven").style.display = "block";
     document.getElementById("hide_pred").style.display = "none";
+    document.getElementById("switch-it").checked=true;
 }
 function nhamnham() {
     if (document.getElementById("switch-it").checked) {
