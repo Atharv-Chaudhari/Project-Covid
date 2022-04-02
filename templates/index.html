@@ -167,10 +167,16 @@
                                     Analysis <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown plk" id="my-dropdown-id">
-                                    <li><a style="display:flex;" href="https://tabsoft.co/3Gzy8v8" target="_blank"><img style="width:30px; height:30px;" src="static/images/tablue.png"><div style="line-height: 30px;"> &#160&#160Israel Covid Data
-                                            Analysis</div></a></li>
+                                    <li><a style="display:flex;" href="https://tabsoft.co/3Gzy8v8" target="_blank"><img
+                                                style="width:30px; height:30px;" src="static/images/tablue.png">
+                                            <div style="line-height: 30px;"> &#160&#160Israel Covid Data
+                                                Analysis</div>
+                                        </a></li>
                                     <li class="separator"></li>
-                                    <li><a style="display:flex;" href="https://tabsoft.co/3Iax6ak" target="_blank"><img style="width:30px; height:30px;" src="static/images/tablue.png"><div style="line-height: 30px;"> &#160&#160Global Covid Data Analysis</div></a></li>
+                                    <li><a style="display:flex;" href="https://tabsoft.co/3Iax6ak" target="_blank"><img
+                                                style="width:30px; height:30px;" src="static/images/tablue.png">
+                                            <div style="line-height: 30px;"> &#160&#160Global Covid Data Analysis</div>
+                                        </a></li>
                                 </ul>
                             </li>
                             <li class="navbar-dropdown">
@@ -344,6 +350,7 @@
                 <br>
             </div>
 
+
             <div class="covid-info">
                 <div class="card">
                     <!-- <img src="static/images/covid.jpg" class="card__image" /> -->
@@ -401,7 +408,8 @@
                         <span class="card__title">Covid-19</span>
                         <br> <br>
                         <ul style="width:90%;margin-left: auto;margin-right: auto;font-size: 17px;">
-                            <li>COVID-19 (SARS-CoV-2), The novel disease which begun in Wuhan, China in Dec 2019 was declared a pandemic by
+                            <li>COVID-19 (SARS-CoV-2), The novel disease which begun in Wuhan, China in Dec 2019 was
+                                declared a pandemic by
                                 World
                                 Health Organization on 11 March 2020.</li>
                             <br>
@@ -418,7 +426,7 @@
                             <li>As long as the coronavirus spreads through the population, mutations will continue to
                                 happen,
                                 and the delta and omicron variant families continue to evolve</li>
-                                <br>
+                            <br>
                             <li>To slow the spread of disease, policy makers and public health experts in many countries
                                 have
                                 developed a catalog of measures that are applied to a variable degree in most countries
@@ -436,12 +444,52 @@
                 </div>
             </div>
 
+            <div class="nlp-box">
+                <div class="nlp-mini-1">
+                    <div class="nlp-slideshow-container">
+                        <div class="nlp-mySlides nlp-fade">
+                            <img src="static/images/positive_wordcloud.jpg" style="width:100%">
+                            <div class="nlp-text">Word Cloud For Positive Tweets</div>
+                        </div>
+                        <div class="nlp-mySlides nlp-fade">
+                            <img src="static/images/neutral_wordcloud.jpg" style="width:100%">
+                            <div class="nlp-text">Word Cloud For Neutral Tweets</div>
+                        </div>
+                        <div class="nlp-mySlides nlp-fade">
+                            <img src="static/images/negative_wordcloud.jpg" style="width:100%">
+                            <div class="nlp-text">Word Cloud For Negative Tweets</div>
+                        </div>
+                        <div class="nlp-dummy"></div>
+                    </div>
+                    <script>
+                        var slideIndexnlp = 0;
+                        showSlidesnlp();
+
+                        function showSlidesnlp() {
+                            var i;
+                            var slidesnlp = document.getElementsByClassName("nlp-mySlides");
+                            for (i = 0; i < slidesnlp.length; i++) {
+                                slidesnlp[i].style.display = "none";
+                            }
+                            slideIndexnlp++;
+                            if (slideIndexnlp > slidesnlp.length) { slideIndexnlp = 1 }
+                            slidesnlp[slideIndexnlp - 1].style.display = "block";
+                            setTimeout(showSlidesnlp, 4000); // Change image every 4 seconds
+                        }
+                    </script>
+                </div>
+                <div class="nlp-mini-1">
+                    <div class="nlp-ui">
+                        <iframe class="nlp-iframe" src="https://project-covid-nlp.infysoars.repl.co/" frameBorder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
 
             <div class="covid-info">
                 <div class="card">
                     <div class="itsimg">
                         <iframe style="display:block;" width="100%" class="itsvedio"
-                            src="https://www.youtube.com/embed/oqFn6AHoJZQ?playlist=oqFn6AHoJZQ&loop=1">
+                            src="https://www.youtube.com/embed/oqFn6AHoJZQ?playlist=oqFn6AHoJZQ&loop=1" frameBorder="0">
                         </iframe>
                     </div>
                     <div class="slideshow-container">
@@ -567,17 +615,25 @@
             </footer> -->
             <footer>
                 <div class="footer">
-                    <a href="https://github.com/Atharv-Chaudhari/Project-Covid" target="_blank"><h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">
-                        </span><span style="font-size: 25px;color:white;">Team</span>
-                        <bold> Infy<span style="font-size: 25px;color:white;">SOARS </span></span></bold>
-                        <i style="font-size: 25px;" class="fa fa-github" style="font-size:36px"></i></h4></a>
+                    <a href="https://github.com/Atharv-Chaudhari/Project-Covid" target="_blank">
+                        <h4 style="font-size: 25px;color:white;"><span style="font-size: 25px;color:#66f;">
+                            </span><span style="font-size: 25px;color:white;">Team</span>
+                            <bold> Infy<span style="font-size: 25px;color:white;">SOARS </span></span></bold>
+                            <i style="font-size: 25px;" class="fa fa-github" style="font-size:36px"></i>
+                        </h4>
+                    </a>
                     <div class="row">
                         <ul>
-                            <li><a href="https://www.linkedin.com/in/siddharth-kulkarni-0296a01aa/" target="_blank">Siddharth Kulkarni</a></li>
-                            <li><a href="https://www.linkedin.com/in/atharv-chaudhari-4a6105188/" target="_blank">Atharv Chaudhari</a></li>
-                            <li><a href="https://www.linkedin.com/in/rutuja-vaidya-97b5781ab/" target="_blank">Rutuja Vaidya</a></li>
-                            <li><a href="https://www.linkedin.com/in/omkar-patil-14b4581ab/" target="_blank">Omkar Patil</a></li>
-                            <li><a href="https://www.linkedin.com/in/sana-shaikh-b30136176/" target="_blank">Sana Shaikh</a></li>
+                            <li><a href="https://www.linkedin.com/in/siddharth-kulkarni-0296a01aa/"
+                                    target="_blank">Siddharth Kulkarni</a></li>
+                            <li><a href="https://www.linkedin.com/in/atharv-chaudhari-4a6105188/" target="_blank">Atharv
+                                    Chaudhari</a></li>
+                            <li><a href="https://www.linkedin.com/in/rutuja-vaidya-97b5781ab/" target="_blank">Rutuja
+                                    Vaidya</a></li>
+                            <li><a href="https://www.linkedin.com/in/omkar-patil-14b4581ab/" target="_blank">Omkar
+                                    Patil</a></li>
+                            <li><a href="https://www.linkedin.com/in/sana-shaikh-b30136176/" target="_blank">Sana
+                                    Shaikh</a></li>
                         </ul>
                     </div>
                     <div class="sub-footer">

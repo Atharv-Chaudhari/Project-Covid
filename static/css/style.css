@@ -1359,7 +1359,12 @@ td {
     width: 80%;
     padding-right: 0px;
   }
-
+  .nlp-box{
+    flex-direction: column;
+  }
+  .nlp-mini-1{
+    width: 100%!important;
+  }
   .img-slide {
     height: 450px !important;
   }
@@ -1493,4 +1498,113 @@ td {
   .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
     justify-content: center;
 }
+}
+.nlp-box{
+  width: 95%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 25px;
+}
+.nlp-mini-1{
+  width: 50%;
+}
+/* Slideshow container */
+.nlp-slideshow-container {
+  position: relative;
+  padding: 5%;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.nlp-mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.nlp-prev, .nlp-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.nlp-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.nlp-prev:hover, .nlp-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.nlp-text {
+  font-family: 'Times New Roman', Times, serif;
+  color: blue;
+  font-size: 20px;
+  /* padding: 8px 12px; */
+  position: absolute;
+  /* bottom: 8px; */
+  padding-top: 18px;
+  bottom: 20px;
+  width: 90%;
+  text-align: center;
+}
+.nlp-dummy{
+  height: 20px;
+}
+/* Number text (1/3 etc) */
+.nlp-numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.nlp-dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.nlp-active, .nlp-dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.nlp-fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes nlp-fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.nlp-iframe{
+  width: 100%;
+  height: 400px;
+}
+.nlp-ui{
+  margin: auto;
+ vertical-align: center;
 }
