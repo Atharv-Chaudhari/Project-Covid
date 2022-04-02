@@ -25,7 +25,7 @@ from django.template.loader import get_template
  
 # from apscheduler.schedulers.background import BackgroundScheduler
 
-print("################################################## Lets Start Project #############################################################")
+print("============================================================= Lets Start Project =============================================================")
 # Create your views here.
 
 loaded_model = joblib.load('models/model1.sav')
@@ -78,6 +78,9 @@ def get_prediction(data, loaded_model=loaded_model):
 
 def welcome(request):
     return render(request, 'welcome.html')
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
 def update_it():
     URL = "https://www.worldometers.info/coronavirus/"

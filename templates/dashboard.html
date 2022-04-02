@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/sign.css" />
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    <link rel="stylesheet" href="static/css/contact.css" />
     <link rel="stylesheet" href="static/css/loading.css" />
     <link rel="stylesheet" href="static/css/risky_modal.css" />
     <!-- <link rel="stylesheet" href="static/css/riskpredictor.css" /> -->
@@ -24,38 +23,6 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript">
-        function sendEmail() {
-            var flag1 = 0;
-            var flag2 = 0
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "infysoars0@gmail.com",
-                Password: "cmhjpsvbhjkeiabu",
-                To: document.getElementById("email").value,
-                From: 'Team InfySOARS' + "<infysoars0@gmail.com>",
-                Subject: "Thank You For Contacting Team InfySOARS",
-                Body: "<p>Dear " + document.getElementById("name").value + " !</p><p>Your query has been submitted successfully.</p><p>Thank you for reaching out to us.</p>",
-            }).then(
-                flag1 = 1
-            );
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "infysoars0@gmail.com",
-                Password: "cmhjpsvbhjkeiabu",
-                To: "infysoars0@gmail.com",
-                From: "infysoars0@gmail.com",
-                Subject: 'Query: ' + document.getElementById("subject").value,
-                Body: "<h3>Query Raised By:</h3><h4>Name: " + document.getElementById("name").value + "</h4>" + "<br><h3>Message: </h3><h4>" + document.getElementById("message").value + "</h4>",
-            }).then(
-                flag2 = 1
-            );
-            if (flag1 == 1 && flag2 == 1) {
-                alert("Query Submitted Successfully...!!!")
-            }
-        }
-    </script>
 </head>
 
 <!-- <body onload="present()"> -->
@@ -185,12 +152,12 @@
                                 Analysis <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown" id="my-dropdown-id">
-                                <!-- <li><a style="display:flex;" href="https://tabsoft.co/3Gzy8v8" target="_blank"><img
+                                <li><a style="display:flex;" href="https://tabsoft.co/3Gzy8v8" target="_blank"><img
                                             style="width:30px; height:30px;" src="static/images/tablue.png">
                                         <div style="line-height: 30px;"> &#160&#160Israel Covid Data
                                             Analysis</div>
-                                    </a></li> -->
-                                <!-- <li class="separator"></li> -->
+                                    </a></li>
+                                <li class="separator"></li>
                                 <li><a style="display:flex;" href="https://tabsoft.co/3Iax6ak" target="_blank"><img
                                             style="width:30px; height:30px;" src="static/images/tablue.png">
                                         <div style="line-height: 30px;"> &#160&#160Global Covid Data
@@ -376,50 +343,10 @@
         </div>
     </div> -->
 
-        <div class="contact" style="font-family: 'Times New Roman', Times, serif;">
-            <div class="main-blocki">
-                <div class="sub-block">
-                    <img style="-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 25px;" width="100%"
-                        class="imgh" src="static/images/contact.jpg">
-                </div>
-                <div class="fakecontact"></div>
-                <div class="sub-block">
-                    <h4 style="font-size: 25px;color: red;">Contact Us</h4>
-                    <br>
-                    <form onsubmit="sendEmail()" action="contact" method="post">
-                        {% csrf_token %}
-                        <div class="row"><input type="text" style="font-family: 'Times New Roman', Times, serif;"
-                                id="name" name="name" placeholder="Full Name" required>
-                        </div>
-                        <div class="row"><input type="email" style="font-family: 'Times New Roman', Times, serif;"
-                                id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email"
-                                placeholder="Email" required></div>
-                        <div class="row"><input type="text" style="font-family: 'Times New Roman', Times, serif;"
-                                id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="row"><textarea type="text" style="font-family: 'Times New Roman', Times, serif;"
-                                id="message" name="message" rows="4" cols="50" placeholder="Write Your Message"
-                                required></textarea></div>
-                        <br>
-                        <div class="row"><input type="submit" value="Send Message"></div>
-                        <div class="fakecontact"></div>
-                    </form>
-                </div>
-                <!--  </div> -->
-            </div>
-        </div>
 
 
 
-
-
-
-
-
-
-
-
-
+    <div class='tableauPlaceholder' id='viz1648896086154' style='position: relative'><noscript><a href='#'><img alt='Global Covid Data Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalCovidDataAnalysis_16452802295850&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GlobalCovidDataAnalysis_16452802295850&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalCovidDataAnalysis_16452802295850&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1648896086154');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='2377px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
 
         <!-- <div class="social-foot">
