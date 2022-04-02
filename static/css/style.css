@@ -853,6 +853,7 @@ code {
     margin: 40px;
     padding: 32px;
   }
+
 }
 
 .card__image {
@@ -1424,6 +1425,9 @@ td {
   .itsvedio {
     height: 300px;
   }
+  .nlp-text{
+    bottom:4px!important;
+  }
 }
 
 @media (max-width:550px) {
@@ -1470,6 +1474,9 @@ td {
 
   .jkl {
     height: 10px;
+  }
+  .nlp-text{
+    bottom:0px!important;
   }
 }
 

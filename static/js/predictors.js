@@ -8,6 +8,7 @@ function sympred() {
     document.getElementById("active-it2").style.backgroundColor = "white";
     document.getElementById("formSeven").style.display = "none";
     document.getElementById("hide_pred2").style.display = "none";
+    document.getElementById("switch-it").checked=false;
     nhamnham();
 }
 function imgpred() {
