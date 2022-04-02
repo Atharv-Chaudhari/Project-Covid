@@ -101,7 +101,14 @@ def update_it():
     return None
 
 def update(request):
+    from datetime import datetime
+    import time
+    t1=datetime.now()
     update_it()
+    t2=datetime.now()
+    diff=(t2-t1).total_seconds()
+    if(diff<7):
+        time.sleep(7-diff)
     return redirect('home')
 
 
