@@ -1,6 +1,6 @@
 # ✨ Project Covid 
 
-## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-Cache/main/arrow.gif" width="60" height="15" /> [![Project_Status](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml)
+## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-NLP/main/Project%20Covid%20Images/arrow.gif" width="60" height="15" /> [![Project_Status](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml)
 
 [![Project Information Page](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment)
 
