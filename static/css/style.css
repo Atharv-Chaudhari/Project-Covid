@@ -1609,9 +1609,24 @@ td {
 }
 .nlp-iframe{
   width: 100%;
-  height: 365px;
+  height: 400px;
 }
 .nlp-ui{
   margin: auto;
  vertical-align: center;
+}
+@media (max-width: 900px) {
+  .nlp-iframe{
+    height: 400px;
+  }
+}
+@media (max-width: 530px) {
+  .nlp-iframe{
+    height: 380px;
+  }
+}
+@media (max-width: 450px) {
+  .nlp-iframe{
+    height: 360px;
+  }
 }
