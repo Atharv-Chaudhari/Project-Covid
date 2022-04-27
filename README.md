@@ -10,6 +10,7 @@
 
 [Visit on Replit](https://infysoars-project-covid.infysoars.repl.co/)
 
+![System Architecture](https://user-images.githubusercontent.com/61587515/165577978-df90f809-f638-4e38-a472-1eeedbe44656.png)
 
 ## Phase 1 - Detection of Covid Positive Cases using Machine Learning 
 
