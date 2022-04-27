@@ -1,4 +1,6 @@
-# ✨ Project Covid [![GitHub contributors](https://img.shields.io/github/contributors/Portfolio-Shop/portfolioshop.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/graphs/contributors) [![Website cv.lbesson.qc.to](https://img.shields.io/website-up-down-green-red/http/www.portfolioshop.tech)](https://infysoars-project-covid.herokuapp.com)
+# ✨ Project Covid [![Website cv.lbesson.qc.to](https://img.shields.io/website-up-down-green-red/http/www.portfolioshop.tech)](https://infysoars-project-covid.herokuapp.com)
+
+![GitHub Contributors Image](https://contrib.rocks/image?repo=Atharv-Chaudhari/Project-Covid)
 
 ## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-NLP/main/Project%20Covid%20Images/arrow.gif" width="60" height="15" /> [![Project_Status](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml)
 
