@@ -1,6 +1,6 @@
 <p align="center">
-      <img width="200" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/static/images/risklogo.png">
-        <font size="30"> ✨ Project Covid ✨ </font> 
+      <img width="400" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/static/images/risklogo.png">
+      <h1> ✨ Project Covid ✨ </h1> 
 </p>
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Atharv-Chaudhari)
