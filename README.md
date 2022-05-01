@@ -4,6 +4,18 @@
 
 ---
 
+<h2 align="center">😎 Team InfySOARS 😎</h2>
+
+<div align="center">
+
+[![](https://img.shields.io/badge/Siddharth_Kulkarni-yellow?style=for-the-badge)](https://github.com/mykeysid10)
+[![](https://img.shields.io/badge/Atharv_Chaudhari-blueviolet?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
+[![](https://img.shields.io/badge/Rutuja_Vaidya-blue?style=for-the-badge)](https://github.com/rutujavaidya15)
+[![](https://img.shields.io/badge/Omkar_Patil-lightgrey?style=for-the-badge)](https://github.com/OmkarPro)
+[![](https://img.shields.io/badge/Sana_Shaikh-orange?style=for-the-badge)](https://github.com/SANA-306)
+
+</div>
+
 <p align="center">
       <img width="300" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/static/images/risklogo.png">
 </p>
@@ -33,18 +45,6 @@
 ![Gunicorn](https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white)
       
 </div>
-     
-<h2 align="center">😎 Team InfySOARS 😎</h2>
-
-<div align="center">
-
-[![](https://img.shields.io/badge/Siddharth_Kulkarni-yellow?style=for-the-badge)](https://github.com/mykeysid10)
-[![](https://img.shields.io/badge/Atharv_Chaudhari-blueviolet?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
-[![](https://img.shields.io/badge/Rutuja_Vaidya-blue?style=for-the-badge)](https://github.com/rutujavaidya15)
-[![](https://img.shields.io/badge/Omkar_Patil-lightgrey?style=for-the-badge)](https://github.com/OmkarPro)
-[![](https://img.shields.io/badge/Sana_Shaikh-orange?style=for-the-badge)](https://github.com/SANA-306)
-
-</div>
       
 [Visit on Heroku](https://covid-infy-soars.herokuapp.com/)
 
@@ -54,14 +54,14 @@
 
 ## Phase 1 - Detection of Covid Positive Cases using Machine Learning 
 
-[Data Source](https://data.gov.il/dataset/covid-19/resource/d337959a-020a-4ed3-84f7-fca182292308) (CSV Data)
-
+<!-- [Data Source](https://data.gov.il/dataset/covid-19/resource/d337959a-020a-4ed3-84f7-fca182292308) (CSV Data)
+ -->
 ## Phase 2 - Detection of Covid Positive Cases using Deep Learning 
 
-[Data Source](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) (Chest X-Ray Data)
-
+<!-- [Data Source](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) (Chest X-Ray Data)
+ -->
 ## Phase 3 - Global Covid Data Analysis & Vaccine Tracker  
 
-[Data Source](https://github.com/BloombergGraphics/covid-vaccine-tracker-data) (Live Data)
-
+<!-- [Data Source](https://github.com/BloombergGraphics/covid-vaccine-tracker-data) (Live Data)
+ -->
  <a href="#top">Back to top</a>
