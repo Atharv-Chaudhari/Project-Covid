@@ -3,7 +3,9 @@
 ## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-NLP/main/Project%20Covid%20Images/arrow.gif" width="60" height="15" /> [![Project_Status](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml) [![Project Information Page](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment) [![Website cv.lbesson.qc.to](https://img.shields.io/website-up-down-green-red/https/infysoars-project-covid.herokuapp.com)](https://infysoars-project-covid.herokuapp.com) 
 
 ---
+
 ![](https://img.shields.io/github/contributors/Atharv-Chaudhari/Project-Covid) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAtharv-Chaudhari%2FProject-Covid&count_bg=%2371FF06&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Total+Views&edge_flat=false)](https://hits.seeyoufarm.com)
+
 ---
 
 <h2 align="center">😎 Team InfySOARS 😎</h2>
