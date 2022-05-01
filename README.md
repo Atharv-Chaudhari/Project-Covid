@@ -4,7 +4,7 @@
 
 <h1 align="center">✨ Project Covid ✨</h1>
 
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=✨ Project Covid ✨) `#f03c15`
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Atharv-Chaudhari)
 
