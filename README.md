@@ -1,4 +1,6 @@
-# ✨ Project Covid 
+<p align="center">
+    ✨ Project Covid ✨
+</p>
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Atharv-Chaudhari)
 
