@@ -45,10 +45,6 @@
 ![Gunicorn](https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white)
       
 </div>
-      
-[Visit on Heroku](https://covid-infy-soars.herokuapp.com/)
-
-[Visit on Replit](https://infysoars-project-covid.infysoars.repl.co/)
 
 ![System Architecture](https://user-images.githubusercontent.com/61587515/165577978-df90f809-f638-4e38-a472-1eeedbe44656.png)
 
