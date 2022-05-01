@@ -6,7 +6,7 @@
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Atharv-Chaudhari)
 
-## Team InfySOARS :-
+<h2 align="center">😎 Team InfySOARS 😎</h2>
 
 [![](https://img.shields.io/badge/Siddharth_Kulkarni-yellow?style=for-the-badge)](https://github.com/mykeysid10)
 [![](https://img.shields.io/badge/Atharv_Chaudhari-blueviolet?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
