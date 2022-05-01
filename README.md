@@ -1,7 +1,8 @@
 <p align="center">
       <img width="400" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/static/images/risklogo.png">
-      <h1> ✨ Project Covid ✨ </h1> 
 </p>
+
+<h1 align="center">✨ Project Covid ✨</h1>
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Atharv-Chaudhari)
 
