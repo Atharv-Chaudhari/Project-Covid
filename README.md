@@ -1,5 +1,6 @@
 <p align="center">
-    ✨ Project Covid ✨
+      <img width="200" src="http://material-bread.org/logo-shadow.svg" alt="Material Bread logo">
+        <font size="30"> ✨ Project Covid ✨ </font> 
 </p>
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Atharv-Chaudhari)
