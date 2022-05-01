@@ -4,7 +4,7 @@
 
 <h1 align="center">✨ Project Covid ✨</h1>
 
-[![](https://img.shields.io/badge/Hello-yellow?style=for-the-badge)](https://docs.rs/crate/redant/latest)
+[![](https://img.shields.io/badge/Siddharth Kulkarni-yellow?style=for-the-badge)](https://github.com/mykeysid10)
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Atharv-Chaudhari)
 
