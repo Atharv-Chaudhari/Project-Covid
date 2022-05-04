@@ -51,6 +51,7 @@
 
 [![](https://img.shields.io/badge/Siddharth_Kulkarni-purple?style=for-the-badge)](https://github.com/mykeysid10)
 [![](https://img.shields.io/badge/Atharv_Chaudhari-orange?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
+      <br>
 [![](https://img.shields.io/badge/Rutuja_Vaidya-purple?style=for-the-badge)](https://github.com/rutujavaidya15)
 [![](https://img.shields.io/badge/Omkar_Patil-orange?style=for-the-badge)](https://github.com/OmkarPro)
 [![](https://img.shields.io/badge/Sana_Shaikh-purple?style=for-the-badge)](https://github.com/SANA-306)
