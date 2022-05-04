@@ -49,11 +49,11 @@
 
 <div align="center">
 
-[![](https://img.shields.io/badge/Siddharth_Kulkarni-violet?style=for-the-badge)](https://github.com/mykeysid10)
+[![](https://img.shields.io/badge/Siddharth_Kulkarni-purple?style=for-the-badge)](https://github.com/mykeysid10)
 [![](https://img.shields.io/badge/Omkar_Patil-orange?style=for-the-badge)](https://github.com/OmkarPro)
-[![](https://img.shields.io/badge/Rutuja_Vaidya-violet?style=for-the-badge)](https://github.com/rutujavaidya15)
+[![](https://img.shields.io/badge/Rutuja_Vaidya-purple?style=for-the-badge)](https://github.com/rutujavaidya15)
 [![](https://img.shields.io/badge/Sana_Shaikh-orange?style=for-the-badge)](https://github.com/SANA-306)
-[![](https://img.shields.io/badge/Atharv_Chaudhari-violet?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
+[![](https://img.shields.io/badge/Atharv_Chaudhari-purple?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
 
 </div>
  
