@@ -70,8 +70,8 @@
 
 ---
  
- <p align="center">
+<div align="center">
  
       <a href="#top">Back to top</a>
 
-</p>
+</div>
