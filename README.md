@@ -7,7 +7,7 @@
 </p>
 
 <h2 align="center">✨ Project Covid ✨</h2>
-
+<br>
 <h3 align="left">System Architecture</h3>
 
 ![System Architecture](https://user-images.githubusercontent.com/61587515/165577978-df90f809-f638-4e38-a472-1eeedbe44656.png)
