@@ -49,11 +49,11 @@
 
 <div align="center">
 
-[![](https://img.shields.io/badge/Siddharth_Kulkarni-yellow?style=for-the-badge)](https://github.com/mykeysid10)
-[![](https://img.shields.io/badge/Atharv_Chaudhari-blueviolet?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
-[![](https://img.shields.io/badge/Rutuja_Vaidya-blue?style=for-the-badge)](https://github.com/rutujavaidya15)
-[![](https://img.shields.io/badge/Omkar_Patil-lightgrey?style=for-the-badge)](https://github.com/OmkarPro)
-[![](https://img.shields.io/badge/Sana_Shaikh-orange?style=for-the-badge)](https://github.com/SANA-306)
+[![](https://img.shields.io/badge/Siddharth_Kulkarni-blueviolet?style=for-the-badge)](https://github.com/mykeysid10)
+[![](https://img.shields.io/badge/Atharv_Chaudhari-red?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
+[![](https://img.shields.io/badge/Rutuja_Vaidya-blueviolet?style=for-the-badge)](https://github.com/rutujavaidya15)
+[![](https://img.shields.io/badge/Omkar_Patil-red?style=for-the-badge)](https://github.com/OmkarPro)
+[![](https://img.shields.io/badge/Sana_Shaikh-blueviolet?style=for-the-badge)](https://github.com/SANA-306)
 
 </div>
  
