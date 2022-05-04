@@ -15,31 +15,44 @@
 
 <div align="center">
 
-![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
-![](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
-![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-![](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
-![Gunicorn](https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white)
-![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
       
 </div>
 
 ### Phase 2 - Detection of Covid Positive Cases using Deep Learning 
 
+<div align="center">
+      
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+      
+</div>
+
 ### Phase 3 - Global Covid Data Analysis & Covid Vaccine Tracker  
+
+<div align="center">
+      
+![](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
+      
+</div>
 
 ### Phase 4 - Covid Tweets Sentiment Analysis using NLP
 
 ### Phase 5 - UI Development using Django Framework & Deployement using Heroku
 
+<div align="center">
+      
+![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
+![Gunicorn](https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white)
+![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+</div>      
 
 ## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-NLP/main/Project%20Covid%20Images/arrow.gif" width="60" height="15" /> [![Project_Status](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml) [![Project Information Page](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment) [![Website cv.lbesson.qc.to](https://img.shields.io/website-up-down-green-red/https/atharv-chaudhari.github.io/Project-Covid/)](https://infysoars-project-covid.herokuapp.com) 
 
