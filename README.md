@@ -1,12 +1,12 @@
 <p id="#top"></p>
 
-<h2 align="center">😎 Team InfySOARS 😎</h2>
+<h1 align="center">😎 Team InfySOARS 😎</h1>
 
 <p align="center">
       <img width="300" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/static/images/risklogo.png">
 </p>
 
-<h1 align="center">✨ Project Covid ✨</h1>
+<h2 align="center">✨ Project Covid ✨</h2>
 
 <div align="center">
 
@@ -27,6 +27,7 @@
       
 </div>
 
+<h3 align="center">System Architecture</h3>
 ![System Architecture](https://user-images.githubusercontent.com/61587515/165577978-df90f809-f638-4e38-a472-1eeedbe44656.png)
 
 ### Phase 1 - Detection of Covid Positive Cases using Machine Learning 
