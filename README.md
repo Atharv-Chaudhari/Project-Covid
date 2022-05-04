@@ -2,23 +2,11 @@
 
 <h2 align="center">😎 Team InfySOARS 😎</h2>
 
-<div align="center">
-
-[![](https://img.shields.io/badge/Siddharth_Kulkarni-yellow?style=for-the-badge)](https://github.com/mykeysid10)
-[![](https://img.shields.io/badge/Atharv_Chaudhari-blueviolet?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
-[![](https://img.shields.io/badge/Rutuja_Vaidya-blue?style=for-the-badge)](https://github.com/rutujavaidya15)
-[![](https://img.shields.io/badge/Omkar_Patil-lightgrey?style=for-the-badge)](https://github.com/OmkarPro)
-[![](https://img.shields.io/badge/Sana_Shaikh-orange?style=for-the-badge)](https://github.com/SANA-306)
-
-</div>
-
 <p align="center">
       <img width="300" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/static/images/risklogo.png">
 </p>
 
 <h1 align="center">✨ Project Covid ✨</h1>
-
----
 
 <div align="center">
 
@@ -41,18 +29,29 @@
 
 ![System Architecture](https://user-images.githubusercontent.com/61587515/165577978-df90f809-f638-4e38-a472-1eeedbe44656.png)
 
-```
-## Phase 1 - Detection of Covid Positive Cases using Machine Learning 
 
-## Phase 2 - Detection of Covid Positive Cases using Deep Learning 
+### Phase 1 - Detection of Covid Positive Cases using Machine Learning 
 
-## Phase 3 - Global Covid Data Analysis & Covid Vaccine Tracker  
+### Phase 2 - Detection of Covid Positive Cases using Deep Learning 
 
-## Phase 4 - Covid Tweets Sentiment Analysis using NLP
+### Phase 3 - Global Covid Data Analysis & Covid Vaccine Tracker  
 
-## Phase 5 - UI Development using Django Framework & Deployement using Heroku
-```
- 
+### Phase 4 - Covid Tweets Sentiment Analysis using NLP
+
+### Phase 5 - UI Development using Django Framework & Deployement using Heroku
+
+<h2 align="center">Contributors</h2>
+
+<div align="center">
+
+[![](https://img.shields.io/badge/Siddharth_Kulkarni-yellow?style=for-the-badge)](https://github.com/mykeysid10)
+[![](https://img.shields.io/badge/Atharv_Chaudhari-blueviolet?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
+[![](https://img.shields.io/badge/Rutuja_Vaidya-blue?style=for-the-badge)](https://github.com/rutujavaidya15)
+[![](https://img.shields.io/badge/Omkar_Patil-lightgrey?style=for-the-badge)](https://github.com/OmkarPro)
+[![](https://img.shields.io/badge/Sana_Shaikh-orange?style=for-the-badge)](https://github.com/SANA-306)
+
+</div>
+
 ## ⌛ Workflow Status <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-NLP/main/Project%20Covid%20Images/arrow.gif" width="60" height="15" /> [![Project_Status](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/django.yml) [![Project Information Page](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Atharv-Chaudhari/Project-Covid/actions/workflows/pages/pages-build-deployment) [![Website cv.lbesson.qc.to](https://img.shields.io/website-up-down-green-red/https/atharv-chaudhari.github.io/Project-Covid/)](https://infysoars-project-covid.herokuapp.com) 
 
 ## 🧿 Repo Info <img src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid-NLP/main/Project%20Covid%20Images/arrow.gif" width="60" height="15" /> ![](https://img.shields.io/github/contributors/Atharv-Chaudhari/Project-Covid) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAtharv-Chaudhari%2FProject-Covid&count_bg=%2371FF06&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Total+Views&edge_flat=false)](https://hits.seeyoufarm.com) ![](https://img.shields.io/github/forks/Atharv-Chaudhari/Project-Covid) ![](https://img.shields.io/github/stars/Atharv-Chaudhari/Project-Covid) ![](https://img.shields.io/github/last-commit/Atharv-Chaudhari/Project-Covid)
