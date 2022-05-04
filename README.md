@@ -18,13 +18,6 @@
 
 <h1 align="center">✨ Project Covid ✨</h1>
 
-<div align="center">
-
-![](http://ForTheBadge.com/images/badges/built-by-developers.svg)
-[![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Atharv-Chaudhari)
-
-</div>      
-
 ---
 
 <div align="center">
