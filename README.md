@@ -8,6 +8,12 @@
 
 <h2 align="center">✨ Project Covid ✨</h2>
 
+<h3 align="center">System Architecture</h3>
+
+![System Architecture](https://user-images.githubusercontent.com/61587515/165577978-df90f809-f638-4e38-a472-1eeedbe44656.png)
+
+### Phase 1 - Detection of Covid Positive Cases using Machine Learning 
+
 <div align="center">
 
 ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
@@ -26,12 +32,6 @@
 ![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
       
 </div>
-
-<h3 align="center">System Architecture</h3>
-
-![System Architecture](https://user-images.githubusercontent.com/61587515/165577978-df90f809-f638-4e38-a472-1eeedbe44656.png)
-
-### Phase 1 - Detection of Covid Positive Cases using Machine Learning 
 
 ### Phase 2 - Detection of Covid Positive Cases using Deep Learning 
 
