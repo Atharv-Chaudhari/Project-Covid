@@ -50,9 +50,9 @@
 <div align="center">
 
 [![](https://img.shields.io/badge/Siddharth_Kulkarni-black?style=for-the-badge)](https://github.com/mykeysid10)
-[![](https://img.shields.io/badge/Omkar_Patil-gray?style=for-the-badge)](https://github.com/OmkarPro)
+[![](https://img.shields.io/badge/Omkar_Patil-lightgray?style=for-the-badge)](https://github.com/OmkarPro)
 [![](https://img.shields.io/badge/Rutuja_Vaidya-black?style=for-the-badge)](https://github.com/rutujavaidya15)
-[![](https://img.shields.io/badge/Sana_Shaikh-gray?style=for-the-badge)](https://github.com/SANA-306)
+[![](https://img.shields.io/badge/Sana_Shaikh-lightgray?style=for-the-badge)](https://github.com/SANA-306)
 [![](https://img.shields.io/badge/Atharv_Chaudhari-black?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
 
 </div>
