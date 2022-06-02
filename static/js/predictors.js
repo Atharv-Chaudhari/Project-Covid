@@ -34,3 +34,21 @@ function nhamnham() {
         document.getElementById("hide_pred2").style.display = "none";
     }
 }
+function changeityar() {
+    var decider = document.getElementById('checkitman');
+    if (decider.checked) {
+        document.getElementById("hideitman1").style.display = "none";
+        document.getElementById("hideitman2").style.display = "none";
+        document.getElementById("hide_pred2").style.display = "none";
+        document.getElementById("hide_pred3").style.display = "block";
+        document.getElementById("hideitman3").style.display = "flex";
+        document.getElementById("hideitman4").style.display = "flex";
+    } else {
+        document.getElementById("hideitman1").style.display = "flex";
+        document.getElementById("hideitman2").style.display = "flex";
+        document.getElementById("hide_pred2").style.display = "block";
+        document.getElementById("hide_pred3").style.display = "none";
+        document.getElementById("hideitman3").style.display = "none";
+        document.getElementById("hideitman4").style.display = "none";
+    }
+}

@@ -3,3 +3,5 @@ set_envs.py
 back up.txt
 Backup-codes-infysoars0.txt
 __pycache__/
+.cpython-310
+.cpython-39

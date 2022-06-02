@@ -166,8 +166,8 @@
                                                 Analysis</div>
                                         </a></li>
                                     <li class="separator"></li> -->
-                                    <li><a style="display:flex;" href="dashboard"><img
-                                                style="width:30px; height:30px;" src="static/images/tablue.png">
+                                    <li><a style="display:flex;" href="dashboard"><img style="width:30px; height:30px;"
+                                                src="static/images/tablue.png">
                                             <div style="line-height: 30px;"> &#160&#160Global Covid Data
                                                 Analysis</div>
                                         </a></li>
@@ -522,7 +522,15 @@
                 </form>
                 <form class="img-form" method="post" id="formSeven" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <div class="img-alg2">
+                    <div class="hell-imhere">
+                        <div class="hellswitch-button">
+                            <input class="hellswitch-button-checkbox" type="checkbox" onclick="changeityar()" id="checkitman" name="whatisit"
+                                value="itsx"></input>
+                            <label class="switch-button-label" for=""><span
+                                    class="switch-button-label-span">X-Ray</span></label>
+                        </div>
+                    </div>
+                    <div class="img-alg2" id="hideitman1">
                         <div class="divide">
                             <img id="borderimg1" src="static/images/img_pos.jpg" width="100%">
                             <h3 style="text-align: center;">Covid Positive X-Ray Image</h3>
@@ -534,15 +542,39 @@
                             <h3 style="text-align: center;"> Hence, <spanb style="font-size: 17px;color: red;">Covid
                                     Positive !!</span></h3>
                         </div>
-
                     </div>
-                    <div class="img-alg2">
+                    <div class="img-alg3" id="hideitman3">
+                        <div class="divide">
+                            <img id="borderimg1" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/gitpage_images/phase1_temp.jpeg" width="100%">
+                            <h3 style="text-align: center;">Covid Positive X-Ray Image</h3>
+                        </div>
+                        <div class="divide">
+                            <img id="borderimg1" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/gitpage_images/phase1_temp.jpeg" width="100%">
+                            <h3 style="text-align: center;">Red Part Highlights </h3>
+                            <h3 style="text-align: center;"> Opacity.</h3>
+                            <h3 style="text-align: center;"> Hence, <spanb style="font-size: 17px;color: red;">Covid
+                                    Positive !!</span></h3>
+                        </div>
+                    </div>
+                    <div class="img-alg2" id="hideitman2">
                         <div class="divide">
                             <img id="borderimg1" src="static/images/img_neg.jpg" width="100%">
                             <h3 style="text-align: center;">Normal X-Ray Image</h3>
                         </div>
                         <div class="divide">
                             <img id="borderimg1" src="static/images/img_neg_cam.jpg" width="100%">
+                            <h3 style="text-align: center;">No any Lung Part is Superimposed.</h3>
+                            <h3 style="text-align: center;"> Hence, <span style="font-size: 17px;color: blue;">Covid
+                                    Negative !!</span></h3>
+                        </div>
+                    </div>
+                    <div class="img-alg3" id="hideitman4">
+                        <div class="divide">
+                            <img id="borderimg1" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/gitpage_images/phase1_temp.jpeg" width="100%">
+                            <h3 style="text-align: center;">Normal X-Ray Image</h3>
+                        </div>
+                        <div class="divide">
+                            <img id="borderimg1" src="https://raw.githubusercontent.com/Atharv-Chaudhari/Project-Covid/main/gitpage_images/phase1_temp.jpeg" width="100%">
                             <h3 style="text-align: center;">No any Lung Part is Superimposed.</h3>
                             <h3 style="text-align: center;"> Hence, <span style="font-size: 17px;color: blue;">Covid
                                     Negative !!</span></h3>
@@ -574,6 +606,38 @@
                     <div class="leaveitbro"></div>
                     <div id="hide_pred2">
                         {% if flag_it is two %}
+                        <br><br>
+                        {% if imgpred in tk %}
+                        <h2 class="page-2-res">
+                            Corona Result: <span style="color:red;font-size:23px;"> Positive
+                            </span></h2>
+                        {% else %}
+                        <h2 class="page-2-res">
+                            Corona Result: <span style="color:blue;font-size:23px;"> Negative
+                            </span></h2>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                    <div id="hide_pred3">
+                        {% if flag_it is three %}
+                        <script>
+                            document.getElementById('checkitman').checked=true;
+                            document.getElementById("hideitman1").style.display = "none";
+                            document.getElementById("hideitman2").style.display = "none";
+                            document.getElementById("hide_pred2").style.display = "none";
+                            document.getElementById("hide_pred3").style.display = "block";
+                            var mq = window.matchMedia( "(max-width: 500px)" );
+                            if (mq.matches) {
+                                document.getElementById("hideitman3").style.display = "flex";
+                                document.getElementById("hideitman4").style.display = "flex";
+                                document.getElementById("hideitman3").style.flexFlow  = "column";
+                                document.getElementById("hideitman4").style.flexFlow  = "column";
+                            }
+                            else {
+                                document.getElementById("hideitman3").style.display = "flex";
+                                document.getElementById("hideitman4").style.display = "flex";
+                            }
+                        </script>
                         <br><br>
                         {% if imgpred in tk %}
                         <h2 class="page-2-res">

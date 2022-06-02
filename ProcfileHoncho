@@ -1,2 +1,2 @@
 web: gunicorn Covid.wsgi --workers 1
-celery: celery -A Covid worker -l info -P eventlet --without-heartbeat --without-gossip --without-mingle
+celery: celery -A Covid worker -l info -P eventlet --without-heartbeat --without-gossip --without-mingle --concurrency=10 -n worker1@%h

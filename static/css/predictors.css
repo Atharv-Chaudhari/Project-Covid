@@ -167,7 +167,9 @@
 .img-alg2 {
   display: flex;
 }
-
+.img-alg3 {
+  display: none;
+}
 .take-file {
   width: 50%;
   padding-left: 10%;
@@ -456,4 +458,87 @@
   .switch-toggle input[type="checkbox"]+label::before {
     font-size: 14px;
   }
+}
+/* ================================================================================ */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.hell-imhere {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.hellswitch-button {
+  background: whitesmoke;
+  border-radius: 30px;
+  /* box-shadow: -3px -3px 5px rgba(255, 255, 255, .5),
+      3px 3px 5px rgba(0, 0, 0, .25); */
+      box-shadow: 0px 0px 3px 5px #DCDCDC;
+  overflow: hidden;
+  width: 240px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: black;
+  position: relative;
+  padding-right: 120px;
+  position: relative;
+}
+.hellswitch-button:before {
+  content: "CT Scan";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+.hellswitch-button-checkbox {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.hellswitch-button-checkbox:checked + .switch-button-label:before {
+  transform: translateX(120px);
+  transition: transform 300ms linear;
+}
+.hellswitch-button-checkbox + .switch-button-label {
+  position: relative;
+  padding: 15px 0;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+.hellswitch-button-checkbox + .switch-button-label:before {
+  content: "";
+  background: #155FFF;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.hellswitch-button-checkbox + .switch-button-label .switch-button-label-span {
+  position: relative;
+}
+.switch-button-label-span{
+  font-size: 18px;
 }

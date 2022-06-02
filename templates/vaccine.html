@@ -391,9 +391,24 @@
                             {% for key, value in i.items %}
                             {% if key == slot %}
                             <td>
-                                {% for k in value %}
-                                <pre> {{ k }} </pre>
-                                {% endfor %}
+                                <table style="text-align: center;align-items: center;font-family: Arial, Helvetica, sans-serif;white-space: nowrap">
+                                    {% for xyz in value|slice:":1" %}
+                                    <tr>
+                                        {% for gh in xyz %}
+                                        <th>{{ gh }}</th>
+                                        {% endfor %}
+                                    </tr>
+                                    {% endfor %}
+                                    {% for xyz in value|slice:"1:" %}
+                                        {% for gh in xyz %}
+                                        <tr>
+                                            {% for hj in gh %}
+                                                <td>{{ hj }}</td>
+                                            {% endfor %}
+                                        </tr>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </table>
                             </td>
                             {% else %}
                             <td>{{ value }}</td>

@@ -30,6 +30,17 @@ print("============================================================= Lets Start 
 
 loaded_model = joblib.load('models/model1.sav')
 
+# def saveme(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,prediction,email, country):
+#     try:
+#         tempo=(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,prediction,email, country)
+#         query1='''Insert into phase1 values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'''
+#         cursor.execute(query1,tempo)
+#         print("Data has been Saved Successfully...!!")
+#     except mysql.connector.Error as e:
+#         print(e)
+#     mydb.commit()
+        # return redirect()
+
 def get_prediction(data, loaded_model=loaded_model):
     data_model = {
         'cough': data['Cough'],
@@ -74,6 +85,9 @@ def get_prediction(data, loaded_model=loaded_model):
     # file.write(str(messageContent))
     # file.close()
     # print(str(messageContent))
+    # print(data_model)
+    # saveme(data_model['cough'], data_model['fever'], data_model['sore_throat'], data_model['shortness_of_breath'], data_model['head_ache'], data_model['age_60_and_above'], data_model['gender'], data_model['abroad'], data_model['contact_with_covid_patient'], data_model['prob'], data_model['prediction'], data_model['email'], data_model['country'])
+    saveme.delay(data_model['cough'], data_model['fever'], data_model['sore_throat'], data_model['shortness_of_breath'], data_model['head_ache'], data_model['age_60_and_above'], data_model['gender'], data_model['abroad'], data_model['contact_with_covid_patient'], data_model['prob'], data_model['prediction'], data_model['email'], data_model['country'])
     return data_model
 
 def welcome(request):
@@ -197,7 +211,13 @@ def vaccine_tracker(pincode, date):
                 data[i]['available_capacity_dose1'])
             d['Available Dose 2 Quantity'] = str(
                 data[i]['available_capacity_dose2'])
-            d['Slots'] = list(data[i]['slots'])
+            sub_data=[]
+            for hell in list(data[i]['slots']):
+                t=[]
+                t.append(hell['time'])
+                t.append(hell['seats'])
+                sub_data.append(t)
+            d['Slots'] = [['Time','Seats'],sub_data]
             display_data.append(d)
         l = list(display_data[0].keys())
         context = {
@@ -223,7 +243,18 @@ def img_process(img,email):
     send_img_mail_task.delay(data)
     return z
 
-    
+def img_process2(img,email):
+    model_1 = tf.keras.models.load_model('models/CNN_1.h5')
+    z_img = cv2.imread(img)
+    z_img = cv2.resize(z_img, (70, 70)) / 255.0
+    z_img = z_img.reshape(1, z_img.shape[0], z_img.shape[1], z_img.shape[2])
+        
+    z = model_1.predict(z_img)
+    z = np.argmax(z, axis = 1)
+    data={'email':email,'output':str(z[0]),'img':img}
+    send_img_mail_task2.delay(data)
+    return z
+
 from django.shortcuts import render
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
@@ -232,6 +263,7 @@ def predictors(request):
     zero=0
     one=1
     two=2
+    three=3
     if request.method == 'POST':
         if request.POST.get("form_type") == 'formFour':
             flag_it=1
@@ -244,7 +276,7 @@ def predictors(request):
             }
             return render(request, 'predictors.html', context)
         if request.POST.get("form_type") == 'formSeven' and request.FILES['image']:
-            flag_it=2
+            whatsup = request.POST.get('whatisit')
             filename = request.FILES['image']
             filename=str(filename)
             file_data=request.FILES['image'].read()
@@ -253,9 +285,20 @@ def predictors(request):
             print(img)
             with open("static/tmp/image"+str(filename[temp:]), "wb") as outfile:
                 outfile.write(file_data)
-            imgpred=img_process(img,request.POST['img_email'])
-            file_n="static/tmp/image"+str(filename[temp:])
-            tk=[1]
-            return render(request, 'predictors.html',{'imgpred':imgpred[0],'img_result':file_n,'tk':tk,'zero':one,
-                'flag_it':flag_it,'two':two})
+            if whatsup:
+                flag_it=3
+                imgpred=img_process2(img,request.POST['img_email'])
+                file_n="static/tmp/image"+str(filename[temp:])
+                tk=[1]
+                print("Its CT Scan...!!!!")
+                return render(request, 'predictors.html',{'imgpred':imgpred[0],'img_result':file_n,'tk':tk,'zero':one,
+                    'flag_it':flag_it,'three':three})
+            else:
+                flag_it=2
+                imgpred=img_process(img,request.POST['img_email'])
+                file_n="static/tmp/image"+str(filename[temp:])
+                tk=[1]
+                print("Its X-Ray...!!!")
+                return render(request, 'predictors.html',{'imgpred':imgpred[0],'img_result':file_n,'tk':tk,'zero':one,
+                    'flag_it':flag_it,'two':two})
     return render(request, 'predictors.html',{'flag_it':flag_it,'zero':zero})
