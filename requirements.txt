@@ -16,3 +16,4 @@ opencv-python-headless
 matplotlib
 keras
 tensorflow-cpu==2.5.0
+mysql-connector
