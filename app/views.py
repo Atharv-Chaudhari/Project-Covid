@@ -252,7 +252,6 @@ def img_process2(img,email):
     z = model_1.predict(z_img)
     z = np.argmax(z, axis = 1)
     data={'email':email,'output':str(z[0]),'img':img}
-    send_img_mail_task2.delay(data)
     return z
 
 from django.shortcuts import render
