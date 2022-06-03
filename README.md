@@ -72,9 +72,7 @@
 </div>
  
  ---
- 
- ![Github Page](https://user-images.githubusercontent.com/61587515/171912454-5ea01a32-c5b5-4957-979d-fcc932375e9c.svg)
-  
+   
 <div align="center">
       <a href="#top">Back to top</a>
 </div>
