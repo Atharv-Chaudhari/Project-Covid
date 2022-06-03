@@ -63,11 +63,11 @@
 
 <div align="center">
 
-[![](https://img.shields.io/badge/Siddharth_Kulkarni-purple?style=for-the-badge)](https://github.com/mykeysid10)
-[![](https://img.shields.io/badge/Omkar_Patil-orange?style=for-the-badge)](https://github.com/OmkarPro)
-[![](https://img.shields.io/badge/Rutuja_Vaidya-purple?style=for-the-badge)](https://github.com/rutujavaidya15)
-[![](https://img.shields.io/badge/Sana_Shaikh-orange?style=for-the-badge)](https://github.com/SANA-306)
-[![](https://img.shields.io/badge/Atharv_Chaudhari-purple?style=for-the-badge)](https://github.com/Atharv-Chaudhari)
+[![](https://img.shields.io/badge/Siddharth_Kulkarni-purple?style=for-the-badge)](https://www.linkedin.com/in/siddharth-kulkarni-0296a01aa/)
+[![](https://img.shields.io/badge/Omkar_Patil-orange?style=for-the-badge)](https://www.linkedin.com/in/omkar-patil-14b4581ab/)
+[![](https://img.shields.io/badge/Rutuja_Vaidya-purple?style=for-the-badge)](https://www.linkedin.com/in/rutuja-vaidya-97b5781ab/)
+[![](https://img.shields.io/badge/Sana_Shaikh-orange?style=for-the-badge)](https://www.linkedin.com/in/sana-shaikh-b30136176/)
+[![](https://img.shields.io/badge/Atharv_Chaudhari-purple?style=for-the-badge)](https://www.linkedin.com/in/Atharv-Chaudhari/)
 
 </div>
  
