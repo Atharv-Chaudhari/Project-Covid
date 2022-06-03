@@ -72,9 +72,7 @@
 </div>
  
  ---
- 
- ![output-onlinepngtools](https://user-images.githubusercontent.com/61587515/171909934-03356dc6-adb9-4e89-99f4-b461c4d56ad0.png)
- 
+  
 <div align="center">
       <a href="#top">Back to top</a>
 </div>
