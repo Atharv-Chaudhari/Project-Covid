@@ -10,6 +10,8 @@ env:
   email_user: tp
   email_pass: tp
   heroku_secret: tp
+  db_user: '${{ secrets.db_user }}'
+  db_pass: '${{ secrets.db_pass }}'
 
 jobs:
   build:
