@@ -252,7 +252,11 @@ def img_process2(img,email):
         
     z = model_1.predict(z_img)
     z = np.argmax(z, axis = 1)
-    data={'email':email,'output':str(z[0]),'img':img}
+    if(z[0]==1):
+        res="Positive"
+    else:
+        res="Negative"
+    savemyimg2.delay(email,img,res)
     return z
 
 from django.shortcuts import render

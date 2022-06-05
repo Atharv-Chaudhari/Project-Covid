@@ -94,7 +94,7 @@ def world_data(d):
     return None
 
 @shared_task
-def savemyimg(email,original_img,gradcam_img):
+def savemyimg(email,original_img,gradcam_img,result):
     mydb = mysql.connector.connect(
             database=getattr(settings, "DB_USER", None),
             host="remotemysql.com",
@@ -106,8 +106,8 @@ def savemyimg(email,original_img,gradcam_img):
     original_img = base64.b64encode(open(original_img,'rb').read())
     gradcam_img = base64.b64encode(open(gradcam_img,'rb').read())
     try:
-        tempo=(email,original_img,gradcam_img)
-        query1='''Insert into phase2a values (%s,%s,%s);'''
+        tempo=(email,original_img,gradcam_img,result)
+        query1='''Insert into phase2a(email,original_img,gradcam_img,Prediction) values (%s,%s,%s,%s);'''
         cursor.execute(query1,tempo)
     except mysql.connector.Error as e:
         print(e)
@@ -116,7 +116,7 @@ def savemyimg(email,original_img,gradcam_img):
     print("Saving Phase 2 X-Ray Successfull...!!!")
 
 @shared_task
-def savemyimg2(email,original_img,gradcam_img):
+def savemyimg2(email,original_img,result):
     mydb = mysql.connector.connect(
             database=getattr(settings, "DB_USER", None),
             host="remotemysql.com",
@@ -126,10 +126,9 @@ def savemyimg2(email,original_img,gradcam_img):
         )
     cursor = mydb.cursor()
     original_img = base64.b64encode(open(original_img,'rb').read())
-    gradcam_img = base64.b64encode(open(gradcam_img,'rb').read())
     try:
-        tempo=(email,original_img,gradcam_img)
-        query1='''Insert into phase2b values (%s,%s,%s);'''
+        tempo=(email,original_img,result)
+        query1='''Insert into phase2b(email,original_img,Prediction) values (%s,%s,%s);'''
         cursor.execute(query1,tempo)
     except mysql.connector.Error as e:
         print(e)
@@ -148,7 +147,12 @@ def send_img_mail_task(data):
         'cam_img':str(data['img'].replace("image", "cam_pred").split("/")[-1]),
     }
     # heading = "Test Report By Team InfySOARS"
-    savemyimg.delay(ctx['email'],data['img'],data['img'].replace("image", "cam_pred"))
+    res=""
+    if(ctx['output']==1):
+        res="Positive"
+    else:
+        res="Negative"
+    savemyimg.delay(ctx['email'],data['img'],data['img'].replace("image", "cam_pred"),res)
     messageContent = get_template('img_email.html').render(ctx)
     # msg = EmailMessage(heading, messageContent, '<infysoars0@gmail.com>',
     #                    [data['email']])
