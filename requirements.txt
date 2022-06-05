@@ -18,3 +18,4 @@ keras
 tensorflow-cpu==2.5.0
 mysql-connector
 protobuf==3.19.4
+django-environ

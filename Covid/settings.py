@@ -10,19 +10,32 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from logging import exception
 from pathlib import Path
 import os
 import django_heroku
 
 try:
-    import set_envs
-    os.system('python set_envs.py')
-    print("Environment Variables Check Process Done...")
-
+    import environ
+    env = environ.Env()
+    environ.Env.read_env()
+    EMAIL_USER = env('email_user')
+    EMAIL_PASS = env('email_pass')
+    HEROKU_SECRET = env('heroku_secret')
+    DB_USER = env('db_user')
+    DB_PASS = env('db_pass')
+    CELERY_URL = env('celery_url')
+    print("LOCALHOST Is Setting Up The Environment Variables...!!!")
 except:
-    print("Environment Variables Check Process not Done...")
+    EMAIL_USER = os.environ.get("email_user")
+    EMAIL_PASS = os.environ.get("email_pass")
+    HEROKU_SECRET = os.environ.get("heroku_secret")
+    DB_USER = os.environ.get("db_user")
+    DB_PASS = os.environ.get("db_pass")
+    CELERY_URL = os.environ.get("celery_url")
+    print("WEBSERVER Is Setting Up The Environment Variables...!!!")
 
-
+print("=========================== Welcome!, Team InfySoars Presents 'Project Covid' ==============================")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
@@ -32,7 +45,7 @@ STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("heroku_secret")
+SECRET_KEY = HEROKU_SECRET
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False

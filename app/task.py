@@ -18,14 +18,13 @@ import base64
 # from github import Github
 # from github import InputGitTreeElement
 import os
-
+from django.conf import settings
 import mysql.connector
-
 mydb = mysql.connector.connect(
-            database=os.environ.get("db_user"),
+            database=getattr(settings, "DB_USER", None),
             host="remotemysql.com",
-            user=os.environ.get("db_user"),
-            password=os.environ.get("db_pass"),
+            user=getattr(settings, "DB_USER", None),
+            password=getattr(settings, "DB_PASS", None),
             port=3306
         )
 cursor = mydb.cursor()
@@ -33,10 +32,10 @@ cursor = mydb.cursor()
 @shared_task
 def saveme(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,pred,email, country):
     mydb = mysql.connector.connect(
-            database=os.environ.get("db_user"),
+            database=getattr(settings, "DB_USER", None),
             host="remotemysql.com",
-            user=os.environ.get("db_user"),
-            password=os.environ.get("db_pass"),
+            user=getattr(settings, "DB_USER", None),
+            password=getattr(settings, "DB_PASS", None),
             port=3306
         )
     cursor = mydb.cursor()
@@ -97,10 +96,10 @@ def world_data(d):
 @shared_task
 def savemyimg(email,original_img,gradcam_img):
     mydb = mysql.connector.connect(
-            database=os.environ.get("db_user"),
+            database=getattr(settings, "DB_USER", None),
             host="remotemysql.com",
-            user=os.environ.get("db_user"),
-            password=os.environ.get("db_pass"),
+            user=getattr(settings, "DB_USER", None),
+            password=getattr(settings, "DB_PASS", None),
             port=3306
         )
     cursor = mydb.cursor()
@@ -119,10 +118,10 @@ def savemyimg(email,original_img,gradcam_img):
 @shared_task
 def savemyimg2(email,original_img,gradcam_img):
     mydb = mysql.connector.connect(
-            database=os.environ.get("db_user"),
+            database=getattr(settings, "DB_USER", None),
             host="remotemysql.com",
-            user=os.environ.get("db_user"),
-            password=os.environ.get("db_pass"),
+            user=getattr(settings, "DB_USER", None),
+            password=getattr(settings, "DB_PASS", None),
             port=3306
         )
     cursor = mydb.cursor()
@@ -166,7 +165,7 @@ def send_img_mail_task(data):
 
     sender_email = "infysoars0@gmail.com"
     receiver_email = data['email']
-    password = os.environ.get("email_pass")
+    password = getattr(settings, "EMAIL_PASS", None)
 
     # Create MIMEMultipart object
     msg = MIMEMultipart("alternative")
@@ -233,7 +232,7 @@ def send_img_mail_task2(data):
 
     sender_email = "infysoars0@gmail.com"
     receiver_email = data['email']
-    password = os.environ.get("email_pass")
+    password = getattr(settings, "EMAIL_PASS", None)
 
     # Create MIMEMultipart object
     msg = MIMEMultipart("alternative")

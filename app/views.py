@@ -17,7 +17,8 @@ import cv2
 import tensorflow as tf
 from django.http import HttpResponse
 from django.views.generic import View
- 
+from django.conf import settings
+
 #importing get_template from loader
 from django.template.loader import get_template
  

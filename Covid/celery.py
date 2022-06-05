@@ -1,5 +1,6 @@
 import os
 from celery import Celery
+from django.conf import settings
 
 # Set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Covid.settings')
@@ -19,7 +20,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Covid.settings')
 # event_queue_expires = 60 # Will delete all celeryev. queues without consumers after 1 minute.
 # worker_prefetch_multiplier = 1 # Disable prefetching, it's causes problems and doesn't help performance
 # worker_concurrency = 50 # If you tasks are CPU bound, then limit to the number of cores, otherwise increase substainally
-app = Celery('Covid', broker=os.environ.get("celery_url"))
+app = Celery('Covid', broker=getattr(settings, "CELERY_URL", None))
 
 # app = Celery('Covid')
 
