@@ -80,6 +80,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
+
 ROOT_URLCONF = 'Covid.urls'
 
 TEMPLATES = [
