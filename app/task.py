@@ -20,25 +20,33 @@ import base64
 import os
 from django.conf import settings
 import mysql.connector
-mydb = mysql.connector.connect(
-            database=getattr(settings, "DB_USER", None),
-            host="remotemysql.com",
-            user=getattr(settings, "DB_USER", None),
-            password=getattr(settings, "DB_PASS", None),
-            port=3306
-        )
-cursor = mydb.cursor()
+try:
+    mydb = mysql.connector.connect(
+                database=getattr(settings, "DB_USER", None),
+                host="remotemysql.com",
+                user=getattr(settings, "DB_USER", None),
+                password=getattr(settings, "DB_PASS", None),
+                port=3306
+            )
+    cursor = mydb.cursor()
+except Exception as e:
+    print("Error :-",e)
+    print("Found Database Connection Issue..!!")
 
 @shared_task
 def saveme(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,pred,email, country):
-    mydb = mysql.connector.connect(
-            database=getattr(settings, "DB_USER", None),
-            host="remotemysql.com",
-            user=getattr(settings, "DB_USER", None),
-            password=getattr(settings, "DB_PASS", None),
-            port=3306
-        )
-    cursor = mydb.cursor()
+    try:
+        mydb = mysql.connector.connect(
+                database=getattr(settings, "DB_USER", None),
+                host="remotemysql.com",
+                user=getattr(settings, "DB_USER", None),
+                password=getattr(settings, "DB_PASS", None),
+                port=3306
+            )
+        cursor = mydb.cursor()
+    except Exception as e:
+        print("Error :-",e)
+        print("Found Database Connection Issue..!!")
     if(pred==0):
         prediction="Negative"
     else:
@@ -95,14 +103,18 @@ def world_data(d):
 
 @shared_task
 def savemyimg(email,original_img,gradcam_img,result):
-    mydb = mysql.connector.connect(
-            database=getattr(settings, "DB_USER", None),
-            host="remotemysql.com",
-            user=getattr(settings, "DB_USER", None),
-            password=getattr(settings, "DB_PASS", None),
-            port=3306
-        )
-    cursor = mydb.cursor()
+    try:
+        mydb = mysql.connector.connect(
+                database=getattr(settings, "DB_USER", None),
+                host="remotemysql.com",
+                user=getattr(settings, "DB_USER", None),
+                password=getattr(settings, "DB_PASS", None),
+                port=3306
+            )
+        cursor = mydb.cursor()
+    except Exception as e:
+        print("Error :-",e)
+        print("Found Database Connection Issue..!!")
     original_img = base64.b64encode(open(original_img,'rb').read())
     gradcam_img = base64.b64encode(open(gradcam_img,'rb').read())
     try:
@@ -117,14 +129,18 @@ def savemyimg(email,original_img,gradcam_img,result):
 
 @shared_task
 def savemyimg2(email,original_img,result):
-    mydb = mysql.connector.connect(
-            database=getattr(settings, "DB_USER", None),
-            host="remotemysql.com",
-            user=getattr(settings, "DB_USER", None),
-            password=getattr(settings, "DB_PASS", None),
-            port=3306
-        )
-    cursor = mydb.cursor()
+    try:
+        mydb = mysql.connector.connect(
+                database=getattr(settings, "DB_USER", None),
+                host="remotemysql.com",
+                user=getattr(settings, "DB_USER", None),
+                password=getattr(settings, "DB_PASS", None),
+                port=3306
+            )
+        cursor = mydb.cursor()
+    except Exception as e:
+        print("Error :-",e)
+        print("Found Database Connection Issue..!!")
     original_img = base64.b64encode(open(original_img,'rb').read())
     try:
         tempo=(email,original_img,result)
