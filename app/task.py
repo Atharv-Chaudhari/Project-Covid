@@ -36,29 +36,32 @@ except Exception as e:
 @shared_task
 def saveme(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,pred,email, country):
     try:
-        mydb = mysql.connector.connect(
-                database=getattr(settings, "DB_USER", None),
-                host="remotemysql.com",
-                user=getattr(settings, "DB_USER", None),
-                password=getattr(settings, "DB_PASS", None),
-                port=3306
-            )
-        cursor = mydb.cursor()
-    except Exception as e:
-        print("Error :-",e)
-        print("Found Database Connection Issue..!!")
-    if(pred==0):
-        prediction="Negative"
-    else:
-        prediction="Positive"
-    try:
-        tempo=(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,prediction,email, country)
-        query1='''Insert into phase1(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,prediction,email, country) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'''
-        cursor.execute(query1,tempo)
-        print("Data has been Saved Successfully...!!")
-    except mysql.connector.Error as e:
-        print(e)
-    mydb.commit()
+        try:
+            mydb = mysql.connector.connect(
+                    database=getattr(settings, "DB_USER", None),
+                    host="remotemysql.com",
+                    user=getattr(settings, "DB_USER", None),
+                    password=getattr(settings, "DB_PASS", None),
+                    port=3306
+                )
+            cursor = mydb.cursor()
+        except Exception as e:
+            print("Error :-",e)
+            print("Found Database Connection Issue..!!")
+        if(pred==0):
+            prediction="Negative"
+        else:
+            prediction="Positive"
+        try:
+            tempo=(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,prediction,email, country)
+            query1='''Insert into phase1(cough,fever,sore_throat,shortness_of_breath,head_ache,age_60_and_above,gender,abroad,contact_with_covid_patient,prob,prediction,email, country) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'''
+            cursor.execute(query1,tempo)
+            print("Data has been Saved Successfully...!!")
+        except mysql.connector.Error as e:
+            print(e)
+        mydb.commit()
+    except:
+        print("Saving Error...!!!")
 
 @shared_task
 def sleepy(duration):
@@ -104,53 +107,59 @@ def world_data(d):
 @shared_task
 def savemyimg(email,original_img,gradcam_img,result):
     try:
-        mydb = mysql.connector.connect(
-                database=getattr(settings, "DB_USER", None),
-                host="remotemysql.com",
-                user=getattr(settings, "DB_USER", None),
-                password=getattr(settings, "DB_PASS", None),
-                port=3306
-            )
-        cursor = mydb.cursor()
-    except Exception as e:
-        print("Error :-",e)
-        print("Found Database Connection Issue..!!")
-    original_img = base64.b64encode(open(original_img,'rb').read())
-    gradcam_img = base64.b64encode(open(gradcam_img,'rb').read())
-    try:
-        tempo=(email,original_img,gradcam_img,result)
-        query1='''Insert into phase2a(email,original_img,gradcam_img,Prediction) values (%s,%s,%s,%s);'''
-        cursor.execute(query1,tempo)
-    except mysql.connector.Error as e:
-        print(e)
-    
-    mydb.commit()
-    print("Saving Phase 2 X-Ray Successfull...!!!")
+        try:
+            mydb = mysql.connector.connect(
+                    database=getattr(settings, "DB_USER", None),
+                    host="remotemysql.com",
+                    user=getattr(settings, "DB_USER", None),
+                    password=getattr(settings, "DB_PASS", None),
+                    port=3306
+                )
+            cursor = mydb.cursor()
+        except Exception as e:
+            print("Error :-",e)
+            print("Found Database Connection Issue..!!")
+        original_img = base64.b64encode(open(original_img,'rb').read())
+        gradcam_img = base64.b64encode(open(gradcam_img,'rb').read())
+        try:
+            tempo=(email,original_img,gradcam_img,result)
+            query1='''Insert into phase2a(email,original_img,gradcam_img,Prediction) values (%s,%s,%s,%s);'''
+            cursor.execute(query1,tempo)
+        except mysql.connector.Error as e:
+            print(e)
+        
+        mydb.commit()
+        print("Saving Phase 2 X-Ray Successfull...!!!")
+    except:
+        print("Saving Error...!!!")
 
 @shared_task
 def savemyimg2(email,original_img,result):
     try:
-        mydb = mysql.connector.connect(
-                database=getattr(settings, "DB_USER", None),
-                host="remotemysql.com",
-                user=getattr(settings, "DB_USER", None),
-                password=getattr(settings, "DB_PASS", None),
-                port=3306
-            )
-        cursor = mydb.cursor()
-    except Exception as e:
-        print("Error :-",e)
-        print("Found Database Connection Issue..!!")
-    original_img = base64.b64encode(open(original_img,'rb').read())
-    try:
-        tempo=(email,original_img,result)
-        query1='''Insert into phase2b(email,original_img,Prediction) values (%s,%s,%s);'''
-        cursor.execute(query1,tempo)
-    except mysql.connector.Error as e:
-        print(e)
-    
-    mydb.commit()
-    print("Saving Phase 2 CT Scan Successfull...!!!")
+        try:
+            mydb = mysql.connector.connect(
+                    database=getattr(settings, "DB_USER", None),
+                    host="remotemysql.com",
+                    user=getattr(settings, "DB_USER", None),
+                    password=getattr(settings, "DB_PASS", None),
+                    port=3306
+                )
+            cursor = mydb.cursor()
+        except Exception as e:
+            print("Error :-",e)
+            print("Found Database Connection Issue..!!")
+        original_img = base64.b64encode(open(original_img,'rb').read())
+        try:
+            tempo=(email,original_img,result)
+            query1='''Insert into phase2b(email,original_img,Prediction) values (%s,%s,%s);'''
+            cursor.execute(query1,tempo)
+        except mysql.connector.Error as e:
+            print(e)
+        
+        mydb.commit()
+        print("Saving Phase 2 CT Scan Successfull...!!!")
+    except:
+        print("Saving Error...!!!")
 
 @shared_task
 def send_img_mail_task(data):
