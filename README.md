@@ -1,6 +1,6 @@
 <p id="#top"></p>
 
-<h1> 🆘🆘🆘🆘🆘🆘 Note :- Project Environment may stop working soon as heroku has removed its all free services.....!!!!! 💔💔💔</h1>
+<h6> ⚠️⚠️⚠️ Note :- Project Environment may have stopped working due to removal of all free services by heroku from November 28th, 2022.....!!!!! </h6>
 
 <h1 align="center">😎 Team InfySOARS 😎</h1>
 
